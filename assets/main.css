@@ -115,6 +115,7 @@ header {
   transition: var(--transition);
   display: inline-block;
   text-align: center;
+  border: none;
 }
 .cta-button:hover {
   background-color: var(--primary-dark);
@@ -1919,5 +1920,9 @@ footer::before {
   }
   .module-title {
     font-size: 18px;
+  }
+
+  .cta-button {
+    display: none;
   }
 }
