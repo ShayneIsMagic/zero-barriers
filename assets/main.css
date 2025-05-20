@@ -1395,7 +1395,8 @@ footer::before {
   margin: 40px 0;
 }
 .contact-img img {
-  max-width: 400px;
+  max-height: 400px;
+  object-position: 0 20%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -1565,7 +1566,8 @@ footer::before {
   margin: 40px 0;
 }
 .hero-img img {
-  max-width: 400px;
+  max-height: 400px;
+  object-position: 0 16%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
@@ -1589,8 +1591,10 @@ footer::before {
 .case-study-image {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .case-study-image img {
+  max-height: 400px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 }
