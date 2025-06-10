@@ -31,27 +31,27 @@ const { isServicesPage = false } = Astro.props;
         <h3 class="footer-title">Services</h3>
         <ul class="footer-links">
           <li>
-            <a href={`${isServicesPage ? "" : "services.html"}#human`}
+            <a href={`${isServicesPage ? "" : "/services"}#human`}
               >Human Transformation</a
             >
           </li>
           <li>
-            <a href={`${isServicesPage ? "" : "services.html"}#technology`}
+            <a href={`${isServicesPage ? "" : "/services"}#technology`}
               >Technology Enablement</a
             >
           </li>
           <li>
-            <a href={`${isServicesPage ? "" : "services.html"}#revenue`}
+            <a href={`${isServicesPage ? "" : "/services"}#revenue`}
               >Revenue Acceleration</a
             >
           </li>
           <li>
-            <a href={`${isServicesPage ? "" : "services.html"}#consulting`}
+            <a href={`${isServicesPage ? "" : "/services"}#consulting`}
               >Strategic Consulting</a
             >
           </li>
           <li>
-            <a href={`${isServicesPage ? "" : "services.html"}#training`}
+            <a href={`${isServicesPage ? "" : "/services"}#training`}
               >Team Training</a
             >
           </li>
@@ -60,10 +60,10 @@ const { isServicesPage = false } = Astro.props;
       <div>
         <h3 class="footer-title">Company</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div>
