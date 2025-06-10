@@ -1,16 +1,254 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Zero Barriers | Engineer Your Revenue Breakthrough"
+  description="Zero Barriers - Revenue Growth Consultancy. We engineer breakthrough growth with proven methodologies that deliver rapid, substantial, and sustainable results."
+>
+  <body>
+    <Header />
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-tagline">Purpose-Driven Growth Agency</span>
+          <h1 class="hero-title">Engineer Your Breakthrough</h1>
+          <p class="hero-description">
+            Rapid, Substantial, Sustainable Growth for People and Organizations
+          </p>
+          <p class="hero-description">
+            Zero Barriers exists to eliminate the obstacles preventing your
+            business from achieving its full potential. Through our proven
+            methodology and strategic technology partnerships, we create systems
+            that deliver:
+          </p>
+          <ul class="benefits-list">
+            <li>
+              <strong>122% Revenue Growth</strong> in first-year implementations
+            </li>
+            <li><strong>Back-to-back banner years</strong> for our clients</li>
+            <li>
+              <strong>Purpose-driven cultures</strong> that attract and retain top
+              talent
+            </li>
+            <li>
+              <strong>Aligned sales and delivery teams</strong> that keep their promises
+            </li>
+          </ul>
+          <div class="testimonial">
+            <p class="testimonial-content">
+              We achieved 122% growth in our first year! Zero Barriers empowered
+              our team, instilled ownership principles, and identified top
+              talent for our elite firm.
+            </p>
+            <p class="testimonial-author">— Jason Kidman, SOS Support</p>
+          </div>
+          <div class="hero-cta">
+            <a href="contact.html" class="cta-button"
+              >Schedule Your Transformation Assessment</a
+            >
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-container">
+            <img
+              src="https://media.istockphoto.com/id/1373240838/photo/positive-team-motivation.jpg?s=612x612&w=0&k=20&c=zyLDqvjxYDV0nhKf7laXUcOer5ZW-FH864I9k6LXgjI="
+              alt="professional team celebrating success"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology">
+      <div class="container">
+        <div class="section-title">
+          <h2>Your Path to Breakthrough Growth</h2>
+          <p>
+            Our four-phase methodology is designed to create rapid, substantial,
+            and sustainable growth:
+          </p>
+        </div>
+        <div class="methodology-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="step-title">IDENTIFY BARRIERS</h3>
+            <p class="step-description">
+              Uncover what's truly holding you back through a comprehensive
+              analysis of your current operations, identifying revenue
+              bottlenecks, misalignments, and untapped potential.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="step-title">ADOPT BEST PRACTICES</h3>
+            <p class="step-description">
+              Implement proven systems for success by mapping the strategies of
+              your top performers, creating custom playbooks, and establishing
+              metrics that matter.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="step-title">ADAPT TO STRENGTHS</h3>
+            <p class="step-description">
+              Customize solutions to your unique context by tailoring systems to
+              leverage individual and team strengths, aligning processes with
+              your company culture.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 class="step-title">ENGINEER SUCCESS</h3>
+            <p class="step-description">
+              Create predictable, repeatable growth patterns through systematic
+              replication of top-performing strategies and continuous
+              improvement cycles driven by real-time data.
+            </p>
+          </div>
+        </div>
+        <div class="methodology-testimonial">
+          <p class="methodology-testimonial-content">
+            Working with Shayne was a game-changer! He quickly identified our
+            sales challenges and provided effective solutions, boosting results
+            and morale across the team.
+          </p>
+          <p class="methodology-testimonial-author">— Kyle C.</p>
+        </div>
+        <div class="methodology-cta">
+          <a href="services.html" class="methodology-link"
+            >Learn more about our methodology <i class="fas fa-arrow-right"
+            ></i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions">
+      <div class="container">
+        <div class="section-title">
+          <h2>Integrated Solutions for Complete Transformation</h2>
+          <p>
+            Zero Barriers partners with industry leaders to deliver
+            comprehensive solutions:
+          </p>
+        </div>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="solution-header">HUMAN TRANSFORMATION</div>
+            <div class="solution-content">
+              <p>
+                Powered by our purpose-driven methodologies, we help individuals
+                and teams unlock their full potential through our proprietary
+                frameworks:
+              </p>
+              <ul class="benefits-list">
+                <li>The Attitude Cycle™</li>
+                <li>IMPROV Sales Methodology™</li>
+                <li>Purpose-Driven Exercise™</li>
+              </ul>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-header">TECHNOLOGY ENABLEMENT</div>
+            <div class="solution-content">
+              <p>
+                Through our strategic partnerships, we implement the right
+                technology solutions to streamline operations and enhance
+                customer experiences:
+              </p>
+              <ul class="benefits-list">
+                <li>Custom software development</li>
+                <li>Salesforce implementation</li>
+                <li>System integration and automation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="solution-card">
+            <div class="solution-header">REVENUE ACCELERATION</div>
+            <div class="solution-content">
+              <p>
+                Combining people, process, and technology for breakthrough
+                results, we create systems that generate predictable,
+                sustainable revenue growth:
+              </p>
+              <ul class="benefits-list">
+                <li>Sales process optimization</li>
+                <li>KPI-driven performance management</li>
+                <li>Continuous improvement cycles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="solutions-cta">
+          <a href="services.html#partnerships" class="solutions-link"
+            >Explore our strategic partnerships
+            <i class="fas fa-arrow-right"></i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Purpose Section -->
+    <section class="purpose">
+      <div class="container purpose-container">
+        <div class="purpose-content">
+          <h2 class="purpose-title">Purpose-Driven Transformation</h2>
+          <p class="purpose-description">
+            At Zero Barriers, we believe that lasting success starts with
+            purpose. Our approach aligns personal motivation with professional
+            excellence, creating organizations where people thrive and results
+            follow.
+          </p>
+          <div class="purpose-testimonial">
+            <p class="purpose-testimonial-content">
+              The purpose-driven model transformed my life, removing obstacles
+              and igniting my potential. I've gained direction, fulfillment, and
+              happiness like never before!
+            </p>
+            <p class="purpose-testimonial-author">— Michelle A.</p>
+          </div>
+          <a href="services.html#purpose" class="purpose-link"
+            >Discover our purpose and values <i class="fas fa-arrow-right"
+            ></i></a
+          >
+        </div>
+        <div class="purpose-image">
+          <div class="purpose-image-container">
+            <img
+              src="https://images.prismic.io/edgeimpact/6562b6d8531ac2845a255d13_BESTTeamDay-4.jpg?auto=format%2Ccompress&fit=max&w=3840"
+              alt="Purpose-driven transformation image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>
+          Schedule a no-obligation transformation assessment with our team to
+          identify your barriers to growth and explore how our integrated
+          approach can help you achieve rapid, substantial, and sustainable
+          results.
+        </p>
+        <a href="contact.html" class="white-cta">Schedule Your Assessment</a>
+        <div>
+          <a href="case-studies.html" class="secondary-white-cta"
+            >Explore Our Case Studies <i class="fas fa-arrow-right"></i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</Layout>

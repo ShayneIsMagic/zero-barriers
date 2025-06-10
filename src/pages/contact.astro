@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Contact Us | Zero Barriers"
+  description="Contact Zero Barriers - Begin your transformation journey. Get in touch to achieve rapid, substantial, and sustainable growth."
+>
+  <body>
+    <Header />
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="section-title">
+          <h1>Contact Us</h1>
+          <p>Begin Your Transformation Journey</p>
+        </div>
+        <div class="contact-img">
+          <img src="/images/mountain-sunset.png" alt="Contact visualization" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section style="background: var(--light-gray); padding: 80px 0 40px">
+      <div class="container contact-main">
+        <div class="contact-info">
+          <h2
+            style="font-size: 26px; color: var(--primary); margin-bottom: 20px"
+          >
+            Get in Touch
+          </h2>
+          <p>
+            Ready to explore how Zero Barriers can help you achieve rapid,
+            substantial, and sustainable growth? Complete the form below to
+            start the conversation.
+          </p>
+          <div class="contact-person">
+            <div class="contact-person-img">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="contact-person-details">
+              <strong>Shayne Roy</strong>
+              <span>Founder, Zero Barriers</span>
+            </div>
+          </div>
+          <ul class="contact-details-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:sk@zerobarriers.io">sk@zerobarriers.io</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:8014733431">801-473-3431</a>
+            </li>
+            <li>
+              <i class="fab fa-instagram"></i>
+              <a
+                href="https://www.instagram.com/zerobarriersinc"
+                target="_blank">Instagram</a
+              >
+            </li>
+            <li>
+              <i class="fab fa-facebook-f"></i>
+              <a href="https://www.facebook.com/zerobarriers" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/company/zerobarriers"
+                target="_blank">LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+        <form
+          class="contact-form"
+          autocomplete="off"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="90687b2d-b5f9-471e-bf36-759c2b3ce51c"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://zerobarriers.io/form-submitted"
+          />
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required />
+          <label for="phone">Phone <span class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+          <label for="company">Company <span class="required">*</span></label>
+          <input type="text" id="company" name="company" required />
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" />
+          <label for="message"
+            >How can we help you? <span class="required">*</span></label
+          >
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container cta-content">
+        <h2>Transform Your Business with Purpose</h2>
+        <p>
+          Discover how our integrated approach can help you achieve rapid,
+          substantial, and sustainable growth.
+        </p>
+        <a href="contact.html" class="white-cta">Schedule a Call</a>
+        <div>
+          <a href="case-studies.html" class="secondary-white-cta"
+            >Explore Our Case Studies <i class="fas fa-arrow-right"></i></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</Layout>
