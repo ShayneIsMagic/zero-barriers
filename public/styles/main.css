@@ -1836,15 +1836,6 @@ footer::before {
   }
 }
 
-@media (max-width: 768px) {
-  .methodology-steps {
-    grid-template-columns: 1fr;
-  }
-  .solutions-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 992px) {
   .hero-container,
   .purpose-container {
@@ -1938,5 +1929,14 @@ footer::before {
   }
   .cta-button {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .methodology-steps {
+    grid-template-columns: 1fr;
+  }
+  .solutions-grid {
+    grid-template-columns: 1fr;
   }
 }
