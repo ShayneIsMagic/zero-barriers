@@ -4,6 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
+<!-- Preload critical images for better performance -->
+<link rel="preload" as="image" href="/images/Human_Transformation.png" />
+
 <Layout
   title="Services | Zero Barriers"
   description="Zero Barriers Services - Comprehensive revenue growth solutions through human transformation, technology enablement, and revenue acceleration."
@@ -61,11 +64,14 @@ import Footer from "../components/Footer.astro";
             </ul>
           </div>
         </div>
-        <div
-          class="service-image"
-          style="background-image: url('/api/placeholder/600/400')"
-        >
-          <img src="/images/Human_Transformation.png" alt="human transformation" />
+        <div class="service-image">
+          <img 
+            src="/images/Human_Transformation.png" 
+            alt="human transformation" 
+            loading="eager"
+            width="600"
+            height="400"
+          />
         </div>
       </div>
     </section>
@@ -107,13 +113,13 @@ import Footer from "../components/Footer.astro";
             </ul>
           </div>
         </div>
-        <div
-          class="service-image"
-          style="background-image: url('/api/placeholder/600/400')"
-        >
+        <div class="service-image">
           <img
             src="/images/side-profile-tech.png"
             alt="technology enablement"
+            loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
       </div>
@@ -156,7 +162,13 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <div class="service-image">
-          <img src="/images/B2B Sales.png" alt="revenue acceleration" />
+          <img 
+            src="/images/B2B Sales.png" 
+            alt="revenue acceleration" 
+            loading="lazy"
+            width="600"
+            height="400"
+          />
         </div>
       </div>
     </section>
@@ -201,6 +213,9 @@ import Footer from "../components/Footer.astro";
           <img
             src="/images/Transforming_Breakthrough.png"
             alt="strategic consulting"
+            loading="lazy"
+            width="600"
+            height="400"
           />
         </div>
       </div>
@@ -243,7 +258,13 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
         <div class="service-image">
-          <img src="/images/Team.png" alt="team training image" />
+          <img 
+            src="/images/Team.png" 
+            alt="team training image" 
+            loading="lazy"
+            width="600"
+            height="400"
+          />
         </div>
       </div>
     </section>

@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const criticalImages = [
     '/images/Team.png',
     '/images/Human_Transformation.png',
+    '/images/side-profile-tech.png',
+    '/images/B2B Sales.png',
+    '/images/Transforming_Breakthrough.png',
     '/zblogo.png'
   ];
 
@@ -95,7 +98,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Add loading states
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
+  // Add loading states
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+
+  // Image loading optimization and error handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+      // Add loading error handling
+      img.addEventListener('error', function() {
+        console.warn('Image failed to load:', this.src);
+        this.style.display = 'none';
+      });
+      
+      // Add loading success handling
+      img.addEventListener('load', function() {
+        this.style.opacity = '1';
+      });
+    });
+  });
