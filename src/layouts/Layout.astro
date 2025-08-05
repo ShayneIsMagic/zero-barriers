@@ -22,6 +22,44 @@ const gtmScript = `
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Zero Barriers" />
+    <meta name="keywords" content="revenue growth, business transformation, sales optimization, revenue acceleration, human transformation, technology enablement, business consulting, growth strategy, sales methodology, purpose-driven business, revenue growth consultancy, business breakthrough, sales process optimization, KPI management, continuous improvement, organizational development, leadership development, team alignment, strategic consulting, revenue operations, RevOps, sales training, customer success, business scaling, revenue systems, growth engineering, business barriers, transformation assessment" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zerobarriers.io" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://zerobarriers.io/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Zero Barriers" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@zerobarriers" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://zerobarriers.io/images/twitter-card.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zerobarriers.io" />
+    
+    <!-- Additional SEO Links -->
+    <link rel="alternate" type="application/rss+xml" title="Zero Barriers RSS Feed" href="https://zerobarriers.io/rss.xml" />
+    <link rel="alternate" type="application/json" title="Zero Barriers JSON Feed" href="https://zerobarriers.io/feed.json" />
+    
+    <!-- Preconnect to Google Analytics -->
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://analytics.google.com" />
+    
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -189,6 +227,70 @@ const gtmScript = `
     </style>
     
     <title>{title}</title>
+    
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zero Barriers",
+      "url": "https://zerobarriers.io",
+      "logo": "https://zerobarriers.io/zblogo.png",
+      "description": "Zero Barriers - Revenue Growth Consultancy. We engineer breakthrough growth with proven methodologies that deliver rapid, substantial, and sustainable results.",
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://zerobarriers.io/contact"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zero-barriers",
+        "https://twitter.com/zerobarriers"
+      ],
+      "serviceType": [
+        "Revenue Growth Consulting",
+        "Business Transformation",
+        "Sales Optimization",
+        "Technology Enablement",
+        "Human Transformation"
+      ],
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Zero Barriers Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Human Transformation",
+              "description": "Purpose-driven methodologies and proprietary frameworks for unlocking potential"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technology Enablement",
+              "description": "Strategic technology solutions to streamline operations and enhance customer experiences"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revenue Acceleration",
+              "description": "Systems that generate predictable, sustainable revenue growth"
+            }
+          }
+        ]
+      }
+    }
+    </script>
     
     <!-- Google Fonts with display=swap for better performance -->
     <link
