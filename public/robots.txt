@@ -1,7 +1,8 @@
+# Allow all legitimate search engines and browsers
 User-agent: *
 Allow: /
 
-# Block common bot patterns
+# Block specific unwanted bots and scrapers
 User-agent: AhrefsBot
 Disallow: /
 
@@ -23,19 +24,10 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-User-agent: Omgilibot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
 User-agent: ChatGPT-User
 Disallow: /
 
 User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
 Disallow: /
 
 User-agent: anthropic-ai
@@ -47,23 +39,59 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
-User-agent: Omgilibot
-Disallow: /
-
 User-agent: PerplexityBot
 Disallow: /
 
 User-agent: YouBot
 Disallow: /
 
-# Allow Google and Bing
+User-agent: CCBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+# Explicitly allow major search engines
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
 User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: ia_archiver
 Allow: /
 
 # Sitemap location

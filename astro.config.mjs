@@ -16,6 +16,8 @@ export default defineConfig({
     assets: '_astro',
   },
   
+
+  
   // Vite configuration for better performance and security
   vite: {
     build: {
