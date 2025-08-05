@@ -102,6 +102,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   window.addEventListener('load', () => {
     document.body.classList.add('loaded');
   });
+  
+  // Ensure body is visible even if JavaScript fails
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '1';
+  });
 
   // Image loading optimization and error handling
   document.addEventListener('DOMContentLoaded', function() {
