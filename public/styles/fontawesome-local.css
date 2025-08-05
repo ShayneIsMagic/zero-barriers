@@ -1,73 +1,63 @@
-/* Essential Font Awesome Icons - Local Version */
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAA...") format("woff2");
-}
-
-.fas {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-}
+/* Essential Font Awesome Icons - CSS-Only Version */
+/* Using CSS-only icons to avoid font loading issues */
 
 /* Arrow Right */
 .fa-arrow-right::before {
-  content: "\f061";
+  content: "→";
+  font-weight: bold;
 }
 
 /* Bars (Hamburger Menu) */
 .fa-bars::before {
-  content: "\f0c9";
+  content: "☰";
 }
 
 /* User Tie */
 .fa-user-tie::before {
-  content: "\f508";
+  content: "👔";
 }
 
 /* Envelope */
 .fa-envelope::before {
-  content: "\f0e0";
+  content: "✉";
 }
 
 /* Phone */
 .fa-phone::before {
-  content: "\f095";
+  content: "📞";
 }
 
 /* Phone Alt */
 .fa-phone-alt::before {
-  content: "\f095";
+  content: "📞";
 }
 
 /* Map Marker Alt */
 .fa-map-marker-alt::before {
-  content: "\f3c5";
+  content: "📍";
 }
 
 /* Code */
 .fa-code::before {
-  content: "\f121";
+  content: "💻";
 }
 
 /* Cloud */
 .fa-cloud::before {
-  content: "\f0c2";
+  content: "☁";
 }
 
 /* Chart Line */
 .fa-chart-line::before {
-  content: "\f201";
+  content: "📈";
 }
 
 /* Exclamation Triangle */
 .fa-exclamation-triangle::before {
-  content: "\f071";
+  content: "⚠";
 }
 
 /* Bridge */
 .fa-bridge::before {
-  content: "\f4ac";
+  content: "🌉";
 } 
