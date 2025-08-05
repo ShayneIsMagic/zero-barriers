@@ -1,4 +1,4 @@
-// Performance optimizations
+// Performance optimizations and navigation handling
 document.addEventListener('DOMContentLoaded', function() {
   // Preload critical images
   const criticalImages = [
@@ -21,10 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.documentElement.classList.add('fonts-loaded');
     });
   }
-});
 
-// Mobile menu toggle (only if element exists)
-document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
   const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
   if (mobileMenuToggle) {
     console.log('Mobile menu toggle found');
@@ -35,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const navLinks = document.querySelector(".nav-links");
       if (navLinks) {
         navLinks.classList.toggle("active");
-        console.log('Nav links toggled:', navLinks.classList.contains('active'));
+        const isActive = navLinks.classList.contains('active');
+        console.log('Nav links toggled:', isActive);
+        
+        // Update ARIA attributes for accessibility
+        mobileMenuToggle.setAttribute('aria-expanded', isActive);
+        mobileMenuToggle.setAttribute('aria-label', isActive ? 'Close navigation menu' : 'Open navigation menu');
       } else {
         console.log('Nav links not found');
       }
@@ -51,9 +54,30 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleMobileMenu();
       }
     });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      const navLinks = document.querySelector(".nav-links");
+      if (navLinks && navLinks.classList.contains('active') && 
+          !mobileMenuToggle.contains(e.target) && 
+          !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.setAttribute('aria-label', 'Open navigation menu');
+      }
+    });
   } else {
     console.log('Mobile menu toggle not found');
   }
+
+  // Set active navigation state based on current page
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
 });
 
 // Smooth scrolling for anchor links (in-page only) - fixed version

@@ -5,19 +5,21 @@
       <img class="logo-image" src="/zblogo.png" alt="zero berriers logo" />
       ZERO <span>BARRIERS</span>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
       <a href="/">Home</a>
       <a href="/services">Services</a>
       <a href="/case-studies">Case Studies</a>
       <a href="/contact">Contact</a>
     </nav>
-    <div
+    <button
       class="mobile-menu-toggle"
       aria-label="Open navigation menu"
-      tabindex="0"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      type="button"
     >
       <i class="fas fa-bars"></i>
-    </div>
+    </button>
     <a href="/contact" class="cta-button">Get Started</a>
   </div>
 </header>

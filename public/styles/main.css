@@ -158,6 +158,15 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
+
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
 .cta-button {
   background-color: var(--primary-dark);
   color: var(--white);
@@ -1927,23 +1936,45 @@ footer::before {
     border: none;
     background: none;
     z-index: 1001;
+    transition: color 0.3s ease;
   }
+  
+  .mobile-menu-toggle:hover {
+    color: var(--primary);
+  }
+  
   .nav-links {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
+    height: calc(100vh - 70px);
     flex-direction: column;
     background-color: var(--white);
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    gap: 15px;
+    gap: 20px;
     border-top: 1px solid var(--light-gray);
+    overflow-y: auto;
+    transition: all 0.3s ease;
   }
+  
   .nav-links.active {
     display: flex !important;
+  }
+  
+  .nav-links a {
+    font-size: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
   }
   .hero-title {
     font-size: 32px;
