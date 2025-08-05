@@ -76,39 +76,9 @@ const gtmScript = `
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        // Inline service worker for caching
-        const swContent = `
-          const CACHE_NAME = 'zero-barriers-v1';
-          const urlsToCache = [
-            '/',
-            '/styles/main.css',
-            '/js/main.js',
-            '/images/Team.png',
-            '/images/Human_Transformation.png',
-            '/zblogo.png'
-          ];
-
-          self.addEventListener('install', event => {
-            event.waitUntil(
-              caches.open(CACHE_NAME)
-                .then(cache => cache.addAll(urlsToCache))
-            );
-          });
-
-          self.addEventListener('fetch', event => {
-            event.respondWith(
-              caches.match(event.request)
-                .then(response => response || fetch(event.request))
-            );
-          });
-        `;
-
-        const blob = new Blob([swContent], { type: 'application/javascript' });
-        const swUrl = URL.createObjectURL(blob);
-        
-        navigator.serviceWorker.register(swUrl)
+        navigator.serviceWorker.register('/sw.js')
           .then(registration => {
-            console.log('SW registered: ', registration);
+            console.log('SW registered successfully: ', registration);
           })
           .catch(registrationError => {
             console.log('SW registration failed: ', registrationError);
