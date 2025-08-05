@@ -24,15 +24,37 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Mobile menu toggle (only if element exists)
-const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
-if (mobileMenuToggle) {
-  mobileMenuToggle.addEventListener("click", function () {
-    const navLinks = document.querySelector(".nav-links");
-    if (navLinks) {
-      navLinks.classList.toggle("active");
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  if (mobileMenuToggle) {
+    console.log('Mobile menu toggle found');
+    
+    // Function to toggle mobile menu
+    function toggleMobileMenu() {
+      console.log('Mobile menu toggled');
+      const navLinks = document.querySelector(".nav-links");
+      if (navLinks) {
+        navLinks.classList.toggle("active");
+        console.log('Nav links toggled:', navLinks.classList.contains('active'));
+      } else {
+        console.log('Nav links not found');
+      }
     }
-  });
-}
+    
+    // Click event
+    mobileMenuToggle.addEventListener("click", toggleMobileMenu);
+    
+    // Keyboard event for accessibility
+    mobileMenuToggle.addEventListener("keydown", function(e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleMobileMenu();
+      }
+    });
+  } else {
+    console.log('Mobile menu toggle not found');
+  }
+});
 
 // Smooth scrolling for anchor links (in-page only) - fixed version
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

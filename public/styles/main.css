@@ -11,6 +11,57 @@
   --accent: #2c88d9;
   --transition: all 0.3s ease;
 }
+
+/* Performance optimizations */
+.fonts-loaded {
+  font-display: swap;
+}
+
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body {
+  opacity: 0;
+}
+
+/* Optimize image loading */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* Contact page accessibility improvements */
+.contact-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: var(--primary);
+}
+
+.contact-details-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-details-list a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-details-list a:hover {
+  text-decoration: underline;
+}
+
+/* Reduce layout shift */
+.hero-image-container {
+  aspect-ratio: 16/9;
+  background-color: var(--light-gray);
+}
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +138,7 @@ header {
 }
 .nav-links a {
   position: relative;
-  color: var(--secondary);
+  color: var(--black);
   font-weight: 500;
   transition: var(--transition);
 }
@@ -108,7 +159,7 @@ header {
   width: 100%;
 }
 .cta-button {
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   color: var(--white);
   padding: 12px 24px;
   border-radius: 4px;
@@ -1028,12 +1079,7 @@ footer::before {
   font-size: 14px;
   font-weight: 300;
 }
-/* Mobile menu */
-.mobile-menu-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-}
+/* Mobile menu - removed duplicate rule */
 /* Services Hero */
 .services-hero {
   background: linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%);
@@ -1873,7 +1919,14 @@ footer::before {
 }
 @media (max-width: 768px) {
   .mobile-menu-toggle {
-    display: block;
+    display: block !important;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--black);
+    padding: 10px;
+    border: none;
+    background: none;
+    z-index: 1001;
   }
   .nav-links {
     display: none;
@@ -1885,11 +1938,12 @@ footer::before {
     background-color: var(--white);
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 1000;
     gap: 15px;
+    border-top: 1px solid var(--light-gray);
   }
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
   .hero-title {
     font-size: 32px;
