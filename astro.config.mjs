@@ -8,7 +8,7 @@ export default defineConfig({
   
   // SEO and security optimizations
   site: 'https://zerobarriers.io',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   
   // Performance optimizations
   build: {
