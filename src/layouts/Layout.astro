@@ -31,11 +31,10 @@ const gtmScript = `
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="/js/main.js" as="script" />
     
-    <!-- Fallback for CSS -->
-    <noscript><link rel="stylesheet" href="/styles/main.css" /></noscript>
+    <!-- Load CSS with fallback -->
+    <link rel="stylesheet" href="/styles/main.css" />
     
     <!-- Critical CSS for above-the-fold content -->
     <style>
@@ -201,15 +200,7 @@ const gtmScript = `
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
     />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
     
     <!-- Font Awesome with integrity and crossorigin for security -->
     <link
@@ -218,20 +209,9 @@ const gtmScript = `
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-      media="print"
-      onload="this.media='all'"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
-    </noscript>
     
-    <!-- Main CSS loaded via preload above -->
+    <!-- Main CSS -->
     <link rel="icon" href="/zblogo.png" type="image/png" />
 
     <!-- Google Tag Manager -->
@@ -252,7 +232,7 @@ const gtmScript = `
     <slot />
   </body>
 
-  <script src="/js/main.js" defer type="module"></script>
+  <script src="/js/main.js" defer></script>
   
   <!-- Service Worker Registration -->
   <script>
