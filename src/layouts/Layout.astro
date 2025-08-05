@@ -21,17 +21,26 @@ const gtmScript = `
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    
+    <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/styles/main.css" as="style" />
+    <link rel="preload" href="/js/main.js" as="script" />
+    
+    <title>{title}</title>
+    
+    <!-- Google Fonts with display=swap for better performance -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    
+    <!-- Local Font Awesome Icons -->
+    <link rel="stylesheet" href="/styles/fontawesome-local.css" />
+    
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="icon" href="/zblogo.png" type="image/png" />
 
@@ -43,7 +52,7 @@ const gtmScript = `
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src=`https://www.googletagmanager.com/ns.html?id=${gtmId}`
+        src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
         height="0"
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
@@ -54,4 +63,49 @@ const gtmScript = `
   </body>
 
   <script src="/js/main.js" defer></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Inline service worker for caching
+        const swContent = `
+          const CACHE_NAME = 'zero-barriers-v1';
+          const urlsToCache = [
+            '/',
+            '/styles/main.css',
+            '/js/main.js',
+            '/images/Team.png',
+            '/images/Human_Transformation.png',
+            '/zblogo.png'
+          ];
+
+          self.addEventListener('install', event => {
+            event.waitUntil(
+              caches.open(CACHE_NAME)
+                .then(cache => cache.addAll(urlsToCache))
+            );
+          });
+
+          self.addEventListener('fetch', event => {
+            event.respondWith(
+              caches.match(event.request)
+                .then(response => response || fetch(event.request))
+            );
+          });
+        `;
+
+        const blob = new Blob([swContent], { type: 'application/javascript' });
+        const swUrl = URL.createObjectURL(blob);
+        
+        navigator.serviceWorker.register(swUrl)
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
 </html>

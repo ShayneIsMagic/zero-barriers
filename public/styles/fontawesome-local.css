@@ -1,0 +1,73 @@
+/* Essential Font Awesome Icons - Local Version */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAA...") format("woff2");
+}
+
+.fas {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+/* Arrow Right */
+.fa-arrow-right::before {
+  content: "\f061";
+}
+
+/* Bars (Hamburger Menu) */
+.fa-bars::before {
+  content: "\f0c9";
+}
+
+/* User Tie */
+.fa-user-tie::before {
+  content: "\f508";
+}
+
+/* Envelope */
+.fa-envelope::before {
+  content: "\f0e0";
+}
+
+/* Phone */
+.fa-phone::before {
+  content: "\f095";
+}
+
+/* Phone Alt */
+.fa-phone-alt::before {
+  content: "\f095";
+}
+
+/* Map Marker Alt */
+.fa-map-marker-alt::before {
+  content: "\f3c5";
+}
+
+/* Code */
+.fa-code::before {
+  content: "\f121";
+}
+
+/* Cloud */
+.fa-cloud::before {
+  content: "\f0c2";
+}
+
+/* Chart Line */
+.fa-chart-line::before {
+  content: "\f201";
+}
+
+/* Exclamation Triangle */
+.fa-exclamation-triangle::before {
+  content: "\f071";
+}
+
+/* Bridge */
+.fa-bridge::before {
+  content: "\f4ac";
+} 
