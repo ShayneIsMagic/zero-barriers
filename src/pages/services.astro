@@ -350,3 +350,210 @@ import Footer from "../components/Footer.astro";
     <Footer isServicesPage="true" />
   </body>
 </Layout>
+
+<style>
+  /* Services Hero */
+  .services-hero {
+    background: linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+  }
+
+  /* Service Detail Sections */
+  .service-detail {
+    padding: 100px 0;
+  }
+
+  .service-detail:nth-child(even) {
+    background: var(--light-gray);
+  }
+
+  .service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .service-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .service-description {
+    font-size: 18px;
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .benefits-list {
+    list-style: none;
+  }
+
+  .benefits-list li {
+    color: var(--secondary);
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .benefits-list li::before {
+    content: "✓";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .service-image {
+    text-align: center;
+  }
+
+  .service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Partnerships Section */
+  .partnerships {
+    padding: 100px 0;
+    background: var(--light-gray);
+  }
+
+  .partnerships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .partner-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary);
+  }
+
+  .partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .partner-logo {
+    background: var(--primary-light);
+    color: var(--primary);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 20px;
+    transition: var(--transition);
+  }
+
+  .partner-card:hover .partner-logo {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+  }
+
+  .partner-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 15px;
+  }
+
+  .partner-description {
+    color: var(--secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .partner-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .highlight {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--primary);
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 100px 0;
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .cta-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .service-title {
+      font-size: 28px;
+    }
+
+    .partnerships-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .partner-card {
+      padding: 30px 20px;
+    }
+
+    .cta-content h2 {
+      font-size: 28px;
+    }
+  }
+</style>
