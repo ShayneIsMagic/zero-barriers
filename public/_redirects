@@ -1,4 +1,2 @@
 # Redirects for better SEO and user experience
-/contact /contact.html 200
-/services /services.html 200
-/case-studies /case-studies.html 200
+# Note: Astro builds pages as index.html in subdirectories, so no redirects needed
