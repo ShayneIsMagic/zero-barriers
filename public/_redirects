@@ -2,11 +2,3 @@
 /contact /contact.html 200
 /services /services.html 200
 /case-studies /case-studies.html 200
-
-# Security redirects
-/admin/* /404.html 404
-/private/* /404.html 404
-/api/* /404.html 404
-
-# Handle 404s gracefully
-/* /404.html 404
