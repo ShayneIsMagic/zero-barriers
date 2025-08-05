@@ -29,6 +29,9 @@ export default defineConfig({
       // Optimize for Cloudflare Pages
       target: 'esnext',
       minify: 'esbuild',
+      cssMinify: true,
+      cssCodeSplit: true,
+      chunkSizeWarningLimit: 1000,
     },
     ssr: {
       noExternal: ['astro'],
@@ -36,6 +39,10 @@ export default defineConfig({
     // Security optimizations
     define: {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    },
+    // CSS optimization
+    css: {
+      devSourcemap: false,
     },
   },
 });

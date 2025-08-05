@@ -26,11 +26,174 @@ const gtmScript = `
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/styles/main.css" as="style" />
+    <link rel="preload" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="preload" href="/js/main.js" as="script" />
+    
+    <!-- Fallback for CSS -->
+    <noscript><link rel="stylesheet" href="/styles/main.css" /></noscript>
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      :root {
+        --primary: #7cc347;
+        --primary-dark: #167a1f;
+        --primary-light: rgba(37, 197, 54, 0.1);
+        --secondary: #58595b;
+        --black: #000000;
+        --white: #ffffff;
+        --light-gray: #f5f5f5;
+        --dark-gray: #333333;
+        --accent: #2c88d9;
+        --transition: all 0.3s ease;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      
+      body {
+        background-color: var(--white);
+        color: var(--secondary);
+        line-height: 1.6;
+        overflow-x: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      body.loaded {
+        opacity: 1;
+      }
+      
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+      }
+      
+      header {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+      }
+      
+      .logo {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--black);
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo span {
+        color: var(--primary);
+        margin-left: 5px;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+      
+      .nav-links a {
+        position: relative;
+        color: var(--black);
+        font-weight: 500;
+        transition: var(--transition);
+      }
+      
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+      
+      .cta-button {
+        background-color: var(--primary-dark);
+        color: var(--white);
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: var(--transition);
+        display: inline-block;
+        text-align: center;
+        border: none;
+      }
+      
+      .mobile-menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+      }
+      
+      .hero {
+        background: linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 120px 0 80px;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      
+      .hero-title {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--black);
+        line-height: 1.2;
+      }
+      
+      .hero-description {
+        font-size: 16px;
+        color: var(--secondary);
+        margin-bottom: 10px;
+        font-weight: 300;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-menu-toggle {
+          display: block !important;
+        }
+        
+        .nav-links {
+          display: none;
+        }
+        
+        .hero-container {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        
+        .hero-title {
+          font-size: 32px;
+        }
+      }
+    </style>
     
     <title>{title}</title>
     
@@ -38,7 +201,15 @@ const gtmScript = `
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     
     <!-- Font Awesome with integrity and crossorigin for security -->
     <link
@@ -47,9 +218,20 @@ const gtmScript = `
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
     
-    <link rel="stylesheet" href="/styles/main.css" />
+    <!-- Main CSS loaded via preload above -->
     <link rel="icon" href="/zblogo.png" type="image/png" />
 
     <!-- Google Tag Manager -->
@@ -70,13 +252,13 @@ const gtmScript = `
     <slot />
   </body>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.js" defer type="module"></script>
   
   <!-- Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
           .then(registration => {
             console.log('SW registered successfully: ', registration);
           })

@@ -24,6 +24,7 @@ body.loaded {
 
 body {
   opacity: 0;
+  font-display: swap;
 }
 
 /* Optimize image loading */
