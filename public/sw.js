@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zero-barriers-v2';
+const CACHE_NAME = 'zero-barriers-v3';
 const urlsToCache = [
   '/',
   '/styles/main.css',
@@ -22,9 +22,28 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Skip caching for non-GET requests
+  if (event.request.method !== 'GET') {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request)
-      .then(response => response || fetch(event.request))
+    fetch(event.request)
+      .then(response => {
+        // Clone the response before caching
+        const responseClone = response.clone();
+        
+        // Cache the response for future use
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, responseClone);
+        });
+        
+        return response;
+      })
+      .catch(() => {
+        // If fetch fails, try to serve from cache
+        return caches.match(event.request);
+      })
   );
 });
 
@@ -34,10 +53,14 @@ self.addEventListener('activate', event => {
       return Promise.all(
         cacheNames.map(cacheName => {
           if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
+    }).then(() => {
+      // Force refresh of all clients
+      return self.clients.claim();
     })
   );
 }); 

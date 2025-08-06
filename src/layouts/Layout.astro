@@ -940,11 +940,29 @@ const gtmScript = `
   
   <!-- Service Worker Registration -->
   <script>
+    // Clear old caches and force fresh content
+    if ('caches' in window) {
+      caches.keys().then(cacheNames => {
+        cacheNames.forEach(cacheName => {
+          if (cacheName !== 'zero-barriers-v3') {
+            console.log('Clearing old cache:', cacheName);
+            caches.delete(cacheName);
+          }
+        });
+      });
+    }
+    
+    // Clear localStorage and sessionStorage
+    localStorage.clear();
+    sessionStorage.clear();
+    
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js', { scope: '/' })
           .then(registration => {
             console.log('SW registered successfully: ', registration);
+            // Force update
+            registration.update();
           })
           .catch(registrationError => {
             console.log('SW registration failed: ', registrationError);
