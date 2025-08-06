@@ -4,6 +4,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
+<!-- Resource hints for performance -->
+<link rel="preload" href="/images/side-profile-tech.png" as="image" type="image/png">
+<link rel="preload" href="/styles/main.css" as="style">
+<link rel="preload" href="/js/main.js" as="script">
+
 <Layout
   title="Revenue Growth Consulting | Rapid, Substantial, Sustainable Growth | Zero Barriers"
   description="Dominate revenue growth with Zero Barriers. Achieve 122% revenue growth through proven methodologies. Rapid, substantial, sustainable growth for businesses. Expert revenue generation consulting and business transformation services."
@@ -56,6 +61,7 @@ import Footer from "../components/Footer.astro";
               width="600"
               height="400"
               decoding="async"
+              fetchpriority="high"
             />
           </div>
         </div>

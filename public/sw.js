@@ -1,11 +1,17 @@
-const CACHE_NAME = 'zero-barriers-v1';
+const CACHE_NAME = 'zero-barriers-v2';
 const urlsToCache = [
   '/',
   '/styles/main.css',
   '/js/main.js',
+  '/images/side-profile-tech.png',
   '/images/Team.png',
   '/images/Human_Transformation.png',
-  '/zblogo.png'
+  '/zblogo.png',
+  '/images/caselle-updated-logo.png',
+  '/images/devpipeline-black-logo.png',
+  '/images/Q90-LOGO.svg',
+  '/images/Salesforce_Consulting_Logo.svg',
+  '/images/Sebo Logosvg.svg'
 ];
 
 self.addEventListener('install', event => {

@@ -16,7 +16,13 @@ export default defineConfig({
     assets: '_astro',
   },
   
-
+  // Image optimization
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp'
+    },
+    remotePatterns: [{ protocol: "https" }],
+  },
   
   // Vite configuration for better performance and security
   vite: {
@@ -45,6 +51,10 @@ export default defineConfig({
     // CSS optimization
     css: {
       devSourcemap: false,
+    },
+    // Performance optimizations
+    optimizeDeps: {
+      include: ['astro'],
     },
   },
 });

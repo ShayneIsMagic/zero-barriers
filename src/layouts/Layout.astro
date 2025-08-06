@@ -910,6 +910,13 @@ const gtmScript = `
     
     <!-- Main CSS -->
     <link rel="icon" href="/zblogo.png" type="image/png" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#7cc347" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zero Barriers" />
 
     <!-- Google Tag Manager -->
     {gtmId && <script set:html={gtmScript} />}
