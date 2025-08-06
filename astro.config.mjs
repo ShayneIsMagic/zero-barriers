@@ -12,7 +12,7 @@ export default defineConfig({
   
   // Performance optimizations
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'never',
     assets: '_astro',
   },
   
