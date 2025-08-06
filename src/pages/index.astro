@@ -249,7 +249,7 @@ import Footer from "../components/Footer.astro";
           <p>Real results from businesses that transformed their revenue growth with Zero Barriers</p>
         </div>
         <div class="stories-grid">
-          <div class="story-card" onclick="toggleStory(this)">
+          <div class="story-card">
             <div class="story-header">
               <h3>122% Growth Achievement</h3>
               <div class="story-indicator">
@@ -261,7 +261,7 @@ import Footer from "../components/Footer.astro";
               <p class="story-author">— Jason Kidman, Owner | SOS Support</p>
             </div>
           </div>
-          <div class="story-card" onclick="toggleStory(this)">
+          <div class="story-card">
             <div class="story-header">
               <h3>25% Consistent Growth</h3>
               <div class="story-indicator">
@@ -273,7 +273,7 @@ import Footer from "../components/Footer.astro";
               <p class="story-author">— Greg Williams, Business Owner | SeboDev</p>
             </div>
           </div>
-          <div class="story-card" onclick="toggleStory(this)">
+          <div class="story-card">
             <div class="story-header">
               <h3>Sales Process Optimization</h3>
               <div class="story-indicator">
@@ -285,7 +285,7 @@ import Footer from "../components/Footer.astro";
               <p class="story-author">— Kyle C., Sales Manager | Q90</p>
             </div>
           </div>
-          <div class="story-card" onclick="toggleStory(this)">
+          <div class="story-card">
             <div class="story-header">
               <h3>Purpose-Driven Transformation</h3>
               <div class="story-indicator">
@@ -353,7 +353,7 @@ import Footer from "../components/Footer.astro";
 
 <script>
   // Success Stories Toggle Functionality
-  function toggleStory(card: HTMLElement) {
+  function toggleStory(card) {
     // Close all other cards
     const allCards = document.querySelectorAll('.story-card');
     allCards.forEach(otherCard => {
@@ -366,16 +366,21 @@ import Footer from "../components/Footer.astro";
     card.classList.toggle('expanded');
   }
 
-  // Add keyboard accessibility
+  // Add keyboard accessibility and click handlers
   document.addEventListener('DOMContentLoaded', function() {
     const storyCards = document.querySelectorAll('.story-card');
     
     storyCards.forEach(card => {
-      card.addEventListener('keydown', function(e: Event) {
-        const keyboardEvent = e as KeyboardEvent;
-        if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') {
+      // Add click handler
+      card.addEventListener('click', function() {
+        toggleStory(card);
+      });
+      
+      // Add keyboard accessibility
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          toggleStory(card as HTMLElement);
+          toggleStory(card);
         }
       });
       

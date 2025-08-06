@@ -28,22 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
   const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
   if (mobileMenuToggle) {
-    console.log('Mobile menu toggle found');
-    
     // Function to toggle mobile menu
     function toggleMobileMenu() {
-      console.log('Mobile menu toggled');
       const navLinks = document.querySelector(".nav-links");
       if (navLinks) {
         navLinks.classList.toggle("active");
         const isActive = navLinks.classList.contains('active');
-        console.log('Nav links toggled:', isActive);
         
         // Update ARIA attributes for accessibility
         mobileMenuToggle.setAttribute('aria-expanded', isActive);
         mobileMenuToggle.setAttribute('aria-label', isActive ? 'Close navigation menu' : 'Open navigation menu');
-      } else {
-        console.log('Nav links not found');
       }
     }
     
@@ -68,9 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.setAttribute('aria-expanded', 'false');
         mobileMenuToggle.setAttribute('aria-label', 'Open navigation menu');
       }
-    });
-  } else {
-    console.log('Mobile menu toggle not found');
+          });
   }
 
   // Set active navigation state based on current page
@@ -110,7 +102,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     images.forEach(img => {
       // Add loading error handling
       img.addEventListener('error', function() {
-        console.warn('Image failed to load:', this.src);
         this.style.display = 'none';
       });
       
