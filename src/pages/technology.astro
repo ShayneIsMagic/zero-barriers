@@ -24,27 +24,38 @@ import Footer from "../components/Footer.astro";
     <!-- Technology Overview -->
     <section class="technology-overview">
       <div class="container">
-        <div class="overview-content">
-          <h2>Unified Technology Solutions for Revenue Growth</h2>
-          <p>Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation.</p>
-          
-          <div class="technology-stats">
-            <div class="stat">
-              <span class="stat-number">40%</span>
-              <span class="stat-label">Average ROI Improvement</span>
+        <div class="overview-container">
+          <div class="overview-content">
+            <h2>Unified Technology Solutions for Revenue Growth</h2>
+            <p>Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation.</p>
+            
+            <div class="technology-stats">
+              <div class="stat">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Average ROI Improvement</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Successful Implementations</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Salesforce Certifications</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Years Development Experience</span>
+              </div>
             </div>
-            <div class="stat">
-              <span class="stat-number">100+</span>
-              <span class="stat-label">Successful Implementations</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">15+</span>
-              <span class="stat-label">Salesforce Certifications</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">30+</span>
-              <span class="stat-label">Years Development Experience</span>
-            </div>
+          </div>
+          <div class="overview-image">
+            <img
+              src="/images/side-profile-tech.png"
+              alt="technology enablement"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
           </div>
         </div>
       </div>
@@ -59,6 +70,10 @@ import Footer from "../components/Footer.astro";
         </div>
         
         <div class="division-content">
+          <div class="division-logos">
+            <img src="/images/Salesforce_Consulting_Logo.svg" alt="Salesforce Consulting Logo" class="division-logo" />
+            <img src="/images/caselle-updated-logo.png" alt="Caselle Logo" class="division-logo" />
+          </div>
           <div class="division-description">
             <p>Our CRM Solutions division delivers world-class Salesforce implementation and optimization services that provide the technology backbone for revenue growth. With 15+ Salesforce certifications and 100+ successful implementations, we ensure your CRM becomes a powerful engine for sustainable growth.</p>
           </div>
@@ -112,6 +127,11 @@ import Footer from "../components/Footer.astro";
         </div>
         
         <div class="division-content">
+          <div class="division-logos">
+            <img src="/images/devpipeline-black-logo.png" alt="DevPipeline Logo" class="division-logo" />
+            <img src="/images/Q90-LOGO.svg" alt="Q90 Logo" class="division-logo" />
+            <img src="/images/Sebo Logosvg.svg" alt="Sebo Logo" class="division-logo" />
+          </div>
           <div class="division-description">
             <p>Our Custom Development division delivers comprehensive software solutions that eliminate technical barriers and create the infrastructure for sustainable revenue growth. With 30+ years of software development experience, we build scalable systems that support your business transformation.</p>
           </div>
@@ -218,15 +238,36 @@ import Footer from "../components/Footer.astro";
     background: var(--light-gray);
   }
 
+  .overview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
   .overview-content {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: left;
   }
 
   .overview-content h2 {
     color: var(--primary-dark);
     margin-bottom: 20px;
+  }
+
+  .overview-image {
+    text-align: center;
+  }
+
+  .overview-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .overview-image img:hover {
+    transform: scale(1.02);
   }
 
   .technology-stats {
@@ -287,6 +328,29 @@ import Footer from "../components/Footer.astro";
     margin: 0 auto 50px;
     font-size: 18px;
     line-height: 1.6;
+  }
+
+  .division-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .division-logo {
+    max-height: 60px;
+    max-width: 180px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .division-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 
   .services-grid {
@@ -353,6 +417,15 @@ import Footer from "../components/Footer.astro";
   @media (max-width: 768px) {
     .technology-hero {
       padding: 100px 0 60px;
+    }
+    
+    .overview-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .overview-content {
+      text-align: center;
     }
     
     .technology-stats {
