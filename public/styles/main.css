@@ -222,10 +222,12 @@ header {
   z-index: 1;
 }
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
-  gap: 80px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .hero-content {
   position: relative;
@@ -233,7 +235,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 600px;
+  width: 100%;
 }
 .hero-tagline {
   color: var(--primary);
@@ -2340,21 +2342,18 @@ footer::before {
 }
 
 @media (max-width: 992px) {
-  .hero-container,
+  .hero-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
   .purpose-container {
     grid-template-columns: 1fr;
     gap: 50px;
   }
-  .hero-image {
-    order: -1;
-  }
-  .hero-image-container,
+  
   .purpose-image-container {
     height: 400px;
-  }
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
   }
   .service-container {
     grid-template-columns: 1fr;
