@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zero-barriers-v3';
+const CACHE_NAME = 'zero-barriers-v4';
 const urlsToCache = [
   '/',
   '/styles/main.css',
