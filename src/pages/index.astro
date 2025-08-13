@@ -14,15 +14,23 @@ import Footer from "../components/Footer.astro";
   <body>
     <Header />
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Updated with image and responsive layout -->
     <section class="hero">
       <div class="container">
-        <div class="section-title">
-          <span class="hero-tagline">Purpose-Driven Growth Agency</span>
-          <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
-          <p class="hero-description">
-            Transform your business with proven methodologies that eliminate barriers and create predictable, repeatable revenue growth systems. Zero Barriers specializes in revenue generation and rapid business transformation through our proven four-phase methodology.
-          </p>
+        <div class="hero-content-wrapper">
+          <div class="hero-text-content">
+            <span class="hero-tagline">Purpose-Driven Growth Agency</span>
+            <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
+            <div class="hero-image-mobile">
+              <img src="/images/Confident Woman.png" alt="Professional working on revenue growth transformation" />
+            </div>
+            <p class="hero-description">
+              Transform your business with proven methodologies that eliminate barriers and create predictable, repeatable revenue growth systems. Zero Barriers specializes in revenue generation and rapid business transformation through our proven four-phase methodology.
+            </p>
+          </div>
+          <div class="hero-image-desktop">
+            <img src="/images/Confident Woman.png" alt="Professional working on revenue growth transformation" />
+          </div>
         </div>
         <div class="hero-metrics">
           <div class="metric-item">
