@@ -51,6 +51,23 @@ import OptimizedImage from "../components/OptimizedImage.astro";
       </div>
     </section>
 
+    <!-- Google Analytics Test Event -->
+    <script>
+      // Test Google Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Home Page',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'home_page'
+          }
+        });
+        console.log('Home page tracking event sent to GA4');
+      } else {
+        console.log('Google Analytics not loaded yet');
+      }
+    </script>
+
     <!-- Methodology Section -->
     <section class="methodology">
       <div class="container">

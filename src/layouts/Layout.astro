@@ -240,7 +240,16 @@ const { title, description = "Zero Barriers - Revenue Growth Transformation | Ra
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-YHS2Y7L3C9');
+      
+      // Configure Google Analytics properly
+      gtag('config', 'G-YHS2Y7L3C9', {
+        send_page_view: true,
+        page_title: document.title,
+        page_location: window.location.href
+      });
+      
+      // Debug logging
+      console.log('Google Analytics initialized with ID: G-YHS2Y7L3C9');
     </script>
     <!-- End Google Analytics -->
 
@@ -263,9 +272,9 @@ const { title, description = "Zero Barriers - Revenue Growth Transformation | Ra
       });
     }
     
-    // Clear localStorage and sessionStorage
-    localStorage.clear();
-    sessionStorage.clear();
+    // IMPORTANT: Don't clear localStorage/sessionStorage as it breaks Google Analytics
+    // localStorage.clear();
+    // sessionStorage.clear();
     
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
