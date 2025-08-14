@@ -14,58 +14,56 @@ import Footer from "../components/Footer.astro";
   <body>
     <Header />
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Updated with image and responsive layout -->
     <section class="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
-          <div class="hero-image-mobile">
+      <div class="container">
+        <div class="hero-content-wrapper">
+          <div class="hero-text-content">
+            <span class="hero-tagline">Purpose-Driven Growth Agency</span>
+            <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
+            <div class="hero-image-mobile">
+              <img 
+                src="/images/Human_Transformation.png" 
+                alt="Human transformation and growth visualization" 
+                width="600" 
+                height="400" 
+                loading="lazy"
+              />
+            </div>
+            <p class="hero-description">
+              We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Our expert revenue generation and business transformation services unlock your potential.
+            </p>
+            <div class="hero-cta">
+              <a href="/contact" class="cta-button primary">Start Your Transformation</a>
+              <a href="/case-studies" class="cta-button secondary">See Our Results</a>
+            </div>
+          </div>
+          <div class="hero-image-desktop">
             <img 
-              src="/images/optimized/Human_Transformation.webp" 
+              src="/images/Human_Transformation.png" 
               alt="Human transformation and growth visualization" 
-              width="600" 
-              height="400" 
-              loading="eager"
-              style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);"
+              width="800" 
+              height="600" 
+              loading="lazy"
             />
           </div>
-          <p class="hero-description">
-            We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Our expert revenue generation and business transformation services unlock your potential.
-          </p>
-          <div class="hero-cta">
-            <a href="/contact" class="cta-button primary">Start Your Transformation</a>
-            <a href="/case-studies" class="cta-button secondary">See Our Results</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <div class="metric-number">122%</div>
+            <div class="metric-label">Revenue Growth</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">40%</div>
+            <div class="metric-label">ROI Improvement</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">100+</div>
+            <div class="metric-label">Successful Implementations</div>
           </div>
         </div>
-        <div class="hero-image-desktop">
-          <img 
-            src="/images/optimized/Human_Transformation.webp" 
-            alt="Human transformation and growth visualization" 
-            width="800" 
-            height="600" 
-            loading="eager"
-            style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);"
-          />
-        </div>
-      </div>
-      
-      <!-- Hero Metrics Section -->
-      <div class="hero-metrics">
-        <div class="container">
-          <div class="metrics-grid">
-            <div class="metric-item">
-              <div class="metric-number">122%</div>
-              <div class="metric-label">Revenue Growth</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-number">40%</div>
-              <div class="metric-label">ROI Improvement</div>
-            </div>
-            <div class="metric-item">
-              <div class="metric-number">100+</div>
-              <div class="metric-label">Successful Implementations</div>
-            </div>
-          </div>
+        <div class="hero-cta">
+          <a href="/contact" class="cta-button">Schedule Your Transformation Assessment</a>
         </div>
       </div>
     </section>
