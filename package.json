@@ -16,5 +16,8 @@
   },
   "engines": {
     "node": ">=18.20.8"
+  },
+  "devDependencies": {
+    "terser": "^5.43.1"
   }
 }

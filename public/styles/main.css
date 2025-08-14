@@ -3569,4 +3569,53 @@ footer::before {
   }
 }
 
+/* CSS Updated: Performance optimizations and image loading improvements */
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Optimize rendering performance */
+img {
+  content-visibility: auto;
+  contain: layout style paint;
+}
+
+/* Smooth scrolling with better performance */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Optimize animations and transitions */
+.service-image,
+.hero-image-desktop img,
+.case-study-logo-inline {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Reduce paint operations during animations */
+@media (prefers-reduced-motion: no-preference) {
+  .service-image,
+  .hero-image-desktop img,
+  .case-study-logo-inline {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Optimize for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 

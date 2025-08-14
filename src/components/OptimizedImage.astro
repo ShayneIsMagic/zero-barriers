@@ -1,0 +1,52 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+}
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height, 
+  className = '', 
+  loading = 'lazy',
+  sizes = '(max-width: 768px) 100vw, 50vw'
+} = Astro.props;
+
+// Extract base name and extension from src
+const baseName = src.split('/').pop()?.split('.')[0] || '';
+const imagePath = `/images/optimized/${baseName}`;
+---
+
+<picture class={className}>
+  <!-- AVIF format for modern browsers (best compression) -->
+  <source 
+    type="image/avif" 
+    srcset={`${imagePath}.avif 1x, ${imagePath}@2x.avif 2x`}
+    sizes={sizes}
+  />
+  
+  <!-- WebP format for good browser support -->
+  <source 
+    type="image/webp" 
+    srcset={`${imagePath}.webp 1x, ${imagePath}@2x.webp 2x`}
+    sizes={sizes}
+  />
+  
+  <!-- JPEG fallback for older browsers -->
+  <img 
+    src={`${imagePath}.jpg`}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding="async"
+    style="width: 100%; height: auto;"
+  />
+</picture>
