@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import OptimizedImage from "../components/OptimizedImage.astro";
 ---
 
 <!-- Resource hints for performance -->
@@ -21,13 +20,13 @@ import OptimizedImage from "../components/OptimizedImage.astro";
         <div class="hero-content">
           <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
           <div class="hero-image-mobile">
-            <OptimizedImage 
-              src="/images/Human_Transformation.png" 
+            <img 
+              src="/images/optimized/Human_Transformation.webp" 
               alt="Human transformation and growth visualization" 
-              width={600} 
-              height={400} 
+              width="600" 
+              height="400" 
               loading="eager"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);"
             />
           </div>
           <p class="hero-description">
@@ -39,34 +38,37 @@ import OptimizedImage from "../components/OptimizedImage.astro";
           </div>
         </div>
         <div class="hero-image-desktop">
-          <OptimizedImage 
-            src="/images/Human_Transformation.png" 
+          <img 
+            src="/images/optimized/Human_Transformation.webp" 
             alt="Human transformation and growth visualization" 
-            width={800} 
-            height={600} 
+            width="800" 
+            height="600" 
             loading="eager"
-            sizes="(max-width: 1200px) 50vw, 40vw"
+            style="width: 100%; height: auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);"
           />
         </div>
       </div>
+      
+      <!-- Hero Metrics Section -->
+      <div class="hero-metrics">
+        <div class="container">
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-number">122%</div>
+              <div class="metric-label">Revenue Growth</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">40%</div>
+              <div class="metric-label">ROI Improvement</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">100+</div>
+              <div class="metric-label">Successful Implementations</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <!-- Google Analytics Test Event -->
-    <script>
-      // Test Google Analytics tracking
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'page_view', {
-          page_title: 'Home Page',
-          page_location: window.location.href,
-          custom_map: {
-            'custom_dimension1': 'home_page'
-          }
-        });
-        console.log('Home page tracking event sent to GA4');
-      } else {
-        console.log('Google Analytics not loaded yet');
-      }
-    </script>
 
     <!-- Methodology Section -->
     <section class="methodology">
@@ -370,6 +372,23 @@ import OptimizedImage from "../components/OptimizedImage.astro";
         </div>
       </div>
     </section>
+
+    <!-- Google Analytics Test Event -->
+    <script>
+      // Test Google Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Home Page',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'home_page'
+          }
+        });
+        console.log('Home page tracking event sent to GA4');
+      } else {
+        console.log('Google Analytics not loaded yet');
+      }
+    </script>
 
     <Footer />
   </body>
