@@ -246,17 +246,30 @@ header {
   z-index: 2;
   width: 100%;
   height: auto;
-  min-height: 300px;
+  min-height: 400px;
 }
 .hero-image-desktop img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-image-desktop img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
 }
 .hero-image-mobile {
   display: none;
+}
+.hero-image-mobile img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 .hero-tagline {
   color: var(--primary);
@@ -1330,14 +1343,20 @@ footer::before {
 }
 
 .service-image {
-  height: 400px;
-  border-radius: 10px;
+  height: 500px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   background-size: cover;
   background-position: center;
   position: relative;
   background-color: var(--light-gray);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
 }
 
 .service-image img {
@@ -1349,7 +1368,7 @@ footer::before {
 }
 
 .service-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .service-label {
@@ -3503,6 +3522,50 @@ footer::before {
 
   .story-indicator {
     font-size: 12px;
+  }
+}
+
+/* Case Study Title Section with Inline Logo */
+.case-study-title-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.case-study-logo-inline {
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.case-study-logo-inline:hover {
+  transform: scale(1.1);
+}
+
+.case-study-title-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Responsive adjustments for case study title sections */
+@media (max-width: 768px) {
+  .case-study-title-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .case-study-logo-inline {
+    width: 70px;
+    height: 50px;
   }
 }
 
