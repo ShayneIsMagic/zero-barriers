@@ -5,18 +5,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Client Testimonials | Revenue Growth Success Stories | Zero Barriers"
-  description="Real success stories from Zero Barriers clients. See how we've delivered rapid, substantial, sustainable revenue growth for businesses through our proven methodology."
+  title="Testimonials | Zero Barriers - Client Success Stories & Revenue Growth Results"
+  description="Read real testimonials from Zero Barriers clients who achieved breakthrough revenue growth. See how our proven methodologies deliver rapid, substantial, and sustainable results for businesses."
 >
   <body>
     <Header />
+
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Testimonials',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'testimonials_page'
+          }
+        });
+      }
+    </script>
 
     <!-- Testimonials Hero -->
     <section class="testimonials-hero">
       <div class="container">
         <div class="section-title">
-          <h1>Client Success Stories</h1>
-          <p>Real results from businesses that have achieved rapid, substantial, sustainable revenue growth with Zero Barriers</p>
+          <h1>Client Testimonials</h1>
+          <p>Real stories from real businesses achieving breakthrough growth</p>
         </div>
       </div>
     </section>
@@ -281,10 +294,17 @@ import Footer from "../components/Footer.astro";
 
   .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     position: relative;
     z-index: 2;
+  }
+
+  @media (max-width: 1200px) {
+    .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
   }
 
   .testimonial-card {
@@ -427,11 +447,18 @@ import Footer from "../components/Footer.astro";
 
   .industry-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 50px;
     position: relative;
     z-index: 2;
+  }
+
+  @media (max-width: 1200px) {
+    .industry-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
   }
 
   .industry-section h3 {
@@ -514,10 +541,18 @@ import Footer from "../components/Footer.astro";
 
   .results-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 50px;
     position: relative;
+  }
+
+  @media (max-width: 1200px) {
+    .results-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+  }
     z-index: 2;
   }
 

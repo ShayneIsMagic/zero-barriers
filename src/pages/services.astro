@@ -5,14 +5,27 @@ import Footer from "../components/Footer.astro";
 ---
 
 <!-- Preload critical images for better performance -->
-<link rel="preload" as="image" href="/images/Human_Transformation.png" />
+<link rel="preload" as="image" href="/images/optimized/Human_Transformation.webp" />
 
 <Layout
-  title="Services | Zero Barriers"
-  description="Zero Barriers Services - Comprehensive revenue growth solutions through human transformation, technology enablement, and revenue acceleration."
+  title="Services | Zero Barriers - Human Transformation, Technology Enablement & Revenue Acceleration"
+  description="Zero Barriers Services: Human Transformation methodologies, Technology Enablement solutions, and Revenue Acceleration systems. Achieve rapid, substantial, sustainable growth through our proven four-phase methodology."
 >
   <body>
     <Header />
+
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Services',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'services_page'
+          }
+        });
+      }
+    </script>
 
     <!-- Services Hero -->
     <section class="services-hero">

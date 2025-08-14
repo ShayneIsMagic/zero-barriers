@@ -5,18 +5,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Zero Barriers Technology Division | CRM Solutions & Custom Development"
-  description="Our integrated technology division delivers comprehensive solutions for revenue growth. CRM Solutions powered by SalesforceConsultants.io and Custom Development powered by DevPipeline."
+  title="Technology Enablement | Zero Barriers - Custom Software, Salesforce & Integration Solutions"
+  description="Zero Barriers Technology Enablement: Custom software development, Salesforce implementation, system integration, and workflow automation. Streamline operations and enhance customer experiences."
 >
   <body>
     <Header />
+
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Technology',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'technology_page'
+          }
+        });
+      }
+    </script>
 
     <!-- Technology Hero -->
     <section class="technology-hero">
       <div class="container">
         <div class="section-title">
-          <h1>Zero Barriers Technology Division</h1>
-          <p>Integrated technology solutions that eliminate barriers and accelerate revenue growth</p>
+          <h1>Technology Enablement</h1>
+          <p>Strategic technology solutions to streamline operations and enhance customer experiences</p>
         </div>
       </div>
     </section>

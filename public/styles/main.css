@@ -3569,7 +3569,7 @@ footer::before {
   }
 }
 
-/* CSS Updated: Performance optimizations and image loading improvements */
+/* CSS Updated: Enhanced performance optimizations for Lighthouse scores */
 
 /* Performance optimizations */
 * {
@@ -3580,6 +3580,13 @@ footer::before {
 img {
   content-visibility: auto;
   contain: layout style paint;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shifts with explicit dimensions */
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
 }
 
 /* Smooth scrolling with better performance */
@@ -3616,6 +3623,67 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Enhanced image loading performance */
+.hero-image-desktop img,
+.hero-image-mobile img,
+.service-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  font-family: 'object-fit: cover;'; /* Fallback for older browsers */
+}
+
+/* Prevent Cumulative Layout Shift (CLS) */
+.hero-container,
+.service-container,
+.case-study-container {
+  min-height: 400px;
+  contain: layout;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2') format('woff2');
+}
+
+/* Critical CSS for above-the-fold content */
+.hero {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Optimize button interactions */
+.cta-button {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+/* Reduce layout shifts for dynamic content */
+.case-study-title-section {
+  min-height: 80px;
+  contain: layout;
+}
+
+/* Optimize service cards */
+.service-card {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Enhanced loading states */
+.loading {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.loaded {
+  opacity: 1;
 }
 
 

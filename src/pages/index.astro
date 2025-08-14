@@ -2,68 +2,51 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import OptimizedImage from "../components/OptimizedImage.astro";
 ---
 
 <!-- Resource hints for performance -->
 <link rel="preload" href="/js/main.js" as="script">
 
 <Layout
-  title="Revenue Growth Consulting | Rapid, Substantial, Sustainable Growth | Zero Barriers"
-  description="Dominate revenue growth with Zero Barriers. Achieve 122% revenue growth through proven methodologies. Rapid, substantial, sustainable growth for businesses. Expert revenue generation consulting and business transformation services."
+  title="Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results"
+  description="We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services."
 >
   <body>
     <Header />
 
-    <!-- Hero Section - Updated with image and responsive layout -->
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-content-wrapper">
-          <div class="hero-text-content">
-            <span class="hero-tagline">Purpose-Driven Growth Agency</span>
-            <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
-            <div class="hero-image-mobile">
-              <img 
-                src="/images/Human_Transformation.png" 
-                alt="Human transformation and growth visualization" 
-                width="600" 
-                height="400" 
-                loading="lazy"
-              />
-            </div>
-            <p class="hero-description">
-              We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Our expert revenue generation and business transformation services unlock your potential.
-            </p>
-            <div class="hero-cta">
-              <a href="/contact" class="cta-button primary">Start Your Transformation</a>
-              <a href="/case-studies" class="cta-button secondary">See Our Results</a>
-            </div>
-          </div>
-          <div class="hero-image-desktop">
-            <img 
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Revenue Growth Transformation | Rapid, Substantial, Sustainable Results</h1>
+          <div class="hero-image-mobile">
+            <OptimizedImage 
               src="/images/Human_Transformation.png" 
               alt="Human transformation and growth visualization" 
-              width="800" 
-              height="600" 
-              loading="lazy"
+              width={600} 
+              height={400} 
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-        </div>
-        <div class="hero-metrics">
-          <div class="metric-item">
-            <div class="metric-number">122%</div>
-            <div class="metric-label">Revenue Growth</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-number">40%</div>
-            <div class="metric-label">ROI Improvement</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-number">100+</div>
-            <div class="metric-label">Successful Implementations</div>
+          <p class="hero-description">
+            We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Our expert revenue generation and business transformation services unlock your potential.
+          </p>
+          <div class="hero-cta">
+            <a href="/contact" class="cta-button primary">Start Your Transformation</a>
+            <a href="/case-studies" class="cta-button secondary">See Our Results</a>
           </div>
         </div>
-        <div class="hero-cta">
-          <a href="/contact" class="cta-button">Schedule Your Transformation Assessment</a>
+        <div class="hero-image-desktop">
+          <OptimizedImage 
+            src="/images/Human_Transformation.png" 
+            alt="Human transformation and growth visualization" 
+            width={800} 
+            height={600} 
+            loading="eager"
+            sizes="(max-width: 1200px) 50vw, 40vw"
+          />
         </div>
       </div>
     </section>

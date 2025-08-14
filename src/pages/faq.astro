@@ -5,18 +5,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Revenue Growth FAQ | Business Transformation Questions | Zero Barriers"
-  description="Frequently asked questions about revenue growth consulting, business transformation, and Zero Barriers' proven methodology for rapid, substantial, sustainable growth."
+  title="FAQ | Zero Barriers - Revenue Growth Transformation Questions & Answers"
+  description="Frequently asked questions about Zero Barriers revenue growth transformation services. Learn about our methodologies, processes, and how we deliver rapid, substantial, sustainable results."
 >
   <body>
     <Header />
+
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'FAQ',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'faq_page'
+          }
+        });
+      }
+    </script>
 
     <!-- FAQ Hero -->
     <section class="faq-hero">
       <div class="container">
         <div class="section-title">
           <h1>Frequently Asked Questions</h1>
-          <p>Common questions about revenue growth consulting and business transformation</p>
+          <p>Everything you need to know about Zero Barriers and our revenue growth transformation services</p>
         </div>
       </div>
     </section>

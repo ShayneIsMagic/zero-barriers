@@ -2,37 +2,35 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import OptimizedImage from "../components/OptimizedImage.astro";
 ---
 
 <Layout
-  title="Case Studies | Zero Barriers"
-  description="Zero Barriers Case Studies - Real-world examples of our breakthrough growth methodology delivering rapid, substantial, and sustainable results for businesses and individuals."
+  title="Case Studies | Zero Barriers - Revenue Growth Success Stories"
+  description="Explore real revenue growth transformations: Caselle achieved 122% growth, Sebo optimized processes, DevPipeline scaled technology. See our proven methodologies in action."
 >
   <body>
     <Header />
 
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+          page_title: 'Case Studies',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'case_studies_page'
+          }
+        });
+      }
+    </script>
+
     <!-- Case Studies Hero -->
-    <section class="case-hero">
+    <section class="case-studies-hero">
       <div class="container">
         <div class="section-title">
-          <h1>Client Success Stories</h1>
-          <p>Transforming People and Businesses</p>
-        </div>
-        <div class="hero-img">
-          <img src="/images/River.png" alt="Success visualization" />
-        </div>
-        <div class="section-title">
-          <p>
-            Our case studies demonstrate Zero Barriers' ability to engineer
-            rapid, substantial, and sustainable growth through our systematic
-            approach to transformation. By identifying barriers, adopting proven
-            systems, adapting to individual strengths, and engineering success,
-            we help both businesses and individuals achieve breakthrough
-            results.
-          </p>
-        </div>
-        <div class="hero-cta">
-          <a href="/contact" class="cta-button">Create Your Success Story</a>
+          <h1>Case Studies</h1>
+          <p>Real results from real businesses using our proven revenue growth methodologies</p>
         </div>
       </div>
     </section>

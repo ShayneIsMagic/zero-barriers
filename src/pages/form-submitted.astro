@@ -5,21 +5,31 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout
-  title="Contact Us | Zero Barriers"
-  description="Contact Zero Barriers - Begin your transformation journey. Get in touch to achieve rapid, substantial, and sustainable growth."
+  title="Thank You | Zero Barriers - Your Revenue Growth Journey Begins"
+  description="Thank you for contacting Zero Barriers. Your revenue growth transformation journey has begun. We'll be in touch soon to discuss your breakthrough growth strategy."
 >
   <body>
     <Header />
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          page_title: 'Form Submitted',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'form_submitted_page'
+          }
+        });
+      }
+    </script>
+
+    <!-- Thank You Hero -->
+    <section class="thank-you-hero">
       <div class="container">
-        <div class="contact-img">
-          <img src="/images/mountain-sunset.png" alt="Contact visualization" />
-        </div>
         <div class="section-title">
-          <h1>Form Submitted</h1>
-          <p>Thank you for reaching out. We'll be in touch soon!</p>
+          <h1>Thank You!</h1>
+          <p>Your transformation journey has begun</p>
         </div>
         <a href="/" class="cta-button">Go back to Home</a>
       </div>
