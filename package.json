@@ -1,23 +1,33 @@
 {
-  "name": "zero-barriers-astro-v2",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "temp-nextjs",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "node scripts/optimize-images.js && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "optimize-images": "node scripts/optimize-images.js",
-    "clear-cache": "node scripts/clear-cache.js"
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "astro": "^5.9.2",
-    "sharp": "^0.34.3"
-  },
-  "engines": {
-    "node": ">=18.20.8"
+    "@headlessui/react": "^2.2.7",
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.540.0",
+    "next": "15.5.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "terser": "^5.43.1"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
