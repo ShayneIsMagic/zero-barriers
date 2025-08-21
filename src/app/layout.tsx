@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -73,6 +74,25 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YHS2Y7L3C9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YHS2Y7L3C9', {
+              page_title: document.title,
+              page_location: window.location.href,
+              send_page_view: true
+            });
+            console.log('Google Analytics initialized with ID: G-YHS2Y7L3C9');
+          `}
+        </Script>
+
         {/* Structured Data (JSON-LD) for SEO */}
         <script
           type="application/ld+json"

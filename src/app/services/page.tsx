@@ -1,12 +1,8 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Cpu, TrendingUp } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Services | Zero Barriers - Human Transformation, Technology Enablement & Revenue Acceleration',
-  description: 'Zero Barriers Services: Human Transformation methodologies, Technology Enablement solutions, and Revenue Acceleration systems. Achieve rapid, substantial, sustainable growth through our proven four-phase methodology.',
-};
 
 const ServicesPage = () => {
   const services = [
