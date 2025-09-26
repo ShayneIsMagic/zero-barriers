@@ -2,11 +2,13 @@
   "name": "temp-nextjs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:contact": "node scripts/test-contact-form.js"
   },
   "dependencies": {
     "@headlessui/react": "2.2.7",
@@ -21,7 +23,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.0.2",
-    "@tailwindcss/postcss": "4.1.12",
     "@types/node": "20.14.10",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
@@ -29,7 +30,7 @@
     "eslint": "9.15.0",
     "eslint-config-next": "15.5.0",
     "postcss": "8.5.6",
-    "tailwindcss": "4.1.12",
+    "tailwindcss": "3.4.17",
     "typescript": "5.6.3"
   },
   "engines": {

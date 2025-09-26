@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 @layer base {
-  :root {
+:root {
     /* Custom CSS Variables for Design System */
     --color-primary-50: #f0f9ff;
     --color-primary-500: #0ea5e9;
@@ -73,7 +71,7 @@
   }
 
   body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-professional-800);
@@ -257,7 +255,7 @@
     text-wrap: pretty;
   }
 
-  /* Animation Utilities */
+  /* Professional Animation Utilities */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -267,6 +265,86 @@
   .animate-on-scroll.animate {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Entrance Animations */
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slide-left 0.8s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+  }
+
+  .animate-scale-bounce {
+    animation: scale-in-bounce 0.8s ease-out forwards;
+  }
+
+  .animate-rotate-in {
+    animation: rotate-in 0.8s ease-out forwards;
+  }
+
+  /* Staggered Delays */
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  /* Floating Elements */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+  }
+
+  /* Glow Effects */
+  .animate-glow-primary {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-glow-growth {
+    animation: pulse-glow-growth 3s ease-in-out infinite;
+  }
+
+  .animate-glow-gold {
+    animation: pulse-glow-gold 3s ease-in-out infinite;
+  }
+
+  /* Background Effects */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
   }
 
   /* Performance Utilities */
@@ -311,7 +389,9 @@
   }
 }
 
-/* Custom Animations */
+/* Professional Animations with Variety */
+
+/* 1. Floating Elements */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -321,6 +401,16 @@
   }
 }
 
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+/* 2. Glow Effects */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
@@ -330,9 +420,28 @@
   }
 }
 
+@keyframes pulse-glow-growth {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+  }
+}
+
+@keyframes pulse-glow-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.6);
+  }
+}
+
+/* 3. Slide Animations */
 @keyframes slide-up {
   0% {
-    transform: translateY(100px);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
@@ -341,9 +450,9 @@
   }
 }
 
-@keyframes slide-down {
+@keyframes slide-up-large {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(60px);
     opacity: 0;
   }
   100% {
@@ -352,23 +461,104 @@
   }
 }
 
-@keyframes fade-in {
+@keyframes slide-left {
   0% {
+    transform: translateX(-30px);
     opacity: 0;
   }
   100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
+@keyframes slide-right {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 4. Scale and Rotate */
 @keyframes scale-in {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.9);
     opacity: 0;
   }
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes scale-in-bounce {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    transform: rotate(-5deg) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* 5. Background Animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 6. Typing Effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: currentColor;
   }
 }
 
@@ -392,4 +582,24 @@
   .no-print {
     display: none !important;
   }
+}
+
+/* Additional Premium Animation Classes */
+.animate-pulse-delayed {
+  animation: pulse 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-bounce-delayed {
+  animation: bounce 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s ease-out forwards;
 }

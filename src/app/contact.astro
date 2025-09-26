@@ -13,8 +13,8 @@ import Footer from "../components/Footer.astro";
 
     <!-- Page-specific Google Analytics tracking -->
     <script>
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'page_view', {
+      if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'page_view', {
           page_title: 'Contact',
           page_location: window.location.href,
           custom_map: {
@@ -92,36 +92,62 @@ import Footer from "../components/Footer.astro";
           </ul>
         </div>
         <form
+          id="contact-form"
           class="contact-form"
           autocomplete="off"
-          action="https://api.web3forms.com/submit"
+          action="#"
           method="POST"
         >
+          <!-- Honeypot field for spam protection -->
+          <input
+            type="text"
+            name="website"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+          
+          <!-- Hidden timestamp for bot detection -->
           <input
             type="hidden"
-            name="access_key"
-            value="90687b2d-b5f9-471e-bf36-759c2b3ce51c"
+            name="form-start-time"
+            value=""
+            id="form-start-time"
           />
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://zerobarriers.io/form-submitted"
-          />
-          <label for="name">Name <span class="required">*</span></label>
-          <input type="text" id="name" name="name" required />
-          <label for="phone">Phone <span class="required">*</span></label>
-          <input type="tel" id="phone" name="phone" required />
-          <label for="email">Email <span class="required">*</span></label>
-          <input type="email" id="email" name="email" required />
-          <label for="company">Company <span class="required">*</span></label>
-          <input type="text" id="company" name="company" required />
-          <label for="website">Website</label>
-          <input type="url" id="website" name="website" />
-          <label for="message"
-            >How can we help you? <span class="required">*</span></label
-          >
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit" class="cta-button">Submit</button>
+          
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+          
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+          
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" autocomplete="organization" />
+          
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" />
+          
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" autocomplete="off" required rows="5"></textarea>
+          
+          <!-- Cloudflare Turnstile CAPTCHA - Enhanced Security -->
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAAB3leLaMnnM_ISQ0"
+               data-theme="light"
+               data-size="normal"
+               data-retry="auto"
+               data-retry-interval="8000"
+               data-refresh-expired="auto"
+               data-language="en">
+          </div>
+          <div class="text-xs text-gray-500 mt-2 text-center">
+            This site is protected by Cloudflare Turnstile
+          </div>
+          
+          <button type="submit" class="submit-btn cta-button">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" style="display:none">Sending...</span>
+          </button>
         </form>
       </div>
     </section>
@@ -144,5 +170,71 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <Footer />
+
+    <!-- Include Turnstile script -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
+    <!-- Form handling script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set form start time for bot detection
+        const formStartTime = document.getElementById('form-start-time');
+        if (formStartTime) {
+          formStartTime.value = Date.now().toString();
+        }
+        
+        const form = document.getElementById('contact-form') as HTMLFormElement;
+        if (form) {
+          form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn') as HTMLButtonElement;
+            const btnText = submitBtn?.querySelector('.btn-text') as HTMLSpanElement;
+            const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLSpanElement;
+            
+            if (!submitBtn || !btnText || !btnLoading) {
+              console.error('Form elements not found');
+              return;
+            }
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            submitBtn.disabled = true;
+            
+            try {
+              const formData = new FormData(this);
+              
+              // Add Turnstile response
+              const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]') as HTMLInputElement;
+              if (turnstileResponse) {
+                formData.append('cf-turnstile-response', turnstileResponse.value);
+              }
+              
+              const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+              });
+              
+              if (response.ok) {
+                // Success message
+                this.innerHTML = '<div class="success-message text-center p-6 bg-green-50 border border-green-200 rounded-lg"><h3 class="text-green-800 font-semibold text-lg mb-2">Thank you!</h3><p class="text-green-700">Your message has been sent successfully. We&apos;ll get back to you within 24 hours.</p></div>';
+              } else {
+                throw new Error('Failed to send message');
+              }
+              
+            } catch (error) {
+              console.error('Form submission error:', error);
+              alert('Sorry, there was an error sending your message. Please try again.');
+              
+              // Reset form state
+              btnText.style.display = 'inline';
+              btnLoading.style.display = 'none';
+              submitBtn.disabled = false;
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </Layout>

@@ -3,8 +3,78 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Instagram, Facebook, Linkedin, User } from 'lucide-react';
+import { useEffect } from 'react';
 
 const ContactPage = () => {
+  useEffect(() => {
+    // Load Turnstile script
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    // Form handling
+    const handleFormSubmit = async (e: Event) => {
+      e.preventDefault();
+      const form = e.target as HTMLFormElement;
+      const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement;
+      const btnText = form.querySelector('.btn-text') as HTMLSpanElement;
+      const btnLoading = form.querySelector('.btn-loading') as HTMLSpanElement;
+      
+      // Show loading state
+      if (btnText && btnLoading && submitBtn) {
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        submitBtn.disabled = true;
+      }
+      
+      try {
+        const formData = new FormData(form);
+        
+        // Add Turnstile response
+        const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]') as HTMLInputElement;
+        if (turnstileResponse) {
+          formData.append('cf-turnstile-response', turnstileResponse.value);
+        }
+        
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData
+        });
+        
+        if (response.ok) {
+          // Success message
+          form.innerHTML = '<div class="success-message text-center p-6 bg-green-50 border border-green-200 rounded-lg"><h3 class="text-green-800 font-semibold text-lg mb-2">Thank you!</h3><p class="text-green-700">Your message has been sent successfully. We\'ll get back to you within 24 hours.</p></div>';
+        } else {
+          throw new Error('Failed to send message');
+        }
+        
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Sorry, there was an error sending your message. Please try again.');
+        
+        // Reset form state
+        if (btnText && btnLoading && submitBtn) {
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+          submitBtn.disabled = false;
+        }
+      }
+    };
+
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', handleFormSubmit);
+    }
+
+    return () => {
+      if (form) {
+        form.removeEventListener('submit', handleFormSubmit);
+      }
+    };
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -133,43 +203,37 @@ const ContactPage = () => {
               viewport={{ once: true }}
             >
               <form
+                id="contact-form"
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
-                action="https://api.web3forms.com/submit"
+                action="#"
                 method="POST"
               >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="90687b2d-b5f9-471e-bf36-759c2b3ce51c"
+                {/* Honeypot field for spam protection */}
+                <input 
+                  type="text" 
+                  name="website" 
+                  style={{display: 'none'}} 
+                  tabIndex={-1} 
+                  autoComplete="off" 
                 />
-                <input
-                  type="hidden"
-                  name="redirect"
-                  value="https://zerobarriers.io/form-submitted"
+                
+                {/* Hidden timestamp for bot detection */}
+                <input 
+                  type="hidden" 
+                  name="form-start-time" 
+                  value={Date.now()} 
                 />
                 
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Name <span className="text-red-500">*</span>
+                      Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                      autoComplete="name"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     />
@@ -177,12 +241,13 @@ const ContactPage = () => {
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email <span className="text-red-500">*</span>
+                      Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
+                      autoComplete="email"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     />
@@ -190,47 +255,64 @@ const ContactPage = () => {
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company <span className="text-red-500">*</span>
+                      Company
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
-                      required
+                      autoComplete="organization"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-2">
-                      Website
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
                     </label>
                     <input
-                      type="url"
-                      id="website"
-                      name="website"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autoComplete="tel"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      How can we help you? <span className="text-red-500">*</span>
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
+                      autoComplete="off"
                       required
-                      rows={4}
+                      rows={5}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 resize-none"
                     ></textarea>
                   </div>
                   
+                  {/* Cloudflare Turnstile CAPTCHA - Enhanced Security */}
+        <div className="cf-turnstile" 
+             data-sitekey="0x4AAAAAAB3leLaMnnM_ISQ0"
+                       data-theme="light"
+                       data-size="normal"
+                       data-retry="auto"
+                       data-retry-interval="8000"
+                       data-refresh-expired="auto"
+                       data-language="en">
+                  </div>
+                  <div className="text-xs text-gray-500 mt-2 text-center">
+                    This site is protected by Cloudflare Turnstile
+                  </div>
+                  
                   <button
                     type="submit"
-                    className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="submit-btn w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit
+                    <span className="btn-text">Send Message</span>
+                    <span className="btn-loading" style={{display: 'none'}}>Sending...</span>
                   </button>
                 </div>
               </form>

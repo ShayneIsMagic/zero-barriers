@@ -1,7 +1,11 @@
 {
   "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact",
   "/favicon.ico/route": "/favicon.ico",
+  "/case-studies/page": "/case-studies",
   "/page": "/",
+  "/technology/page": "/technology",
+  "/testimonials/page": "/testimonials",
   "/services/page": "/services",
   "/contact/page": "/contact"
 }

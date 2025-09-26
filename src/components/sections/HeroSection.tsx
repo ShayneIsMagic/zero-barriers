@@ -18,20 +18,20 @@ const HeroSection = () => {
 
   const metrics = [
     { 
-      number: '150%', 
-      label: 'Average Revenue Growth',
+      number: '122%', 
+      label: 'First Year Growth (SOS Support)',
       icon: TrendingUp,
       color: 'text-growth-600'
     },
     { 
-      number: '90', 
-      label: 'Days to Results',
+      number: '25%', 
+      label: 'Consistent Growth (SeboDev)',
       icon: Target,
       color: 'text-primary-600'
     },
     { 
-      number: '200+', 
-      label: 'Businesses Transformed',
+      number: '15+', 
+      label: 'Years Experience',
       icon: Users,
       color: 'text-gold-600'
     }
@@ -171,7 +171,7 @@ const HeroSection = () => {
             >
               <h3 className="text-xl font-bold mb-3">Our Promise to Business Leaders:</h3>
               <p className="text-lg opacity-90">
-                &ldquo;We eliminate revenue barriers and engineer breakthrough growth through our proven four-phase methodology, delivering <strong>150% average revenue growth</strong> in <strong>90 days</strong>.&rdquo;
+                &ldquo;We eliminate revenue barriers and engineer breakthrough growth through our proven four-phase methodology, delivering measurable, sustainable results for businesses ready to transform.&rdquo;
               </p>
             </motion.div>
 
@@ -232,8 +232,8 @@ const HeroSection = () => {
               transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-growth-600">150%</div>
-                <div className="text-sm text-professional-600">Revenue Growth</div>
+                <div className="text-2xl font-bold text-growth-600">122%</div>
+                <div className="text-sm text-professional-600">First Year Growth</div>
               </div>
             </motion.div>
 
@@ -244,8 +244,8 @@ const HeroSection = () => {
               transition={{ delay: 1.4, type: "spring", stiffness: 200 }}
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600">90</div>
-                <div className="text-sm text-professional-600">Days to Results</div>
+                <div className="text-2xl font-bold text-primary-600">25%</div>
+                <div className="text-sm text-professional-600">Consistent Growth</div>
               </div>
             </motion.div>
           </motion.div>

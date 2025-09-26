@@ -17,8 +17,8 @@ const FAQSection = () => {
       answer: 'Our revenue generation methodology combines human transformation, technology enablement, and revenue acceleration to eliminate barriers and create systems that generate predictable, sustainable revenue growth.'
     },
     {
-      question: 'Can you really deliver 122% revenue growth?',
-      answer: 'Yes, our clients consistently achieve 122% revenue growth in first-year implementations through our proven rapid, substantial, sustainable growth methodology and strategic partnerships.'
+      question: 'What results can I expect from working with Zero Barriers?',
+      answer: 'Results vary based on your starting point and commitment to implementation. Our clients have achieved significant growth, from 25% consistent monthly increases to 122% first-year growth. We focus on sustainable, systematic improvements rather than quick fixes.'
     }
   ];
 
