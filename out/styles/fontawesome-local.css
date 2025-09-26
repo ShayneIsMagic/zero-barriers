@@ -1,0 +1,63 @@
+/* Essential Font Awesome Icons - CSS-Only Version */
+/* Using CSS-only icons to avoid font loading issues */
+
+/* Arrow Right */
+.fa-arrow-right::before {
+  content: "→";
+  font-weight: bold;
+}
+
+/* Bars (Hamburger Menu) */
+.fa-bars::before {
+  content: "☰";
+}
+
+/* User Tie */
+.fa-user-tie::before {
+  content: "👔";
+}
+
+/* Envelope */
+.fa-envelope::before {
+  content: "✉";
+}
+
+/* Phone */
+.fa-phone::before {
+  content: "📞";
+}
+
+/* Phone Alt */
+.fa-phone-alt::before {
+  content: "📞";
+}
+
+/* Map Marker Alt */
+.fa-map-marker-alt::before {
+  content: "📍";
+}
+
+/* Code */
+.fa-code::before {
+  content: "💻";
+}
+
+/* Cloud */
+.fa-cloud::before {
+  content: "☁";
+}
+
+/* Chart Line */
+.fa-chart-line::before {
+  content: "📈";
+}
+
+/* Exclamation Triangle */
+.fa-exclamation-triangle::before {
+  content: "⚠";
+}
+
+/* Bridge */
+.fa-bridge::before {
+  content: "🌉";
+} 
