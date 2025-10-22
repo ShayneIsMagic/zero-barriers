@@ -10,8 +10,7 @@ import Footer from "../components/Footer.astro";
 >
   <body>
     <Header />
-
-    <!-- Page-specific Google Analytics tracking -->
+        <!-- Page-specific Google Analytics tracking -->
     <script>
       if (typeof gtag !== 'undefined') {
         gtag('event', 'page_view', {
@@ -41,92 +40,61 @@ import Footer from "../components/Footer.astro";
     <section style="background: var(--light-gray); padding: 80px 0 40px">
       <div class="container contact-main">
         <div class="contact-info">
-          <h2
-            style="font-size: 26px; color: var(--primary); margin-bottom: 20px"
-          >
+          <h2 style="font-size: 26px; color: var(--primary); margin-bottom: 20px">
             Get in Touch
           </h2>
-          <p>
-            Ready to explore how Zero Barriers can help you achieve rapid,
-            substantial, and sustainable growth? Complete the form to
-            start the conversation.
-          </p>
+          <p>Ready to explore how Zero Barriers can help you achieve rapid, substantial, and sustainable growth? Complete the form to start the conversation.</p>
+
           <div class="contact-person">
-            <div class="contact-person-img">
-              <i class="fas fa-user-tie"></i>
-            </div>
+            <div class="contact-person-img"><i class="fas fa-user-tie"></i></div>
             <div class="contact-person-details">
               <strong>Shayne Roy</strong>
               <span>Founder, Zero Barriers</span>
             </div>
           </div>
+
           <ul class="contact-details-list">
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:sk@zerobarriers.io">sk@zerobarriers.io</a>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <a href="tel:8019970457">801-997-0457</a>
-            </li>
-            <li>
-              <i class="fab fa-instagram"></i>
-              <a
-                href="https://www.instagram.com/zerobarriersinc"
-                target="_blank">Instagram</a
-              >
-            </li>
-            <li>
-              <i class="fab fa-facebook-f"></i>
-              <a href="https://www.facebook.com/zerobarriers" target="_blank"
-                >Facebook</a
-              >
-            </li>
-            <li>
-              <i class="fab fa-linkedin"></i>
-              <a
-                href="https://www.linkedin.com/company/zerobarriers"
-                target="_blank">LinkedIn</a
-              >
-            </li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:sk@zerobarriers.io">sk@zerobarriers.io</a></li>
+            <li><i class="fas fa-phone"></i><a href="tel:8019970457">801-997-0457</a></li>
+            <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/zerobarriersinc" target="_blank">Instagram</a></li>
+            <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/zerobarriers" target="_blank">Facebook</a></li>
+            <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/company/zerobarriers" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
-        <form
-          class="contact-form"
-          autocomplete="off"
-          action="https://api.web3forms.com/submit"
-          method="POST"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="90687b2d-b5f9-471e-bf36-759c2b3ce51c"
-          />
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://zerobarriers.io/form-submitted"
-          />
-          <label for="name">Name <span class="required">*</span></label>
-          <input type="text" id="name" name="name" required />
+
+        <!-- Updated form -->
+        <form id="contact-form" class="contact-form">
+
+          <label for="first_name">First Name <span class="required">*</span></label>
+          <input type="text" id="first_name" name="first_name" required />
+          
+          <label for="last_name">Last Name <span class="required">*</span></label>
+          <input type="text" id="last_name" name="last_name" required />
+
           <label for="phone">Phone <span class="required">*</span></label>
           <input type="tel" id="phone" name="phone" required />
+
           <label for="email">Email <span class="required">*</span></label>
           <input type="email" id="email" name="email" required />
+
           <label for="company">Company <span class="required">*</span></label>
           <input type="text" id="company" name="company" required />
+
           <label for="website">Website</label>
           <input type="url" id="website" name="website" />
-          <label for="message"
-            >How can we help you? <span class="required">*</span></label
-          >
+
+          <label for="message">How can we help you? <span class="required">*</span></label>
           <textarea id="message" name="message" required></textarea>
+          <input type="hidden" name="page" value="Contact" />
+
           <button type="submit" class="cta-button">Submit</button>
         </form>
+
+        <div class="toast-container"></div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+       <!-- CTA Section -->
     <section class="cta-section">
       <div class="container cta-content">
         <h2>Transform Your Business with Purpose</h2>
@@ -144,5 +112,8 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <Footer />
+
+    <script type="module" src="/js/sendEmail.js"></script>
+
   </body>
 </Layout>
