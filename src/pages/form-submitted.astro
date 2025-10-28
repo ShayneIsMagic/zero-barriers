@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Thank You | Zero Barriers - Your Revenue Growth Journey Begins"
+  description="Thank you for contacting Zero Barriers. Your revenue growth transformation journey has begun. We'll be in touch soon to discuss your breakthrough growth strategy."
+>
+  <body>
+    <Header />
+
+    <!-- Page-specific Google Analytics tracking -->
+    <script>
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_submit', {
+          page_title: 'Form Submitted',
+          page_location: window.location.href,
+          custom_map: {
+            'custom_dimension1': 'form_submitted_page'
+          }
+        });
+      }
+    </script>
+
+    <!-- Thank You Hero -->
+    <section class="thank-you-hero">
+      <div class="container">
+        <div class="section-title">
+          <h1>Thank You!</h1>
+          <p>Your transformation journey has begun</p>
+        </div>
+        <a href="/" class="cta-button">Go back to Home</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</Layout>

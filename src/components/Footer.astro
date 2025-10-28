@@ -1,0 +1,97 @@
+---
+const { isServicesPage = false } = Astro.props;
+---
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div>
+        <div class="footer-logo">
+          <img class="logo-image" src="/zblogo.png" alt="zero barriers logo" />
+          ZERO <span>BARRIERS</span>
+        </div>
+        <p class="footer-description">
+          Potential Unleashed: Transforming people and organizations through
+          rapid, substantial, and sustainable growth.
+        </p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/zerobarriers"
+            ><i class="fab fa-linkedin-in" aria-label="LinkedIn"></i></a
+          >
+          <a href="https://www.facebook.com/zerobarriers"
+            ><i class="fab fa-facebook-f" aria-label="Facebook"></i></a
+          >
+          <a href="https://www.instagram.com/zerobarriersinc"
+            ><i class="fab fa-instagram" aria-label="Instagram"></i></a
+          >
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Services</h3>
+        <ul class="footer-links">
+          <li>
+            <a href={`${isServicesPage ? "" : "/services"}#human`}
+              >Human Transformation</a
+            >
+          </li>
+          <li>
+            <a href={`${isServicesPage ? "" : "/services"}#technology`}
+              >Technology Enablement</a
+            >
+          </li>
+          <li>
+            <a href={`${isServicesPage ? "" : "/services"}#revenue`}
+              >Revenue Acceleration</a
+            >
+          </li>
+          <li>
+            <a href={`${isServicesPage ? "" : "/services"}#consulting`}
+              >Strategic Consulting</a
+            >
+          </li>
+          <li>
+            <a href={`${isServicesPage ? "" : "/services"}#training`}
+              >Team Training</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/technology">Technology</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">Contact Us</h3>
+        <div class="contact-info">
+          <div class="contact-info-icon">
+            <i class="fas fa-map-marker-alt" aria-label="Address"></i>
+          </div>
+          <p>518 E 800 N, Suite A<br />Orem, Utah 84097</p>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-icon">
+            <i class="fas fa-phone-alt" aria-label="Phone"></i>
+          </div>
+          <p>+1 (801) 997-0457</p>
+        </div>
+        <div class="contact-info">
+          <div class="contact-info-icon">
+            <i class="fas fa-envelope" aria-label="Email"></i>
+          </div>
+          <p>sk@zerobarriers.io</p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Zero Barriers. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
