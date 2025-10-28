@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = new FormData(form);
     const emailData = Object.fromEntries(formData.entries());
 
-    fetch("http://localhost:5000/send", {
+    fetch("https://flask-mailer-04f370a78f42.herokuapp.com/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(emailData),
