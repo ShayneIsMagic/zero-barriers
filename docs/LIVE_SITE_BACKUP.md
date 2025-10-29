@@ -4,7 +4,7 @@
 
 **Date Created**: October 28, 2025  
 **Current Live Site State**: Commit `b1cacf7` - "Updates POST Url."  
-**Live Branch**: `dev`  
+**Live Branch**: `main`  
 **Platform**: GitHub Pages  
 
 ---
@@ -16,7 +16,7 @@
 - **Date**: Tue Oct 28 16:33:47 2025 -0600
 - **Message**: "Updates POST Url."
 - **Technology**: Next.js static site
-- **Deployment**: GitHub Pages from `dev` branch
+- **Deployment**: GitHub Pages from `main` branch
 
 ---
 
@@ -24,26 +24,26 @@
 
 ### Quick Rollback (Emergency)
 ```bash
-# Switch to dev branch
-git checkout dev
+# Switch to main branch
+git checkout main
 
 # Reset to current live state
 git reset --hard b1cacf7
 
 # Force push to restore live site
-git push origin dev --force
+git push origin main --force
 ```
 
 ### Safe Rollback (Recommended)
 ```bash
-# Switch to dev branch
-git checkout dev
+# Switch to main branch
+git checkout main
 
 # Reset to backup tag
 git reset --hard live-site-backup-20251028
 
 # Push changes
-git push origin dev --force
+git push origin main --force
 ```
 
 ---
@@ -94,8 +94,8 @@ git push origin dev --force
 
 1. **Always backup before major changes**
 2. **Test rollbacks in a separate branch first**
-3. **The `dev` branch is the live deployment branch**
-4. **GitHub Pages automatically deploys from `dev`**
+3. **The `main` branch is the live deployment branch**
+4. **GitHub Pages automatically deploys from `main`**
 
 ---
 
