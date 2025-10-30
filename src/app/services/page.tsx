@@ -1,8 +1,55 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+// Structured Data for Services Page
+const servicesBreadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://zerobarriers.io"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://zerobarriers.io/services"
+    }
+  ]
+}
+
+export const metadata: Metadata = {
+  title: 'Services | Zero Barriers – Human Transformation, Technology, Revenue, Strategy',
+  description:
+    'Explore Zero Barriers services: Human Transformation, Technology Enablement, Revenue Acceleration, Strategic Consulting, and Team Training.',
+  alternates: { canonical: 'https://zerobarriers.io/services' },
+  openGraph: {
+    title: 'Services | Zero Barriers',
+    description:
+      'Explore Zero Barriers services: Human Transformation, Technology Enablement, Revenue Acceleration, Strategic Consulting, and Team Training.',
+    url: 'https://zerobarriers.io/services',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services | Zero Barriers',
+    description:
+      'Explore Zero Barriers services: Human Transformation, Technology Enablement, Revenue Acceleration, Strategic Consulting, and Team Training.',
+  },
+}
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesBreadcrumbSchema),
+        }}
+      />
       {/* Services Hero */}
       <section className="services-hero">
         <div className="container">
@@ -67,8 +114,8 @@ export default function ServicesPage() {
           </div>
           <div className="service-image">
             <img 
-              src="/images/Human_Transformation.png" 
-              alt="human transformation" 
+              src="/images/hero-human-transformation.png" 
+              alt="Human transformation service illustration showing purpose-driven methodologies and revenue growth" 
               loading="eager"
               width="600"
               height="400"
@@ -123,8 +170,8 @@ export default function ServicesPage() {
           </div>
           <div className="service-image">
             <img
-              src="/images/side-profile-tech.png"
-              alt="technology enablement"
+              src="/images/technology-empowerment-hero.png"
+              alt="Technology enablement services including Salesforce implementation and custom software development"
               loading="lazy"
               width="600"
               height="400"
@@ -178,8 +225,8 @@ export default function ServicesPage() {
           </div>
           <div className="service-image">
             <img
-              src="/images/B2B Sales.png"
-              alt="revenue acceleration"
+              src="/images/services-b2b-sales.png"
+              alt="B2B sales and revenue acceleration services optimizing sales processes and KPIs"
               loading="lazy"
               width="600"
               height="400"
@@ -192,43 +239,43 @@ export default function ServicesPage() {
       <section className="service-detail" id="consulting">
         <div className="container service-container">
           <div className="service-content">
-            <span className="service-label">Strategic Growth Consulting</span>
+            <span className="service-label">Strategic Growth & Planning</span>
             <h2 className="service-title">Strategic Consulting</h2>
             <p className="service-description">
-              Our strategic consulting services provide high-level guidance and
-              expertise to help you navigate complex business challenges and
-              opportunities. We work with leadership teams to develop comprehensive
-              strategies that drive sustainable growth.
+              Our strategic consulting services provide expert guidance on
+              critical business challenges and opportunities. We work with
+              executive teams to identify growth obstacles, develop strategic
+              plans, and implement solutions that drive sustainable results.
             </p>
             <div className="service-features">
               <ul className="benefits-list">
                 <li>
-                  <strong>Business Strategy Development</strong> - Comprehensive
-                  strategic planning and roadmap creation
+                  <strong>Growth Strategy Development</strong> - Creation of clear,
+                  actionable plans to achieve revenue targets
                 </li>
                 <li>
-                  <strong>Market Analysis & Positioning</strong> - Deep dive into
-                  market opportunities and competitive positioning
+                  <strong>Organizational Design</strong> - Structuring teams and roles
+                  for optimal performance
                 </li>
                 <li>
-                  <strong>Organizational Design</strong> - Structure optimization
-                  to support growth objectives
+                  <strong>Market Expansion</strong> - Identification and evaluation
+                  of new market opportunities
                 </li>
                 <li>
-                  <strong>Change Management</strong> - Guidance through major
-                  organizational transitions
+                  <strong>Merger & Acquisition Support</strong> - Due diligence and
+                  integration planning
                 </li>
                 <li>
-                  <strong>Performance Optimization</strong> - Identification and
-                  elimination of operational inefficiencies
+                  <strong>Executive Coaching</strong> - One-on-one support for leaders
+                  driving transformation
                 </li>
               </ul>
             </div>
           </div>
           <div className="service-image">
             <img
-              src="/images/Team.png"
-              alt="strategic consulting"
+              src="/images/services-strategic-consulting-transforming-breakthrough.png"
+              alt="Strategic consulting services for business transformation and growth strategy development"
               loading="lazy"
               width="600"
               height="400"
@@ -241,43 +288,49 @@ export default function ServicesPage() {
       <section className="service-detail" id="training">
         <div className="container service-container">
           <div className="service-content">
-            <span className="service-label">Team Development & Training</span>
+            <span className="service-label">Skills Development & Training</span>
             <h2 className="service-title">Team Training</h2>
             <p className="service-description">
-              Our team training programs are designed to elevate the performance
-              of your entire organization. We provide comprehensive training
-              solutions that build skills, improve collaboration, and drive
-              measurable results.
+              Our training programs equip your teams with the skills, knowledge,
+              and mindset needed to excel in their roles. From sales professionals
+              to customer service representatives, we provide custom training
+              solutions designed to drive immediate performance improvements.
             </p>
             <div className="service-features">
               <ul className="benefits-list">
                 <li>
-                  <strong>Sales Training Programs</strong> - Comprehensive sales
-                  skill development and methodology training
+                  <strong>Sales Training</strong> - Comprehensive programs to develop
+                  consultative selling skills
                 </li>
                 <li>
-                  <strong>Leadership Development</strong> - Programs to build
-                  effective leaders at all levels
+                  <strong>Leadership Development</strong> - Practical workshops for
+                  new and experienced leaders
                 </li>
                 <li>
-                  <strong>Team Building Workshops</strong> - Interactive sessions
-                  to improve collaboration and communication
+                  <strong>Customer Service Excellence</strong> - Training focused on
+                  creating exceptional experiences
                 </li>
                 <li>
-                  <strong>Process Training</strong> - Implementation and adoption
-                  of new processes and systems
+                  <strong>Process Adoption</strong> - Sessions designed to drive compliance
+                  with new systems and processes
                 </li>
                 <li>
-                  <strong>Ongoing Support</strong> - Continuous coaching and
-                  reinforcement to ensure lasting change
+                  <strong>Role-Based Certifications</strong> - Structured programs
+                  to validate skills and knowledge
                 </li>
               </ul>
+            </div>
+            <div className="service-testimonial">
+              <p className="service-testimonial-content">
+                "Shayne guided me to find purpose and direction in my life. He's incredibly passionate about building people and making a difference. He always takes time to make sure you're doing well."
+              </p>
+              <p className="service-testimonial-author">— Andrew B., DevPipeline</p>
             </div>
           </div>
           <div className="service-image">
             <img
-              src="/images/teamwork.jpg"
-              alt="team training"
+              src="/images/services-team-collaboration.jpg"
+              alt="Team training and collaboration services for sales teams and leadership development"
               loading="lazy"
               width="600"
               height="400"
@@ -286,19 +339,74 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Strategic Partnerships */}
+      <section className="partnerships" id="partnerships">
+        <div className="container">
+          <div className="section-title">
+            <h2>Our Strategic Partnerships</h2>
+            <p>
+              Zero Barriers collaborates with industry leaders to deliver
+              comprehensive solutions
+            </p>
+          </div>
+          <div className="partnerships-grid">
+            <div className="partner-card">
+              <div className="partner-logo">
+                <i className="fas fa-code"></i>
+              </div>
+              <h3 className="partner-name">Zero Barriers Custom Development</h3>
+              <p className="partner-description">
+                Our technology division delivering custom software development, integration, automation, and workflow management solutions that eliminate technical barriers and accelerate revenue growth. 30+ years of experience building scalable systems for sustainable business growth.
+              </p>
+              <div className="partner-highlights">
+                <span className="highlight">Custom CRM Development</span>
+                <span className="highlight">Workflow Management</span>
+                <span className="highlight">E-Commerce Solutions</span>
+              </div>
+            </div>
+            <div className="partner-card">
+              <div className="partner-logo">
+                <i className="fas fa-cloud"></i>
+              </div>
+              <h3 className="partner-name">Zero Barriers CRM Solutions</h3>
+              <p className="partner-description">
+                Our technology division delivering 40% average ROI improvement through expert Salesforce implementation, customization, and optimization services. 15+ certifications and 100+ successful implementations for rapid revenue growth.
+              </p>
+              <div className="partner-highlights">
+                <span className="highlight">40% ROI Improvement</span>
+                <span className="highlight">15+ Certifications</span>
+                <span className="highlight">100+ Implementations</span>
+              </div>
+            </div>
+            <div className="partner-card">
+              <div className="partner-logo">
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <h3 className="partner-name">Growth Accelerators</h3>
+              <p className="partner-description">
+                Specialized revenue acceleration tools and methodologies to drive predictable, sustainable growth through proven frameworks and systematic approaches.
+              </p>
+              <div className="partner-highlights">
+                <span className="highlight">Revenue Acceleration</span>
+                <span className="highlight">Growth Frameworks</span>
+                <span className="highlight">Systematic Results</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Transform Your Business?</h2>
+            <h2>Ready to Eliminate Your Growth Barriers?</h2>
             <p>
-              Let's discuss how our services can help you achieve rapid, substantial,
-              and sustainable growth. Schedule a consultation to explore the best
-              approach for your organization.
+              Schedule a no-obligation transformation assessment with our team to identify your barriers to growth and explore how our integrated approach can help you achieve rapid, substantial, and sustainable results.
             </p>
-            <Link href="/contact" className="white-cta">Schedule Your Consultation</Link>
+            <Link href="/contact" className="white-cta">Schedule Your Assessment</Link>
             <div>
-              <Link href="/case-studies" className="secondary-white-cta">View Our Case Studies <i className="fas fa-arrow-right"></i></Link>
+              <Link href="/case-studies" className="secondary-white-cta">Explore Our Case Studies <i className="fas fa-arrow-right"></i></Link>
             </div>
           </div>
         </div>

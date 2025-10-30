@@ -1,5 +1,23 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import StoryCard from '../components/StoryCard'
+
+export const metadata: Metadata = {
+  title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
+  description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
+  alternates: { canonical: 'https://zerobarriers.io' },
+  openGraph: {
+    title: 'Zero Barriers – Revenue Growth Transformation',
+    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
+    url: 'https://zerobarriers.io',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zero Barriers – Revenue Growth Transformation',
+    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
+  },
+}
 
 export default function HomePage() {
   return (
@@ -13,7 +31,7 @@ export default function HomePage() {
               <h1 className="hero-title">Transform Your Revenue Growth</h1>
               <p className="hero-subtitle">Rapid, Substantial, Sustainable Growth</p>
               <div className="hero-image-mobile">
-                <img src="/images/Human_Transformation.png" alt="Human transformation and growth visualization" width="600" height="400" loading="lazy" />
+                <img src="/images/hero-human-transformation.png" alt="Human transformation visual illustrating revenue growth through purpose-driven methodologies" width="600" height="400" loading="lazy" />
               </div>
               <p className="hero-description">
                 We specialize in rapid revenue transformation through proven methodologies that deliver measurable results. Our expert team unlocks your business potential with data-driven strategies and systematic implementation.
@@ -24,7 +42,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="hero-image-desktop">
-              <img src="/images/Human_Transformation.png" alt="Human transformation and growth visualization" width="800" height="600" loading="lazy" />
+              <img src="/images/hero-human-transformation.png" alt="Human transformation visual illustrating revenue growth through purpose-driven methodologies" width="800" height="600" loading="lazy" />
             </div>
           </div>
           <div className="hero-metrics">
@@ -155,8 +173,8 @@ export default function HomePage() {
             <div className="division-content">
               <div className="division-description">
                 <div className="division-logos">
-                  <img src="/images/Salesforce_Consulting_Logo.svg" alt="Salesforce Consulting Logo" className="division-logo" />
-                  <img src="/images/caselle-updated-logo.png" alt="Caselle Logo" className="division-logo" />
+                  <img src="/images/salesforce-consulting-logo.svg" alt="Salesforce Consulting logo" className="division-logo" />
+                  <img src="/images/caselle-logo.png" alt="Caselle logo" className="division-logo" />
                 </div>
                 <p>Our <strong>Zero Barriers CRM Solutions division</strong> delivers revenue growth through world-class CRM implementation and optimization. With 15+ Salesforce certifications and 100+ successful implementations, we provide the technology foundation for rapid, substantial, sustainable revenue growth.</p>
                 
@@ -176,9 +194,9 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="division-cta">
-                <a href="https://salesforceconsultants.io/" target="_blank" rel="noopener" className="division-button">
+                <Link href="https://salesforceconsultants.io/" target="_blank" rel="noopener" className="division-button">
                   Explore CRM Solutions <i className="fas fa-external-link-alt"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -192,9 +210,9 @@ export default function HomePage() {
             <div className="division-content">
               <div className="division-description">
                 <div className="division-logos">
-                  <img src="/images/devpipeline-black-logo.png" alt="DevPipeline Logo" className="division-logo" />
-                  <img src="/images/Q90-LOGO.svg" alt="Q90 Logo" className="division-logo" />
-                  <img src="/images/Sebo Logosvg.svg" alt="Sebo Logo" className="division-logo" />
+                  <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="division-logo" />
+                  <img src="/images/q90-logo.svg" alt="Q90 logo" className="division-logo" />
+                  <img src="/images/sebo-logo.svg" alt="Sebo logo" className="division-logo" />
                 </div>
                 <p>Our <strong>Zero Barriers Custom Development division</strong> delivers revenue growth through custom software solutions that eliminate technical barriers. With 30+ years of software development experience and a proven track record of building scalable systems, we create the technology infrastructure for sustainable revenue growth.</p>
                 
@@ -216,9 +234,9 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="division-cta">
-                <a href="https://www.devpipeline.com/software-solutions" target="_blank" rel="noopener" className="division-button">
+                <Link href="https://www.devpipeline.com/software-solutions" target="_blank" rel="noopener" className="division-button">
                   Explore Custom Development <i className="fas fa-external-link-alt"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

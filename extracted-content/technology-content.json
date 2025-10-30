@@ -1,0 +1,770 @@
+{
+  "url": "https://zerobarriers.io/technology/",
+  "title": "Technology Enablement | Zero Barriers - Custom Software, Salesforce & Integration Solutions",
+  "sections": [
+    {
+      "className": "technology-hero",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"section-title\" data-astro-cid-zpgh5vpc=\"\"> <h1 data-astro-cid-zpgh5vpc=\"\">Technology Enablement</h1> <p data-astro-cid-zpgh5vpc=\"\">Strategic technology solutions to streamline operations and enhance customer experiences</p> </div> </div> ",
+      "outerHTML": "<section class=\"technology-hero\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"section-title\" data-astro-cid-zpgh5vpc=\"\"> <h1 data-astro-cid-zpgh5vpc=\"\">Technology Enablement</h1> <p data-astro-cid-zpgh5vpc=\"\">Strategic technology solutions to streamline operations and enhance customer experiences</p> </div> </div> </section>"
+    },
+    {
+      "className": "technology-overview",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"overview-container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"overview-content\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Unified Technology Solutions for Revenue Growth</h2> <p data-astro-cid-zpgh5vpc=\"\">Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation.</p> <div class=\"technology-stats\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">40%</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Average ROI Improvement</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">100+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Successful Implementations</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">15+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Salesforce Certifications</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">30+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Years Development Experience</span> </div> </div> </div> <div class=\"overview-image\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/side-profile-tech.png\" alt=\"technology enablement\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-zpgh5vpc=\"\" style=\"opacity: 1;\"> </div> </div> </div> ",
+      "outerHTML": "<section class=\"technology-overview\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"overview-container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"overview-content\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Unified Technology Solutions for Revenue Growth</h2> <p data-astro-cid-zpgh5vpc=\"\">Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation.</p> <div class=\"technology-stats\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">40%</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Average ROI Improvement</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">100+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Successful Implementations</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">15+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Salesforce Certifications</span> </div> <div class=\"stat\" data-astro-cid-zpgh5vpc=\"\"> <span class=\"stat-number\" data-astro-cid-zpgh5vpc=\"\">30+</span> <span class=\"stat-label\" data-astro-cid-zpgh5vpc=\"\">Years Development Experience</span> </div> </div> </div> <div class=\"overview-image\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/side-profile-tech.png\" alt=\"technology enablement\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-zpgh5vpc=\"\" style=\"opacity: 1;\"> </div> </div> </div> </section>"
+    },
+    {
+      "className": "crm-solutions",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-header\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Zero Barriers CRM Solutions</h2> <p class=\"division-subtitle\" data-astro-cid-zpgh5vpc=\"\">Powered by SalesforceConsultants.io | A Zero Barriers Technology Division</p> </div> <div class=\"division-content\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-logos\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Salesforce_Consulting_Logo.svg\" alt=\"Salesforce Consulting Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/caselle-updated-logo.png\" alt=\"Caselle Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\" style=\"opacity: 1;\"> </div> <div class=\"division-description\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">Our CRM Solutions division delivers world-class Salesforce implementation and optimization services that provide the technology backbone for revenue growth. With 15+ Salesforce certifications and 100+ successful implementations, we ensure your CRM becomes a powerful engine for sustainable growth.</p> </div> <div class=\"services-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Custom Salesforce Development</h3> <p data-astro-cid-zpgh5vpc=\"\">Tailored CRM solutions that streamline your revenue workflows and eliminate bottlenecks in your sales process.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Implementation</h3> <p data-astro-cid-zpgh5vpc=\"\">Seamless setup with proven adoption strategies designed specifically for revenue teams and growth objectives.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Training</h3> <p data-astro-cid-zpgh5vpc=\"\">Expert-led training that empowers your revenue teams to maximize CRM utilization and drive results.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Integrations</h3> <p data-astro-cid-zpgh5vpc=\"\">Connect with QuickBooks, Mailchimp, and other essential revenue tools for unified data and workflows.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Automation</h3> <p data-astro-cid-zpgh5vpc=\"\">Eliminate repetitive tasks and boost revenue productivity through intelligent automation workflows.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Migrations</h3> <p data-astro-cid-zpgh5vpc=\"\">Transition from legacy systems with zero data loss and minimal disruption to your revenue operations.</p> </div> </div> <div class=\"division-testimonial\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">\"Our partnership with SalesforceConsultants.io has been instrumental in delivering world-class CRM solutions to our clients, with proven results of 40% ROI improvement and 100+ successful implementations.\"</p> <span class=\"testimonial-source\" data-astro-cid-zpgh5vpc=\"\">— Zero Barriers Technology Division</span> </div> </div> </div> ",
+      "outerHTML": "<section class=\"crm-solutions\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-header\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Zero Barriers CRM Solutions</h2> <p class=\"division-subtitle\" data-astro-cid-zpgh5vpc=\"\">Powered by SalesforceConsultants.io | A Zero Barriers Technology Division</p> </div> <div class=\"division-content\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-logos\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Salesforce_Consulting_Logo.svg\" alt=\"Salesforce Consulting Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/caselle-updated-logo.png\" alt=\"Caselle Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\" style=\"opacity: 1;\"> </div> <div class=\"division-description\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">Our CRM Solutions division delivers world-class Salesforce implementation and optimization services that provide the technology backbone for revenue growth. With 15+ Salesforce certifications and 100+ successful implementations, we ensure your CRM becomes a powerful engine for sustainable growth.</p> </div> <div class=\"services-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Custom Salesforce Development</h3> <p data-astro-cid-zpgh5vpc=\"\">Tailored CRM solutions that streamline your revenue workflows and eliminate bottlenecks in your sales process.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Implementation</h3> <p data-astro-cid-zpgh5vpc=\"\">Seamless setup with proven adoption strategies designed specifically for revenue teams and growth objectives.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Training</h3> <p data-astro-cid-zpgh5vpc=\"\">Expert-led training that empowers your revenue teams to maximize CRM utilization and drive results.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Integrations</h3> <p data-astro-cid-zpgh5vpc=\"\">Connect with QuickBooks, Mailchimp, and other essential revenue tools for unified data and workflows.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Automation</h3> <p data-astro-cid-zpgh5vpc=\"\">Eliminate repetitive tasks and boost revenue productivity through intelligent automation workflows.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Salesforce Migrations</h3> <p data-astro-cid-zpgh5vpc=\"\">Transition from legacy systems with zero data loss and minimal disruption to your revenue operations.</p> </div> </div> <div class=\"division-testimonial\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">\"Our partnership with SalesforceConsultants.io has been instrumental in delivering world-class CRM solutions to our clients, with proven results of 40% ROI improvement and 100+ successful implementations.\"</p> <span class=\"testimonial-source\" data-astro-cid-zpgh5vpc=\"\">— Zero Barriers Technology Division</span> </div> </div> </div> </section>"
+    },
+    {
+      "className": "custom-development",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-header\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Zero Barriers Custom Development</h2> <p class=\"division-subtitle\" data-astro-cid-zpgh5vpc=\"\">Powered by DevPipeline | A Zero Barriers Technology Division</p> </div> <div class=\"division-content\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-logos\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/devpipeline-black-logo.png\" alt=\"DevPipeline Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Q90-LOGO.svg\" alt=\"Q90 Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Sebo Logosvg.svg\" alt=\"Sebo Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> </div> <div class=\"division-description\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">Our Custom Development division delivers comprehensive software solutions that eliminate technical barriers and create the infrastructure for sustainable revenue growth. With 30+ years of software development experience, we build scalable systems that support your business transformation.</p> </div> <div class=\"services-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Custom CRM Development</h3> <p data-astro-cid-zpgh5vpc=\"\">Tailored systems that fit your unique revenue processes and eliminate technical barriers to growth.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Workflow Management</h3> <p data-astro-cid-zpgh5vpc=\"\">Streamlined processes that accelerate revenue generation and eliminate operational bottlenecks.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Data Management &amp; Reporting</h3> <p data-astro-cid-zpgh5vpc=\"\">Real-time insights for revenue optimization and data-driven decision making.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Integrations &amp; Feature Enhancements</h3> <p data-astro-cid-zpgh5vpc=\"\">Seamless connections between revenue systems for unified data and improved efficiency.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Cross-Platform Customer-Facing Apps</h3> <p data-astro-cid-zpgh5vpc=\"\">Enhanced customer experiences that drive revenue through improved engagement and satisfaction.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">E-Commerce Solutions</h3> <p data-astro-cid-zpgh5vpc=\"\">Direct revenue generation through optimized online platforms and digital commerce systems.</p> </div> </div> <div class=\"division-testimonial\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">\"Our partnership with DevPipeline enables us to deliver exceptional custom development solutions, with 30+ years of experience building scalable systems that eliminate technical barriers for our clients.\"</p> <span class=\"testimonial-source\" data-astro-cid-zpgh5vpc=\"\">— Zero Barriers Technology Division</span> </div> </div> </div> ",
+      "outerHTML": "<section class=\"custom-development\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-header\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Zero Barriers Custom Development</h2> <p class=\"division-subtitle\" data-astro-cid-zpgh5vpc=\"\">Powered by DevPipeline | A Zero Barriers Technology Division</p> </div> <div class=\"division-content\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"division-logos\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/devpipeline-black-logo.png\" alt=\"DevPipeline Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Q90-LOGO.svg\" alt=\"Q90 Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> <img src=\"/images/Sebo Logosvg.svg\" alt=\"Sebo Logo\" class=\"division-logo\" data-astro-cid-zpgh5vpc=\"\"> </div> <div class=\"division-description\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">Our Custom Development division delivers comprehensive software solutions that eliminate technical barriers and create the infrastructure for sustainable revenue growth. With 30+ years of software development experience, we build scalable systems that support your business transformation.</p> </div> <div class=\"services-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Custom CRM Development</h3> <p data-astro-cid-zpgh5vpc=\"\">Tailored systems that fit your unique revenue processes and eliminate technical barriers to growth.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Workflow Management</h3> <p data-astro-cid-zpgh5vpc=\"\">Streamlined processes that accelerate revenue generation and eliminate operational bottlenecks.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Data Management &amp; Reporting</h3> <p data-astro-cid-zpgh5vpc=\"\">Real-time insights for revenue optimization and data-driven decision making.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Integrations &amp; Feature Enhancements</h3> <p data-astro-cid-zpgh5vpc=\"\">Seamless connections between revenue systems for unified data and improved efficiency.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Cross-Platform Customer-Facing Apps</h3> <p data-astro-cid-zpgh5vpc=\"\">Enhanced customer experiences that drive revenue through improved engagement and satisfaction.</p> </div> <div class=\"service-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">E-Commerce Solutions</h3> <p data-astro-cid-zpgh5vpc=\"\">Direct revenue generation through optimized online platforms and digital commerce systems.</p> </div> </div> <div class=\"division-testimonial\" data-astro-cid-zpgh5vpc=\"\"> <p data-astro-cid-zpgh5vpc=\"\">\"Our partnership with DevPipeline enables us to deliver exceptional custom development solutions, with 30+ years of experience building scalable systems that eliminate technical barriers for our clients.\"</p> <span class=\"testimonial-source\" data-astro-cid-zpgh5vpc=\"\">— Zero Barriers Technology Division</span> </div> </div> </div> </section>"
+    },
+    {
+      "className": "integrated-approach",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"section-title\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Our Integrated Technology Approach</h2> <p data-astro-cid-zpgh5vpc=\"\">How our unified technology division delivers comprehensive revenue growth solutions</p> </div> <div class=\"approach-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Unified Strategy</h3> <p data-astro-cid-zpgh5vpc=\"\">Both divisions work together under the Zero Barriers brand to deliver cohesive technology solutions that eliminate barriers and accelerate revenue growth.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Proven Results</h3> <p data-astro-cid-zpgh5vpc=\"\">Combined track record of 40% ROI improvement, 100+ successful implementations, and 15+ years of technology expertise across both divisions.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Comprehensive Coverage</h3> <p data-astro-cid-zpgh5vpc=\"\">From CRM optimization to custom development, our technology divisions cover every aspect of technology-enabled revenue growth.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Local Expertise</h3> <p data-astro-cid-zpgh5vpc=\"\">Serving Utah, California, and surrounding areas with personalized support and deep understanding of local business needs.</p> </div> </div> </div> ",
+      "outerHTML": "<section class=\"integrated-approach\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"section-title\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Our Integrated Technology Approach</h2> <p data-astro-cid-zpgh5vpc=\"\">How our unified technology division delivers comprehensive revenue growth solutions</p> </div> <div class=\"approach-grid\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Unified Strategy</h3> <p data-astro-cid-zpgh5vpc=\"\">Both divisions work together under the Zero Barriers brand to deliver cohesive technology solutions that eliminate barriers and accelerate revenue growth.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Proven Results</h3> <p data-astro-cid-zpgh5vpc=\"\">Combined track record of 40% ROI improvement, 100+ successful implementations, and 15+ years of technology expertise across both divisions.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Comprehensive Coverage</h3> <p data-astro-cid-zpgh5vpc=\"\">From CRM optimization to custom development, our technology divisions cover every aspect of technology-enabled revenue growth.</p> </div> <div class=\"approach-item\" data-astro-cid-zpgh5vpc=\"\"> <h3 data-astro-cid-zpgh5vpc=\"\">Local Expertise</h3> <p data-astro-cid-zpgh5vpc=\"\">Serving Utah, California, and surrounding areas with personalized support and deep understanding of local business needs.</p> </div> </div> </div> </section>"
+    },
+    {
+      "className": "cta-section",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Ready to Transform Your Technology Infrastructure?</h2> <p data-astro-cid-zpgh5vpc=\"\">Discover how our integrated technology division can eliminate barriers and accelerate your revenue growth</p> <a href=\"/contact\" class=\"white-cta\" data-astro-cid-zpgh5vpc=\"\">Schedule Your Technology Assessment</a> <div data-astro-cid-zpgh5vpc=\"\"> <a href=\"/testimonials\" class=\"secondary-white-cta\" data-astro-cid-zpgh5vpc=\"\">See Technology Success Stories <i class=\"fas fa-arrow-right\" data-astro-cid-zpgh5vpc=\"\"></i></a> </div> </div> ",
+      "outerHTML": "<section class=\"cta-section\" data-astro-cid-zpgh5vpc=\"\"> <div class=\"container\" data-astro-cid-zpgh5vpc=\"\"> <h2 data-astro-cid-zpgh5vpc=\"\">Ready to Transform Your Technology Infrastructure?</h2> <p data-astro-cid-zpgh5vpc=\"\">Discover how our integrated technology division can eliminate barriers and accelerate your revenue growth</p> <a href=\"/contact\" class=\"white-cta\" data-astro-cid-zpgh5vpc=\"\">Schedule Your Technology Assessment</a> <div data-astro-cid-zpgh5vpc=\"\"> <a href=\"/testimonials\" class=\"secondary-white-cta\" data-astro-cid-zpgh5vpc=\"\">See Technology Success Stories <i class=\"fas fa-arrow-right\" data-astro-cid-zpgh5vpc=\"\"></i></a> </div> </div> </section>"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero berriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/side-profile-tech.png",
+      "srcset": "",
+      "alt": "technology enablement",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "lazy",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Salesforce_Consulting_Logo.svg",
+      "srcset": "",
+      "alt": "Salesforce Consulting Logo",
+      "title": "",
+      "width": 237,
+      "height": 60,
+      "className": "division-logo",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/caselle-updated-logo.png",
+      "srcset": "",
+      "alt": "Caselle Logo",
+      "title": "",
+      "width": 5082,
+      "height": 1057,
+      "className": "division-logo",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/devpipeline-black-logo.png",
+      "srcset": "",
+      "alt": "DevPipeline Logo",
+      "title": "",
+      "width": 722,
+      "height": 100,
+      "className": "division-logo",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Q90-LOGO.svg",
+      "srcset": "",
+      "alt": "Q90 Logo",
+      "title": "",
+      "width": 202,
+      "height": 150,
+      "className": "division-logo",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Sebo%20Logosvg.svg",
+      "srcset": "",
+      "alt": "Sebo Logo",
+      "title": "",
+      "width": 300,
+      "height": 93,
+      "className": "division-logo",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero barriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    }
+  ],
+  "content": {
+    "headings": {
+      "h1": [
+        {
+          "text": "Technology Enablement",
+          "className": "",
+          "id": "",
+          "innerHTML": "Technology Enablement"
+        }
+      ],
+      "h2": [
+        {
+          "text": "Unified Technology Solutions for Revenue Growth",
+          "className": "",
+          "id": "",
+          "innerHTML": "Unified Technology Solutions for Revenue Growth"
+        },
+        {
+          "text": "Zero Barriers CRM Solutions",
+          "className": "",
+          "id": "",
+          "innerHTML": "Zero Barriers CRM Solutions"
+        },
+        {
+          "text": "Zero Barriers Custom Development",
+          "className": "",
+          "id": "",
+          "innerHTML": "Zero Barriers Custom Development"
+        },
+        {
+          "text": "Our Integrated Technology Approach",
+          "className": "",
+          "id": "",
+          "innerHTML": "Our Integrated Technology Approach"
+        },
+        {
+          "text": "Ready to Transform Your Technology Infrastructure?",
+          "className": "",
+          "id": "",
+          "innerHTML": "Ready to Transform Your Technology Infrastructure?"
+        }
+      ],
+      "h3": [
+        {
+          "text": "Custom Salesforce Development",
+          "className": "",
+          "id": "",
+          "innerHTML": "Custom Salesforce Development"
+        },
+        {
+          "text": "Salesforce Implementation",
+          "className": "",
+          "id": "",
+          "innerHTML": "Salesforce Implementation"
+        },
+        {
+          "text": "Salesforce Training",
+          "className": "",
+          "id": "",
+          "innerHTML": "Salesforce Training"
+        },
+        {
+          "text": "Salesforce Integrations",
+          "className": "",
+          "id": "",
+          "innerHTML": "Salesforce Integrations"
+        },
+        {
+          "text": "Salesforce Automation",
+          "className": "",
+          "id": "",
+          "innerHTML": "Salesforce Automation"
+        },
+        {
+          "text": "Salesforce Migrations",
+          "className": "",
+          "id": "",
+          "innerHTML": "Salesforce Migrations"
+        },
+        {
+          "text": "Custom CRM Development",
+          "className": "",
+          "id": "",
+          "innerHTML": "Custom CRM Development"
+        },
+        {
+          "text": "Workflow Management",
+          "className": "",
+          "id": "",
+          "innerHTML": "Workflow Management"
+        },
+        {
+          "text": "Data Management & Reporting",
+          "className": "",
+          "id": "",
+          "innerHTML": "Data Management &amp; Reporting"
+        },
+        {
+          "text": "Integrations & Feature Enhancements",
+          "className": "",
+          "id": "",
+          "innerHTML": "Integrations &amp; Feature Enhancements"
+        },
+        {
+          "text": "Cross-Platform Customer-Facing Apps",
+          "className": "",
+          "id": "",
+          "innerHTML": "Cross-Platform Customer-Facing Apps"
+        },
+        {
+          "text": "E-Commerce Solutions",
+          "className": "",
+          "id": "",
+          "innerHTML": "E-Commerce Solutions"
+        },
+        {
+          "text": "Unified Strategy",
+          "className": "",
+          "id": "",
+          "innerHTML": "Unified Strategy"
+        },
+        {
+          "text": "Proven Results",
+          "className": "",
+          "id": "",
+          "innerHTML": "Proven Results"
+        },
+        {
+          "text": "Comprehensive Coverage",
+          "className": "",
+          "id": "",
+          "innerHTML": "Comprehensive Coverage"
+        },
+        {
+          "text": "Local Expertise",
+          "className": "",
+          "id": "",
+          "innerHTML": "Local Expertise"
+        },
+        {
+          "text": "Services",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Services"
+        },
+        {
+          "text": "Company",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Company"
+        },
+        {
+          "text": "Contact Us",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Contact Us"
+        }
+      ]
+    },
+    "paragraphs": [
+      {
+        "text": "Strategic technology solutions to streamline operations and enhance customer experiences",
+        "className": "",
+        "innerHTML": "Strategic technology solutions to streamline operations and enhance customer experiences"
+      },
+      {
+        "text": "Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation.",
+        "className": "",
+        "innerHTML": "Our technology division combines the expertise of industry-leading specialists to deliver comprehensive solutions that eliminate technical barriers and accelerate revenue growth. Through our integrated approach, we provide the technology foundation for rapid, substantial, sustainable business transformation."
+      },
+      {
+        "text": "Powered by SalesforceConsultants.io | A Zero Barriers Technology Division",
+        "className": "division-subtitle",
+        "innerHTML": "Powered by SalesforceConsultants.io | A Zero Barriers Technology Division"
+      },
+      {
+        "text": "Our CRM Solutions division delivers world-class Salesforce implementation and optimization services that provide the technology backbone for revenue growth. With 15+ Salesforce certifications and 100+ successful implementations, we ensure your CRM becomes a powerful engine for sustainable growth.",
+        "className": "",
+        "innerHTML": "Our CRM Solutions division delivers world-class Salesforce implementation and optimization services that provide the technology backbone for revenue growth. With 15+ Salesforce certifications and 100+ successful implementations, we ensure your CRM becomes a powerful engine for sustainable growth."
+      },
+      {
+        "text": "Tailored CRM solutions that streamline your revenue workflows and eliminate bottlenecks in your sales process.",
+        "className": "",
+        "innerHTML": "Tailored CRM solutions that streamline your revenue workflows and eliminate bottlenecks in your sales process."
+      },
+      {
+        "text": "Seamless setup with proven adoption strategies designed specifically for revenue teams and growth objectives.",
+        "className": "",
+        "innerHTML": "Seamless setup with proven adoption strategies designed specifically for revenue teams and growth objectives."
+      },
+      {
+        "text": "Expert-led training that empowers your revenue teams to maximize CRM utilization and drive results.",
+        "className": "",
+        "innerHTML": "Expert-led training that empowers your revenue teams to maximize CRM utilization and drive results."
+      },
+      {
+        "text": "Connect with QuickBooks, Mailchimp, and other essential revenue tools for unified data and workflows.",
+        "className": "",
+        "innerHTML": "Connect with QuickBooks, Mailchimp, and other essential revenue tools for unified data and workflows."
+      },
+      {
+        "text": "Eliminate repetitive tasks and boost revenue productivity through intelligent automation workflows.",
+        "className": "",
+        "innerHTML": "Eliminate repetitive tasks and boost revenue productivity through intelligent automation workflows."
+      },
+      {
+        "text": "Transition from legacy systems with zero data loss and minimal disruption to your revenue operations.",
+        "className": "",
+        "innerHTML": "Transition from legacy systems with zero data loss and minimal disruption to your revenue operations."
+      },
+      {
+        "text": "\"Our partnership with SalesforceConsultants.io has been instrumental in delivering world-class CRM solutions to our clients, with proven results of 40% ROI improvement and 100+ successful implementations.\"",
+        "className": "",
+        "innerHTML": "\"Our partnership with SalesforceConsultants.io has been instrumental in delivering world-class CRM solutions to our clients, with proven results of 40% ROI improvement and 100+ successful implementations.\""
+      },
+      {
+        "text": "Powered by DevPipeline | A Zero Barriers Technology Division",
+        "className": "division-subtitle",
+        "innerHTML": "Powered by DevPipeline | A Zero Barriers Technology Division"
+      },
+      {
+        "text": "Our Custom Development division delivers comprehensive software solutions that eliminate technical barriers and create the infrastructure for sustainable revenue growth. With 30+ years of software development experience, we build scalable systems that support your business transformation.",
+        "className": "",
+        "innerHTML": "Our Custom Development division delivers comprehensive software solutions that eliminate technical barriers and create the infrastructure for sustainable revenue growth. With 30+ years of software development experience, we build scalable systems that support your business transformation."
+      },
+      {
+        "text": "Tailored systems that fit your unique revenue processes and eliminate technical barriers to growth.",
+        "className": "",
+        "innerHTML": "Tailored systems that fit your unique revenue processes and eliminate technical barriers to growth."
+      },
+      {
+        "text": "Streamlined processes that accelerate revenue generation and eliminate operational bottlenecks.",
+        "className": "",
+        "innerHTML": "Streamlined processes that accelerate revenue generation and eliminate operational bottlenecks."
+      },
+      {
+        "text": "Real-time insights for revenue optimization and data-driven decision making.",
+        "className": "",
+        "innerHTML": "Real-time insights for revenue optimization and data-driven decision making."
+      },
+      {
+        "text": "Seamless connections between revenue systems for unified data and improved efficiency.",
+        "className": "",
+        "innerHTML": "Seamless connections between revenue systems for unified data and improved efficiency."
+      },
+      {
+        "text": "Enhanced customer experiences that drive revenue through improved engagement and satisfaction.",
+        "className": "",
+        "innerHTML": "Enhanced customer experiences that drive revenue through improved engagement and satisfaction."
+      },
+      {
+        "text": "Direct revenue generation through optimized online platforms and digital commerce systems.",
+        "className": "",
+        "innerHTML": "Direct revenue generation through optimized online platforms and digital commerce systems."
+      },
+      {
+        "text": "\"Our partnership with DevPipeline enables us to deliver exceptional custom development solutions, with 30+ years of experience building scalable systems that eliminate technical barriers for our clients.\"",
+        "className": "",
+        "innerHTML": "\"Our partnership with DevPipeline enables us to deliver exceptional custom development solutions, with 30+ years of experience building scalable systems that eliminate technical barriers for our clients.\""
+      },
+      {
+        "text": "How our unified technology division delivers comprehensive revenue growth solutions",
+        "className": "",
+        "innerHTML": "How our unified technology division delivers comprehensive revenue growth solutions"
+      },
+      {
+        "text": "Both divisions work together under the Zero Barriers brand to deliver cohesive technology solutions that eliminate barriers and accelerate revenue growth.",
+        "className": "",
+        "innerHTML": "Both divisions work together under the Zero Barriers brand to deliver cohesive technology solutions that eliminate barriers and accelerate revenue growth."
+      },
+      {
+        "text": "Combined track record of 40% ROI improvement, 100+ successful implementations, and 15+ years of technology expertise across both divisions.",
+        "className": "",
+        "innerHTML": "Combined track record of 40% ROI improvement, 100+ successful implementations, and 15+ years of technology expertise across both divisions."
+      },
+      {
+        "text": "From CRM optimization to custom development, our technology divisions cover every aspect of technology-enabled revenue growth.",
+        "className": "",
+        "innerHTML": "From CRM optimization to custom development, our technology divisions cover every aspect of technology-enabled revenue growth."
+      },
+      {
+        "text": "Serving Utah, California, and surrounding areas with personalized support and deep understanding of local business needs.",
+        "className": "",
+        "innerHTML": "Serving Utah, California, and surrounding areas with personalized support and deep understanding of local business needs."
+      },
+      {
+        "text": "Discover how our integrated technology division can eliminate barriers and accelerate your revenue growth",
+        "className": "",
+        "innerHTML": "Discover how our integrated technology division can eliminate barriers and accelerate your revenue growth"
+      },
+      {
+        "text": "Potential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.",
+        "className": "footer-description",
+        "innerHTML": "\nPotential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.\n"
+      },
+      {
+        "text": "518 E 800 N, Suite AOrem, Utah 84097",
+        "className": "",
+        "innerHTML": "518 E 800 N, Suite A<br>Orem, Utah 84097"
+      },
+      {
+        "text": "+1 (801) 997-0457",
+        "className": "",
+        "innerHTML": "+1 (801) 997-0457"
+      },
+      {
+        "text": "sk@zerobarriers.io",
+        "className": "",
+        "innerHTML": "sk@zerobarriers.io"
+      },
+      {
+        "text": "© 2025 Zero Barriers. All rights reserved.",
+        "className": "",
+        "innerHTML": "© 2025 Zero Barriers. All rights reserved."
+      }
+    ],
+    "lists": [
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Human Transformation",
+            "innerHTML": " <a href=\"/services#human\">Human Transformation</a> "
+          },
+          {
+            "text": "Technology Enablement",
+            "innerHTML": " <a href=\"/services#technology\">Technology Enablement</a> "
+          },
+          {
+            "text": "Revenue Acceleration",
+            "innerHTML": " <a href=\"/services#revenue\">Revenue Acceleration</a> "
+          },
+          {
+            "text": "Strategic Consulting",
+            "innerHTML": " <a href=\"/services#consulting\">Strategic Consulting</a> "
+          },
+          {
+            "text": "Team Training",
+            "innerHTML": " <a href=\"/services#training\">Team Training</a> "
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Home",
+            "innerHTML": "<a href=\"/\">Home</a>"
+          },
+          {
+            "text": "Services",
+            "innerHTML": "<a href=\"/services\">Services</a>"
+          },
+          {
+            "text": "Case Studies",
+            "innerHTML": "<a href=\"/case-studies\">Case Studies</a>"
+          },
+          {
+            "text": "Technology",
+            "innerHTML": "<a href=\"/technology\">Technology</a>"
+          },
+          {
+            "text": "Testimonials",
+            "innerHTML": "<a href=\"/testimonials\">Testimonials</a>"
+          },
+          {
+            "text": "Contact",
+            "innerHTML": "<a href=\"/contact\">Contact</a>"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "text": "ZERO BARRIERS",
+        "href": "https://zerobarriers.io/",
+        "className": "logo",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Get Started",
+        "href": "https://zerobarriers.io/contact",
+        "className": "cta-button",
+        "target": ""
+      },
+      {
+        "text": "Schedule Your Technology Assessment",
+        "href": "https://zerobarriers.io/contact",
+        "className": "white-cta",
+        "target": ""
+      },
+      {
+        "text": "See Technology Success Stories",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "secondary-white-cta",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/zerobarriersinc",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Human Transformation",
+        "href": "https://zerobarriers.io/services#human",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology Enablement",
+        "href": "https://zerobarriers.io/services#technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Revenue Acceleration",
+        "href": "https://zerobarriers.io/services#revenue",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Strategic Consulting",
+        "href": "https://zerobarriers.io/services#consulting",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Team Training",
+        "href": "https://zerobarriers.io/services#training",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      }
+    ]
+  },
+  "elementsWithAnimations": [],
+  "allClassNames": [
+    "fonts-loaded",
+    "loaded",
+    "container",
+    "nav-container",
+    "logo",
+    "logo-image",
+    "nav-links",
+    "mobile-menu-toggle",
+    "fas",
+    "fa-bars",
+    "cta-button",
+    "technology-hero",
+    "section-title",
+    "technology-overview",
+    "overview-container",
+    "overview-content",
+    "technology-stats",
+    "stat",
+    "stat-number",
+    "stat-label",
+    "overview-image",
+    "crm-solutions",
+    "division-header",
+    "division-subtitle",
+    "division-content",
+    "division-logos",
+    "division-logo",
+    "division-description",
+    "services-grid",
+    "service-item",
+    "division-testimonial",
+    "testimonial-source",
+    "custom-development",
+    "integrated-approach",
+    "approach-grid",
+    "approach-item",
+    "cta-section",
+    "white-cta",
+    "secondary-white-cta",
+    "fa-arrow-right",
+    "footer-container",
+    "footer-logo",
+    "footer-description",
+    "social-links",
+    "fab",
+    "fa-linkedin-in",
+    "fa-facebook-f",
+    "fa-instagram",
+    "footer-title",
+    "footer-links",
+    "contact-info",
+    "contact-info-icon",
+    "fa-map-marker-alt",
+    "fa-phone-alt",
+    "fa-envelope",
+    "copyright"
+  ],
+  "animations": [
+    {
+      "name": "fa-beat",
+      "cssText": "@-webkit-keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-beat",
+      "cssText": "@keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@-webkit-keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@-webkit-keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@-webkit-keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@-webkit-keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@-webkit-keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    }
+  ]
+}

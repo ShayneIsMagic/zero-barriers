@@ -14,7 +14,7 @@ export default function Header() {
     <header className="header">
       <div className="container nav-container">
         <Link href="/" className="logo">
-          <img className="logo-image" src="/images/zblogo.png" alt="zero barriers logo" />
+          <img className="logo-image" src="/images/zero-barriers-logo.png" alt="Zero Barriers logo" />
           ZERO <span>BARRIERS</span>
         </Link>
         

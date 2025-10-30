@@ -16,7 +16,19 @@ export default function StoryCard({ title, quote, author }: StoryCardProps) {
   }
 
   return (
-    <div className={`story-card ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpanded}>
+    <div 
+      className={`story-card ${isExpanded ? 'expanded' : ''}`}
+      onClick={toggleExpanded}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          toggleExpanded()
+        }
+      }}
+      tabIndex={0}
+      role="button"
+      aria-expanded={isExpanded}
+    >
       <div className="story-header">
         <h3>{title}</h3>
         <div className="story-indicator">
@@ -30,4 +42,3 @@ export default function StoryCard({ title, quote, author }: StoryCardProps) {
     </div>
   )
 }
-

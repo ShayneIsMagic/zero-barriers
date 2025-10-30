@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-container">
           <div>
             <div className="footer-logo">
-              <img className="logo-image" src="/images/zblogo.png" alt="zero barriers logo" />
+              <img className="logo-image" src="/images/zero-barriers-logo.png" alt="Zero Barriers logo" />
               ZERO <span>BARRIERS</span>
             </div>
             <p className="footer-description">
