@@ -1,198 +1,142 @@
-# Zero Barriers Website
+# Zero Barriers – Next.js App (Clean-up Branch)
 
-A complete HTML/CSS/JS recreation of the Zero Barriers website (https://zerobarriers.io/) converted from the original Astro implementation.
+Production-grade rebuild of https://zerobarriers.io using Next.js App Router with a focus on SEO, structured data, responsive design, and portability. This branch consolidates the project into a modern framework and extracts assets/content from the live site for continuity.
+
+## Tech Stack
+
+- Next.js 14 (App Router) with TypeScript
+- React 18
+- CSS (single `globals.css` design system)
+- Google Fonts (`Poppins`) via `next/font`
+- Font Awesome via CDN
 
 ## Project Structure
 
 ```
 zero-barriers/
-├── README.md                # This file
-├── pages/                   # HTML pages
-│   ├── index.html           # Home page
-│   ├── services.html        # Services page
-│   ├── technology.html      # Technology page
-│   ├── testimonials.html    # Testimonials page
-│   ├── case-studies.html    # Case studies page
-│   └── contact.html         # Contact page
-├── public/                  # Static assets
-│   ├── images/             # Image assets
-│   │   └── optimized/      # Optimized images
-│   ├── icons/              # Icon files
+├── src/
+│   ├── app/                # App Router pages and route handlers
+│   │   ├── layout.tsx      # Global layout (Header, Footer, Analytics, GTM, schema)
+│   │   ├── page.tsx        # Home
+│   │   ├── services/page.tsx
+│   │   ├── technology/page.tsx
+│   │   ├── testimonials/page.tsx
+│   │   ├── case-studies/page.tsx
+│   │   ├── contact/
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── robots.ts       # Auto-generated robots.txt
+│   │   └── sitemap.ts      # Auto-generated sitemap.xml
+│   ├── components/         # Header, Footer, Analytics, GTM, StoryCard
+│   └── styles/globals.css  # Design tokens, all page styles, responsive breakpoints
+├── public/
+│   ├── images/             # Optimized image assets
+│   ├── icons/              # Icons
 │   ├── manifest.json       # PWA manifest
-│   ├── robots.txt          # SEO robots file
-│   ├── sitemap.xml         # XML sitemap
-│   ├── sw.js               # Service worker
-│   └── [other config files]
-├── assets/                  # Compiled assets
-│   ├── css/
-│   │   └── main.css        # Compiled CSS
-│   └── js/
-│       ├── main.js         # Main JavaScript
-│       └── contact.js     # Contact form JS
-├── src/                    # Source files for development
-│   ├── components/
-│   │   └── layout/
-│   └── styles/            # SCSS structure
-│       ├── abstracts/
-│       ├── base/
-│       ├── components/
-│       ├── layout/
-│       ├── media-queries/
-│       ├── pages/
-│       └── themes/
-└── docs/                   # Documentation
-    ├── README.md
-    ├── CODE_STRUCTURE.md
-    ├── deployment.md
-    └── DESIGN_REVAMP_PLAN.md
+│   ├── robots.txt          # Static fallback (generated at runtime too)
+│   ├── sitemap.xml         # Static fallback (generated at runtime too)
+│   └── sw.js               # Service worker
+├── html-pages-backup/      # Read-only HTML backups from the legacy site
+├── extracted-content/      # JSON/text extracted from the live site
+├── scripts/                # Extraction/backup utilities
+├── next.config.js
+├── package.json
+└── README.md               # This file (single source of docs)
 ```
 
-## Technologies
+## Routing Overview
 
-- **HTML5** - Structure
-- **CSS/SCSS** - Styling with CSS variables
-- **JavaScript** - Interactivity and animations
-- **Service Worker** - PWA functionality
+- `/` Home
+- `/services`
+- `/technology`
+- `/testimonials`
+- `/case-studies`
+- `/contact`
+- `/robots.txt` and `/sitemap.xml` are generated via `app/robots.ts` and `app/sitemap.ts`.
 
-## Features
+## Global Layout and SEO
 
-### Design Elements
-- **Modern, Professional Layout**: Green primary color (#7cc347)
-- **Fully Responsive**: Works on desktop, tablet, and mobile devices
-- **Hero Section**: Eye-catching hero with tagline, title, and CTAs
-- **Methodology Section**: 4-step process cards
-- **Solutions Section**: Solution cards in grid layout
-- **Case Studies**: Success stories with statistics and testimonials
-- **Purpose Section**: About the company with testimonials
-- **Contact Section**: Contact form with validation
-- **Footer**: Multi-column footer with links and social media
+- Centralized metadata in `src/app/layout.tsx` (title, description, keywords, canonical, icons).
+- Open Graph and Twitter cards configured globally.
+- Viewport and theme color set via exported `viewport`.
+- Structured data injected as JSON-LD in `layout.tsx`:
+  - `Organization`, `WebSite`, `Service` with `OfferCatalog`.
+- Google Analytics and Google Tag Manager supported via `NEXT_PUBLIC_GA_ID`, `Analytics` and `GTM` components.
 
-### Interactive Features
-- **Mobile Navigation**: Hamburger menu for mobile devices
-- **Smooth Scrolling**: Smooth scroll to sections when clicking navigation links
-- **Active Navigation**: Navigation links highlight based on current section
-- **Form Validation**: Contact form with required field validation
-- **Scroll Animations**: Elements fade in as you scroll
-- **Counter Animations**: Metrics animate when they come into view
-- **Hover Effects**: Interactive hover states on buttons and cards
+## Styling and Responsiveness
 
-### Performance Optimizations
-- **Lazy Loading**: Images load as they come into view
-- **Debounced Scroll**: Optimized scroll event handlers
-- **CSS Transitions**: Smooth animations with hardware acceleration
-- **Reduced Motion**: Respects user's motion preferences
-- **Service Worker**: PWA caching for offline support
+- All styles live in `src/styles/globals.css` with design tokens:
+  - Color system, spacing scale, container rules, button/image standards, grid gaps.
+- Responsive breakpoints: 1200px, 992px, 968px, 768px, 640px, and 480px.
+- Mobile improvements:
+  - 480px breakpoint added for very small devices.
+  - `background-attachment: fixed` disabled on mobile for performance.
+  - Mobile nav overlay with accessible toggle (ARIA attributes on button and nav).
 
-## How to Use
+## Images and Assets
 
-### Local Development
-1. Start a local HTTP server:
-   ```bash
-   python3 -m http.server 8000
-   ```
-2. Open http://localhost:8000/pages/ in your browser
+- Images consolidated under `public/images/` with descriptive filenames for SEO.
+- Many originals preserved under `public/images/extracted/**` for reference.
+- Consider migrating high-traffic images to `next/image` for built-in optimization.
 
-### Deploy Online
-You can deploy this website to:
-- **GitHub Pages**: Free hosting for static sites
-- **Cloudflare Pages**: For Cloudflare deployment
-- **Netlify**: Drag and drop deployment
-- **Vercel**: Fast deployment with CLI
-- **Any web hosting service**: Upload files via FTP
+## Content Backups and Scripts
 
-## Customization
+- `html-pages-backup/`: point-in-time HTML snapshots from the legacy site.
+- `extracted-content/`: structured content JSON extracted from live pages.
+- `scripts/`: repeatable extraction utilities and helpers.
 
-### Change Colors
-Edit the CSS variables in `assets/css/main.css`:
-```css
-:root {
-  --primary: #7cc347;        /* Main green color */
-  --primary-dark: #167a1f;   /* Darker green */
-  --secondary: #58595b;      /* Gray text */
-  --accent: #2c88d9;         /* Blue accent */
-}
+## Environment Variables
+
+Create `.env.local` with:
+
 ```
-
-### Update Content
-Edit the HTML files in `pages/`:
-- Change text in any section
-- Update testimonials
-- Modify case studies
-- Replace images with your own
-
-### Add/Remove Pages
-To add a new page:
-1. Create a new HTML file in `pages/`
-2. Copy the structure from an existing page
-3. Update content
-4. Add navigation link in header
-
-## Images
-
-Images are stored in `public/images/`. Replace these with your own optimized images.
-
-## Contact Form
-
-The contact form currently shows an alert message. To make it functional:
-
-1. **Use a Form Service**:
-   - Formspree: https://formspree.io
-   - Netlify Forms: Built into Netlify hosting
-   - EmailJS: https://www.emailjs.com
-
-2. **Backend API**:
-   - Connect to your own backend server
-   - Modify the form submission in `assets/js/contact.js`
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Dependencies
-
-The website uses:
-- **Google Fonts** (Poppins): Loaded from Google CDN
-- **Font Awesome 6.5.1**: Icons loaded from CDN
-
-No build tools or package managers required for basic HTML version!
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
 
 ## Development
 
-### Converted From Astro
-This project was converted from an Astro-based implementation to pure HTML/CSS/JS. The original structure preserved includes:
-- All content and design elements
-- Responsive breakpoints
-- Interactive features
-- SEO meta tags
-- PWA support
+```bash
+npm install
+npm run dev
+# open http://localhost:3000
+```
 
-### Branch Information
-- **Branch**: `skr/clean-up`
-- **Base**: Converted from Astro to HTML/CSS/JS
-- **Status**: Ready for deployment
+## Build and Export
+
+```bash
+npm run build
+npm run start    # production server
+```
+
+Static export artifacts (if generated) are under `out/` for hosting on static providers.
+
+## Deployment
+
+- Vercel (recommended) or Netlify. Ensure `NEXT_PUBLIC_GA_ID` is configured.
+- SEO files are generated at runtime; static fallbacks exist in `public/`.
+
+## Accessibility
+
+- Keyboard/touch-friendly mobile navigation.
+- `aria-expanded`, `aria-controls` wired on the menu toggle.
+- Color contrast and typographic scales tuned for readability.
+
+## Performance Notes
+
+- Lazy-loaded imagery, `content-visibility` hints, reduced motion support.
+- Fixed backgrounds disabled on mobile to improve paint performance.
+
+## Known Gaps / Next Steps
+
+- Add `Review` schema for testimonials/case studies.
+- Add `FAQPage` schema for the home FAQ section.
+- Optional: Upgrade `Organization` to `LocalBusiness` if doing local SEO.
+- Optional: Switch hero and heavy images to `next/image`.
+
+## Branch
+
+- Branch: `skr/clean-up` (refactors, asset extraction, SEO, responsive fixes)
 
 ## License
 
-Copyright © 2025 Zero Barriers. All rights reserved.
-
-## Support
-
-For questions or issues:
-- Check the browser console for JavaScript errors
-- Ensure all files are in the correct directories
-- Make sure you're viewing via HTTP (not file://)
-- Review deployment documentation in `docs/deployment.md`
-
-## Tips for Going Live
-
-1. **Optimize Images**: Compress images before deploying
-2. **Update Meta Tags**: Ensure SEO meta tags are current
-3. **Add Analytics**: Insert Google Analytics tracking
-4. **Test Forms**: Ensure contact form works before launch
-5. **Mobile Testing**: Test on real mobile devices
-6. **SSL Certificate**: Use HTTPS for production
-7. **Service Worker**: Verify caching works correctly
+Copyright © 2025 Zero Barriers.
