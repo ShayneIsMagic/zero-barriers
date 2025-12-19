@@ -14,9 +14,30 @@ export default function Footer() {
               Potential Unleashed: Transforming people and organizations through rapid, substantial, and sustainable growth.
             </p>
             <div className="social-links">
-              <a href="https://www.linkedin.com/company/zerobarriers"><i className="fab fa-linkedin-in" aria-label="LinkedIn"></i></a>
-              <a href="https://www.facebook.com/zerobarriers"><i className="fab fa-facebook-f" aria-label="Facebook"></i></a>
-              <a href="https://www.instagram.com/zerobarriersinc"><i className="fab fa-instagram" aria-label="Instagram"></i></a>
+              <a 
+                href="https://www.linkedin.com/company/zerobarriers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on LinkedIn"
+              >
+                <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a 
+                href="https://www.facebook.com/zerobarriers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on Facebook"
+              >
+                <i className="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a 
+                href="https://www.instagram.com/zerobarriersinc" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on Instagram"
+              >
+                <i className="fab fa-instagram" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
           <div>
