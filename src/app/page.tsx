@@ -2,8 +2,24 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import StoryCard from '../components/StoryCard'
 import StatsSection from '../components/StatsSection/StatsSection'
+import TrackedCTA from '../components/TrackedCTA'
 
 export const metadata: Metadata = {
+  title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
+  description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
+  alternates: { canonical: 'https://zerobarriers.io' },
+  openGraph: {
+    title: 'Zero Barriers – Revenue Growth Transformation',
+    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
+    url: 'https://zerobarriers.io',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zero Barriers – Revenue Growth Transformation',
+    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
+  },
+}
   title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
   description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
   alternates: { canonical: 'https://zerobarriers.io' },
@@ -38,8 +54,12 @@ export default function HomePage() {
                 We specialize in rapid revenue transformation through proven methodologies that deliver measurable results. Our expert team unlocks your business potential with data-driven strategies and systematic implementation.
               </p>
               <div className="hero-cta">
-                <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-                <Link href="/results" className="cta-button secondary">See Transformations</Link>
+                <TrackedCTA href="/contact" className="cta-button primary" location="hero">
+                  Begin Your Transformation
+                </TrackedCTA>
+                <TrackedCTA href="/results" className="cta-button secondary" location="hero">
+                  See Transformations
+                </TrackedCTA>
               </div>
             </div>
             <div className="hero-image-desktop">
@@ -303,8 +323,12 @@ export default function HomePage() {
               Schedule a no-obligation assessment to identify your revenue barriers and discover how our proven methodology can unleash your business potential. Every client is different—we tailor our approach to your unique context.
             </p>
             <div className="cta-actions">
-              <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-              <Link href="/results" className="cta-button secondary">Explore Results</Link>
+              <TrackedCTA href="/contact" className="cta-button primary" location="final_cta">
+                Begin Your Transformation
+              </TrackedCTA>
+              <TrackedCTA href="/results" className="cta-button secondary" location="final_cta">
+                Explore Results
+              </TrackedCTA>
             </div>
             <div className="cta-trust">
               <span>✓ No obligation</span>

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
+import TrackedCTA from '../../components/TrackedCTA'
   title: 'Tech Empowerment | Zero Barriers – CRM + Custom Development',
   description:
     'Zero Barriers technology division delivers Salesforce CRM solutions and custom development to eliminate technical barriers and accelerate revenue.',
@@ -42,8 +41,12 @@ export default function TechnologyPage() {
                 Our technology division activates systems that eliminate technical barriers and scale transformation results. With 30+ years of development experience and 100+ successful implementations, we provide the technology foundation for breakthrough growth.
               </p>
               <div className="hero-cta">
-                <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-                <Link href="/results" className="cta-button secondary">See Transformations</Link>
+                <TrackedCTA href="/contact" className="cta-button primary" location="technology_hero">
+                  Begin Your Transformation
+                </TrackedCTA>
+                <TrackedCTA href="/results" className="cta-button secondary" location="technology_hero">
+                  See Transformations
+                </TrackedCTA>
               </div>
             </div>
           </div>
@@ -222,9 +225,13 @@ export default function TechnologyPage() {
             <p>
               Discover how purpose-driven technology enablement can eliminate barriers and scale your transformation results
             </p>
-            <Link href="/contact" className="white-cta">Begin Your Transformation</Link>
+            <TrackedCTA href="/contact" className="white-cta" location="technology_final">
+              Begin Your Transformation
+            </TrackedCTA>
             <div>
-              <Link href="/results" className="secondary-white-cta">See Technology Transformations <i className="fas fa-arrow-right"></i></Link>
+              <TrackedCTA href="/results" className="secondary-white-cta" location="technology_final">
+                See Technology Transformations <i className="fas fa-arrow-right"></i>
+              </TrackedCTA>
             </div>
           </div>
         </div>

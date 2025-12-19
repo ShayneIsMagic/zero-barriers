@@ -5,6 +5,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './Header.module.css'
+import { trackNavigationClick, trackCTAClick } from '../../lib/analytics'
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -61,6 +62,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               className={styles.navLink}
+              onClick={() => trackNavigationClick(item.href, item.label)}
             >
               {item.label}
             </Link>
@@ -68,7 +70,11 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <Link href="/contact" className={styles.ctaButton}>
+        <Link 
+          href="/contact" 
+          className={styles.ctaButton}
+          onClick={() => trackCTAClick('Begin Transformation', '/contact', 'header')}
+        >
           Begin Transformation
         </Link>
 
@@ -127,7 +133,10 @@ function MobileMenu({ navItems, onClose }: {
             <Link 
               href={item.href}
               className={styles.mobileNavLink}
-              onClick={onClose}
+              onClick={() => {
+                trackNavigationClick(item.href, item.label)
+                onClose()
+              }}
             >
               {item.label}
             </Link>
@@ -141,7 +150,10 @@ function MobileMenu({ navItems, onClose }: {
           <Link 
             href="/contact"
             className={styles.mobileCtaButton}
-            onClick={onClose}
+            onClick={() => {
+              trackCTAClick('Begin Transformation', '/contact', 'mobile_menu')
+              onClose()
+            }}
           >
             Begin Transformation
           </Link>

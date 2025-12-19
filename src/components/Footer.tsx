@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { trackNavigationClick } from '../lib/analytics'
 
 export default function Footer() {
   return (
@@ -43,21 +44,21 @@ export default function Footer() {
           <div>
             <h3 className="footer-title">Services</h3>
             <ul className="footer-links">
-              <li><Link href="/services#human">Human Transformation</Link></li>
-              <li><Link href="/services#technology">Technology Enablement</Link></li>
-              <li><Link href="/services#revenue">Revenue Acceleration</Link></li>
-              <li><Link href="/services#consulting">Strategic Consulting</Link></li>
-              <li><Link href="/services#training">Team Training</Link></li>
+              <li><Link href="/services#human" onClick={() => trackNavigationClick('/services#human', 'Human Transformation')}>Human Transformation</Link></li>
+              <li><Link href="/services#technology" onClick={() => trackNavigationClick('/services#technology', 'Technology Enablement')}>Technology Enablement</Link></li>
+              <li><Link href="/services#revenue" onClick={() => trackNavigationClick('/services#revenue', 'Revenue Acceleration')}>Revenue Acceleration</Link></li>
+              <li><Link href="/services#consulting" onClick={() => trackNavigationClick('/services#consulting', 'Strategic Consulting')}>Strategic Consulting</Link></li>
+              <li><Link href="/services#training" onClick={() => trackNavigationClick('/services#training', 'Team Training')}>Team Training</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="footer-title">Company</h3>
             <ul className="footer-links">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/technology">Technology</Link></li>
-              <li><Link href="/results">Results</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/" onClick={() => trackNavigationClick('/', 'Home')}>Home</Link></li>
+              <li><Link href="/services" onClick={() => trackNavigationClick('/services', 'Services')}>Services</Link></li>
+              <li><Link href="/technology" onClick={() => trackNavigationClick('/technology', 'Technology')}>Technology</Link></li>
+              <li><Link href="/results" onClick={() => trackNavigationClick('/results', 'Results')}>Results</Link></li>
+              <li><Link href="/contact" onClick={() => trackNavigationClick('/contact', 'Contact')}>Contact</Link></li>
             </ul>
           </div>
           <div>

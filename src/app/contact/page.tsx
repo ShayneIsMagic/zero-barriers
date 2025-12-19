@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 import Link from 'next/link'
+import { trackFormSubmission } from '../../lib/analytics'
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -57,6 +58,8 @@ export default function ContactPage() {
       if (data.success) {
         setSubmitStatus('success')
         e.currentTarget.reset()
+        // Track successful form submission
+        trackFormSubmission('contact_form', true)
         // Set rate limit timestamp
         if (typeof window !== 'undefined') {
           localStorage.setItem('lastFormSubmission', Date.now().toString())
@@ -64,18 +67,22 @@ export default function ContactPage() {
       } else {
         console.error('Web3Forms API Error:', data)
         // Log the full error for debugging
-        if (data.message) {
-          console.error('Error message:', data.message)
-        }
+        const errorMessage = data.message || 'Unknown error'
+        console.error('Error message:', errorMessage)
         setSubmitStatus('error')
+        // Track form submission error
+        trackFormSubmission('contact_form', false, errorMessage)
       }
     } catch (error) {
       console.error('Form submission error:', error)
+      const errorMessage = error instanceof Error ? error.message : 'Network error'
       // Check if it's a network error
       if (error instanceof TypeError && error.message.includes('fetch')) {
         console.error('Network error - check your internet connection')
       }
       setSubmitStatus('error')
+      // Track form submission error
+      trackFormSubmission('contact_form', false, errorMessage)
     } finally {
       setIsSubmitting(false)
     }

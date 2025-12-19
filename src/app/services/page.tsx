@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import TrackedCTA from '../../components/TrackedCTA'
 
 // Structured Data for Services Page
 const servicesBreadcrumbSchema = {
@@ -65,8 +66,20 @@ export default function ServicesPage() {
                 Every client is different. We unleash potential through our proven three-pillar approach, delivering rapid, substantial, and sustainable transformation results across 15+ industries.
               </p>
               <div className="hero-cta">
-                <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-                <Link href="/results" className="cta-button secondary">See Transformations</Link>
+                <Link 
+                  href="/contact" 
+                  className="cta-button primary"
+                  onClick={() => trackCTAClick('Begin Your Transformation', '/contact', 'services_hero')}
+                >
+                  Begin Your Transformation
+                </Link>
+                <Link 
+                  href="/results" 
+                  className="cta-button secondary"
+                  onClick={() => trackCTAClick('See Transformations', '/results', 'services_hero')}
+                >
+                  See Transformations
+                </Link>
               </div>
             </div>
             <div className="hero-image-desktop">
@@ -302,9 +315,13 @@ export default function ServicesPage() {
             <p>
               Schedule a no-obligation assessment to discover how purpose-driven transformation, activated technology systems, and engineered revenue acceleration can align to unleash your breakthrough results.
             </p>
-            <Link href="/contact" className="white-cta">Begin Your Transformation</Link>
+            <TrackedCTA href="/contact" className="white-cta" location="services_final">
+              Begin Your Transformation
+            </TrackedCTA>
             <div>
-              <Link href="/results" className="secondary-white-cta">See Transformations <i className="fas fa-arrow-right"></i></Link>
+              <TrackedCTA href="/results" className="secondary-white-cta" location="services_final">
+                See Transformations <i className="fas fa-arrow-right"></i>
+              </TrackedCTA>
             </div>
           </div>
         </div>

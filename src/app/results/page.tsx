@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
+import TrackedCTA from '../../components/TrackedCTA'
   title: 'Results | Zero Barriers – Gap → Bridge → Results',
   description:
     'Real businesses. Real breakthroughs. Detailed case studies showcasing how purpose-driven transformation delivers rapid, substantial, and sustainable results.',
@@ -671,9 +670,13 @@ export default function TestimonialsPage() {
         <div className="container">
           <h2>Ready to Create Your Success Story?</h2>
           <p>Ready to transform your business or career with Zero Barriers?</p>
-          <Link href="/contact" className="white-cta">Schedule Your Transformation Assessment</Link>
+          <TrackedCTA href="/contact" className="white-cta" location="results_final">
+            Schedule Your Transformation Assessment
+          </TrackedCTA>
           <div>
-            <Link href="/services#methodology" className="secondary-white-cta">Explore Our Methodology <i className="fas fa-arrow-right"></i></Link>
+            <TrackedCTA href="/services#methodology" className="secondary-white-cta" location="results_final">
+              Explore Our Methodology <i className="fas fa-arrow-right"></i>
+            </TrackedCTA>
           </div>
         </div>
       </section>
