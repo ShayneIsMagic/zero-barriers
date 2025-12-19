@@ -7,7 +7,7 @@ export default function CaseStudiesRedirect() {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace('/testimonials')
+    router.replace('/results')
   }, [router])
 
   return (

@@ -39,7 +39,7 @@ export default function HomePage() {
               </p>
               <div className="hero-cta">
                 <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-                <Link href="/testimonials" className="cta-button secondary">See Transformations</Link>
+                <Link href="/results" className="cta-button secondary">See Transformations</Link>
               </div>
             </div>
             <div className="hero-image-desktop">
@@ -170,7 +170,7 @@ export default function HomePage() {
             />
           </div>
           <div className="testimonials-cta">
-            <Link href="/testimonials" className="testimonials-link">Explore All Success Stories <i className="fas fa-arrow-right"></i></Link>
+            <Link href="/results" className="testimonials-link">Explore All Success Stories <i className="fas fa-arrow-right"></i></Link>
           </div>
         </div>
       </section>
@@ -304,7 +304,7 @@ export default function HomePage() {
             </p>
             <div className="cta-actions">
               <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-              <Link href="/testimonials" className="cta-button secondary">Explore Results</Link>
+              <Link href="/results" className="cta-button secondary">Explore Results</Link>
             </div>
             <div className="cta-trust">
               <span>✓ No obligation</span>

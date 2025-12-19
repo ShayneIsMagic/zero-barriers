@@ -66,7 +66,7 @@ export default function ServicesPage() {
               </p>
               <div className="hero-cta">
                 <Link href="/contact" className="cta-button primary">Begin Your Transformation</Link>
-                <Link href="/testimonials" className="cta-button secondary">See Transformations</Link>
+                <Link href="/results" className="cta-button secondary">See Transformations</Link>
               </div>
             </div>
             <div className="hero-image-desktop">
@@ -304,7 +304,7 @@ export default function ServicesPage() {
             </p>
             <Link href="/contact" className="white-cta">Begin Your Transformation</Link>
             <div>
-              <Link href="/testimonials" className="secondary-white-cta">See Transformations <i className="fas fa-arrow-right"></i></Link>
+              <Link href="/results" className="secondary-white-cta">See Transformations <i className="fas fa-arrow-right"></i></Link>
             </div>
           </div>
         </div>
