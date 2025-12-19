@@ -11,7 +11,10 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node scripts/test-site.js",
+    "test:local": "TEST_URL=http://localhost:3000 node scripts/test-site.js",
+    "test:production": "TEST_URL=https://zerobarriers.io node scripts/test-site.js"
   },
   "dependencies": {
     "@types/node": "^24.9.2",
