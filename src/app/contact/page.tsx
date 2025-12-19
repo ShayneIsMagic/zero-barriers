@@ -24,21 +24,11 @@ export default function ContactPage() {
       }
     }
 
-    // Get your access key from https://web3forms.com and add it to .env.local as NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+    // Check for Web3Forms access key (fallback option)
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''
     
-    if (!accessKey) {
-      console.error('❌ Web3Forms access key is not configured!')
-      console.error('   Variable: NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY')
-      console.error('   Current value:', accessKey || '(empty/undefined)')
-      console.error('   This must be set in Cloudflare Pages Environment Variables and available at build time')
-      console.error('   For static exports, env vars must be embedded at build time')
-      setSubmitStatus('error')
-      setIsSubmitting(false)
-      return
-    }
-    
-    console.log('✅ Web3Forms access key found, length:', accessKey.length)
+    // Note: We'll try Cloudflare Pages Function first, which doesn't need build-time env vars
+    // Web3Forms key is only needed as fallback if Cloudflare Function isn't available
 
     const formData = new FormData(e.currentTarget)
     
@@ -49,46 +39,85 @@ export default function ContactPage() {
       setIsSubmitting(false)
       return
     }
-    formData.append('access_key', accessKey)
-    formData.append('subject', 'New Contact Form Submission from Zero Barriers')
-    formData.append('to', 'sk@zerobarriers.io')
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
+      // Try Cloudflare Pages Function first (more secure, env vars at runtime)
+      // Prepare form data as JSON for Cloudflare Function
+      const formDataObject: Record<string, string> = {}
+      formData.forEach((value, key) => {
+        if (key !== 'website_url') { // Exclude honeypot
+          formDataObject[key] = value.toString()
+        }
       })
 
-      const data = await response.json()
+      // Try Cloudflare Pages Function endpoint
+      const functionResponse = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataObject),
+      })
 
-      if (data.success) {
-        setSubmitStatus('success')
-        e.currentTarget.reset()
-        // Track successful form submission
-        trackFormSubmission('contact_form', true)
-        // Set rate limit timestamp
-        if (typeof window !== 'undefined') {
-          localStorage.setItem('lastFormSubmission', Date.now().toString())
+      // If function endpoint works (not 404), use it
+      if (functionResponse.status !== 404) {
+        const data = await functionResponse.json()
+
+        if (data.success) {
+          setSubmitStatus('success')
+          e.currentTarget.reset()
+          trackFormSubmission('contact_form', true)
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('lastFormSubmission', Date.now().toString())
+          }
+          return
+        } else {
+          throw new Error(data.error || 'Form submission failed')
+        }
+      }
+    } catch (functionError) {
+      // Cloudflare Function not available or failed, fallback to Web3Forms
+      console.log('Cloudflare Function not available, trying Web3Forms fallback')
+      
+      // Fallback to Web3Forms (if Cloudflare Function unavailable)
+      if (accessKey) {
+        try {
+          formData.append('access_key', accessKey)
+          formData.append('subject', 'New Contact Form Submission from Zero Barriers')
+          formData.append('to', 'sk@zerobarriers.io')
+
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+          })
+
+          const data = await response.json()
+
+          if (data.success) {
+            setSubmitStatus('success')
+            e.currentTarget.reset()
+            trackFormSubmission('contact_form', true)
+            if (typeof window !== 'undefined') {
+              localStorage.setItem('lastFormSubmission', Date.now().toString())
+            }
+          } else {
+            console.error('Web3Forms API Error:', data)
+            const errorMessage = data.message || 'Unknown error'
+            console.error('Error message:', errorMessage)
+            setSubmitStatus('error')
+            trackFormSubmission('contact_form', false, errorMessage)
+          }
+        } catch (web3formsError) {
+          console.error('Web3Forms fallback also failed:', web3formsError)
+          setSubmitStatus('error')
+          trackFormSubmission('contact_form', false, web3formsError instanceof Error ? web3formsError.message : 'Submission failed')
         }
       } else {
-        console.error('Web3Forms API Error:', data)
-        // Log the full error for debugging
-        const errorMessage = data.message || 'Unknown error'
-        console.error('Error message:', errorMessage)
+        // Neither method available
+        console.error('No form submission method available')
         setSubmitStatus('error')
-        // Track form submission error
-        trackFormSubmission('contact_form', false, errorMessage)
+        trackFormSubmission('contact_form', false, 'Form service not configured')
       }
-    } catch (error) {
-      console.error('Form submission error:', error)
-      const errorMessage = error instanceof Error ? error.message : 'Network error'
-      // Check if it's a network error
-      if (error instanceof TypeError && error.message.includes('fetch')) {
-        console.error('Network error - check your internet connection')
-      }
-      setSubmitStatus('error')
-      // Track form submission error
-      trackFormSubmission('contact_form', false, errorMessage)
     } finally {
       setIsSubmitting(false)
     }

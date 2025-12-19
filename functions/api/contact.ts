@@ -106,7 +106,9 @@ ${formData.message}
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Zero Barriers Contact <onboarding@resend.dev>', // Update with your verified domain
+        // Note: Update 'from' email after verifying your domain in Resend
+        // For now, using Resend's default domain (works for testing)
+        from: 'Zero Barriers <onboarding@resend.dev>',
         to: [recipientEmail],
         reply_to: formData.email,
         subject: 'New Contact Form Submission from Zero Barriers',
