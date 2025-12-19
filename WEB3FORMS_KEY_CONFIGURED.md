@@ -44,9 +44,11 @@ The access key has been added to `env.template` for reference, but **you MUST al
 ### Local Development:
 
 1. Create `.env.local` file in project root (if it doesn't exist)
-2. Add: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=90687b2d-b5f9-471e-bf36-759c2b3ce51c`
-3. Restart dev server: `npm run dev`
-4. Test form submission
+2. Get your access key from https://web3forms.com (enter sk@zerobarriers.io)
+3. Add to `.env.local`: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_access_key_here`
+4. Replace `your_access_key_here` with your actual key from the email
+5. Restart dev server: `npm run dev`
+6. Test form submission
 
 ### Production (After Adding to Cloudflare):
 
