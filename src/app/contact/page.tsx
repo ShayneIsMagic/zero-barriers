@@ -12,6 +12,17 @@ export default function ContactPage() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
+    // Check rate limit (prevent rapid-fire submissions)
+    if (typeof window !== 'undefined') {
+      const lastSubmission = localStorage.getItem('lastFormSubmission')
+      const now = Date.now()
+      if (lastSubmission && (now - parseInt(lastSubmission)) < 60000) {
+        alert('Please wait 60 seconds before submitting again.')
+        setIsSubmitting(false)
+        return
+      }
+    }
+
     // Get your access key from https://web3forms.com and add it to .env.local as NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''
     
@@ -23,6 +34,14 @@ export default function ContactPage() {
     }
 
     const formData = new FormData(e.currentTarget)
+    
+    // Honeypot check - if this hidden field is filled, it's likely a bot
+    if (formData.get('website_url')) {
+      // Bot detected - silently reject (don't show error to bot)
+      console.warn('Bot submission blocked')
+      setIsSubmitting(false)
+      return
+    }
     formData.append('access_key', accessKey)
     formData.append('subject', 'New Contact Form Submission from Zero Barriers')
     formData.append('to', 'sk@zerobarriers.io')
@@ -38,6 +57,10 @@ export default function ContactPage() {
       if (data.success) {
         setSubmitStatus('success')
         e.currentTarget.reset()
+        // Set rate limit timestamp
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('lastFormSubmission', Date.now().toString())
+        }
       } else {
         console.error('Web3Forms API Error:', data)
         // Log the full error for debugging
@@ -136,6 +159,16 @@ export default function ContactPage() {
               </div>
               
               <input type="hidden" name="page" value="Contact" />
+              
+              {/* Honeypot field - hidden from users, bots will fill it */}
+              <input 
+                type="text" 
+                name="website_url" 
+                style={{display: 'none'}} 
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
               
               {submitStatus === 'success' && (
                 <div style={{padding: '15px', background: 'var(--primary-light)', color: 'var(--primary-dark)', borderRadius: '4px', marginBottom: '20px'}}>
