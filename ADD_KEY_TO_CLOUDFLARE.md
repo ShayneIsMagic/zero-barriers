@@ -5,28 +5,53 @@ Add the Web3Forms access key to Cloudflare Pages so the contact form works on th
 
 ---
 
-## Step 1: Get Your Access Key
+## Step 1: Get Your Access Keys
 
+### Web3Forms Access Key
 1. Go to: **https://web3forms.com**
 2. Enter your email: **sk@zerobarriers.io**
 3. Click **"Get Your Access Key"** or **"Create your Form"**
 4. Check your **Outlook inbox** (sk@zerobarriers.io) for an email from Web3Forms
 5. Copy the access key from the email (it looks like: `abc123-def456-ghi789-xyz012`)
 
+### Google Analytics IDs (Already Available)
+- **GA ID**: `G-YHS2Y7L3C9` (from env.template)
+- **GTM ID**: `GTM-WL8K8XK` (from env.template)
+
 ---
 
-## Step 2: Add to Cloudflare Pages
+## Step 2: Add All Variables to Cloudflare Pages
 
 1. **Go to Cloudflare Dashboard**: https://dash.cloudflare.com
 2. **Navigate to**: Your Pages Project → **Settings** → **Environment variables**
 3. **Find**: **Variables and Secrets** section
+
+### Add Variable 1: Web3Forms Access Key
 4. **Click**: **"Add variable"** or **"+ Add variable"** button
 5. **Fill in**:
    - **Variable name**: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
      - ⚠️ Must be exactly this (case-sensitive)
-   - **Value**: [Paste your access key from the email]
+   - **Value**: [Paste your Web3Forms access key from email]
    - **Type**: Select **"Secret"** (recommended for security)
 6. **Click**: **Save**
+
+### Add Variable 2: Google Analytics ID
+7. **Click**: **"Add variable"** again
+8. **Fill in**:
+   - **Variable name**: `NEXT_PUBLIC_GA_ID`
+   - **Value**: `G-YHS2Y7L3C9`
+   - **Type**: **Plain text** or **Secret** (your choice)
+9. **Click**: **Save**
+
+### Add Variable 3: Google Tag Manager ID
+10. **Click**: **"Add variable"** again
+11. **Fill in**:
+    - **Variable name**: `NEXT_PUBLIC_GTM_ID`
+    - **Value**: `GTM-WL8K8XK`
+    - **Type**: **Plain text** or **Secret** (your choice)
+12. **Click**: **Save**
+
+---
 
 ---
 
@@ -57,15 +82,23 @@ After saving the environment variable:
 
 ---
 
-## Form Configuration (Already Done ✅)
+## Configuration Status (Already Done ✅)
 
-Your form is already correctly configured:
+### Contact Form
 - ✅ Uses: `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
 - ✅ Sends to: sk@zerobarriers.io
 - ✅ Subject: "New Contact Form Submission from Zero Barriers"
 - ✅ Security: Honeypot + rate limiting enabled
 
-**Everything is ready** - you just need to add the environment variable in Cloudflare!
+### Google Analytics
+- ✅ Uses: `process.env.NEXT_PUBLIC_GA_ID` (G-YHS2Y7L3C9)
+- ✅ Configured in: `src/app/layout.tsx` and `src/components/Analytics.tsx`
+
+### Google Tag Manager
+- ✅ Uses: `process.env.NEXT_PUBLIC_GTM_ID` (GTM-WL8K8XK)
+- ✅ Configured in: `src/components/GTM.tsx`
+
+**Everything is ready** - you just need to add all three environment variables in Cloudflare!
 
 ---
 
