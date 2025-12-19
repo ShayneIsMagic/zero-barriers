@@ -159,6 +159,7 @@ export default function ContactPage() {
               </div>
               
               <input type="hidden" name="page" value="Contact" />
+              <input type="hidden" name="from_name" value="Zero Barriers Contact Form" />
               
               {/* Honeypot field - hidden from users, bots will fill it */}
               <input 
@@ -178,7 +179,7 @@ export default function ContactPage() {
               
               {submitStatus === 'error' && (
                 <div style={{padding: '15px', background: '#fee', color: '#c33', borderRadius: '4px', marginBottom: '20px'}}>
-                  There was an error sending your message. Please check the browser console for details and try again.
+                  There was an error sending your message. Please try again or contact us directly at sk@zerobarriers.io.
                 </div>
               )}
               

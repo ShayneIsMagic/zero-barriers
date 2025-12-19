@@ -134,15 +134,36 @@ After saving the environment variable:
 
 ## Quick Checklist
 
+### Web3Forms
 - [ ] Get access key from https://web3forms.com (using sk@zerobarriers.io)
-- [ ] Add to Cloudflare Pages → Settings → Environment Variables
-- [ ] Variable name: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
+- [ ] Add `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` to Cloudflare Pages
 - [ ] Type: Secret
-- [ ] Save
-- [ ] Trigger deployment (or wait for auto-deploy)
 - [ ] Test form submission
 - [ ] Verify email received in Outlook inbox
 
+### Google Analytics
+- [ ] Add `NEXT_PUBLIC_GA_ID` = `G-YHS2Y7L3C9` to Cloudflare Pages
+- [ ] Verify analytics tracking works
+
+### Google Tag Manager
+- [ ] Add `NEXT_PUBLIC_GTM_ID` = `GTM-WL8K8XK` to Cloudflare Pages
+- [ ] Verify GTM container loads
+
+### Final Steps
+- [ ] Save all variables
+- [ ] Trigger deployment (or wait for auto-deploy)
+- [ ] Test everything on live site
+
 ---
 
-**Once completed, your contact form will work on the live site!** ✅
+## Environment Variables Summary
+
+Add these three variables to Cloudflare Pages:
+
+| Variable Name | Value | Type | Required |
+|--------------|-------|------|----------|
+| `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | [Get from web3forms.com] | Secret | ✅ Yes |
+| `NEXT_PUBLIC_GA_ID` | `G-YHS2Y7L3C9` | Plain text/Secret | ⚠️ Optional |
+| `NEXT_PUBLIC_GTM_ID` | `GTM-WL8K8XK` | Plain text/Secret | ⚠️ Optional |
+
+**Once completed, your contact form and analytics will work on the live site!** ✅
