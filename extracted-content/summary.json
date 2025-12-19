@@ -1,0 +1,17 @@
+{
+  "extractedAt": "2025-10-29T16:16:00.096Z",
+  "baseUrl": "https://zerobarriers.io",
+  "pages": [
+    "home",
+    "services",
+    "technology",
+    "testimonials",
+    "case-studies",
+    "contact"
+  ],
+  "totals": {
+    "sections": 38,
+    "images": 42,
+    "animations": 84
+  }
+}

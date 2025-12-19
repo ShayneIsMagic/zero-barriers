@@ -1,0 +1,168 @@
+'use client'
+
+import { useState, FormEvent } from 'react'
+import Link from 'next/link'
+
+export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    // Get your access key from https://web3forms.com and add it to .env.local as NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''
+    
+    if (!accessKey) {
+      console.error('Web3Forms access key is not configured. Please add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to .env.local')
+      setSubmitStatus('error')
+      setIsSubmitting(false)
+      return
+    }
+
+    const formData = new FormData(e.currentTarget)
+    formData.append('access_key', accessKey)
+    formData.append('subject', 'New Contact Form Submission from Zero Barriers')
+    formData.append('to', 'sk@zerobarriers.io')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setSubmitStatus('success')
+        e.currentTarget.reset()
+      } else {
+        console.error('Web3Forms API Error:', data)
+        // Log the full error for debugging
+        if (data.message) {
+          console.error('Error message:', data.message)
+        }
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      // Check if it's a network error
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        console.error('Network error - check your internet connection')
+      }
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <>
+      {/* Contact Hero */}
+      <section className="contact-hero">
+        <div className="container">
+          <div className="section-title">
+            <span className="section-eyebrow">POTENTIAL UNLEASHED</span>
+            <h1>Begin Your Transformation</h1>
+            <p>Ready to align purpose-driven transformation, activated technology systems, and engineered revenue acceleration?</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info & Form over background image */}
+      <section className="contact-section-bg">
+        <div className="container contact-main">
+          <div className="contact-info sticky">
+            <h2 style={{fontSize: '26px', color: 'var(--teal-rich)', marginBottom: '20px'}}>
+              Get in Touch
+            </h2>
+            <p>Every client is different. Ready to discover how purpose-driven transformation can unleash your breakthrough results? Complete the form to begin your transformation journey.</p>
+            
+            <div className="contact-person">
+              <div className="contact-person-img">
+                <i className="fas fa-user-tie"></i>
+              </div>
+              <div className="contact-person-details">
+                <strong>Shayne Roy</strong>
+                <span>Founder, Zero Barriers</span>
+              </div>
+            </div>
+            
+            <ul className="contact-details-list">
+              <li><i className="fas fa-phone"></i><a href="tel:8019970457">801-997-0457</a></li>
+              <li><i className="fab fa-instagram"></i><a href="https://www.instagram.com/zerobarriersinc" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><i className="fab fa-facebook-f"></i><a href="https://www.facebook.com/zerobarriers" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><i className="fab fa-linkedin"></i><a href="https://www.linkedin.com/company/zerobarriers" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+          </div>
+          
+          <div className="contact-form-container">
+            <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="first_name">First Name <span className="required">*</span></label>
+                  <input type="text" id="first_name" name="first_name" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="last_name">Last Name <span className="required">*</span></label>
+                  <input type="text" id="last_name" name="last_name" required />
+                </div>
+              </div>
+
+              <div className="form-row" style={{marginTop: '16px'}}>
+                <div className="form-group">
+                  <label htmlFor="phone">Phone <span className="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email <span className="required">*</span></label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+              
+              <label htmlFor="company">Company <span className="required">*</span></label>
+              <input type="text" id="company" name="company" required />
+              
+              <div className="form-group">
+                <label htmlFor="website">Website</label>
+                <input type="url" id="website" name="website" />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message">How can we help you? <span className="required">*</span></label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              
+              <input type="hidden" name="page" value="Contact" />
+              
+              {submitStatus === 'success' && (
+                <div style={{padding: '15px', background: 'var(--primary-light)', color: 'var(--primary-dark)', borderRadius: '4px', marginBottom: '20px'}}>
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div style={{padding: '15px', background: '#fee', color: '#c33', borderRadius: '4px', marginBottom: '20px'}}>
+                  There was an error sending your message. Please check the browser console for details and try again.
+                </div>
+              )}
+              
+              <button type="submit" className="cta-button" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin"></i> Submitting...
+                  </>
+                ) : (
+                  'Submit'
+                )}
+              </button>
+            </form>
+            <div className="toast-container"></div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

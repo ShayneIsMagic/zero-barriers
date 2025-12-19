@@ -1,0 +1,817 @@
+{
+  "url": "https://zerobarriers.io/services/",
+  "title": "Services | Zero Barriers - Human Transformation, Technology Enablement & Revenue Acceleration",
+  "sections": [
+    {
+      "className": "services-hero",
+      "id": "",
+      "innerHTML": "<div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"section-title\" data-astro-cid-ucd2ps2b=\"\"><h1 data-astro-cid-ucd2ps2b=\"\">Our Services</h1><p data-astro-cid-ucd2ps2b=\"\">\nComprehensive solutions designed to eliminate barriers and engineer\n            breakthrough growth through our proven four-phase methodology\n</p></div><div class=\"services-intro\" data-astro-cid-ucd2ps2b=\"\"><p data-astro-cid-ucd2ps2b=\"\">\nZero Barriers delivers rapid, substantial, and sustainable results through our systematic approach to transformation. Each service is designed to work independently or as part of our comprehensive growth solution.\n</p></div></div>",
+      "outerHTML": "<section class=\"services-hero\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"section-title\" data-astro-cid-ucd2ps2b=\"\"><h1 data-astro-cid-ucd2ps2b=\"\">Our Services</h1><p data-astro-cid-ucd2ps2b=\"\">\nComprehensive solutions designed to eliminate barriers and engineer\n            breakthrough growth through our proven four-phase methodology\n</p></div><div class=\"services-intro\" data-astro-cid-ucd2ps2b=\"\"><p data-astro-cid-ucd2ps2b=\"\">\nZero Barriers delivers rapid, substantial, and sustainable results through our systematic approach to transformation. Each service is designed to work independently or as part of our comprehensive growth solution.\n</p></div></div></section>"
+    },
+    {
+      "className": "service-detail",
+      "id": "human",
+      "innerHTML": "<div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Purpose-Driven Transformation</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Human Transformation</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur human transformation services help individuals and teams unlock\n            their full potential through purpose-driven methodologies and\n            proprietary frameworks. We believe that lasting success starts with\n            people who understand their purpose and are equipped with the right\n            mindset and skills.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">The Attitude Cycle™</strong> - Our proprietary methodology\n                for creating mindset shifts that lead to lasting behavioral change\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">IMPROV Sales Methodology™</strong> - A customer-centric\n                approach to sales that emphasizes authenticity and adaptability\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Purpose-Driven Exercise™</strong> - A structured process\n                for identifying individual and team purpose\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Programs designed to build\n                confident, effective leaders at all levels\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Team Alignment</strong> - Workshops and tools to align teams\n                around shared goals and values\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"The purpose-driven model transformed my life, removing obstacles and igniting my potential. Being purpose-oriented has given me direction, freedom, fulfillment, confidence, peace, success, happiness, and love. It set me free and lit me on fire!\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Michelle A., SOS Support</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Human_Transformation.png\" alt=\"human transformation\" loading=\"eager\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div>",
+      "outerHTML": "<section class=\"service-detail\" id=\"human\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Purpose-Driven Transformation</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Human Transformation</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur human transformation services help individuals and teams unlock\n            their full potential through purpose-driven methodologies and\n            proprietary frameworks. We believe that lasting success starts with\n            people who understand their purpose and are equipped with the right\n            mindset and skills.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">The Attitude Cycle™</strong> - Our proprietary methodology\n                for creating mindset shifts that lead to lasting behavioral change\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">IMPROV Sales Methodology™</strong> - A customer-centric\n                approach to sales that emphasizes authenticity and adaptability\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Purpose-Driven Exercise™</strong> - A structured process\n                for identifying individual and team purpose\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Programs designed to build\n                confident, effective leaders at all levels\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Team Alignment</strong> - Workshops and tools to align teams\n                around shared goals and values\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"The purpose-driven model transformed my life, removing obstacles and igniting my potential. Being purpose-oriented has given me direction, freedom, fulfillment, confidence, peace, success, happiness, and love. It set me free and lit me on fire!\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Michelle A., SOS Support</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Human_Transformation.png\" alt=\"human transformation\" loading=\"eager\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div></section>"
+    },
+    {
+      "className": "service-detail",
+      "id": "technology",
+      "innerHTML": "<div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Technology-Enabled Growth</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Technology Enablement</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nThrough our strategic partnerships, we implement the right\n            technology solutions to streamline operations, enhance customer\n            experiences, and drive efficiency. Our technology enablement\n            services are designed to support your growth objectives and\n            eliminate technical barriers.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Custom Software Development</strong> - Tailored applications\n                designed to address your specific business challenges\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Salesforce Implementation</strong> - Expert configuration\n                and customization of the world's leading CRM platform\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">System Integration</strong> - Seamless connection of disparate\n                systems to create unified workflows\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Workflow Automation</strong> - Identification and automation\n                of repetitive tasks to increase efficiency\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Digital Presence Enhancement</strong> - Website development,\n                SEO, and digital marketing solutions\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Shayne has tools and ideas that produce remarkable results. We grew 25% in revenue consistently for nearly a year. He genuinely cares for those he serves and his systems work.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Greg Williams, SeboDev</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/side-profile-tech.png\" alt=\"technology enablement\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div>",
+      "outerHTML": "<section class=\"service-detail\" id=\"technology\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Technology-Enabled Growth</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Technology Enablement</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nThrough our strategic partnerships, we implement the right\n            technology solutions to streamline operations, enhance customer\n            experiences, and drive efficiency. Our technology enablement\n            services are designed to support your growth objectives and\n            eliminate technical barriers.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Custom Software Development</strong> - Tailored applications\n                designed to address your specific business challenges\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Salesforce Implementation</strong> - Expert configuration\n                and customization of the world's leading CRM platform\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">System Integration</strong> - Seamless connection of disparate\n                systems to create unified workflows\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Workflow Automation</strong> - Identification and automation\n                of repetitive tasks to increase efficiency\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Digital Presence Enhancement</strong> - Website development,\n                SEO, and digital marketing solutions\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Shayne has tools and ideas that produce remarkable results. We grew 25% in revenue consistently for nearly a year. He genuinely cares for those he serves and his systems work.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Greg Williams, SeboDev</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/side-profile-tech.png\" alt=\"technology enablement\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div></section>"
+    },
+    {
+      "className": "service-detail",
+      "id": "revenue",
+      "innerHTML": "<div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Revenue Growth &amp; Acceleration</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Revenue Acceleration</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nBy combining people, process, and technology, we create systems that\n            generate predictable, sustainable revenue growth. Our revenue\n            acceleration services focus on eliminating bottlenecks and\n            optimizing your entire revenue generation process.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Sales Process Optimization</strong> - Design and implementation\n                of efficient, effective sales processes\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">KPI-Driven Performance Management</strong> - Establishment\n                of meaningful metrics and management systems\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Continuous Improvement Cycles</strong> - Implementation of\n                feedback loops to drive ongoing enhancement\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Revenue Operations (RevOps)</strong> - Alignment of sales,\n                marketing, and customer success functions\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Compensation Design</strong> - Creation of incentive structures\n                that drive desired behaviors and outcomes\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"We achieved 122% growth in our first year! The coaching has given me greater confidence as a business owner. Zero Barriers has empowered our team and instilled ownership principles.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Jason Kidman, SOS Support</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/B2B Sales.png\" alt=\"revenue acceleration\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div>",
+      "outerHTML": "<section class=\"service-detail\" id=\"revenue\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Revenue Growth &amp; Acceleration</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Revenue Acceleration</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nBy combining people, process, and technology, we create systems that\n            generate predictable, sustainable revenue growth. Our revenue\n            acceleration services focus on eliminating bottlenecks and\n            optimizing your entire revenue generation process.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Sales Process Optimization</strong> - Design and implementation\n                of efficient, effective sales processes\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">KPI-Driven Performance Management</strong> - Establishment\n                of meaningful metrics and management systems\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Continuous Improvement Cycles</strong> - Implementation of\n                feedback loops to drive ongoing enhancement\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Revenue Operations (RevOps)</strong> - Alignment of sales,\n                marketing, and customer success functions\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Compensation Design</strong> - Creation of incentive structures\n                that drive desired behaviors and outcomes\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"We achieved 122% growth in our first year! The coaching has given me greater confidence as a business owner. Zero Barriers has empowered our team and instilled ownership principles.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Jason Kidman, SOS Support</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/B2B Sales.png\" alt=\"revenue acceleration\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div></section>"
+    },
+    {
+      "className": "service-detail",
+      "id": "consulting",
+      "innerHTML": "<div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Strategic Growth &amp; Planning</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Strategic Consulting</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur strategic consulting services provide expert guidance on\n            critical business challenges and opportunities. We work with\n            executive teams to identify growth obstacles, develop strategic\n            plans, and implement solutions that drive sustainable results.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Growth Strategy Development</strong> - Creation of clear,\n                actionable plans to achieve revenue targets\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Organizational Design</strong> - Structuring teams and roles\n                for optimal performance\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Market Expansion</strong> - Identification and evaluation\n                of new market opportunities\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Merger &amp; Acquisition Support</strong> - Due diligence and\n                integration planning\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Executive Coaching</strong> - One-on-one support for leaders\n                driving transformation\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Working with Shayne was a game-changer! He quickly identified our sales challenges and provided effective solutions. His enthusiasm boosted results and morale across the entire team.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Kyle C., Q90</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Transforming_Breakthrough.png\" alt=\"strategic consulting\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div>",
+      "outerHTML": "<section class=\"service-detail\" id=\"consulting\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Strategic Growth &amp; Planning</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Strategic Consulting</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur strategic consulting services provide expert guidance on\n            critical business challenges and opportunities. We work with\n            executive teams to identify growth obstacles, develop strategic\n            plans, and implement solutions that drive sustainable results.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Growth Strategy Development</strong> - Creation of clear,\n                actionable plans to achieve revenue targets\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Organizational Design</strong> - Structuring teams and roles\n                for optimal performance\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Market Expansion</strong> - Identification and evaluation\n                of new market opportunities\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Merger &amp; Acquisition Support</strong> - Due diligence and\n                integration planning\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Executive Coaching</strong> - One-on-one support for leaders\n                driving transformation\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Working with Shayne was a game-changer! He quickly identified our sales challenges and provided effective solutions. His enthusiasm boosted results and morale across the entire team.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Kyle C., Q90</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Transforming_Breakthrough.png\" alt=\"strategic consulting\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div></section>"
+    },
+    {
+      "className": "service-detail",
+      "id": "training",
+      "innerHTML": "<div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Skills Development &amp; Training</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Team Training</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur training programs equip your teams with the skills, knowledge,\n            and mindset needed to excel in their roles. From sales professionals\n            to customer service representatives, we provide custom training\n            solutions designed to drive immediate performance improvements.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Sales Training</strong> - Comprehensive programs to develop\n                consultative selling skills\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Practical workshops for\n                new and experienced leaders\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Customer Service Excellence</strong> - Training focused on\n                creating exceptional experiences\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Process Adoption</strong> - Sessions designed to drive compliance\n                with new systems and processes\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Role-Based Certifications</strong> - Structured programs\n                to validate skills and knowledge\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Shayne guided me to find purpose and direction in my life. He's incredibly passionate about building people and making a difference. He always takes time to make sure you're doing well.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Andrew B., DevPipeline</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Team.png\" alt=\"team training image\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div>",
+      "outerHTML": "<section class=\"service-detail\" id=\"training\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container service-container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"service-content\" data-astro-cid-ucd2ps2b=\"\"><span class=\"service-label\" data-astro-cid-ucd2ps2b=\"\">Skills Development &amp; Training</span><h2 class=\"service-title\" data-astro-cid-ucd2ps2b=\"\">Team Training</h2><p class=\"service-description\" data-astro-cid-ucd2ps2b=\"\">\nOur training programs equip your teams with the skills, knowledge,\n            and mindset needed to excel in their roles. From sales professionals\n            to customer service representatives, we provide custom training\n            solutions designed to drive immediate performance improvements.\n</p><div class=\"service-features\" data-astro-cid-ucd2ps2b=\"\"><ul class=\"benefits-list\" data-astro-cid-ucd2ps2b=\"\"><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Sales Training</strong> - Comprehensive programs to develop\n                consultative selling skills\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Practical workshops for\n                new and experienced leaders\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Customer Service Excellence</strong> - Training focused on\n                creating exceptional experiences\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Process Adoption</strong> - Sessions designed to drive compliance\n                with new systems and processes\n</li><li data-astro-cid-ucd2ps2b=\"\"><strong data-astro-cid-ucd2ps2b=\"\">Role-Based Certifications</strong> - Structured programs\n                to validate skills and knowledge\n</li></ul></div><div class=\"service-testimonial\" data-astro-cid-ucd2ps2b=\"\"><p class=\"service-testimonial-content\" data-astro-cid-ucd2ps2b=\"\">\n\"Shayne guided me to find purpose and direction in my life. He's incredibly passionate about building people and making a difference. He always takes time to make sure you're doing well.\"\n</p><p class=\"service-testimonial-author\" data-astro-cid-ucd2ps2b=\"\">— Andrew B., DevPipeline</p></div></div><div class=\"service-image\" data-astro-cid-ucd2ps2b=\"\"><img src=\"/images/Team.png\" alt=\"team training image\" loading=\"lazy\" width=\"600\" height=\"400\" data-astro-cid-ucd2ps2b=\"\" style=\"opacity: 1;\"></div></div></section>"
+    },
+    {
+      "className": "partnerships",
+      "id": "partnerships",
+      "innerHTML": "<div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"section-title\" data-astro-cid-ucd2ps2b=\"\"><h2 data-astro-cid-ucd2ps2b=\"\">Our Strategic Partnerships</h2><p data-astro-cid-ucd2ps2b=\"\">\nZero Barriers collaborates with industry leaders to deliver\n            comprehensive solutions\n</p></div><div class=\"partnerships-grid\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-code\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Zero Barriers Custom Development</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nOur technology division delivering custom software development, integration, automation, and workflow management solutions that eliminate technical barriers and accelerate revenue growth. 30+ years of experience building scalable systems for sustainable business growth.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Custom CRM Development</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Workflow Management</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">E-Commerce Solutions</span></div></div><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-cloud\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Zero Barriers CRM Solutions</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nOur technology division delivering 40% average ROI improvement through expert Salesforce implementation, customization, and optimization services. 15+ certifications and 100+ successful implementations for rapid revenue growth.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">40% ROI Improvement</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">15+ Certifications</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">100+ Implementations</span></div></div><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-chart-line\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Growth Accelerators</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nSpecialized revenue acceleration tools and methodologies to drive predictable, sustainable growth through proven frameworks and systematic approaches.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Revenue Acceleration</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Growth Frameworks</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Systematic Results</span></div></div></div></div>",
+      "outerHTML": "<section class=\"partnerships\" id=\"partnerships\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"section-title\" data-astro-cid-ucd2ps2b=\"\"><h2 data-astro-cid-ucd2ps2b=\"\">Our Strategic Partnerships</h2><p data-astro-cid-ucd2ps2b=\"\">\nZero Barriers collaborates with industry leaders to deliver\n            comprehensive solutions\n</p></div><div class=\"partnerships-grid\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-code\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Zero Barriers Custom Development</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nOur technology division delivering custom software development, integration, automation, and workflow management solutions that eliminate technical barriers and accelerate revenue growth. 30+ years of experience building scalable systems for sustainable business growth.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Custom CRM Development</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Workflow Management</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">E-Commerce Solutions</span></div></div><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-cloud\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Zero Barriers CRM Solutions</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nOur technology division delivering 40% average ROI improvement through expert Salesforce implementation, customization, and optimization services. 15+ certifications and 100+ successful implementations for rapid revenue growth.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">40% ROI Improvement</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">15+ Certifications</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">100+ Implementations</span></div></div><div class=\"partner-card\" data-astro-cid-ucd2ps2b=\"\"><div class=\"partner-logo\" data-astro-cid-ucd2ps2b=\"\"><i class=\"fas fa-chart-line\" data-astro-cid-ucd2ps2b=\"\"></i></div><h3 class=\"partner-name\" data-astro-cid-ucd2ps2b=\"\">Growth Accelerators</h3><p class=\"partner-description\" data-astro-cid-ucd2ps2b=\"\">\nSpecialized revenue acceleration tools and methodologies to drive predictable, sustainable growth through proven frameworks and systematic approaches.\n</p><div class=\"partner-highlights\" data-astro-cid-ucd2ps2b=\"\"><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Revenue Acceleration</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Growth Frameworks</span><span class=\"highlight\" data-astro-cid-ucd2ps2b=\"\">Systematic Results</span></div></div></div></div></section>"
+    },
+    {
+      "className": "cta-section",
+      "id": "",
+      "innerHTML": "<div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"cta-content\" data-astro-cid-ucd2ps2b=\"\"><h2 data-astro-cid-ucd2ps2b=\"\">Ready to Eliminate Your Growth Barriers?</h2><p data-astro-cid-ucd2ps2b=\"\">\nSchedule a no-obligation transformation assessment with our team to\n            identify your barriers to growth and explore how our integrated\n            approach can help you achieve rapid, substantial, and sustainable\n            results.\n</p><a href=\"/contact\" class=\"white-cta\" data-astro-cid-ucd2ps2b=\"\">Schedule Your Assessment</a><div data-astro-cid-ucd2ps2b=\"\"><a href=\"/case-studies\" class=\"secondary-white-cta\" data-astro-cid-ucd2ps2b=\"\">Explore Our Case Studies <i class=\"fas fa-arrow-right\" data-astro-cid-ucd2ps2b=\"\"></i></a></div></div></div>",
+      "outerHTML": "<section class=\"cta-section\" data-astro-cid-ucd2ps2b=\"\"><div class=\"container\" data-astro-cid-ucd2ps2b=\"\"><div class=\"cta-content\" data-astro-cid-ucd2ps2b=\"\"><h2 data-astro-cid-ucd2ps2b=\"\">Ready to Eliminate Your Growth Barriers?</h2><p data-astro-cid-ucd2ps2b=\"\">\nSchedule a no-obligation transformation assessment with our team to\n            identify your barriers to growth and explore how our integrated\n            approach can help you achieve rapid, substantial, and sustainable\n            results.\n</p><a href=\"/contact\" class=\"white-cta\" data-astro-cid-ucd2ps2b=\"\">Schedule Your Assessment</a><div data-astro-cid-ucd2ps2b=\"\"><a href=\"/case-studies\" class=\"secondary-white-cta\" data-astro-cid-ucd2ps2b=\"\">Explore Our Case Studies <i class=\"fas fa-arrow-right\" data-astro-cid-ucd2ps2b=\"\"></i></a></div></div></div></section>"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero berriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Human_Transformation.png",
+      "srcset": "",
+      "alt": "human transformation",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "eager",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/side-profile-tech.png",
+      "srcset": "",
+      "alt": "technology enablement",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "lazy",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/B2B%20Sales.png",
+      "srcset": "",
+      "alt": "revenue acceleration",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "lazy",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Transforming_Breakthrough.png",
+      "srcset": "",
+      "alt": "strategic consulting",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "lazy",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Team.png",
+      "srcset": "",
+      "alt": "team training image",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "lazy",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero barriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    }
+  ],
+  "content": {
+    "headings": {
+      "h1": [
+        {
+          "text": "Our Services",
+          "className": "",
+          "id": "",
+          "innerHTML": "Our Services"
+        }
+      ],
+      "h2": [
+        {
+          "text": "Human Transformation",
+          "className": "service-title",
+          "id": "",
+          "innerHTML": "Human Transformation"
+        },
+        {
+          "text": "Technology Enablement",
+          "className": "service-title",
+          "id": "",
+          "innerHTML": "Technology Enablement"
+        },
+        {
+          "text": "Revenue Acceleration",
+          "className": "service-title",
+          "id": "",
+          "innerHTML": "Revenue Acceleration"
+        },
+        {
+          "text": "Strategic Consulting",
+          "className": "service-title",
+          "id": "",
+          "innerHTML": "Strategic Consulting"
+        },
+        {
+          "text": "Team Training",
+          "className": "service-title",
+          "id": "",
+          "innerHTML": "Team Training"
+        },
+        {
+          "text": "Our Strategic Partnerships",
+          "className": "",
+          "id": "",
+          "innerHTML": "Our Strategic Partnerships"
+        },
+        {
+          "text": "Ready to Eliminate Your Growth Barriers?",
+          "className": "",
+          "id": "",
+          "innerHTML": "Ready to Eliminate Your Growth Barriers?"
+        }
+      ],
+      "h3": [
+        {
+          "text": "Zero Barriers Custom Development",
+          "className": "partner-name",
+          "id": "",
+          "innerHTML": "Zero Barriers Custom Development"
+        },
+        {
+          "text": "Zero Barriers CRM Solutions",
+          "className": "partner-name",
+          "id": "",
+          "innerHTML": "Zero Barriers CRM Solutions"
+        },
+        {
+          "text": "Growth Accelerators",
+          "className": "partner-name",
+          "id": "",
+          "innerHTML": "Growth Accelerators"
+        },
+        {
+          "text": "Services",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Services"
+        },
+        {
+          "text": "Company",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Company"
+        },
+        {
+          "text": "Contact Us",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Contact Us"
+        }
+      ]
+    },
+    "paragraphs": [
+      {
+        "text": "Comprehensive solutions designed to eliminate barriers and engineer\n            breakthrough growth through our proven four-phase methodology",
+        "className": "",
+        "innerHTML": "\nComprehensive solutions designed to eliminate barriers and engineer\n            breakthrough growth through our proven four-phase methodology\n"
+      },
+      {
+        "text": "Zero Barriers delivers rapid, substantial, and sustainable results through our systematic approach to transformation. Each service is designed to work independently or as part of our comprehensive growth solution.",
+        "className": "",
+        "innerHTML": "\nZero Barriers delivers rapid, substantial, and sustainable results through our systematic approach to transformation. Each service is designed to work independently or as part of our comprehensive growth solution.\n"
+      },
+      {
+        "text": "Our human transformation services help individuals and teams unlock\n            their full potential through purpose-driven methodologies and\n            proprietary frameworks. We believe that lasting success starts with\n            people who understand their purpose and are equipped with the right\n            mindset and skills.",
+        "className": "service-description",
+        "innerHTML": "\nOur human transformation services help individuals and teams unlock\n            their full potential through purpose-driven methodologies and\n            proprietary frameworks. We believe that lasting success starts with\n            people who understand their purpose and are equipped with the right\n            mindset and skills.\n"
+      },
+      {
+        "text": "\"The purpose-driven model transformed my life, removing obstacles and igniting my potential. Being purpose-oriented has given me direction, freedom, fulfillment, confidence, peace, success, happiness, and love. It set me free and lit me on fire!\"",
+        "className": "service-testimonial-content",
+        "innerHTML": "\n\"The purpose-driven model transformed my life, removing obstacles and igniting my potential. Being purpose-oriented has given me direction, freedom, fulfillment, confidence, peace, success, happiness, and love. It set me free and lit me on fire!\"\n"
+      },
+      {
+        "text": "— Michelle A., SOS Support",
+        "className": "service-testimonial-author",
+        "innerHTML": "— Michelle A., SOS Support"
+      },
+      {
+        "text": "Through our strategic partnerships, we implement the right\n            technology solutions to streamline operations, enhance customer\n            experiences, and drive efficiency. Our technology enablement\n            services are designed to support your growth objectives and\n            eliminate technical barriers.",
+        "className": "service-description",
+        "innerHTML": "\nThrough our strategic partnerships, we implement the right\n            technology solutions to streamline operations, enhance customer\n            experiences, and drive efficiency. Our technology enablement\n            services are designed to support your growth objectives and\n            eliminate technical barriers.\n"
+      },
+      {
+        "text": "\"Shayne has tools and ideas that produce remarkable results. We grew 25% in revenue consistently for nearly a year. He genuinely cares for those he serves and his systems work.\"",
+        "className": "service-testimonial-content",
+        "innerHTML": "\n\"Shayne has tools and ideas that produce remarkable results. We grew 25% in revenue consistently for nearly a year. He genuinely cares for those he serves and his systems work.\"\n"
+      },
+      {
+        "text": "— Greg Williams, SeboDev",
+        "className": "service-testimonial-author",
+        "innerHTML": "— Greg Williams, SeboDev"
+      },
+      {
+        "text": "By combining people, process, and technology, we create systems that\n            generate predictable, sustainable revenue growth. Our revenue\n            acceleration services focus on eliminating bottlenecks and\n            optimizing your entire revenue generation process.",
+        "className": "service-description",
+        "innerHTML": "\nBy combining people, process, and technology, we create systems that\n            generate predictable, sustainable revenue growth. Our revenue\n            acceleration services focus on eliminating bottlenecks and\n            optimizing your entire revenue generation process.\n"
+      },
+      {
+        "text": "\"We achieved 122% growth in our first year! The coaching has given me greater confidence as a business owner. Zero Barriers has empowered our team and instilled ownership principles.\"",
+        "className": "service-testimonial-content",
+        "innerHTML": "\n\"We achieved 122% growth in our first year! The coaching has given me greater confidence as a business owner. Zero Barriers has empowered our team and instilled ownership principles.\"\n"
+      },
+      {
+        "text": "— Jason Kidman, SOS Support",
+        "className": "service-testimonial-author",
+        "innerHTML": "— Jason Kidman, SOS Support"
+      },
+      {
+        "text": "Our strategic consulting services provide expert guidance on\n            critical business challenges and opportunities. We work with\n            executive teams to identify growth obstacles, develop strategic\n            plans, and implement solutions that drive sustainable results.",
+        "className": "service-description",
+        "innerHTML": "\nOur strategic consulting services provide expert guidance on\n            critical business challenges and opportunities. We work with\n            executive teams to identify growth obstacles, develop strategic\n            plans, and implement solutions that drive sustainable results.\n"
+      },
+      {
+        "text": "\"Working with Shayne was a game-changer! He quickly identified our sales challenges and provided effective solutions. His enthusiasm boosted results and morale across the entire team.\"",
+        "className": "service-testimonial-content",
+        "innerHTML": "\n\"Working with Shayne was a game-changer! He quickly identified our sales challenges and provided effective solutions. His enthusiasm boosted results and morale across the entire team.\"\n"
+      },
+      {
+        "text": "— Kyle C., Q90",
+        "className": "service-testimonial-author",
+        "innerHTML": "— Kyle C., Q90"
+      },
+      {
+        "text": "Our training programs equip your teams with the skills, knowledge,\n            and mindset needed to excel in their roles. From sales professionals\n            to customer service representatives, we provide custom training\n            solutions designed to drive immediate performance improvements.",
+        "className": "service-description",
+        "innerHTML": "\nOur training programs equip your teams with the skills, knowledge,\n            and mindset needed to excel in their roles. From sales professionals\n            to customer service representatives, we provide custom training\n            solutions designed to drive immediate performance improvements.\n"
+      },
+      {
+        "text": "\"Shayne guided me to find purpose and direction in my life. He's incredibly passionate about building people and making a difference. He always takes time to make sure you're doing well.\"",
+        "className": "service-testimonial-content",
+        "innerHTML": "\n\"Shayne guided me to find purpose and direction in my life. He's incredibly passionate about building people and making a difference. He always takes time to make sure you're doing well.\"\n"
+      },
+      {
+        "text": "— Andrew B., DevPipeline",
+        "className": "service-testimonial-author",
+        "innerHTML": "— Andrew B., DevPipeline"
+      },
+      {
+        "text": "Zero Barriers collaborates with industry leaders to deliver\n            comprehensive solutions",
+        "className": "",
+        "innerHTML": "\nZero Barriers collaborates with industry leaders to deliver\n            comprehensive solutions\n"
+      },
+      {
+        "text": "Our technology division delivering custom software development, integration, automation, and workflow management solutions that eliminate technical barriers and accelerate revenue growth. 30+ years of experience building scalable systems for sustainable business growth.",
+        "className": "partner-description",
+        "innerHTML": "\nOur technology division delivering custom software development, integration, automation, and workflow management solutions that eliminate technical barriers and accelerate revenue growth. 30+ years of experience building scalable systems for sustainable business growth.\n"
+      },
+      {
+        "text": "Our technology division delivering 40% average ROI improvement through expert Salesforce implementation, customization, and optimization services. 15+ certifications and 100+ successful implementations for rapid revenue growth.",
+        "className": "partner-description",
+        "innerHTML": "\nOur technology division delivering 40% average ROI improvement through expert Salesforce implementation, customization, and optimization services. 15+ certifications and 100+ successful implementations for rapid revenue growth.\n"
+      },
+      {
+        "text": "Specialized revenue acceleration tools and methodologies to drive predictable, sustainable growth through proven frameworks and systematic approaches.",
+        "className": "partner-description",
+        "innerHTML": "\nSpecialized revenue acceleration tools and methodologies to drive predictable, sustainable growth through proven frameworks and systematic approaches.\n"
+      },
+      {
+        "text": "Schedule a no-obligation transformation assessment with our team to\n            identify your barriers to growth and explore how our integrated\n            approach can help you achieve rapid, substantial, and sustainable\n            results.",
+        "className": "",
+        "innerHTML": "\nSchedule a no-obligation transformation assessment with our team to\n            identify your barriers to growth and explore how our integrated\n            approach can help you achieve rapid, substantial, and sustainable\n            results.\n"
+      },
+      {
+        "text": "Potential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.",
+        "className": "footer-description",
+        "innerHTML": "\nPotential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.\n"
+      },
+      {
+        "text": "518 E 800 N, Suite AOrem, Utah 84097",
+        "className": "",
+        "innerHTML": "518 E 800 N, Suite A<br>Orem, Utah 84097"
+      },
+      {
+        "text": "+1 (801) 997-0457",
+        "className": "",
+        "innerHTML": "+1 (801) 997-0457"
+      },
+      {
+        "text": "sk@zerobarriers.io",
+        "className": "",
+        "innerHTML": "sk@zerobarriers.io"
+      },
+      {
+        "text": "© 2025 Zero Barriers. All rights reserved.",
+        "className": "",
+        "innerHTML": "© 2025 Zero Barriers. All rights reserved."
+      }
+    ],
+    "lists": [
+      {
+        "tagName": "UL",
+        "className": "benefits-list",
+        "items": [
+          {
+            "text": "The Attitude Cycle™ - Our proprietary methodology\n                for creating mindset shifts that lead to lasting behavioral change",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">The Attitude Cycle™</strong> - Our proprietary methodology\n                for creating mindset shifts that lead to lasting behavioral change\n"
+          },
+          {
+            "text": "IMPROV Sales Methodology™ - A customer-centric\n                approach to sales that emphasizes authenticity and adaptability",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">IMPROV Sales Methodology™</strong> - A customer-centric\n                approach to sales that emphasizes authenticity and adaptability\n"
+          },
+          {
+            "text": "Purpose-Driven Exercise™ - A structured process\n                for identifying individual and team purpose",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Purpose-Driven Exercise™</strong> - A structured process\n                for identifying individual and team purpose\n"
+          },
+          {
+            "text": "Leadership Development - Programs designed to build\n                confident, effective leaders at all levels",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Programs designed to build\n                confident, effective leaders at all levels\n"
+          },
+          {
+            "text": "Team Alignment - Workshops and tools to align teams\n                around shared goals and values",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Team Alignment</strong> - Workshops and tools to align teams\n                around shared goals and values\n"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "benefits-list",
+        "items": [
+          {
+            "text": "Custom Software Development - Tailored applications\n                designed to address your specific business challenges",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Custom Software Development</strong> - Tailored applications\n                designed to address your specific business challenges\n"
+          },
+          {
+            "text": "Salesforce Implementation - Expert configuration\n                and customization of the world's leading CRM platform",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Salesforce Implementation</strong> - Expert configuration\n                and customization of the world's leading CRM platform\n"
+          },
+          {
+            "text": "System Integration - Seamless connection of disparate\n                systems to create unified workflows",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">System Integration</strong> - Seamless connection of disparate\n                systems to create unified workflows\n"
+          },
+          {
+            "text": "Workflow Automation - Identification and automation\n                of repetitive tasks to increase efficiency",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Workflow Automation</strong> - Identification and automation\n                of repetitive tasks to increase efficiency\n"
+          },
+          {
+            "text": "Digital Presence Enhancement - Website development,\n                SEO, and digital marketing solutions",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Digital Presence Enhancement</strong> - Website development,\n                SEO, and digital marketing solutions\n"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "benefits-list",
+        "items": [
+          {
+            "text": "Sales Process Optimization - Design and implementation\n                of efficient, effective sales processes",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Sales Process Optimization</strong> - Design and implementation\n                of efficient, effective sales processes\n"
+          },
+          {
+            "text": "KPI-Driven Performance Management - Establishment\n                of meaningful metrics and management systems",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">KPI-Driven Performance Management</strong> - Establishment\n                of meaningful metrics and management systems\n"
+          },
+          {
+            "text": "Continuous Improvement Cycles - Implementation of\n                feedback loops to drive ongoing enhancement",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Continuous Improvement Cycles</strong> - Implementation of\n                feedback loops to drive ongoing enhancement\n"
+          },
+          {
+            "text": "Revenue Operations (RevOps) - Alignment of sales,\n                marketing, and customer success functions",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Revenue Operations (RevOps)</strong> - Alignment of sales,\n                marketing, and customer success functions\n"
+          },
+          {
+            "text": "Compensation Design - Creation of incentive structures\n                that drive desired behaviors and outcomes",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Compensation Design</strong> - Creation of incentive structures\n                that drive desired behaviors and outcomes\n"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "benefits-list",
+        "items": [
+          {
+            "text": "Growth Strategy Development - Creation of clear,\n                actionable plans to achieve revenue targets",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Growth Strategy Development</strong> - Creation of clear,\n                actionable plans to achieve revenue targets\n"
+          },
+          {
+            "text": "Organizational Design - Structuring teams and roles\n                for optimal performance",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Organizational Design</strong> - Structuring teams and roles\n                for optimal performance\n"
+          },
+          {
+            "text": "Market Expansion - Identification and evaluation\n                of new market opportunities",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Market Expansion</strong> - Identification and evaluation\n                of new market opportunities\n"
+          },
+          {
+            "text": "Merger & Acquisition Support - Due diligence and\n                integration planning",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Merger &amp; Acquisition Support</strong> - Due diligence and\n                integration planning\n"
+          },
+          {
+            "text": "Executive Coaching - One-on-one support for leaders\n                driving transformation",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Executive Coaching</strong> - One-on-one support for leaders\n                driving transformation\n"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "benefits-list",
+        "items": [
+          {
+            "text": "Sales Training - Comprehensive programs to develop\n                consultative selling skills",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Sales Training</strong> - Comprehensive programs to develop\n                consultative selling skills\n"
+          },
+          {
+            "text": "Leadership Development - Practical workshops for\n                new and experienced leaders",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Leadership Development</strong> - Practical workshops for\n                new and experienced leaders\n"
+          },
+          {
+            "text": "Customer Service Excellence - Training focused on\n                creating exceptional experiences",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Customer Service Excellence</strong> - Training focused on\n                creating exceptional experiences\n"
+          },
+          {
+            "text": "Process Adoption - Sessions designed to drive compliance\n                with new systems and processes",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Process Adoption</strong> - Sessions designed to drive compliance\n                with new systems and processes\n"
+          },
+          {
+            "text": "Role-Based Certifications - Structured programs\n                to validate skills and knowledge",
+            "innerHTML": "<strong data-astro-cid-ucd2ps2b=\"\">Role-Based Certifications</strong> - Structured programs\n                to validate skills and knowledge\n"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Human Transformation",
+            "innerHTML": " <a href=\"#human\">Human Transformation</a> "
+          },
+          {
+            "text": "Technology Enablement",
+            "innerHTML": " <a href=\"#technology\">Technology Enablement</a> "
+          },
+          {
+            "text": "Revenue Acceleration",
+            "innerHTML": " <a href=\"#revenue\">Revenue Acceleration</a> "
+          },
+          {
+            "text": "Strategic Consulting",
+            "innerHTML": " <a href=\"#consulting\">Strategic Consulting</a> "
+          },
+          {
+            "text": "Team Training",
+            "innerHTML": " <a href=\"#training\">Team Training</a> "
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Home",
+            "innerHTML": "<a href=\"/\">Home</a>"
+          },
+          {
+            "text": "Services",
+            "innerHTML": "<a href=\"/services\">Services</a>"
+          },
+          {
+            "text": "Case Studies",
+            "innerHTML": "<a href=\"/case-studies\">Case Studies</a>"
+          },
+          {
+            "text": "Technology",
+            "innerHTML": "<a href=\"/technology\">Technology</a>"
+          },
+          {
+            "text": "Testimonials",
+            "innerHTML": "<a href=\"/testimonials\">Testimonials</a>"
+          },
+          {
+            "text": "Contact",
+            "innerHTML": "<a href=\"/contact\">Contact</a>"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "text": "ZERO BARRIERS",
+        "href": "https://zerobarriers.io/",
+        "className": "logo",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Get Started",
+        "href": "https://zerobarriers.io/contact",
+        "className": "cta-button",
+        "target": ""
+      },
+      {
+        "text": "Schedule Your Assessment",
+        "href": "https://zerobarriers.io/contact",
+        "className": "white-cta",
+        "target": ""
+      },
+      {
+        "text": "Explore Our Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "secondary-white-cta",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/zerobarriersinc",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Human Transformation",
+        "href": "https://zerobarriers.io/services/#human",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology Enablement",
+        "href": "https://zerobarriers.io/services/#technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Revenue Acceleration",
+        "href": "https://zerobarriers.io/services/#revenue",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Strategic Consulting",
+        "href": "https://zerobarriers.io/services/#consulting",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Team Training",
+        "href": "https://zerobarriers.io/services/#training",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      }
+    ]
+  },
+  "elementsWithAnimations": [],
+  "allClassNames": [
+    "fonts-loaded",
+    "loaded",
+    "container",
+    "nav-container",
+    "logo",
+    "logo-image",
+    "nav-links",
+    "mobile-menu-toggle",
+    "fas",
+    "fa-bars",
+    "cta-button",
+    "services-hero",
+    "section-title",
+    "services-intro",
+    "service-detail",
+    "service-container",
+    "service-content",
+    "service-label",
+    "service-title",
+    "service-description",
+    "service-features",
+    "benefits-list",
+    "service-testimonial",
+    "service-testimonial-content",
+    "service-testimonial-author",
+    "service-image",
+    "partnerships",
+    "partnerships-grid",
+    "partner-card",
+    "partner-logo",
+    "fa-code",
+    "partner-name",
+    "partner-description",
+    "partner-highlights",
+    "highlight",
+    "fa-cloud",
+    "fa-chart-line",
+    "cta-section",
+    "cta-content",
+    "white-cta",
+    "secondary-white-cta",
+    "fa-arrow-right",
+    "footer-container",
+    "footer-logo",
+    "footer-description",
+    "social-links",
+    "fab",
+    "fa-linkedin-in",
+    "fa-facebook-f",
+    "fa-instagram",
+    "footer-title",
+    "footer-links",
+    "contact-info",
+    "contact-info-icon",
+    "fa-map-marker-alt",
+    "fa-phone-alt",
+    "fa-envelope",
+    "copyright"
+  ],
+  "animations": [
+    {
+      "name": "fa-beat",
+      "cssText": "@-webkit-keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-beat",
+      "cssText": "@keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@-webkit-keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@-webkit-keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@-webkit-keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@-webkit-keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@-webkit-keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    }
+  ]
+}
