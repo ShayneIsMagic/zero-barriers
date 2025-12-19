@@ -230,7 +230,7 @@ export default function HomePage() {
               <div className="division-description">
                 <div className="division-logos">
                   <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="division-logo" />
-                  <img src="/images/q90-logo.svg" alt="Q90 logo" className="division-logo" />
+                  <img src="/images/Q90-LOGO.svg" alt="Q90 logo" className="division-logo" />
                   <img src="/images/sebo-logo.svg" alt="Sebo logo" className="division-logo" />
                 </div>
                 <p>Our <strong>Zero Barriers Custom Development division</strong> delivers revenue growth through custom software solutions that eliminate technical barriers. With 30+ years of software development experience and a proven track record of building scalable systems, we create the technology infrastructure for sustainable revenue growth.</p>

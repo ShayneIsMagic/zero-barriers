@@ -143,7 +143,7 @@ export default function TechnologyPage() {
           <div className="division-content">
             <div className="division-logos">
               <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="division-logo" />
-              <img src="/images/q90-logo.svg" alt="Q90 logo" className="division-logo" />
+              <img src="/images/Q90-LOGO.svg" alt="Q90 logo" className="division-logo" />
               <img src="/images/sebo-logo.svg" alt="Sebo logo" className="division-logo" />
             </div>
             <div className="division-description">
