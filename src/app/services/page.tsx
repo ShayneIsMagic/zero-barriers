@@ -66,20 +66,12 @@ export default function ServicesPage() {
                 Every client is different. We unleash potential through our proven three-pillar approach, delivering rapid, substantial, and sustainable transformation results across 15+ industries.
               </p>
               <div className="hero-cta">
-                <Link 
-                  href="/contact" 
-                  className="cta-button primary"
-                  onClick={() => trackCTAClick('Begin Your Transformation', '/contact', 'services_hero')}
-                >
+                <TrackedCTA href="/contact" className="cta-button primary" location="services_hero">
                   Begin Your Transformation
-                </Link>
-                <Link 
-                  href="/results" 
-                  className="cta-button secondary"
-                  onClick={() => trackCTAClick('See Transformations', '/results', 'services_hero')}
-                >
+                </TrackedCTA>
+                <TrackedCTA href="/results" className="cta-button secondary" location="services_hero">
                   See Transformations
-                </Link>
+                </TrackedCTA>
               </div>
             </div>
             <div className="hero-image-desktop">

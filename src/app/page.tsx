@@ -20,21 +20,6 @@ export const metadata: Metadata = {
     description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
   },
 }
-  title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
-  description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
-  alternates: { canonical: 'https://zerobarriers.io' },
-  openGraph: {
-    title: 'Zero Barriers – Revenue Growth Transformation',
-    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
-    url: 'https://zerobarriers.io',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zero Barriers – Revenue Growth Transformation',
-    description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results.',
-  },
-}
 
 export default function HomePage() {
   return (

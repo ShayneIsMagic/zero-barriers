@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
+
+export const metadata: Metadata = {
   title: 'Tech Empowerment | Zero Barriers – CRM + Custom Development',
   description:
     'Zero Barriers technology division delivers Salesforce CRM solutions and custom development to eliminate technical barriers and accelerate revenue.',

@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
+
+export const metadata: Metadata = {
   title: 'Results | Zero Barriers – Gap → Bridge → Results',
   description:
     'Real businesses. Real breakthroughs. Detailed case studies showcasing how purpose-driven transformation delivers rapid, substantial, and sustainable results.',
