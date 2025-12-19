@@ -28,11 +28,17 @@ export default function ContactPage() {
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''
     
     if (!accessKey) {
-      console.error('Web3Forms access key is not configured. Please add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to .env.local')
+      console.error('❌ Web3Forms access key is not configured!')
+      console.error('   Variable: NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY')
+      console.error('   Current value:', accessKey || '(empty/undefined)')
+      console.error('   This must be set in Cloudflare Pages Environment Variables and available at build time')
+      console.error('   For static exports, env vars must be embedded at build time')
       setSubmitStatus('error')
       setIsSubmitting(false)
       return
     }
+    
+    console.log('✅ Web3Forms access key found, length:', accessKey.length)
 
     const formData = new FormData(e.currentTarget)
     
