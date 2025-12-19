@@ -1,10 +1,9 @@
 # Web3Forms Access Key Configured
 
-## ✅ Access Key Added
+## ✅ Access Key Configuration
 
-**Access Key**: `90687b2d-b5f9-471e-bf36-759c2b3ce51c`  
 **Email**: sk@zerobarriers.io  
-**Status**: Configured in env.template
+**Status**: Access key should be added to `.env.local` (local development) and Cloudflare Pages (production)
 
 ---
 
@@ -16,9 +15,14 @@ The access key has been added to `env.template` for reference, but **you MUST al
 
 1. **Go to**: Cloudflare Dashboard → Your Pages Project → Settings → Environment Variables
 
-2. **Add Variable**:
+2. **Get Your Access Key**:
+   - Go to: https://web3forms.com
+   - Enter email: sk@zerobarriers.io
+   - Get access key from email
+
+3. **Add Variable**:
    - **Name**: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
-   - **Value**: `90687b2d-b5f9-471e-bf36-759c2b3ce51c`
+   - **Value**: [Paste your access key from email]
    - **Type**: Secret (recommended)
 
 3. **Save** and trigger a new deployment
@@ -54,8 +58,7 @@ The access key has been added to `env.template` for reference, but **you MUST al
 
 ## Status
 
-- ✅ Access key: Configured
-- ✅ Form code: Ready
-- ⏳ Cloudflare environment variable: Needs to be added
+- ✅ Form code: Ready and configured
+- ⏳ Access key: Needs to be added to `.env.local` (local) and Cloudflare Pages (production)
 
 Once added to Cloudflare, the form will work immediately!
