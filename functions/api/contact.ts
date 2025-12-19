@@ -118,12 +118,29 @@ ${formData.message}
     })
 
     if (!resendResponse.ok) {
-      const errorData = await resendResponse.text()
-      console.error('Resend API error:', errorData)
+      let errorData: any
+      try {
+        errorData = await resendResponse.json()
+      } catch {
+        errorData = await resendResponse.text()
+      }
+      
+      console.error('Resend API error:', JSON.stringify(errorData, null, 2))
+      console.error('Resend API status:', resendResponse.status, resendResponse.statusText)
+      
+      // Provide more helpful error messages based on common issues
+      let errorMessage = 'Failed to send email. Please try again later.'
+      if (typeof errorData === 'object' && errorData.message) {
+        errorMessage = errorData.message
+      } else if (typeof errorData === 'string' && errorData.includes('domain')) {
+        errorMessage = 'Email domain not verified. Please verify your domain in Resend.'
+      }
+      
       return new Response(
         JSON.stringify({ 
           success: false, 
-          error: 'Failed to send email. Please try again later.' 
+          error: errorMessage,
+          details: process.env.NODE_ENV === 'development' ? errorData : undefined
         }),
         {
           status: 500,
@@ -133,6 +150,7 @@ ${formData.message}
     }
 
     const resendData = await resendResponse.json()
+    console.log('Resend API success:', resendData.id)
 
     // Success
     return new Response(
