@@ -52,7 +52,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Handle different types of requests
+  // Skip external resources (CDN, analytics, etc.) - let browser handle them directly
+  const isExternal = url.origin !== self.location.origin;
+  if (isExternal) {
+    // Don't intercept external requests - let browser handle CSP and loading
+    return;
+  }
+
+  // Handle different types of requests (only for same-origin)
   if (request.destination === 'image') {
     // Image caching strategy: cache-first with network fallback
     event.respondWith(handleImageRequest(request));

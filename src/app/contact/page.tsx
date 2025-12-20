@@ -59,8 +59,8 @@ export default function ContactPage() {
         body: JSON.stringify(formDataObject),
       })
 
-      // If function endpoint works (not 404), use it
-      if (functionResponse.status !== 404) {
+      // Check if function response is successful
+      if (functionResponse.ok) {
         const data = await functionResponse.json()
 
         if (data.success) {
@@ -70,10 +70,14 @@ export default function ContactPage() {
           if (typeof window !== 'undefined') {
             localStorage.setItem('lastFormSubmission', Date.now().toString())
           }
+          setIsSubmitting(false)
           return
         } else {
           throw new Error(data.error || 'Form submission failed')
         }
+      } else {
+        // Function returned error status, throw to trigger fallback
+        throw new Error(`Function returned ${functionResponse.status}`)
       }
     } catch (functionError) {
       // Cloudflare Function not available or failed, fallback to Web3Forms
