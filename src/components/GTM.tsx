@@ -1,9 +1,17 @@
 'use client'
 
 import Script from 'next/script'
+import { useEffect } from 'react'
 
 export function GTM() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+
+  useEffect(() => {
+    // Initialize dataLayer even if GTM fails to load
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || []
+    }
+  }, [])
 
   if (!gtmId) return null
 
@@ -12,6 +20,11 @@ export function GTM() {
       <Script
         id="gtm-script"
         strategy="afterInteractive"
+        onError={(e) => {
+          // Silently handle GTM load errors - don't log to console
+          // GTM container might not exist or might not be published
+          console.debug('GTM script failed to load (this is okay if GTM container is not set up)')
+        }}
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
