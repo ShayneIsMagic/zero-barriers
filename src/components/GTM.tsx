@@ -10,6 +10,13 @@ export function GTM() {
     // Initialize dataLayer even if GTM fails to load
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || []
+      
+      // Suppress GTM script errors by catching them
+      const originalError = console.error
+      const errorMessages = window.console.error ? window.console.error.bind(window.console) : null
+      
+      // Wrap script injection in try-catch within the GTM code itself
+      // This is handled in the inline script below
     }
   }, [])
 
@@ -20,17 +27,21 @@ export function GTM() {
       <Script
         id="gtm-script"
         strategy="afterInteractive"
-        onError={(e) => {
-          // Silently handle GTM load errors - don't log to console
-          // GTM container might not exist or might not be published
-          console.debug('GTM script failed to load (this is okay if GTM container is not set up)')
-        }}
         dangerouslySetInnerHTML={{
           __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            (function(w,d,s,l,i){
+              try {
+                w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                j.onerror=function(){/* Silently handle GTM load failures */};
+                f.parentNode.insertBefore(j,f);
+              } catch(e) {
+                /* Silently handle GTM initialization errors */
+              }
             })(window,document,'script','dataLayer','${gtmId}');
           `,
         }}
