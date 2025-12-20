@@ -3549,6 +3549,15 @@ footer::before {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-links a i {
+  display: inline-block;
+  font-size: inherit;
+  line-height: 1;
 }
 
 .social-links a:hover {
