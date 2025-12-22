@@ -133,14 +133,25 @@
   color: var(--charcoal);
 }
 
+.mobileMenuBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: calc(var(--z-fixed) + 1);
+}
+
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
   background: linear-gradient(135deg, var(--charcoal) 0%, var(--black-rich) 100%);
-  z-index: calc(var(--z-fixed) + 1);
+  z-index: calc(var(--z-fixed) + 2);
   padding-top: 80px;
   overflow-y: auto;
 }
@@ -148,45 +159,56 @@
 .mobileMenuContent {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-xl);
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 0;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  width: 100%;
+  max-width: 100%;
 }
 
 .mobileNavLink {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
   text-decoration: none;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
-  padding: var(--spacing-md);
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-base);
+  padding: var(--spacing-lg) var(--spacing-md);
+  min-height: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background var(--transition-base), color var(--transition-base);
+  text-align: center;
 }
 
-.mobileNavLink:hover {
+.mobileNavLink:hover,
+.mobileNavLink:focus {
   background: rgba(255, 255, 255, 0.1);
+  color: var(--yellow-sunshine);
 }
 
 .mobileCtaButton {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--yellow-sunshine);
   color: var(--charcoal);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
   border-radius: var(--radius-sm);
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   margin-top: var(--spacing-xl);
+  min-height: 64px;
   box-shadow: var(--shadow-gold);
   transition: all var(--transition-base);
 }
 
-.mobileCtaButton:hover {
+.mobileCtaButton:hover,
+.mobileCtaButton:focus {
   background: var(--yellow-golden);
   transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 213, 79, 0.4);
 }
 
 /* Desktop Styles */

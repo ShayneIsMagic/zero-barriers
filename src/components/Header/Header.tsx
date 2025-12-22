@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -27,6 +27,18 @@ export default function Header() {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <motion.header 
@@ -113,52 +125,68 @@ function MobileMenu({ navItems, onClose }: {
   navItems: Array<{ href: string; label: string }>
   onClose: () => void 
 }) {
+
   return (
-    <motion.div
-      className={styles.mobileMenu}
-      initial={{ opacity: 0, x: '100%' }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: '100%' }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
-      id="mobile-menu"
-    >
-      <div className={styles.mobileMenuContent}>
-        {navItems.map((item, index) => (
+    <>
+      {/* Backdrop */}
+      <motion.div
+        className={styles.mobileMenuBackdrop}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      {/* Menu */}
+      <motion.div
+        className={styles.mobileMenu}
+        initial={{ opacity: 0, y: '-100%' }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: '-100%' }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        id="mobile-menu"
+      >
+        <div className={styles.mobileMenuContent}>
+          {navItems.map((item, index) => (
+            <motion.div
+              key={item.href}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <Link 
+                href={item.href}
+                className={styles.mobileNavLink}
+                onClick={() => {
+                  trackNavigationClick(item.href, item.label)
+                  onClose()
+                  document.body.style.overflow = ''
+                }}
+              >
+                {item.label}
+              </Link>
+            </motion.div>
+          ))}
           <motion.div
-            key={item.href}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.05 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: navItems.length * 0.05 }}
           >
             <Link 
-              href={item.href}
-              className={styles.mobileNavLink}
+              href="/contact"
+              className={styles.mobileCtaButton}
               onClick={() => {
-                trackNavigationClick(item.href, item.label)
+                trackCTAClick('Begin Transformation', '/contact', 'mobile_menu')
                 onClose()
+                document.body.style.overflow = ''
               }}
             >
-              {item.label}
+              Begin Transformation
             </Link>
           </motion.div>
-        ))}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: navItems.length * 0.05 }}
-        >
-          <Link 
-            href="/contact"
-            className={styles.mobileCtaButton}
-            onClick={() => {
-              trackCTAClick('Begin Transformation', '/contact', 'mobile_menu')
-              onClose()
-            }}
-          >
-            Begin Transformation
-          </Link>
-        </motion.div>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </>
   )
 }
