@@ -70,10 +70,8 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
       )
     }
 
-    // Get recipient email
-    // Note: Until domain is verified in Resend, can only send to verified email (shayne@devpipeline.com)
-    // Once domain verified, can send to sk@zerobarriers.io
-    const recipientEmail = env.CONTACT_EMAIL || 'shayne@devpipeline.com'
+    // Get recipient email - using verified domain
+    const recipientEmail = env.CONTACT_EMAIL || 'sk@zerobarriers.io'
 
     // Prepare email content
     const emailHtml = `
