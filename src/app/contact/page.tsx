@@ -7,6 +7,7 @@ import { trackFormSubmission } from '../../lib/analytics'
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submittedEmail, setSubmittedEmail] = useState<string>('')
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -64,6 +65,9 @@ export default function ContactPage() {
         const data = await functionResponse.json()
 
         if (data.success) {
+          // Store email before resetting form
+          const emailValue = formDataObject.email || ''
+          setSubmittedEmail(emailValue)
           setSubmitStatus('success')
           e.currentTarget.reset()
           trackFormSubmission('contact_form', true)
@@ -218,14 +222,27 @@ export default function ContactPage() {
               />
               
               {submitStatus === 'success' && (
-                <div style={{padding: '15px', background: 'var(--primary-light)', color: 'var(--primary-dark)', borderRadius: '4px', marginBottom: '20px'}}>
-                  Thank you! Your message has been sent successfully.
+                <div className="form-message form-message-success" role="alert" aria-live="polite">
+                  <i className="fas fa-check-circle"></i>
+                  <div>
+                    <strong>Message Sent Successfully!</strong>
+                    <p>Thank you for contacting Zero Barriers. We've received your message and will respond to you{submittedEmail ? ` at ${submittedEmail}` : ''} as soon as possible.</p>
+                    <p style={{marginTop: '10px', fontSize: '0.9em', opacity: 0.9}}>For immediate assistance, you can also reach us at <a href="mailto:sk@zerobarriers.io" style={{color: 'inherit', textDecoration: 'underline'}}>sk@zerobarriers.io</a> or <a href="tel:8019970457" style={{color: 'inherit', textDecoration: 'underline'}}>801-997-0457</a>.</p>
+                  </div>
                 </div>
               )}
               
               {submitStatus === 'error' && (
-                <div style={{padding: '15px', background: '#fee', color: '#c33', borderRadius: '4px', marginBottom: '20px'}}>
-                  There was an error sending your message. Please try again or contact us directly at sk@zerobarriers.io.
+                <div className="form-message form-message-error" role="alert" aria-live="polite">
+                  <i className="fas fa-exclamation-circle"></i>
+                  <div>
+                    <strong>Unable to Send Message</strong>
+                    <p>We encountered an issue sending your message. Please try again, or contact us directly:</p>
+                    <ul style={{marginTop: '10px', paddingLeft: '20px'}}>
+                      <li>Email: <a href="mailto:sk@zerobarriers.io" style={{color: 'inherit', textDecoration: 'underline'}}>sk@zerobarriers.io</a></li>
+                      <li>Phone: <a href="tel:8019970457" style={{color: 'inherit', textDecoration: 'underline'}}>801-997-0457</a></li>
+                    </ul>
+                  </div>
                 </div>
               )}
               

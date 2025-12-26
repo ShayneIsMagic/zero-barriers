@@ -1,0 +1,237 @@
+{
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/",
+      "status": 403,
+      "title": "DNS points to prohibited IP | zerobarriers.io | Cloudflare",
+      "h1Count": 1,
+      "linkCount": 4,
+      "hasMobileMenu": false,
+      "loadTime": 7724,
+      "domContentLoaded": 7722,
+      "errors": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Services",
+      "path": "/services",
+      "status": 403,
+      "title": "DNS points to prohibited IP | zerobarriers.io | Cloudflare",
+      "h1Count": 1,
+      "linkCount": 4,
+      "hasMobileMenu": false,
+      "loadTime": 255,
+      "domContentLoaded": 254,
+      "errors": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Technology",
+      "path": "/technology",
+      "status": 403,
+      "title": "DNS points to prohibited IP | zerobarriers.io | Cloudflare",
+      "h1Count": 1,
+      "linkCount": 4,
+      "hasMobileMenu": false,
+      "loadTime": 200,
+      "domContentLoaded": 198,
+      "errors": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Results",
+      "path": "/results",
+      "status": 403,
+      "title": "DNS points to prohibited IP | zerobarriers.io | Cloudflare",
+      "h1Count": 1,
+      "linkCount": 4,
+      "hasMobileMenu": false,
+      "loadTime": 246,
+      "domContentLoaded": 245,
+      "errors": 1,
+      "warnings": 0
+    },
+    {
+      "name": "Contact",
+      "path": "/contact",
+      "status": 403,
+      "title": "DNS points to prohibited IP | zerobarriers.io | Cloudflare",
+      "h1Count": 1,
+      "linkCount": 4,
+      "hasMobileMenu": false,
+      "loadTime": 195,
+      "domContentLoaded": 195,
+      "errors": 1,
+      "warnings": 0
+    }
+  ],
+  "links": [],
+  "contactForm": {
+    "status": "ERROR",
+    "message": "Contact form not found"
+  },
+  "security": [
+    {
+      "check": "HTTPS Enabled",
+      "status": "PASS",
+      "message": "Site uses HTTPS"
+    },
+    {
+      "check": "X-Frame-Options",
+      "status": "PASS",
+      "message": "Header present: SAMEORIGIN"
+    },
+    {
+      "check": "X-Content-Type-Options",
+      "status": "WARNING",
+      "message": "Header not found"
+    },
+    {
+      "check": "X-XSS-Protection",
+      "status": "WARNING",
+      "message": "Header not found"
+    },
+    {
+      "check": "Content-Security-Policy",
+      "status": "WARNING",
+      "message": "Header not found"
+    },
+    {
+      "check": "Strict-Transport-Security",
+      "status": "WARNING",
+      "message": "Header not found"
+    },
+    {
+      "check": "Exposed API Keys",
+      "status": "PASS",
+      "message": "No api keys found in page source"
+    },
+    {
+      "check": "Exposed Passwords",
+      "status": "PASS",
+      "message": "No passwords found in page source"
+    },
+    {
+      "check": "Exposed Secrets",
+      "status": "PASS",
+      "message": "No secrets found in page source"
+    },
+    {
+      "check": "Exposed Tokens",
+      "status": "PASS",
+      "message": "No tokens found in page source"
+    }
+  ],
+  "errors": [
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "Home",
+      "message": "Page returned status 403"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "Services",
+      "message": "Page returned status 403"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "Technology",
+      "message": "Page returned status 403"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "Results",
+      "message": "Page returned status 403"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "Contact",
+      "message": "Page returned status 403"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED"
+    },
+    {
+      "page": "unknown",
+      "message": "Failed to load resource: the server responded with a status of 403 ()"
+    }
+  ],
+  "warnings": []
+}

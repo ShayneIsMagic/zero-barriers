@@ -221,6 +221,13 @@ img {
   z-index: 2;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+}
+
 /* Header */
 header {
   background-color: var(--white);
@@ -231,11 +238,24 @@ header {
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 12px 0;
+  }
 }
 
 .logo {
@@ -327,6 +347,8 @@ header {
   border: none;
   color: var(--black);
   padding: 10px;
+  z-index: 1001;
+  position: relative;
 }
 
 /* Hero Section - Split Layout with Yellow Theme */
@@ -4117,15 +4139,21 @@ footer::before {
   }
   
   .mobile-menu-toggle {
+    display: block !important;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--black);
     padding: 10px;
     border: none;
     background: none;
-    z-index: 1001;
+    z-index: 1002;
+    position: relative;
     transition: color 0.3s;
-    display: block !important;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .mobile-menu-toggle:hover {
@@ -4135,31 +4163,69 @@ footer::before {
   .nav-links {
     display: none;
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     flex-direction: column;
     background-color: var(--white);
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    gap: 20px;
-    border-top: 1px solid var(--light-gray);
+    padding: 80px 20px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    gap: 0;
     overflow-y: auto;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
   }
   
   .nav-links.active {
     display: flex !important;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Mobile menu backdrop */
+  .mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   .nav-links a {
-    font-size: 18px;
-    padding: 15px 0;
+    font-size: 20px;
+    padding: 20px 24px;
     border-bottom: 1px solid var(--light-gray);
     text-align: center;
     font-weight: 600;
+    color: var(--black);
+    display: block;
+    width: 100%;
+    transition: background-color 0.2s, color 0.2s;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--gray-soft);
+    color: var(--teal-rich);
   }
   
   .nav-links a:last-child {
@@ -4202,6 +4268,21 @@ footer::before {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+}
+
+/* Main content spacing for fixed header */
+main {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+  
+  main {
+    padding-top: 70px;
+  }
 }
 
 .division-logos {
@@ -6141,6 +6222,80 @@ img {
   top: 20px;
   right: 20px;
   z-index: 10000;
+}
+
+/* Form Messages (Success/Error Toast Notifications) */
+.form-message {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-message i {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-message div {
+  flex: 1;
+}
+
+.form-message strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.form-message p {
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+}
+
+.form-message ul {
+  margin: 8px 0 0 0;
+}
+
+.form-message a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.form-message-success {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 2px solid #4caf50;
+  color: #1b5e20;
+}
+
+.form-message-success i {
+  color: #4caf50;
+}
+
+.form-message-error {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border: 2px solid #f44336;
+  color: #b71c1c;
+}
+
+.form-message-error i {
+  color: #f44336;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Updates */
