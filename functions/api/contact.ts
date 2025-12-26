@@ -76,7 +76,11 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
     // Check if Resend API key is configured
     const resendApiKey = env.RESEND_API_KEY
     if (!resendApiKey) {
-      console.error('RESEND_API_KEY not configured')
+      console.error('[FORM SUBMISSION] CRITICAL ERROR - RESEND_API_KEY not configured', {
+        timestamp: new Date().toISOString(),
+        email: formData.email,
+        hasApiKey: false,
+      })
       return new Response(
         JSON.stringify({ 
           success: false, 
@@ -184,7 +188,13 @@ ${formData.message}
     }
 
     const resendData = await resendResponse.json()
-    console.log('Resend API success:', resendData.id)
+    console.log('[FORM SUBMISSION] SUCCESS:', {
+      timestamp: new Date().toISOString(),
+      resendId: resendData.id,
+      email: formData.email,
+      name: `${formData.first_name} ${formData.last_name}`,
+      recipient: recipientEmail,
+    })
 
     // Success
     return new Response(
@@ -200,7 +210,12 @@ ${formData.message}
     )
 
   } catch (error) {
-    console.error('Contact form error:', error)
+    console.error('[FORM SUBMISSION] CRITICAL ERROR - Exception caught:', {
+      timestamp: new Date().toISOString(),
+      error: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+    })
     return new Response(
       JSON.stringify({ 
         success: false, 

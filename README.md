@@ -284,13 +284,24 @@ Implemented JSON-LD structured data:
 
 ## Environment Variables
 
-### Development (.env.local)
+### Development
+
+**Copy `.env` to `.env.local` and update with your actual values:**
+
+```bash
+cp .env .env.local
+```
+
+**Then edit `.env.local` with your actual keys:**
 
 ```env
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
+NEXT_PUBLIC_GA_ID=G-YHS2Y7L3C9
+NEXT_PUBLIC_GTM_ID=GTM-WL8K8XK
+RESEND_API_KEY=your_resend_api_key_here
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-web3forms-key
 ```
+
+**Note:** `.env` is a template file (committed to git). `.env.local` is for your actual keys (gitignored).
 
 ### Production (Cloudflare Pages)
 

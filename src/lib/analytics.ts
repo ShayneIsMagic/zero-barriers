@@ -82,16 +82,38 @@ export function trackCTAClick(ctaText: string, destination: string, location?: s
 }
 
 /**
- * Track form submission
+ * Track form submission with detailed analytics
  */
-export function trackFormSubmission(formName: string, success: boolean, error?: string) {
-  trackEvent(success ? 'form_submit_success' : 'form_submit_error', {
+export function trackFormSubmission(formName: string, success: boolean, error?: string, formData?: {
+  email?: string
+  firstName?: string
+  lastName?: string
+  company?: string
+}) {
+  const eventName = success ? 'form_submit_success' : 'form_submit_error'
+  
+  // Enhanced tracking with form data
+  trackEvent(eventName, {
     event_category: 'form',
     event_label: formName,
     form_name: formName,
     success: success,
-    error: error,
+    error: error || null,
+    // Add form data for analytics (no PII)
+    has_email: !!formData?.email,
+    has_company: !!formData?.company,
+    form_timestamp: new Date().toISOString(),
   })
+  
+  // Log to console for debugging (development only)
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[Analytics] Form submission tracked:', {
+      event: eventName,
+      formName,
+      success,
+      error,
+    })
+  }
 }
 
 /**

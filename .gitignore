@@ -22,7 +22,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment
-.env
+# Note: .env is committed as a template file (with placeholder values only)
 .env.local
 .env.development.local
 .env.test.local

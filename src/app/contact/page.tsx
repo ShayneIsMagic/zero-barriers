@@ -139,7 +139,13 @@ export default function ContactPage() {
           if (data.success) {
             setSubmitStatus('success')
             e.currentTarget.reset()
-            trackFormSubmission('contact_form', true)
+            // Enhanced analytics tracking
+            trackFormSubmission('contact_form', true, undefined, {
+              email: emailValue,
+              firstName: formData.get('first_name')?.toString(),
+              lastName: formData.get('last_name')?.toString(),
+              company: formData.get('company')?.toString(),
+            })
             if (typeof window !== 'undefined') {
               localStorage.setItem('lastFormSubmission', Date.now().toString())
             }
