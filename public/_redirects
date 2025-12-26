@@ -1,2 +1,3 @@
 # Redirects for better SEO and user experience
-# Note: Astro builds pages as index.html in subdirectories, so no redirects needed
+# Next.js App Router with static export handles routing automatically
+# Add custom redirects here if needed (e.g., /old-page /new-page 301)
