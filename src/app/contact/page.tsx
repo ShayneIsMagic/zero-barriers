@@ -80,7 +80,19 @@ export default function ContactPage() {
           // Function returned error - try to get detailed error message
           const errorMsg = data.error || 'Form submission failed'
           console.error('Contact API error:', errorMsg, data)
-          throw new Error(errorMsg)
+          setSubmitStatus('error')
+          trackFormSubmission('contact_form', false, errorMsg)
+          setIsSubmitting(false)
+          // Scroll error message into view
+          if (typeof window !== 'undefined') {
+            setTimeout(() => {
+              const errorMsgEl = document.getElementById('form-error-message')
+              if (errorMsgEl) {
+                errorMsgEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+              }
+            }, 100)
+          }
+          return
         }
       } else {
         // Function returned error status - get error details
@@ -91,7 +103,20 @@ export default function ContactPage() {
           errorData = { error: `Server error (${functionResponse.status})` }
         }
         console.error('Contact API failed:', functionResponse.status, errorData)
-        throw new Error(errorData.error || `Server returned ${functionResponse.status}`)
+        const errorMsg = errorData.error || `Server returned ${functionResponse.status}`
+        setSubmitStatus('error')
+        trackFormSubmission('contact_form', false, errorMsg)
+        setIsSubmitting(false)
+        // Scroll error message into view
+        if (typeof window !== 'undefined') {
+          setTimeout(() => {
+            const errorMsgEl = document.getElementById('form-error-message')
+            if (errorMsgEl) {
+              errorMsgEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+            }
+          }, 100)
+        }
+        return
       }
     } catch (functionError) {
       // Cloudflare Function not available or failed, fallback to Web3Forms
@@ -124,11 +149,29 @@ export default function ContactPage() {
             console.error('Error message:', errorMessage)
             setSubmitStatus('error')
             trackFormSubmission('contact_form', false, errorMessage)
+            // Scroll error message into view
+            if (typeof window !== 'undefined') {
+              setTimeout(() => {
+                const errorMsg = document.getElementById('form-error-message')
+                if (errorMsg) {
+                  errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+                }
+              }, 100)
+            }
           }
         } catch (web3formsError) {
           console.error('Web3Forms fallback also failed:', web3formsError)
           setSubmitStatus('error')
           trackFormSubmission('contact_form', false, web3formsError instanceof Error ? web3formsError.message : 'Submission failed')
+          // Scroll error message into view
+          if (typeof window !== 'undefined') {
+            setTimeout(() => {
+              const errorMsg = document.getElementById('form-error-message')
+              if (errorMsg) {
+                errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+              }
+            }, 100)
+          }
         }
       } else {
         // Neither method available - show helpful error with diagnostic info
@@ -144,6 +187,15 @@ export default function ContactPage() {
           hasWeb3FormsKey: !!accessKey,
           errorMessage: errorMsg
         })
+        // Scroll error message into view
+        if (typeof window !== 'undefined') {
+          setTimeout(() => {
+            const errorMsg = document.getElementById('form-error-message')
+            if (errorMsg) {
+              errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+            }
+          }, 100)
+        }
       }
     } finally {
       setIsSubmitting(false)
@@ -241,7 +293,13 @@ export default function ContactPage() {
               />
               
               {submitStatus === 'success' && (
-                <div className="form-message form-message-success" role="alert" aria-live="polite">
+                <div 
+                  className="form-message form-message-success" 
+                  role="alert" 
+                  aria-live="polite"
+                  id="form-success-message"
+                  style={{scrollMarginTop: '20px'}}
+                >
                   <i className="fas fa-check-circle"></i>
                   <div>
                     <strong>Message Sent Successfully!</strong>
@@ -252,18 +310,21 @@ export default function ContactPage() {
               )}
               
               {submitStatus === 'error' && (
-                <div className="form-message form-message-error" role="alert" aria-live="polite">
+                <div 
+                  className="form-message form-message-error" 
+                  role="alert" 
+                  aria-live="polite"
+                  id="form-error-message"
+                  style={{scrollMarginTop: '20px'}}
+                >
                   <i className="fas fa-exclamation-circle"></i>
                   <div>
                     <strong>Unable to Send Message</strong>
-                    <p>We encountered an issue sending your message. Please check the browser console for details, try again, or contact us directly:</p>
+                    <p>We encountered an issue sending your message. Please try again, or contact us directly:</p>
                     <ul style={{marginTop: '10px', paddingLeft: '20px'}}>
                       <li>Email: <a href="mailto:sk@zerobarriers.io" style={{color: 'inherit', textDecoration: 'underline'}}>sk@zerobarriers.io</a></li>
                       <li>Phone: <a href="tel:8019970457" style={{color: 'inherit', textDecoration: 'underline'}}>801-997-0457</a></li>
                     </ul>
-                    <p style={{marginTop: '10px', fontSize: '0.9em', opacity: 0.9}}>
-                      <strong>Note:</strong> Please check that <code>RESEND_API_KEY</code> is set in Cloudflare Pages environment variables if this error persists.
-                    </p>
                   </div>
                 </div>
               )}
