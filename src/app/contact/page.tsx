@@ -256,11 +256,14 @@ export default function ContactPage() {
                   <i className="fas fa-exclamation-circle"></i>
                   <div>
                     <strong>Unable to Send Message</strong>
-                    <p>We encountered an issue sending your message. Please try again, or contact us directly:</p>
+                    <p>We encountered an issue sending your message. Please check the browser console for details, try again, or contact us directly:</p>
                     <ul style={{marginTop: '10px', paddingLeft: '20px'}}>
                       <li>Email: <a href="mailto:sk@zerobarriers.io" style={{color: 'inherit', textDecoration: 'underline'}}>sk@zerobarriers.io</a></li>
                       <li>Phone: <a href="tel:8019970457" style={{color: 'inherit', textDecoration: 'underline'}}>801-997-0457</a></li>
                     </ul>
+                    <p style={{marginTop: '10px', fontSize: '0.9em', opacity: 0.9}}>
+                      <strong>Note:</strong> Please check that <code>RESEND_API_KEY</code> is set in Cloudflare Pages environment variables if this error persists.
+                    </p>
                   </div>
                 </div>
               )}

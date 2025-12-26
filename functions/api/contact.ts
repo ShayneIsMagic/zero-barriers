@@ -141,7 +141,8 @@ ${formData.message}
       try {
         errorData = await resendResponse.json()
       } catch {
-        errorData = await resendResponse.text()
+        const textData = await resendResponse.text()
+        errorData = { message: textData || 'Unknown error', raw: textData }
       }
       
       console.error('Resend API error:', JSON.stringify(errorData, null, 2))
@@ -149,17 +150,31 @@ ${formData.message}
       
       // Provide more helpful error messages based on common issues
       let errorMessage = 'Failed to send email. Please try again later.'
-      if (typeof errorData === 'object' && errorData.message) {
-        errorMessage = errorData.message
-      } else if (typeof errorData === 'string' && errorData.includes('domain')) {
-        errorMessage = 'Email domain not verified. Please verify your domain in Resend.'
+      if (typeof errorData === 'object') {
+        if (errorData.message) {
+          errorMessage = errorData.message
+        } else if (errorData.error) {
+          errorMessage = errorData.error
+        } else if (errorData.raw) {
+          errorMessage = errorData.raw
+        }
+      } else if (typeof errorData === 'string') {
+        errorMessage = errorData
+      }
+      
+      // Add more context to error message
+      if (errorMessage.includes('domain') || errorMessage.includes('Domain')) {
+        errorMessage = 'Email domain not verified. Please verify contact@zerobarriers.io in Resend.'
+      } else if (errorMessage.includes('API') || errorMessage.includes('api')) {
+        errorMessage = 'Resend API configuration issue. Please check your API key and domain verification.'
       }
       
       return new Response(
         JSON.stringify({ 
           success: false, 
           error: errorMessage,
-          details: process.env.NODE_ENV === 'development' ? errorData : undefined
+          statusCode: resendResponse.status,
+          details: errorData
         }),
         {
           status: 500,
