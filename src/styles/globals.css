@@ -6217,13 +6217,6 @@ img {
   background: var(--white);
 }
 
-.toast-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10000;
-}
-
 /* Form Messages (Success/Error Toast Notifications) */
 .form-message {
   padding: 20px;

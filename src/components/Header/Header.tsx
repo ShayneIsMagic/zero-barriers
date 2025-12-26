@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import Image from 'next/image'
+// Note: Using regular img tag since images are unoptimized in next.config.js (required for static export)
 import styles from './Header.module.css'
 import { trackNavigationClick, trackCTAClick } from '../../lib/analytics'
 
@@ -54,7 +54,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <Image 
+            <img 
               src="/images/zero-barriers-logo.png" 
               alt="Zero Barriers logo"
               width={40}

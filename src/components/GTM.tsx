@@ -10,13 +10,6 @@ export function GTM() {
     // Initialize dataLayer even if GTM fails to load
     if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || []
-      
-      // Suppress GTM script errors by catching them
-      const originalError = console.error
-      const errorMessages = window.console.error ? window.console.error.bind(window.console) : null
-      
-      // Wrap script injection in try-catch within the GTM code itself
-      // This is handled in the inline script below
     }
   }, [])
 

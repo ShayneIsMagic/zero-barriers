@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import Link from 'next/link'
 import { trackFormSubmission } from '../../lib/analytics'
 
 export default function ContactPage() {
@@ -70,9 +69,22 @@ export default function ContactPage() {
           setSubmittedEmail(emailValue)
           setSubmitStatus('success')
           e.currentTarget.reset()
-          trackFormSubmission('contact_form', true)
+          // Enhanced analytics tracking
+          trackFormSubmission('contact_form', true, undefined, {
+            email: emailValue,
+            firstName: formDataObject.first_name,
+            lastName: formDataObject.last_name,
+            company: formDataObject.company,
+          })
           if (typeof window !== 'undefined') {
             localStorage.setItem('lastFormSubmission', Date.now().toString())
+            // Scroll success message into view
+            setTimeout(() => {
+              const successMsg = document.getElementById('form-success-message')
+              if (successMsg) {
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+              }
+            }, 100)
           }
           setIsSubmitting(false)
           return
@@ -137,17 +149,27 @@ export default function ContactPage() {
           const data = await response.json()
 
           if (data.success) {
+            // Store email before resetting form
+            const emailValue = formData.get('email')?.toString() || ''
+            setSubmittedEmail(emailValue)
             setSubmitStatus('success')
             e.currentTarget.reset()
             // Enhanced analytics tracking
             trackFormSubmission('contact_form', true, undefined, {
               email: emailValue,
-              firstName: formData.get('first_name')?.toString(),
-              lastName: formData.get('last_name')?.toString(),
-              company: formData.get('company')?.toString(),
+              firstName: formData.get('first_name')?.toString() || '',
+              lastName: formData.get('last_name')?.toString() || '',
+              company: formData.get('company')?.toString() || '',
             })
             if (typeof window !== 'undefined') {
               localStorage.setItem('lastFormSubmission', Date.now().toString())
+              // Scroll success message into view
+              setTimeout(() => {
+                const successMsg = document.getElementById('form-success-message')
+                if (successMsg) {
+                  successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+                }
+              }, 100)
             }
           } else {
             console.error('Web3Forms API Error:', data)
@@ -345,7 +367,6 @@ export default function ContactPage() {
                 )}
               </button>
             </form>
-            <div className="toast-container"></div>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer } from '@/lib/animations'
+import { fadeInUp, staggerContainer } from '../../lib/animations'
 import styles from './StatsSection.module.css'
 
 const stats = [
