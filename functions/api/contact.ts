@@ -24,15 +24,34 @@ interface ContactFormData {
   message: string
 }
 
+// CORS headers for cross-origin requests
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+}
+
+// Handle GET requests (helpful error message)
+export async function onRequestGet() {
+  return new Response(
+    JSON.stringify({ 
+      error: 'Method not allowed',
+      message: 'This endpoint only accepts POST requests. Please use the contact form to submit data.',
+      allowedMethods: ['POST']
+    }),
+    {
+      status: 405,
+      headers: { 
+        'Content-Type': 'application/json',
+        'Allow': 'POST, OPTIONS',
+        ...corsHeaders 
+      },
+    }
+  )
+}
+
 export async function onRequestPost(context: { request: Request; env: Env }) {
   const { request, env } = context
-
-  // CORS headers for cross-origin requests
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-  }
 
   // Handle OPTIONS preflight
   if (request.method === 'OPTIONS') {
@@ -70,7 +89,8 @@ export async function onRequestPost(context: { request: Request; env: Env }) {
       )
     }
 
-    // Get recipient email - using verified domain
+    // Get recipient email - defaults to sk@zerobarriers.io
+    // Can be overridden via CONTACT_EMAIL environment variable in Cloudflare Pages
     const recipientEmail = env.CONTACT_EMAIL || 'sk@zerobarriers.io'
 
     // Prepare email content
@@ -106,10 +126,8 @@ ${formData.message}
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        // Using verified domain - update once DNS records are added and domain is verified in Resend
-        // For now using default domain (only works for testing to verified email)
-        // Once domain verified, change to: 'Zero Barriers <contact@zerobarriers.io>'
-        from: 'Zero Barriers <onboarding@resend.dev>',
+        // Using verified domain zerobarriers.io
+        from: 'Zero Barriers <contact@zerobarriers.io>',
         to: [recipientEmail],
         reply_to: formData.email,
         subject: 'New Contact Form Submission from Zero Barriers',

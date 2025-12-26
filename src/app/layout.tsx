@@ -11,7 +11,9 @@ import { GTM } from '../components/GTM'
 const poppins = Poppins({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-poppins'
+  variable: '--font-poppins',
+  display: 'swap', // Prevents layout shift during font load
+  preload: false,  // Reduces preload warnings
 })
 
 export const metadata: Metadata = {
@@ -26,7 +28,11 @@ export const metadata: Metadata = {
     canonical: 'https://zerobarriers.io',
   },
   icons: {
-      icon: '/images/zero-barriers-logo.png',
+    icon: [
+      { url: '/images/zero-barriers-logo.png', type: 'image/png' },
+    ],
+    shortcut: '/images/zero-barriers-logo.png',
+    apple: '/images/zero-barriers-logo.png',
   },
   openGraph: {
     title: 'Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
@@ -212,6 +218,16 @@ export default function RootLayout({
         )}
       </head>
       <body className={poppins.variable} suppressHydrationWarning>
+        {/* Google Tag Manager (noscript) - must be immediately after opening <body> tag */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P34N6DXL"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <GTM />
         <Analytics />
         {structuredData.map((schema, index) => (
