@@ -77,11 +77,21 @@ export default function ContactPage() {
           setIsSubmitting(false)
           return
         } else {
-          throw new Error(data.error || 'Form submission failed')
+          // Function returned error - try to get detailed error message
+          const errorMsg = data.error || 'Form submission failed'
+          console.error('Contact API error:', errorMsg, data)
+          throw new Error(errorMsg)
         }
       } else {
-        // Function returned error status, throw to trigger fallback
-        throw new Error(`Function returned ${functionResponse.status}`)
+        // Function returned error status - get error details
+        let errorData: any = {}
+        try {
+          errorData = await functionResponse.json()
+        } catch {
+          errorData = { error: `Server error (${functionResponse.status})` }
+        }
+        console.error('Contact API failed:', functionResponse.status, errorData)
+        throw new Error(errorData.error || `Server returned ${functionResponse.status}`)
       }
     } catch (functionError) {
       // Cloudflare Function not available or failed, fallback to Web3Forms
@@ -121,10 +131,19 @@ export default function ContactPage() {
           trackFormSubmission('contact_form', false, web3formsError instanceof Error ? web3formsError.message : 'Submission failed')
         }
       } else {
-        // Neither method available
+        // Neither method available - show helpful error with diagnostic info
         console.error('No form submission method available')
+        console.error('Function error:', functionError)
         setSubmitStatus('error')
         trackFormSubmission('contact_form', false, 'Form service not configured')
+        
+        // Show more helpful error message
+        const errorMsg = functionError instanceof Error ? functionError.message : 'Form submission service not available'
+        console.error('Full error details:', {
+          functionError,
+          hasWeb3FormsKey: !!accessKey,
+          errorMessage: errorMsg
+        })
       }
     } finally {
       setIsSubmitting(false)
