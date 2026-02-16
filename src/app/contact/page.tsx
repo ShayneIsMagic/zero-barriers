@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useRef, FormEvent } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { trackFormSubmission } from "../../lib/analytics";
 
 const RATE_LIMIT_MS = 60_000;
 const BACKEND_URL = process.env.NEXT_PUBLIC_CONTACT_FORM_API_URL || "";
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 
 function scrollToMessage(elementId: string) {
   setTimeout(() => {
@@ -29,13 +31,17 @@ export default function ContactPage() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
   const [submittedEmail, setSubmittedEmail] = useState<string>("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setErrorMessage("");
 
     const lastSubmission = localStorage.getItem("lastFormSubmission");
     if (
@@ -53,6 +59,17 @@ export default function ContactPage() {
       return;
     }
 
+    if (RECAPTCHA_SITE_KEY && !recaptchaToken) {
+      setErrorMessage(
+        "Please verify you're human by completing the \"I'm not a robot\" checkbox above before submitting."
+      );
+      setSubmitStatus("error");
+      trackFormSubmission("contact_form", false, "reCAPTCHA not completed");
+      scrollToMessage("form-error-message");
+      setIsSubmitting(false);
+      return;
+    }
+
     if (!BACKEND_URL) {
       setSubmitStatus("error");
       trackFormSubmission("contact_form", false, "Form service not configured");
@@ -62,6 +79,7 @@ export default function ContactPage() {
     }
 
     const payload = buildFormPayload(form);
+    if (recaptchaToken) payload.recaptcha_token = recaptchaToken;
 
     try {
       const res = await fetch(BACKEND_URL, {
@@ -76,6 +94,8 @@ export default function ContactPage() {
       if (isSuccess) {
         setSubmittedEmail(payload.email || "");
         setSubmitStatus("success");
+        setRecaptchaToken(null);
+        recaptchaRef.current?.reset();
         form.reset();
         trackFormSubmission("contact_form", true, undefined, {
           email: payload.email,
@@ -306,10 +326,12 @@ export default function ContactPage() {
                 >
                   <i className="fas fa-exclamation-circle"></i>
                   <div>
-                    <strong>Unable to Send Message</strong>
+                    <strong>
+                      {errorMessage ? "Action Required" : "Unable to Send Message"}
+                    </strong>
                     <p>
-                      We encountered an issue sending your message. Please try
-                      again, or contact us directly:
+                      {errorMessage ||
+                        "We encountered an issue sending your message. Please try again, or contact us directly:"}
                     </p>
                     <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
                       <li>
@@ -326,6 +348,24 @@ export default function ContactPage() {
                       </li>
                     </ul>
                   </div>
+                </div>
+              )}
+
+              {RECAPTCHA_SITE_KEY && (
+                <div className="form-group" style={{ marginBottom: "16px" }}>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={RECAPTCHA_SITE_KEY}
+                    onChange={(token) => {
+                      setRecaptchaToken(token);
+                      if (token) {
+                        setErrorMessage("");
+                        setSubmitStatus("idle");
+                      }
+                    }}
+                    onExpired={() => setRecaptchaToken(null)}
+                    theme="light"
+                  />
                 </div>
               )}
 
