@@ -16,7 +16,9 @@ export default function ContactPage() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
   const [recaptchaError, setRecaptchaError] = useState(false)
 
-  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
+  const siteKey =
+    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ||
+    "6LeF8G0sAAAAAAhUjfpviWjKUaZd-HkvZO7711ql";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
