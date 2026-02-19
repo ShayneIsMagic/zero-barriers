@@ -1,12 +1,22 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import dynamic from 'next/dynamic'
 import { trackFormSubmission } from '../../lib/analytics'
+
+const ReCAPTCHA = dynamic(
+  () => import('react-google-recaptcha').then((mod) => mod.default),
+  { ssr: false }
+)
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [submittedEmail, setSubmittedEmail] = useState<string>('')
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null)
+  const [recaptchaError, setRecaptchaError] = useState(false)
+
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -35,6 +45,18 @@ export default function ContactPage() {
       return
     }
 
+    // reCAPTCHA check (only when site key is configured)
+    if (siteKey && !recaptchaToken) {
+      setRecaptchaError(true)
+      setIsSubmitting(false)
+      if (typeof window !== 'undefined') {
+        setTimeout(() => {
+          document.getElementById('recaptcha-error')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+        }, 100)
+      }
+      return
+    }
+
     try {
       // Try Cloudflare Pages Function first (more secure, env vars at runtime)
       // Prepare form data as JSON for Cloudflare Function
@@ -44,6 +66,9 @@ export default function ContactPage() {
           formDataObject[key] = value.toString()
         }
       })
+      if (recaptchaToken) {
+        formDataObject.recaptcha_token = recaptchaToken
+      }
 
       // Try Cloudflare Pages Function endpoint
       const functionResponse = await fetch('/api/contact', {
@@ -62,6 +87,8 @@ export default function ContactPage() {
           const emailValue = formDataObject.email || ''
           setSubmittedEmail(emailValue)
           setSubmitStatus('success')
+          setRecaptchaToken(null)
+          setRecaptchaError(false)
           form.reset()
           // Enhanced analytics tracking
           trackFormSubmission('contact_form', true, undefined, {
@@ -228,6 +255,31 @@ export default function ContactPage() {
                 autoComplete="off"
                 aria-hidden="true"
               />
+              
+              {siteKey && (
+                <div className="form-group" style={{ marginTop: '16px', marginBottom: '8px' }}>
+                  <ReCAPTCHA
+                    sitekey={siteKey}
+                    onChange={(token) => {
+                      setRecaptchaToken(token)
+                      setRecaptchaError(false)
+                    }}
+                    onExpired={() => setRecaptchaToken(null)}
+                    theme="light"
+                    tabIndex={0}
+                  />
+                  {recaptchaError && (
+                    <p
+                      id="recaptcha-error"
+                      role="alert"
+                      className="form-message form-message-error"
+                      style={{ marginTop: '8px', padding: '10px 12px', fontSize: '0.95em', scrollMarginTop: '20px' }}
+                    >
+                      Please verify you&apos;re human by completing the &quot;I&apos;m not a robot&quot; checkbox above before submitting.
+                    </p>
+                  )}
+                </div>
+              )}
               
               {submitStatus === 'success' && (
                 <div 
