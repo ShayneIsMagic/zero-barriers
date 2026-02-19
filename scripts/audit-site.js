@@ -360,7 +360,7 @@ async function testSecurity(page) {
   const envMatches = scripts.match(envVarPattern)
   if (envMatches) {
     // Check if they're using NEXT_PUBLIC_ prefix (safe) or exposing secrets
-    const hasSecrets = scripts.match(/RESEND_API_KEY|WEB3FORMS_ACCESS_KEY|API_KEY/g)
+    const hasSecrets = scripts.match(/RESEND_API_KEY|API_KEY/g)
     if (hasSecrets && !scripts.includes('NEXT_PUBLIC_')) {
       securityChecks.push({
         check: 'Exposed Secrets in Client Code',

@@ -1,6 +1,6 @@
 /**
  * Test script for contact form submission
- * Tests both Cloudflare Function endpoint (will 404 locally) and Web3Forms fallback
+ * Tests /api/contact endpoint (Cloudflare Function; will 404 locally)
  */
 
 const puppeteer = require('puppeteer')
@@ -32,7 +32,7 @@ async function testContactForm() {
   // Capture network requests
   const networkRequests = []
   page.on('request', request => {
-    if (request.url().includes('/api/contact') || request.url().includes('web3forms.com')) {
+    if (request.url().includes('/api/contact')) {
       networkRequests.push({
         url: request.url(),
         method: request.method(),
@@ -44,7 +44,7 @@ async function testContactForm() {
   // Capture network responses with body for errors
   const networkResponses = []
   page.on('response', async response => {
-    if (response.url().includes('/api/contact') || response.url().includes('web3forms.com')) {
+    if (response.url().includes('/api/contact')) {
       let body = null
       try {
         if (!response.ok()) {
@@ -106,9 +106,7 @@ async function testContactForm() {
 
     // Wait for response
     const responsePromise = page.waitForResponse(
-      (response) => 
-        response.url().includes('/api/contact') || 
-        response.url().includes('web3forms.com'),
+      (response) => response.url().includes('/api/contact'),
       { timeout: 15000 }
     ).catch(() => null)
 
@@ -187,26 +185,18 @@ async function testContactForm() {
 
     // Check what method was attempted
     console.log('\n📊 Summary:')
-    const triedFunction = networkRequests.some(r => r.url.includes('/api/contact'))
-    const triedWeb3Forms = networkRequests.some(r => r.url.includes('web3forms.com'))
-    
-    if (triedFunction) {
-      console.log('   ✅ Attempted Cloudflare Function endpoint (/api/contact)')
-      const functionResponse = networkResponses.find(r => r.url.includes('/api/contact'))
-      if (functionResponse) {
-        if (functionResponse.status === 404) {
-          console.log('   ⚠️  Function returned 404 (expected locally - function only runs on Cloudflare)')
+    const triedApiContact = networkRequests.some(r => r.url.includes('/api/contact'))
+    if (triedApiContact) {
+      console.log('   ✅ Attempted /api/contact endpoint')
+      const apiResponse = networkResponses.find(r => r.url.includes('/api/contact'))
+      if (apiResponse) {
+        if (apiResponse.status === 404) {
+          console.log('   ⚠️  Returned 404 (expected locally - function runs on Cloudflare)')
         } else {
-          console.log(`   ✅ Function responded with ${functionResponse.status}`)
+          console.log(`   ✅ Responded with ${apiResponse.status}`)
         }
       }
-    }
-    
-    if (triedWeb3Forms) {
-      console.log('   ✅ Attempted Web3Forms fallback')
-    }
-
-    if (!triedFunction && !triedWeb3Forms) {
+    } else {
       console.log('   ⚠️  No form submission requests detected')
     }
 

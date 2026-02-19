@@ -24,7 +24,7 @@ async function testFormSubmission() {
   // Capture network requests
   const networkRequests = []
   page.on('request', (request) => {
-    if (request.url().includes('web3forms.com')) {
+    if (request.url().includes('/api/contact')) {
       networkRequests.push({
         url: request.url(),
         method: request.method(),
@@ -35,7 +35,7 @@ async function testFormSubmission() {
 
   const networkResponses = []
   page.on('response', (response) => {
-    if (response.url().includes('web3forms.com')) {
+    if (response.url().includes('/api/contact')) {
       networkResponses.push({
         url: response.url(),
         status: response.status(),
@@ -70,7 +70,7 @@ async function testFormSubmission() {
     console.log('📤 Submitting form...')
     await Promise.all([
       page.waitForResponse((response) => {
-        return response.url().includes('web3forms.com')
+        return response.url().includes('/api/contact')
       }, { timeout: 15000 }).catch(() => null),
       page.click('button[type="submit"]'),
     ])
@@ -102,18 +102,12 @@ async function testFormSubmission() {
       console.log(`  [${msg.type}] ${msg.text}`)
     })
 
-    console.log('\n📡 Network Requests to Web3Forms:')
+    console.log('\n📡 Network Requests to /api/contact:')
     networkRequests.forEach(req => {
       console.log(`  ${req.method} ${req.url}`)
-      if (req.postData) {
-        const data = new URLSearchParams(req.postData)
-        console.log(`    Access Key: ${data.get('access_key') ? 'Present' : 'Missing'}`)
-        console.log(`    To: ${data.get('to')}`)
-        console.log(`    Subject: ${data.get('subject')}`)
-      }
     })
 
-    console.log('\n📥 Network Responses from Web3Forms:')
+    console.log('\n📥 Network Responses from /api/contact:')
     networkResponses.forEach(resp => {
       console.log(`  ${resp.status} ${resp.statusText} - ${resp.url}`)
       
@@ -134,18 +128,6 @@ async function testFormSubmission() {
       console.log('  ✅ Success Messages:')
       pageErrors.successMessages.forEach(msg => console.log(`    - ${msg}`))
     }
-
-    // Check for environment variable
-    const envCheck = await page.evaluate(() => {
-      return {
-        hasAccessKey: typeof window !== 'undefined' && 
-                     (process?.env?.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''),
-        accessKeyLength: (process?.env?.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '').length,
-      }
-    })
-    console.log('\n🔑 Environment Variable Check:')
-    console.log(`  Has Access Key: ${envCheck.hasAccessKey}`)
-    console.log(`  Access Key Length: ${envCheck.accessKeyLength}`)
 
   } catch (error) {
     console.error('❌ Test Error:', error.message)

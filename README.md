@@ -42,9 +42,9 @@ Zero Barriers delivers purpose-driven revenue growth transformation through prov
 - **Fonts:** Poppins (Google Fonts) via `next/font`
 - **Icons:** Font Awesome 6.4.0 (CDN)
 - **Analytics:** Google Analytics 4 + Google Tag Manager
-- **Form Handling:** Cloudflare Pages Functions + Resend API (with Web3Forms fallback)
+- **Form Handling:** Cloudflare Pages Functions (`/api/contact`) + Resend API
 - **Deployment:** Cloudflare Pages (static export)
-- **Email Service:** Resend (primary) / Web3Forms (fallback)
+- **Email Service:** Resend (via `/api/contact`)
 
 ---
 
@@ -259,7 +259,6 @@ Implemented JSON-LD structured data:
 
 **Optional:**
 - `CONTACT_EMAIL` - Override recipient (defaults to `sk@zerobarriers.io`)
-- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` - Web3Forms fallback key
 - `NEXT_PUBLIC_GA_ID` - Google Analytics 4 ID
 - `NEXT_PUBLIC_GTM_ID` - Google Tag Manager ID
 
@@ -298,7 +297,6 @@ cp .env .env.local
 NEXT_PUBLIC_GA_ID=G-YHS2Y7L3C9
 NEXT_PUBLIC_GTM_ID=GTM-WL8K8XK
 RESEND_API_KEY=your_resend_api_key_here
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-web3forms-key
 ```
 
 **Note:** `.env` is a template file (committed to git). `.env.local` is for your actual keys (gitignored).

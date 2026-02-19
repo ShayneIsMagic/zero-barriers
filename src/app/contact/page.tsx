@@ -24,13 +24,8 @@ export default function ContactPage() {
       }
     }
 
-    // Check for Web3Forms access key (fallback option)
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ''
-    
-    // Note: We'll try Cloudflare Pages Function first, which doesn't need build-time env vars
-    // Web3Forms key is only needed as fallback if Cloudflare Function isn't available
-
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     
     // Honeypot check - if this hidden field is filled, it's likely a bot
     if (formData.get('website_url')) {
@@ -64,11 +59,10 @@ export default function ContactPage() {
         const data = await functionResponse.json()
 
         if (data.success) {
-          // Store email before resetting form
           const emailValue = formDataObject.email || ''
           setSubmittedEmail(emailValue)
           setSubmitStatus('success')
-          e.currentTarget.reset()
+          form.reset()
           // Enhanced analytics tracking
           trackFormSubmission('contact_form', true, undefined, {
             email: emailValue,
@@ -130,100 +124,15 @@ export default function ContactPage() {
         }
         return
       }
-    } catch (functionError) {
-      // Cloudflare Function not available or failed, fallback to Web3Forms
-      console.log('Cloudflare Function not available, trying Web3Forms fallback')
-      
-      // Fallback to Web3Forms (if Cloudflare Function unavailable)
-      if (accessKey) {
-        try {
-          formData.append('access_key', accessKey)
-          formData.append('subject', 'New Contact Form Submission from Zero Barriers')
-          formData.append('to', 'sk@zerobarriers.io')
-
-          const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData,
-          })
-
-          const data = await response.json()
-
-          if (data.success) {
-            // Store email before resetting form
-            const emailValue = formData.get('email')?.toString() || ''
-            setSubmittedEmail(emailValue)
-            setSubmitStatus('success')
-            e.currentTarget.reset()
-            // Enhanced analytics tracking
-            trackFormSubmission('contact_form', true, undefined, {
-              email: emailValue,
-              firstName: formData.get('first_name')?.toString() || '',
-              lastName: formData.get('last_name')?.toString() || '',
-              company: formData.get('company')?.toString() || '',
-            })
-            if (typeof window !== 'undefined') {
-              localStorage.setItem('lastFormSubmission', Date.now().toString())
-              // Scroll success message into view
-              setTimeout(() => {
-                const successMsg = document.getElementById('form-success-message')
-                if (successMsg) {
-                  successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-                }
-              }, 100)
-            }
-          } else {
-            console.error('Web3Forms API Error:', data)
-            const errorMessage = data.message || 'Unknown error'
-            console.error('Error message:', errorMessage)
-            setSubmitStatus('error')
-            trackFormSubmission('contact_form', false, errorMessage)
-            // Scroll error message into view
-            if (typeof window !== 'undefined') {
-              setTimeout(() => {
-                const errorMsg = document.getElementById('form-error-message')
-                if (errorMsg) {
-                  errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-                }
-              }, 100)
-            }
-          }
-        } catch (web3formsError) {
-          console.error('Web3Forms fallback also failed:', web3formsError)
-          setSubmitStatus('error')
-          trackFormSubmission('contact_form', false, web3formsError instanceof Error ? web3formsError.message : 'Submission failed')
-          // Scroll error message into view
-          if (typeof window !== 'undefined') {
-            setTimeout(() => {
-              const errorMsg = document.getElementById('form-error-message')
-              if (errorMsg) {
-                errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-              }
-            }, 100)
-          }
-        }
-      } else {
-        // Neither method available - show helpful error with diagnostic info
-        console.error('No form submission method available')
-        console.error('Function error:', functionError)
-        setSubmitStatus('error')
-        trackFormSubmission('contact_form', false, 'Form service not configured')
-        
-        // Show more helpful error message
-        const errorMsg = functionError instanceof Error ? functionError.message : 'Form submission service not available'
-        console.error('Full error details:', {
-          functionError,
-          hasWeb3FormsKey: !!accessKey,
-          errorMessage: errorMsg
-        })
-        // Scroll error message into view
-        if (typeof window !== 'undefined') {
-          setTimeout(() => {
-            const errorMsg = document.getElementById('form-error-message')
-            if (errorMsg) {
-              errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-            }
-          }, 100)
-        }
+    } catch (err) {
+      console.error('Contact form submission failed:', err)
+      const errorMsg = err instanceof Error ? err.message : 'Form submission failed'
+      setSubmitStatus('error')
+      trackFormSubmission('contact_form', false, errorMsg)
+      if (typeof window !== 'undefined') {
+        setTimeout(() => {
+          document.getElementById('form-error-message')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+        }, 100)
       }
     } finally {
       setIsSubmitting(false)
