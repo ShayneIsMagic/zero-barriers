@@ -64,6 +64,8 @@ export default function ContactPage() {
     }
   }
 
+  const formRef = useRef<HTMLFormElement>(null)
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -121,7 +123,7 @@ export default function ContactPage() {
         const emailValue = formDataObject.email || ''
         setSubmittedEmail(emailValue)
         setSubmitStatus('success')
-        e.currentTarget.reset()
+        formRef.current?.reset()
         trackFormSubmission('contact_form', true, undefined, {
           email: emailValue,
           firstName: formDataObject.first_name,
@@ -202,7 +204,7 @@ export default function ContactPage() {
           </div>
           
           <div className="contact-form-container">
-            <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form" id="contact-form" ref={formRef} onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="first_name">First Name <span className="required">*</span></label>
