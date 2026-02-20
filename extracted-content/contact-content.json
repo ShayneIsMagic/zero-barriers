@@ -1,0 +1,514 @@
+{
+  "url": "https://zerobarriers.io/contact/",
+  "title": "Contact Zero Barriers | Start Your Revenue Growth Transformation",
+  "sections": [
+    {
+      "className": "contact-hero",
+      "id": "",
+      "innerHTML": " <div class=\"container\"> <div class=\"section-title\"> <h1>Start Your Transformation</h1> <p>Ready to eliminate barriers and achieve breakthrough growth?</p> </div> <div class=\"contact-img\"> <img src=\"/images/mountain-sunset.png\" alt=\"Contact visualization\" style=\"opacity: 1;\"> </div> </div> ",
+      "outerHTML": "<section class=\"contact-hero\"> <div class=\"container\"> <div class=\"section-title\"> <h1>Start Your Transformation</h1> <p>Ready to eliminate barriers and achieve breakthrough growth?</p> </div> <div class=\"contact-img\"> <img src=\"/images/mountain-sunset.png\" alt=\"Contact visualization\" style=\"opacity: 1;\"> </div> </div> </section>"
+    },
+    {
+      "className": "",
+      "id": "",
+      "innerHTML": " <div class=\"container contact-main\"> <div class=\"contact-info\"> <h2 style=\"font-size: 26px; color: var(--primary); margin-bottom: 20px\">\nGet in Touch\n</h2> <p>Ready to explore how Zero Barriers can help you achieve rapid, substantial, and sustainable growth? Complete the form to start the conversation.</p> <div class=\"contact-person\"> <div class=\"contact-person-img\"><i class=\"fas fa-user-tie\"></i></div> <div class=\"contact-person-details\"> <strong>Shayne Roy</strong> <span>Founder, Zero Barriers</span> </div> </div> <ul class=\"contact-details-list\"> <li><i class=\"fas fa-envelope\"></i><a href=\"mailto:sk@zerobarriers.io\">sk@zerobarriers.io</a></li> <li><i class=\"fas fa-phone\"></i><a href=\"tel:8019970457\">801-997-0457</a></li> <li><i class=\"fab fa-instagram\"></i><a href=\"https://www.instagram.com/zerobarriersinc\" target=\"_blank\">Instagram</a></li> <li><i class=\"fab fa-facebook-f\"></i><a href=\"https://www.facebook.com/zerobarriers\" target=\"_blank\">Facebook</a></li> <li><i class=\"fab fa-linkedin\"></i><a href=\"https://www.linkedin.com/company/zerobarriers\" target=\"_blank\">LinkedIn</a></li> </ul> </div> <!-- Updated form --> <form id=\"contact-form\" class=\"contact-form\"> <label for=\"first_name\">First Name <span class=\"required\">*</span></label> <input type=\"text\" id=\"first_name\" name=\"first_name\" required=\"\"> <label for=\"last_name\">Last Name <span class=\"required\">*</span></label> <input type=\"text\" id=\"last_name\" name=\"last_name\" required=\"\"> <label for=\"phone\">Phone <span class=\"required\">*</span></label> <input type=\"tel\" id=\"phone\" name=\"phone\" required=\"\"> <label for=\"email\">Email <span class=\"required\">*</span></label> <input type=\"email\" id=\"email\" name=\"email\" required=\"\"> <label for=\"company\">Company <span class=\"required\">*</span></label> <input type=\"text\" id=\"company\" name=\"company\" required=\"\"> <label for=\"website\">Website</label> <input type=\"url\" id=\"website\" name=\"website\"> <label for=\"message\">How can we help you? <span class=\"required\">*</span></label> <textarea id=\"message\" name=\"message\" required=\"\"></textarea> <input type=\"hidden\" name=\"page\" value=\"Contact\"> <button type=\"submit\" class=\"cta-button\">Submit</button> </form> <div class=\"toast-container\"></div> </div> ",
+      "outerHTML": "<section style=\"background: var(--light-gray); padding: 80px 0 40px\"> <div class=\"container contact-main\"> <div class=\"contact-info\"> <h2 style=\"font-size: 26px; color: var(--primary); margin-bottom: 20px\">\nGet in Touch\n</h2> <p>Ready to explore how Zero Barriers can help you achieve rapid, substantial, and sustainable growth? Complete the form to start the conversation.</p> <div class=\"contact-person\"> <div class=\"contact-person-img\"><i class=\"fas fa-user-tie\"></i></div> <div class=\"contact-person-details\"> <strong>Shayne Roy</strong> <span>Founder, Zero Barriers</span> </div> </div> <ul class=\"contact-details-list\"> <li><i class=\"fas fa-envelope\"></i><a href=\"mailto:sk@zerobarriers.io\">sk@zerobarriers.io</a></li> <li><i class=\"fas fa-phone\"></i><a href=\"tel:8019970457\">801-997-0457</a></li> <li><i class=\"fab fa-instagram\"></i><a href=\"https://www.instagram.com/zerobarriersinc\" target=\"_blank\">Instagram</a></li> <li><i class=\"fab fa-facebook-f\"></i><a href=\"https://www.facebook.com/zerobarriers\" target=\"_blank\">Facebook</a></li> <li><i class=\"fab fa-linkedin\"></i><a href=\"https://www.linkedin.com/company/zerobarriers\" target=\"_blank\">LinkedIn</a></li> </ul> </div> <!-- Updated form --> <form id=\"contact-form\" class=\"contact-form\"> <label for=\"first_name\">First Name <span class=\"required\">*</span></label> <input type=\"text\" id=\"first_name\" name=\"first_name\" required=\"\"> <label for=\"last_name\">Last Name <span class=\"required\">*</span></label> <input type=\"text\" id=\"last_name\" name=\"last_name\" required=\"\"> <label for=\"phone\">Phone <span class=\"required\">*</span></label> <input type=\"tel\" id=\"phone\" name=\"phone\" required=\"\"> <label for=\"email\">Email <span class=\"required\">*</span></label> <input type=\"email\" id=\"email\" name=\"email\" required=\"\"> <label for=\"company\">Company <span class=\"required\">*</span></label> <input type=\"text\" id=\"company\" name=\"company\" required=\"\"> <label for=\"website\">Website</label> <input type=\"url\" id=\"website\" name=\"website\"> <label for=\"message\">How can we help you? <span class=\"required\">*</span></label> <textarea id=\"message\" name=\"message\" required=\"\"></textarea> <input type=\"hidden\" name=\"page\" value=\"Contact\"> <button type=\"submit\" class=\"cta-button\">Submit</button> </form> <div class=\"toast-container\"></div> </div> </section>"
+    },
+    {
+      "className": "cta-section",
+      "id": "",
+      "innerHTML": " <div class=\"container cta-content\"> <h2>Transform Your Business with Purpose</h2> <p>\nDiscover how our integrated approach can help you achieve rapid,\n          substantial, and sustainable growth.\n</p> <a href=\"/contact\" class=\"white-cta\">Schedule a Call</a> <div> <a href=\"/case-studies\" class=\"secondary-white-cta\">Explore Our Case Studies <i class=\"fas fa-arrow-right\"></i></a> </div> </div> ",
+      "outerHTML": "<section class=\"cta-section\"> <div class=\"container cta-content\"> <h2>Transform Your Business with Purpose</h2> <p>\nDiscover how our integrated approach can help you achieve rapid,\n          substantial, and sustainable growth.\n</p> <a href=\"/contact\" class=\"white-cta\">Schedule a Call</a> <div> <a href=\"/case-studies\" class=\"secondary-white-cta\">Explore Our Case Studies <i class=\"fas fa-arrow-right\"></i></a> </div> </div> </section>"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero berriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/mountain-sunset.png",
+      "srcset": "",
+      "alt": "Contact visualization",
+      "title": "",
+      "width": 1024,
+      "height": 1024,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero barriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    }
+  ],
+  "content": {
+    "headings": {
+      "h1": [
+        {
+          "text": "Start Your Transformation",
+          "className": "",
+          "id": "",
+          "innerHTML": "Start Your Transformation"
+        }
+      ],
+      "h2": [
+        {
+          "text": "Get in Touch",
+          "className": "",
+          "id": "",
+          "innerHTML": "\nGet in Touch\n"
+        },
+        {
+          "text": "Transform Your Business with Purpose",
+          "className": "",
+          "id": "",
+          "innerHTML": "Transform Your Business with Purpose"
+        }
+      ],
+      "h3": [
+        {
+          "text": "Services",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Services"
+        },
+        {
+          "text": "Company",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Company"
+        },
+        {
+          "text": "Contact Us",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Contact Us"
+        }
+      ]
+    },
+    "paragraphs": [
+      {
+        "text": "Ready to eliminate barriers and achieve breakthrough growth?",
+        "className": "",
+        "innerHTML": "Ready to eliminate barriers and achieve breakthrough growth?"
+      },
+      {
+        "text": "Ready to explore how Zero Barriers can help you achieve rapid, substantial, and sustainable growth? Complete the form to start the conversation.",
+        "className": "",
+        "innerHTML": "Ready to explore how Zero Barriers can help you achieve rapid, substantial, and sustainable growth? Complete the form to start the conversation."
+      },
+      {
+        "text": "Discover how our integrated approach can help you achieve rapid,\n          substantial, and sustainable growth.",
+        "className": "",
+        "innerHTML": "\nDiscover how our integrated approach can help you achieve rapid,\n          substantial, and sustainable growth.\n"
+      },
+      {
+        "text": "Potential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.",
+        "className": "footer-description",
+        "innerHTML": "\nPotential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.\n"
+      },
+      {
+        "text": "518 E 800 N, Suite AOrem, Utah 84097",
+        "className": "",
+        "innerHTML": "518 E 800 N, Suite A<br>Orem, Utah 84097"
+      },
+      {
+        "text": "+1 (801) 997-0457",
+        "className": "",
+        "innerHTML": "+1 (801) 997-0457"
+      },
+      {
+        "text": "sk@zerobarriers.io",
+        "className": "",
+        "innerHTML": "sk@zerobarriers.io"
+      },
+      {
+        "text": "© 2025 Zero Barriers. All rights reserved.",
+        "className": "",
+        "innerHTML": "© 2025 Zero Barriers. All rights reserved."
+      }
+    ],
+    "lists": [
+      {
+        "tagName": "UL",
+        "className": "contact-details-list",
+        "items": [
+          {
+            "text": "sk@zerobarriers.io",
+            "innerHTML": "<i class=\"fas fa-envelope\"></i><a href=\"mailto:sk@zerobarriers.io\">sk@zerobarriers.io</a>"
+          },
+          {
+            "text": "801-997-0457",
+            "innerHTML": "<i class=\"fas fa-phone\"></i><a href=\"tel:8019970457\">801-997-0457</a>"
+          },
+          {
+            "text": "Instagram",
+            "innerHTML": "<i class=\"fab fa-instagram\"></i><a href=\"https://www.instagram.com/zerobarriersinc\" target=\"_blank\">Instagram</a>"
+          },
+          {
+            "text": "Facebook",
+            "innerHTML": "<i class=\"fab fa-facebook-f\"></i><a href=\"https://www.facebook.com/zerobarriers\" target=\"_blank\">Facebook</a>"
+          },
+          {
+            "text": "LinkedIn",
+            "innerHTML": "<i class=\"fab fa-linkedin\"></i><a href=\"https://www.linkedin.com/company/zerobarriers\" target=\"_blank\">LinkedIn</a>"
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Human Transformation",
+            "innerHTML": " <a href=\"/services#human\">Human Transformation</a> "
+          },
+          {
+            "text": "Technology Enablement",
+            "innerHTML": " <a href=\"/services#technology\">Technology Enablement</a> "
+          },
+          {
+            "text": "Revenue Acceleration",
+            "innerHTML": " <a href=\"/services#revenue\">Revenue Acceleration</a> "
+          },
+          {
+            "text": "Strategic Consulting",
+            "innerHTML": " <a href=\"/services#consulting\">Strategic Consulting</a> "
+          },
+          {
+            "text": "Team Training",
+            "innerHTML": " <a href=\"/services#training\">Team Training</a> "
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Home",
+            "innerHTML": "<a href=\"/\">Home</a>"
+          },
+          {
+            "text": "Services",
+            "innerHTML": "<a href=\"/services\">Services</a>"
+          },
+          {
+            "text": "Case Studies",
+            "innerHTML": "<a href=\"/case-studies\">Case Studies</a>"
+          },
+          {
+            "text": "Technology",
+            "innerHTML": "<a href=\"/technology\">Technology</a>"
+          },
+          {
+            "text": "Testimonials",
+            "innerHTML": "<a href=\"/testimonials\">Testimonials</a>"
+          },
+          {
+            "text": "Contact",
+            "innerHTML": "<a href=\"/contact\">Contact</a>"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "text": "ZERO BARRIERS",
+        "href": "https://zerobarriers.io/",
+        "className": "logo",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Get Started",
+        "href": "https://zerobarriers.io/contact",
+        "className": "cta-button",
+        "target": ""
+      },
+      {
+        "text": "sk@zerobarriers.io",
+        "href": "mailto:sk@zerobarriers.io",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "801-997-0457",
+        "href": "tel:8019970457",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Instagram",
+        "href": "https://www.instagram.com/zerobarriersinc",
+        "className": "",
+        "target": "_blank"
+      },
+      {
+        "text": "Facebook",
+        "href": "https://www.facebook.com/zerobarriers",
+        "className": "",
+        "target": "_blank"
+      },
+      {
+        "text": "LinkedIn",
+        "href": "https://www.linkedin.com/company/zerobarriers",
+        "className": "",
+        "target": "_blank"
+      },
+      {
+        "text": "Schedule a Call",
+        "href": "https://zerobarriers.io/contact",
+        "className": "white-cta",
+        "target": ""
+      },
+      {
+        "text": "Explore Our Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "secondary-white-cta",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/zerobarriersinc",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Human Transformation",
+        "href": "https://zerobarriers.io/services#human",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology Enablement",
+        "href": "https://zerobarriers.io/services#technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Revenue Acceleration",
+        "href": "https://zerobarriers.io/services#revenue",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Strategic Consulting",
+        "href": "https://zerobarriers.io/services#consulting",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Team Training",
+        "href": "https://zerobarriers.io/services#training",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      }
+    ]
+  },
+  "elementsWithAnimations": [],
+  "allClassNames": [
+    "fonts-loaded",
+    "loaded",
+    "container",
+    "nav-container",
+    "logo",
+    "logo-image",
+    "nav-links",
+    "mobile-menu-toggle",
+    "fas",
+    "fa-bars",
+    "cta-button",
+    "contact-hero",
+    "section-title",
+    "contact-img",
+    "contact-main",
+    "contact-info",
+    "contact-person",
+    "contact-person-img",
+    "fa-user-tie",
+    "contact-person-details",
+    "contact-details-list",
+    "fa-envelope",
+    "fa-phone",
+    "fab",
+    "fa-instagram",
+    "fa-facebook-f",
+    "fa-linkedin",
+    "contact-form",
+    "required",
+    "toast-container",
+    "cta-section",
+    "cta-content",
+    "white-cta",
+    "secondary-white-cta",
+    "fa-arrow-right",
+    "footer-container",
+    "footer-logo",
+    "footer-description",
+    "social-links",
+    "fa-linkedin-in",
+    "footer-title",
+    "footer-links",
+    "contact-info-icon",
+    "fa-map-marker-alt",
+    "fa-phone-alt",
+    "copyright"
+  ],
+  "animations": [
+    {
+      "name": "fa-beat",
+      "cssText": "@-webkit-keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-beat",
+      "cssText": "@keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@-webkit-keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@-webkit-keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@-webkit-keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@-webkit-keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@-webkit-keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    }
+  ]
+}

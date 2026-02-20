@@ -1,0 +1,96 @@
+🔍 Starting comprehensive site audit...
+
+Testing: https://zerobarriers.io
+
+📄 Testing Pages...
+  Testing: Home (/)
+  Testing: Services (/services)
+  Testing: Technology (/technology)
+  Testing: Results (/results)
+  Testing: Contact (/contact)
+
+📝 Testing Contact Form...
+
+🔒 Testing Security...
+
+🔗 Testing Links...
+
+============================================================
+📊 AUDIT REPORT
+============================================================
+
+📄 PAGES SUMMARY
+------------------------------------------------------------
+❌ Home            | Status: 403 | Load: 7724ms | Links: 4 | Mobile Menu: ❌
+   ⚠️  Errors: 1, Warnings: 0
+❌ Services        | Status: 403 | Load: 255ms | Links: 4 | Mobile Menu: ❌
+   ⚠️  Errors: 1, Warnings: 0
+❌ Technology      | Status: 403 | Load: 200ms | Links: 4 | Mobile Menu: ❌
+   ⚠️  Errors: 1, Warnings: 0
+❌ Results         | Status: 403 | Load: 246ms | Links: 4 | Mobile Menu: ❌
+   ⚠️  Errors: 1, Warnings: 0
+❌ Contact         | Status: 403 | Load: 195ms | Links: 4 | Mobile Menu: ❌
+   ⚠️  Errors: 1, Warnings: 0
+
+📝 CONTACT FORM
+------------------------------------------------------------
+❌ Contact form not found
+
+🔒 SECURITY CHECKS
+------------------------------------------------------------
+✅ HTTPS Enabled                  | PASS | Site uses HTTPS
+✅ X-Frame-Options                | PASS | Header present: SAMEORIGIN
+⚠️ X-Content-Type-Options         | WARNING | Header not found
+⚠️ X-XSS-Protection               | WARNING | Header not found
+⚠️ Content-Security-Policy        | WARNING | Header not found
+⚠️ Strict-Transport-Security      | WARNING | Header not found
+✅ Exposed API Keys               | PASS | No api keys found in page source
+✅ Exposed Passwords              | PASS | No passwords found in page source
+✅ Exposed Secrets                | PASS | No secrets found in page source
+✅ Exposed Tokens                 | PASS | No tokens found in page source
+
+🔗 LINKS TESTED
+------------------------------------------------------------
+✅ Working: 0
+❌ Broken: 0
+
+❌ ERRORS
+------------------------------------------------------------
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   Home: Page returned status 403
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   Services: Page returned status 403
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   Technology: Page returned status 403
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   Results: Page returned status 403
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   Contact: Page returned status 403
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+   unknown: Failed request: https://zerobarriers.io/cdn-cgi/rum? - net::ERR_ABORTED
+   unknown: Failed request: https://zerobarriers.io/favicon.ico - net::ERR_ABORTED
+   unknown: Failed to load resource: the server responded with a status of 403 ()
+
+📄 Full report saved to: /Users/shayneroy/Downloads/zero-barriers/AUDIT_REPORT.json
+
+============================================================
+📈 SUMMARY
+============================================================
+Pages: 0/5 working
+Security: 6/10 checks passed
+Links: 0 working, 0 broken
+Errors: 27
+Warnings: 0

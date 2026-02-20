@@ -1,0 +1,21 @@
+{
+  "name": "Zero Barriers - Revenue Growth Transformation",
+  "short_name": "Zero Barriers",
+  "description": "Purpose-driven revenue growth consulting and business transformation services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7cc347",
+  "icons": [
+    {
+      "src": "/zblogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/zblogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

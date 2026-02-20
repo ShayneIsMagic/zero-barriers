@@ -1,0 +1,729 @@
+{
+  "url": "https://zerobarriers.io/testimonials/",
+  "title": "Testimonials | Zero Barriers - Client Success Stories & Revenue Growth Results",
+  "sections": [
+    {
+      "className": "testimonials-hero",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h1 data-astro-cid-gx536xi6=\"\">Client Testimonials</h1> <p data-astro-cid-gx536xi6=\"\">Real stories from real businesses achieving breakthrough growth</p> </div> </div> ",
+      "outerHTML": "<section class=\"testimonials-hero\" data-astro-cid-gx536xi6=\"\"> <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h1 data-astro-cid-gx536xi6=\"\">Client Testimonials</h1> <p data-astro-cid-gx536xi6=\"\">Real stories from real businesses achieving breakthrough growth</p> </div> </div> </section>"
+    },
+    {
+      "className": "featured-testimonials",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-grid\" data-astro-cid-gx536xi6=\"\"> <!-- Caselle Success Story --> <div class=\"testimonial-card featured\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-header\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/caselle-updated-logo.png\" alt=\"Caselle Logo\" data-astro-cid-gx536xi6=\"\" style=\"opacity: 1;\"> </div> <h3 data-astro-cid-gx536xi6=\"\">Transformative Revenue Growth</h3> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Caselle</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Commitment to Community</p> </div> <div class=\"results-badge\" data-astro-cid-gx536xi6=\"\"> <span class=\"percentage\" data-astro-cid-gx536xi6=\"\">40%</span> <span class=\"label\" data-astro-cid-gx536xi6=\"\">ROI</span> </div> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers delivered exceptional results through their integrated technology approach. Their CRM solutions and custom development services eliminated our technical barriers and accelerated our revenue growth significantly.\"</p> </div> <div class=\"testimonial-metrics\" data-astro-cid-gx536xi6=\"\"> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">40%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">ROI Improvement</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">100%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Implementation Success</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">6 Months</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Time to Results</span> </div> </div> </div> <!-- DevPipeline Success Story --> <div class=\"testimonial-card featured\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-header\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/devpipeline-black-logo.png\" alt=\"DevPipeline Logo\" data-astro-cid-gx536xi6=\"\"> </div> <h3 data-astro-cid-gx536xi6=\"\">Custom Development Excellence</h3> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">DevPipeline</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Technology Division Partner</p> </div> <div class=\"results-badge\" data-astro-cid-gx536xi6=\"\"> <span class=\"percentage\" data-astro-cid-gx536xi6=\"\">30+</span> <span class=\"label\" data-astro-cid-gx536xi6=\"\">Years</span> </div> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Our partnership with Zero Barriers has been instrumental in delivering world-class custom development solutions. With 30+ years of experience, we've built scalable systems that eliminate technical barriers for sustainable business growth.\"</p> </div> <div class=\"testimonial-metrics\" data-astro-cid-gx536xi6=\"\"> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">30+</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Years Experience</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">100+</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Projects Delivered</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">95%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Client Satisfaction</span> </div> </div> </div> </div> </div> ",
+      "outerHTML": "<section class=\"featured-testimonials\" data-astro-cid-gx536xi6=\"\"> <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-grid\" data-astro-cid-gx536xi6=\"\"> <!-- Caselle Success Story --> <div class=\"testimonial-card featured\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-header\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/caselle-updated-logo.png\" alt=\"Caselle Logo\" data-astro-cid-gx536xi6=\"\" style=\"opacity: 1;\"> </div> <h3 data-astro-cid-gx536xi6=\"\">Transformative Revenue Growth</h3> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Caselle</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Commitment to Community</p> </div> <div class=\"results-badge\" data-astro-cid-gx536xi6=\"\"> <span class=\"percentage\" data-astro-cid-gx536xi6=\"\">40%</span> <span class=\"label\" data-astro-cid-gx536xi6=\"\">ROI</span> </div> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers delivered exceptional results through their integrated technology approach. Their CRM solutions and custom development services eliminated our technical barriers and accelerated our revenue growth significantly.\"</p> </div> <div class=\"testimonial-metrics\" data-astro-cid-gx536xi6=\"\"> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">40%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">ROI Improvement</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">100%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Implementation Success</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">6 Months</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Time to Results</span> </div> </div> </div> <!-- DevPipeline Success Story --> <div class=\"testimonial-card featured\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-header\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/devpipeline-black-logo.png\" alt=\"DevPipeline Logo\" data-astro-cid-gx536xi6=\"\"> </div> <h3 data-astro-cid-gx536xi6=\"\">Custom Development Excellence</h3> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">DevPipeline</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Technology Division Partner</p> </div> <div class=\"results-badge\" data-astro-cid-gx536xi6=\"\"> <span class=\"percentage\" data-astro-cid-gx536xi6=\"\">30+</span> <span class=\"label\" data-astro-cid-gx536xi6=\"\">Years</span> </div> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Our partnership with Zero Barriers has been instrumental in delivering world-class custom development solutions. With 30+ years of experience, we've built scalable systems that eliminate technical barriers for sustainable business growth.\"</p> </div> <div class=\"testimonial-metrics\" data-astro-cid-gx536xi6=\"\"> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">30+</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Years Experience</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">100+</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Projects Delivered</span> </div> <div class=\"metric\" data-astro-cid-gx536xi6=\"\"> <span class=\"metric-value\" data-astro-cid-gx536xi6=\"\">95%</span> <span class=\"metric-label\" data-astro-cid-gx536xi6=\"\">Client Satisfaction</span> </div> </div> </div> </div> </div> </section>"
+    },
+    {
+      "className": "industry-testimonials",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Success Across Industries</h2> <p data-astro-cid-gx536xi6=\"\">Our revenue growth methodology works across diverse business sectors</p> </div> <div class=\"industry-grid\" data-astro-cid-gx536xi6=\"\"> <!-- Q90 Technology --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Technology &amp; Innovation</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Q90-LOGO.svg\" alt=\"Q90 Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers' technology enablement division delivered exceptional results. Their integrated approach to CRM solutions and custom development helped us achieve significant operational improvements and revenue growth.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Q90 Technology</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Innovation Partner</p> </div> </div> </div> <!-- Salesforce Consulting --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">CRM Solutions</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Salesforce_Consulting_Logo.svg\" alt=\"Salesforce Consulting Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Our partnership with Zero Barriers has been transformative. We've achieved 40% average ROI improvement and 100+ successful implementations through their proven Salesforce expertise and methodology.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Salesforce Consulting</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">CRM Excellence Partner</p> </div> </div> </div> <!-- Sebo --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Business Solutions</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Sebo Logosvg.svg\" alt=\"Sebo Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers' revenue acceleration framework transformed our business processes. We achieved substantial growth through their systematic approach to eliminating barriers and optimizing operations.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Sebo</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Business Solutions Partner</p> </div> </div> </div> <!-- SOS Support --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Support Services</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"We achieved 122% revenue growth in our first year! Zero Barriers empowered our team, instilled ownership principles, and identified top talent for our elite firm. Their revenue growth methodology delivered rapid, substantial, sustainable results.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Jason Kidman</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">CEO, SOS Support</p> </div> </div> </div> </div> </div> ",
+      "outerHTML": "<section class=\"industry-testimonials\" data-astro-cid-gx536xi6=\"\"> <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Success Across Industries</h2> <p data-astro-cid-gx536xi6=\"\">Our revenue growth methodology works across diverse business sectors</p> </div> <div class=\"industry-grid\" data-astro-cid-gx536xi6=\"\"> <!-- Q90 Technology --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Technology &amp; Innovation</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Q90-LOGO.svg\" alt=\"Q90 Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers' technology enablement division delivered exceptional results. Their integrated approach to CRM solutions and custom development helped us achieve significant operational improvements and revenue growth.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Q90 Technology</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Innovation Partner</p> </div> </div> </div> <!-- Salesforce Consulting --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">CRM Solutions</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Salesforce_Consulting_Logo.svg\" alt=\"Salesforce Consulting Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Our partnership with Zero Barriers has been transformative. We've achieved 40% average ROI improvement and 100+ successful implementations through their proven Salesforce expertise and methodology.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Salesforce Consulting</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">CRM Excellence Partner</p> </div> </div> </div> <!-- Sebo --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Business Solutions</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"client-logo-small\" data-astro-cid-gx536xi6=\"\"> <img src=\"/images/Sebo Logosvg.svg\" alt=\"Sebo Logo\" data-astro-cid-gx536xi6=\"\"> </div> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"Zero Barriers' revenue acceleration framework transformed our business processes. We achieved substantial growth through their systematic approach to eliminating barriers and optimizing operations.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Sebo</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">Business Solutions Partner</p> </div> </div> </div> <!-- SOS Support --> <div class=\"industry-section\" data-astro-cid-gx536xi6=\"\"> <h3 data-astro-cid-gx536xi6=\"\">Support Services</h3> <div class=\"testimonial-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"testimonial-content\" data-astro-cid-gx536xi6=\"\"> <p data-astro-cid-gx536xi6=\"\">\"We achieved 122% revenue growth in our first year! Zero Barriers empowered our team, instilled ownership principles, and identified top talent for our elite firm. Their revenue growth methodology delivered rapid, substantial, sustainable results.\"</p> </div> <div class=\"client-info\" data-astro-cid-gx536xi6=\"\"> <p class=\"client-name\" data-astro-cid-gx536xi6=\"\">Jason Kidman</p> <p class=\"client-title\" data-astro-cid-gx536xi6=\"\">CEO, SOS Support</p> </div> </div> </div> </div> </div> </section>"
+    },
+    {
+      "className": "methodology-results",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Proven Results Across Our Methodology</h2> <p data-astro-cid-gx536xi6=\"\">Every phase of our revenue growth methodology delivers measurable results</p> </div> <div class=\"results-grid\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">1</div> <h3 data-astro-cid-gx536xi6=\"\">Identify Revenue Barriers</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 40% efficiency gain identified</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Clients discover untapped revenue potential and eliminate bottlenecks through our comprehensive analysis.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">2</div> <h3 data-astro-cid-gx536xi6=\"\">Implement Best Practices</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 60% process improvement</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Proven systems and methodologies deliver immediate performance improvements and revenue acceleration.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">3</div> <h3 data-astro-cid-gx536xi6=\"\">Adapt to Strengths</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 80% team adoption rate</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Customized solutions that leverage individual and team strengths for sustainable growth.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">4</div> <h3 data-astro-cid-gx536xi6=\"\">Engineer Success</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 122% revenue growth</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Predictable, repeatable revenue patterns that scale with your business and deliver lasting results.</p> </div> </div> </div> ",
+      "outerHTML": "<section class=\"methodology-results\" data-astro-cid-gx536xi6=\"\"> <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <div class=\"section-title\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Proven Results Across Our Methodology</h2> <p data-astro-cid-gx536xi6=\"\">Every phase of our revenue growth methodology delivers measurable results</p> </div> <div class=\"results-grid\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">1</div> <h3 data-astro-cid-gx536xi6=\"\">Identify Revenue Barriers</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 40% efficiency gain identified</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Clients discover untapped revenue potential and eliminate bottlenecks through our comprehensive analysis.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">2</div> <h3 data-astro-cid-gx536xi6=\"\">Implement Best Practices</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 60% process improvement</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Proven systems and methodologies deliver immediate performance improvements and revenue acceleration.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">3</div> <h3 data-astro-cid-gx536xi6=\"\">Adapt to Strengths</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 80% team adoption rate</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Customized solutions that leverage individual and team strengths for sustainable growth.</p> </div> <div class=\"result-card\" data-astro-cid-gx536xi6=\"\"> <div class=\"result-number\" data-astro-cid-gx536xi6=\"\">4</div> <h3 data-astro-cid-gx536xi6=\"\">Engineer Success</h3> <p class=\"result-stats\" data-astro-cid-gx536xi6=\"\">Average 122% revenue growth</p> <p class=\"result-description\" data-astro-cid-gx536xi6=\"\">Predictable, repeatable revenue patterns that scale with your business and deliver lasting results.</p> </div> </div> </div> </section>"
+    },
+    {
+      "className": "cta-section",
+      "id": "",
+      "innerHTML": " <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Ready to Create Your Success Story?</h2> <p data-astro-cid-gx536xi6=\"\">Join the growing list of businesses achieving rapid, substantial, sustainable revenue growth with Zero Barriers</p> <a href=\"/contact\" class=\"white-cta\" data-astro-cid-gx536xi6=\"\">Schedule Your Revenue Growth Assessment</a> <div data-astro-cid-gx536xi6=\"\"> <a href=\"/case-studies\" class=\"secondary-white-cta\" data-astro-cid-gx536xi6=\"\">View Detailed Case Studies <i class=\"fas fa-arrow-right\" data-astro-cid-gx536xi6=\"\"></i></a> </div> </div> ",
+      "outerHTML": "<section class=\"cta-section\" data-astro-cid-gx536xi6=\"\"> <div class=\"container\" data-astro-cid-gx536xi6=\"\"> <h2 data-astro-cid-gx536xi6=\"\">Ready to Create Your Success Story?</h2> <p data-astro-cid-gx536xi6=\"\">Join the growing list of businesses achieving rapid, substantial, sustainable revenue growth with Zero Barriers</p> <a href=\"/contact\" class=\"white-cta\" data-astro-cid-gx536xi6=\"\">Schedule Your Revenue Growth Assessment</a> <div data-astro-cid-gx536xi6=\"\"> <a href=\"/case-studies\" class=\"secondary-white-cta\" data-astro-cid-gx536xi6=\"\">View Detailed Case Studies <i class=\"fas fa-arrow-right\" data-astro-cid-gx536xi6=\"\"></i></a> </div> </div> </section>"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero berriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/caselle-updated-logo.png",
+      "srcset": "",
+      "alt": "Caselle Logo",
+      "title": "",
+      "width": 5082,
+      "height": 1057,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/devpipeline-black-logo.png",
+      "srcset": "",
+      "alt": "DevPipeline Logo",
+      "title": "",
+      "width": 722,
+      "height": 100,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Q90-LOGO.svg",
+      "srcset": "",
+      "alt": "Q90 Logo",
+      "title": "",
+      "width": 202,
+      "height": 150,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Salesforce_Consulting_Logo.svg",
+      "srcset": "",
+      "alt": "Salesforce Consulting Logo",
+      "title": "",
+      "width": 237,
+      "height": 60,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/images/Sebo%20Logosvg.svg",
+      "srcset": "",
+      "alt": "Sebo Logo",
+      "title": "",
+      "width": 300,
+      "height": 93,
+      "className": "",
+      "loading": "auto",
+      "sizes": ""
+    },
+    {
+      "src": "https://zerobarriers.io/zblogo.png",
+      "srcset": "",
+      "alt": "zero barriers logo",
+      "title": "",
+      "width": 642,
+      "height": 640,
+      "className": "logo-image",
+      "loading": "auto",
+      "sizes": ""
+    }
+  ],
+  "content": {
+    "headings": {
+      "h1": [
+        {
+          "text": "Client Testimonials",
+          "className": "",
+          "id": "",
+          "innerHTML": "Client Testimonials"
+        }
+      ],
+      "h2": [
+        {
+          "text": "Success Across Industries",
+          "className": "",
+          "id": "",
+          "innerHTML": "Success Across Industries"
+        },
+        {
+          "text": "Proven Results Across Our Methodology",
+          "className": "",
+          "id": "",
+          "innerHTML": "Proven Results Across Our Methodology"
+        },
+        {
+          "text": "Ready to Create Your Success Story?",
+          "className": "",
+          "id": "",
+          "innerHTML": "Ready to Create Your Success Story?"
+        }
+      ],
+      "h3": [
+        {
+          "text": "Transformative Revenue Growth",
+          "className": "",
+          "id": "",
+          "innerHTML": "Transformative Revenue Growth"
+        },
+        {
+          "text": "Custom Development Excellence",
+          "className": "",
+          "id": "",
+          "innerHTML": "Custom Development Excellence"
+        },
+        {
+          "text": "Technology & Innovation",
+          "className": "",
+          "id": "",
+          "innerHTML": "Technology &amp; Innovation"
+        },
+        {
+          "text": "CRM Solutions",
+          "className": "",
+          "id": "",
+          "innerHTML": "CRM Solutions"
+        },
+        {
+          "text": "Business Solutions",
+          "className": "",
+          "id": "",
+          "innerHTML": "Business Solutions"
+        },
+        {
+          "text": "Support Services",
+          "className": "",
+          "id": "",
+          "innerHTML": "Support Services"
+        },
+        {
+          "text": "Identify Revenue Barriers",
+          "className": "",
+          "id": "",
+          "innerHTML": "Identify Revenue Barriers"
+        },
+        {
+          "text": "Implement Best Practices",
+          "className": "",
+          "id": "",
+          "innerHTML": "Implement Best Practices"
+        },
+        {
+          "text": "Adapt to Strengths",
+          "className": "",
+          "id": "",
+          "innerHTML": "Adapt to Strengths"
+        },
+        {
+          "text": "Engineer Success",
+          "className": "",
+          "id": "",
+          "innerHTML": "Engineer Success"
+        },
+        {
+          "text": "Services",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Services"
+        },
+        {
+          "text": "Company",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Company"
+        },
+        {
+          "text": "Contact Us",
+          "className": "footer-title",
+          "id": "",
+          "innerHTML": "Contact Us"
+        }
+      ]
+    },
+    "paragraphs": [
+      {
+        "text": "Real stories from real businesses achieving breakthrough growth",
+        "className": "",
+        "innerHTML": "Real stories from real businesses achieving breakthrough growth"
+      },
+      {
+        "text": "Caselle",
+        "className": "client-name",
+        "innerHTML": "Caselle"
+      },
+      {
+        "text": "Commitment to Community",
+        "className": "client-title",
+        "innerHTML": "Commitment to Community"
+      },
+      {
+        "text": "\"Zero Barriers delivered exceptional results through their integrated technology approach. Their CRM solutions and custom development services eliminated our technical barriers and accelerated our revenue growth significantly.\"",
+        "className": "",
+        "innerHTML": "\"Zero Barriers delivered exceptional results through their integrated technology approach. Their CRM solutions and custom development services eliminated our technical barriers and accelerated our revenue growth significantly.\""
+      },
+      {
+        "text": "DevPipeline",
+        "className": "client-name",
+        "innerHTML": "DevPipeline"
+      },
+      {
+        "text": "Technology Division Partner",
+        "className": "client-title",
+        "innerHTML": "Technology Division Partner"
+      },
+      {
+        "text": "\"Our partnership with Zero Barriers has been instrumental in delivering world-class custom development solutions. With 30+ years of experience, we've built scalable systems that eliminate technical barriers for sustainable business growth.\"",
+        "className": "",
+        "innerHTML": "\"Our partnership with Zero Barriers has been instrumental in delivering world-class custom development solutions. With 30+ years of experience, we've built scalable systems that eliminate technical barriers for sustainable business growth.\""
+      },
+      {
+        "text": "Our revenue growth methodology works across diverse business sectors",
+        "className": "",
+        "innerHTML": "Our revenue growth methodology works across diverse business sectors"
+      },
+      {
+        "text": "\"Zero Barriers' technology enablement division delivered exceptional results. Their integrated approach to CRM solutions and custom development helped us achieve significant operational improvements and revenue growth.\"",
+        "className": "",
+        "innerHTML": "\"Zero Barriers' technology enablement division delivered exceptional results. Their integrated approach to CRM solutions and custom development helped us achieve significant operational improvements and revenue growth.\""
+      },
+      {
+        "text": "Q90 Technology",
+        "className": "client-name",
+        "innerHTML": "Q90 Technology"
+      },
+      {
+        "text": "Innovation Partner",
+        "className": "client-title",
+        "innerHTML": "Innovation Partner"
+      },
+      {
+        "text": "\"Our partnership with Zero Barriers has been transformative. We've achieved 40% average ROI improvement and 100+ successful implementations through their proven Salesforce expertise and methodology.\"",
+        "className": "",
+        "innerHTML": "\"Our partnership with Zero Barriers has been transformative. We've achieved 40% average ROI improvement and 100+ successful implementations through their proven Salesforce expertise and methodology.\""
+      },
+      {
+        "text": "Salesforce Consulting",
+        "className": "client-name",
+        "innerHTML": "Salesforce Consulting"
+      },
+      {
+        "text": "CRM Excellence Partner",
+        "className": "client-title",
+        "innerHTML": "CRM Excellence Partner"
+      },
+      {
+        "text": "\"Zero Barriers' revenue acceleration framework transformed our business processes. We achieved substantial growth through their systematic approach to eliminating barriers and optimizing operations.\"",
+        "className": "",
+        "innerHTML": "\"Zero Barriers' revenue acceleration framework transformed our business processes. We achieved substantial growth through their systematic approach to eliminating barriers and optimizing operations.\""
+      },
+      {
+        "text": "Sebo",
+        "className": "client-name",
+        "innerHTML": "Sebo"
+      },
+      {
+        "text": "Business Solutions Partner",
+        "className": "client-title",
+        "innerHTML": "Business Solutions Partner"
+      },
+      {
+        "text": "\"We achieved 122% revenue growth in our first year! Zero Barriers empowered our team, instilled ownership principles, and identified top talent for our elite firm. Their revenue growth methodology delivered rapid, substantial, sustainable results.\"",
+        "className": "",
+        "innerHTML": "\"We achieved 122% revenue growth in our first year! Zero Barriers empowered our team, instilled ownership principles, and identified top talent for our elite firm. Their revenue growth methodology delivered rapid, substantial, sustainable results.\""
+      },
+      {
+        "text": "Jason Kidman",
+        "className": "client-name",
+        "innerHTML": "Jason Kidman"
+      },
+      {
+        "text": "CEO, SOS Support",
+        "className": "client-title",
+        "innerHTML": "CEO, SOS Support"
+      },
+      {
+        "text": "Every phase of our revenue growth methodology delivers measurable results",
+        "className": "",
+        "innerHTML": "Every phase of our revenue growth methodology delivers measurable results"
+      },
+      {
+        "text": "Average 40% efficiency gain identified",
+        "className": "result-stats",
+        "innerHTML": "Average 40% efficiency gain identified"
+      },
+      {
+        "text": "Clients discover untapped revenue potential and eliminate bottlenecks through our comprehensive analysis.",
+        "className": "result-description",
+        "innerHTML": "Clients discover untapped revenue potential and eliminate bottlenecks through our comprehensive analysis."
+      },
+      {
+        "text": "Average 60% process improvement",
+        "className": "result-stats",
+        "innerHTML": "Average 60% process improvement"
+      },
+      {
+        "text": "Proven systems and methodologies deliver immediate performance improvements and revenue acceleration.",
+        "className": "result-description",
+        "innerHTML": "Proven systems and methodologies deliver immediate performance improvements and revenue acceleration."
+      },
+      {
+        "text": "Average 80% team adoption rate",
+        "className": "result-stats",
+        "innerHTML": "Average 80% team adoption rate"
+      },
+      {
+        "text": "Customized solutions that leverage individual and team strengths for sustainable growth.",
+        "className": "result-description",
+        "innerHTML": "Customized solutions that leverage individual and team strengths for sustainable growth."
+      },
+      {
+        "text": "Average 122% revenue growth",
+        "className": "result-stats",
+        "innerHTML": "Average 122% revenue growth"
+      },
+      {
+        "text": "Predictable, repeatable revenue patterns that scale with your business and deliver lasting results.",
+        "className": "result-description",
+        "innerHTML": "Predictable, repeatable revenue patterns that scale with your business and deliver lasting results."
+      },
+      {
+        "text": "Join the growing list of businesses achieving rapid, substantial, sustainable revenue growth with Zero Barriers",
+        "className": "",
+        "innerHTML": "Join the growing list of businesses achieving rapid, substantial, sustainable revenue growth with Zero Barriers"
+      },
+      {
+        "text": "Potential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.",
+        "className": "footer-description",
+        "innerHTML": "\nPotential Unleashed: Transforming people and organizations through\n          rapid, substantial, and sustainable growth.\n"
+      },
+      {
+        "text": "518 E 800 N, Suite AOrem, Utah 84097",
+        "className": "",
+        "innerHTML": "518 E 800 N, Suite A<br>Orem, Utah 84097"
+      },
+      {
+        "text": "+1 (801) 997-0457",
+        "className": "",
+        "innerHTML": "+1 (801) 997-0457"
+      },
+      {
+        "text": "sk@zerobarriers.io",
+        "className": "",
+        "innerHTML": "sk@zerobarriers.io"
+      },
+      {
+        "text": "© 2025 Zero Barriers. All rights reserved.",
+        "className": "",
+        "innerHTML": "© 2025 Zero Barriers. All rights reserved."
+      }
+    ],
+    "lists": [
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Human Transformation",
+            "innerHTML": " <a href=\"/services#human\">Human Transformation</a> "
+          },
+          {
+            "text": "Technology Enablement",
+            "innerHTML": " <a href=\"/services#technology\">Technology Enablement</a> "
+          },
+          {
+            "text": "Revenue Acceleration",
+            "innerHTML": " <a href=\"/services#revenue\">Revenue Acceleration</a> "
+          },
+          {
+            "text": "Strategic Consulting",
+            "innerHTML": " <a href=\"/services#consulting\">Strategic Consulting</a> "
+          },
+          {
+            "text": "Team Training",
+            "innerHTML": " <a href=\"/services#training\">Team Training</a> "
+          }
+        ]
+      },
+      {
+        "tagName": "UL",
+        "className": "footer-links",
+        "items": [
+          {
+            "text": "Home",
+            "innerHTML": "<a href=\"/\">Home</a>"
+          },
+          {
+            "text": "Services",
+            "innerHTML": "<a href=\"/services\">Services</a>"
+          },
+          {
+            "text": "Case Studies",
+            "innerHTML": "<a href=\"/case-studies\">Case Studies</a>"
+          },
+          {
+            "text": "Technology",
+            "innerHTML": "<a href=\"/technology\">Technology</a>"
+          },
+          {
+            "text": "Testimonials",
+            "innerHTML": "<a href=\"/testimonials\">Testimonials</a>"
+          },
+          {
+            "text": "Contact",
+            "innerHTML": "<a href=\"/contact\">Contact</a>"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "text": "ZERO BARRIERS",
+        "href": "https://zerobarriers.io/",
+        "className": "logo",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Get Started",
+        "href": "https://zerobarriers.io/contact",
+        "className": "cta-button",
+        "target": ""
+      },
+      {
+        "text": "Schedule Your Revenue Growth Assessment",
+        "href": "https://zerobarriers.io/contact",
+        "className": "white-cta",
+        "target": ""
+      },
+      {
+        "text": "View Detailed Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "secondary-white-cta",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.facebook.com/zerobarriers",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "",
+        "href": "https://www.instagram.com/zerobarriersinc",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Human Transformation",
+        "href": "https://zerobarriers.io/services#human",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology Enablement",
+        "href": "https://zerobarriers.io/services#technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Revenue Acceleration",
+        "href": "https://zerobarriers.io/services#revenue",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Strategic Consulting",
+        "href": "https://zerobarriers.io/services#consulting",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Team Training",
+        "href": "https://zerobarriers.io/services#training",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Home",
+        "href": "https://zerobarriers.io/",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Services",
+        "href": "https://zerobarriers.io/services",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Case Studies",
+        "href": "https://zerobarriers.io/case-studies",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Technology",
+        "href": "https://zerobarriers.io/technology",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Testimonials",
+        "href": "https://zerobarriers.io/testimonials",
+        "className": "",
+        "target": ""
+      },
+      {
+        "text": "Contact",
+        "href": "https://zerobarriers.io/contact",
+        "className": "",
+        "target": ""
+      }
+    ]
+  },
+  "elementsWithAnimations": [],
+  "allClassNames": [
+    "fonts-loaded",
+    "loaded",
+    "container",
+    "nav-container",
+    "logo",
+    "logo-image",
+    "nav-links",
+    "mobile-menu-toggle",
+    "fas",
+    "fa-bars",
+    "cta-button",
+    "testimonials-hero",
+    "section-title",
+    "featured-testimonials",
+    "testimonial-grid",
+    "testimonial-card",
+    "featured",
+    "testimonial-header",
+    "client-info",
+    "client-logo",
+    "client-name",
+    "client-title",
+    "results-badge",
+    "percentage",
+    "label",
+    "testimonial-content",
+    "testimonial-metrics",
+    "metric",
+    "metric-value",
+    "metric-label",
+    "industry-testimonials",
+    "industry-grid",
+    "industry-section",
+    "client-logo-small",
+    "methodology-results",
+    "results-grid",
+    "result-card",
+    "result-number",
+    "result-stats",
+    "result-description",
+    "cta-section",
+    "white-cta",
+    "secondary-white-cta",
+    "fa-arrow-right",
+    "footer-container",
+    "footer-logo",
+    "footer-description",
+    "social-links",
+    "fab",
+    "fa-linkedin-in",
+    "fa-facebook-f",
+    "fa-instagram",
+    "footer-title",
+    "footer-links",
+    "contact-info",
+    "contact-info-icon",
+    "fa-map-marker-alt",
+    "fa-phone-alt",
+    "fa-envelope",
+    "copyright"
+  ],
+  "animations": [
+    {
+      "name": "fa-beat",
+      "cssText": "@-webkit-keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-beat",
+      "cssText": "@keyframes fa-beat { \n  0%, 90% { transform: scale(1); }\n  45% { transform: scale(var(--fa-beat-scale,1.25)); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@-webkit-keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-bounce",
+      "cssText": "@keyframes fa-bounce { \n  0% { transform: scale(1) translateY(0px); }\n  10% { transform: scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0); }\n  30% { transform: scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em)); }\n  50% { transform: scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0); }\n  57% { transform: scale(1) translateY(var(--fa-bounce-rebound,-.125em)); }\n  64% { transform: scale(1) translateY(0px); }\n  100% { transform: scale(1) translateY(0px); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@-webkit-keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-fade",
+      "cssText": "@keyframes fa-fade { \n  50% { opacity: var(--fa-fade-opacity,.4); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@-webkit-keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-beat-fade",
+      "cssText": "@keyframes fa-beat-fade { \n  0%, 100% { opacity: var(--fa-beat-fade-opacity,.4); transform: scale(1); }\n  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale,1.125)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@-webkit-keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-flip",
+      "cssText": "@keyframes fa-flip { \n  50% { transform: rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg)); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@-webkit-keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-shake",
+      "cssText": "@keyframes fa-shake { \n  0% { transform: rotate(-15deg); }\n  4% { transform: rotate(15deg); }\n  8%, 24% { transform: rotate(-18deg); }\n  12%, 28% { transform: rotate(18deg); }\n  16% { transform: rotate(-22deg); }\n  20% { transform: rotate(22deg); }\n  32% { transform: rotate(-12deg); }\n  36% { transform: rotate(12deg); }\n  40%, 100% { transform: rotate(0deg); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@-webkit-keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    },
+    {
+      "name": "fa-spin",
+      "cssText": "@keyframes fa-spin { \n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(1turn); }\n}"
+    }
+  ]
+}

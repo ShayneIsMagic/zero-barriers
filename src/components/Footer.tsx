@@ -1,0 +1,88 @@
+'use client'
+
+import Link from 'next/link'
+import { trackNavigationClick } from '../lib/analytics'
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-container">
+          <div>
+            <div className="footer-logo">
+              <img className="logo-image" src="/images/zero-barriers-logo.png" alt="Zero Barriers logo" />
+              ZERO <span>BARRIERS</span>
+            </div>
+            <p className="footer-description">
+              Potential Unleashed: Transforming people and organizations through rapid, substantial, and sustainable growth.
+            </p>
+            <div className="social-links">
+              <a 
+                href="https://www.linkedin.com/company/zerobarriers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on LinkedIn"
+              >
+                <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a 
+                href="https://www.facebook.com/zerobarriers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on Facebook"
+              >
+                <i className="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a 
+                href="https://www.instagram.com/zerobarriersinc" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Visit Zero Barriers on Instagram"
+              >
+                <i className="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 className="footer-title">Services</h3>
+            <ul className="footer-links">
+              <li><Link href="/services#human" onClick={() => trackNavigationClick('/services#human', 'Human Transformation')}>Human Transformation</Link></li>
+              <li><Link href="/services#technology" onClick={() => trackNavigationClick('/services#technology', 'Technology Enablement')}>Technology Enablement</Link></li>
+              <li><Link href="/services#revenue" onClick={() => trackNavigationClick('/services#revenue', 'Revenue Acceleration')}>Revenue Acceleration</Link></li>
+              <li><Link href="/services#consulting" onClick={() => trackNavigationClick('/services#consulting', 'Strategic Consulting')}>Strategic Consulting</Link></li>
+              <li><Link href="/services#training" onClick={() => trackNavigationClick('/services#training', 'Team Training')}>Team Training</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="footer-title">Company</h3>
+            <ul className="footer-links">
+              <li><Link href="/" onClick={() => trackNavigationClick('/', 'Home')}>Home</Link></li>
+              <li><Link href="/services" onClick={() => trackNavigationClick('/services', 'Services')}>Services</Link></li>
+              <li><Link href="/technology" onClick={() => trackNavigationClick('/technology', 'Technology')}>Technology</Link></li>
+              <li><Link href="/results" onClick={() => trackNavigationClick('/results', 'Results')}>Results</Link></li>
+              <li><Link href="/contact" onClick={() => trackNavigationClick('/contact', 'Contact')}>Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="footer-title">Contact Us</h3>
+            <div className="contact-info">
+              <div className="contact-info-icon">
+                <i className="fas fa-map-marker-alt" aria-label="Address"></i>
+              </div>
+              <p>518 E 800 N, Suite A<br />Orem, Utah 84097</p>
+            </div>
+            <div className="contact-info">
+              <div className="contact-info-icon">
+                <i className="fas fa-phone-alt" aria-label="Phone"></i>
+              </div>
+              <p>+1 (801) 997-0457</p>
+            </div>
+          </div>
+        </div>
+        <div className="copyright">
+          <p>&copy; 2025 Zero Barriers. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

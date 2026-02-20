@@ -1,0 +1,333 @@
+/* ============================================
+   PAGE-SPECIFIC COLOR THEMES
+   Transformative Sage Color Strategy
+   ============================================ */
+
+/* Home Page - Sunshine Yellow Dominant */
+body:has(main > div:first-child > section.hero) .hero-glass-overlay,
+.home-page .hero-glass-overlay {
+  background: linear-gradient(135deg,
+    rgba(255, 213, 79, 0.4) 0%,
+    rgba(255, 193, 7, 0.3) 50%,
+    rgba(255, 213, 79, 0.4) 100%
+  );
+}
+
+.home-page .services-trinity,
+body:has(main > div:first-child > section.services-trinity) .services-trinity {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--home-dominant-light) 30%,
+    var(--white) 60%,
+    var(--home-dominant-light) 100%
+  );
+}
+
+.home-page .service-pillar:hover::before,
+body:has(main > div:first-child > section.services-trinity) .service-pillar:hover::before {
+  background: linear-gradient(135deg, var(--home-dominant), var(--home-dominant-dark));
+  opacity: 0.3;
+}
+
+.home-page .final-cta,
+body:has(main > div:first-child > section.final-cta) .final-cta {
+  background: linear-gradient(135deg,
+    var(--home-dominant-dark) 0%,
+    var(--home-dominant) 50%,
+    var(--home-dominant-dark) 100%
+  );
+}
+
+/* Services Page - Deep Blues Dominant */
+.services-hero {
+  background: var(--white);
+  padding: var(--spacing-5xl) 0;
+  position: relative;
+}
+
+.services-hero .section-title h1 {
+  color: var(--services-dominant);
+}
+
+.services-hero .section-title p {
+  color: var(--services-dominant-dark);
+}
+
+.service-detail {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--services-dominant-light) 20%,
+    var(--white) 40%,
+    var(--services-dominant-light) 60%,
+    var(--white) 80%,
+    var(--services-dominant-light) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+}
+
+.service-detail .service-label {
+  color: var(--services-dominant-dark);
+}
+
+.service-detail .service-title {
+  color: var(--services-dominant);
+}
+
+/* Services Page CTA */
+.services-page .cta-section,
+body:has(main > div:first-child > section.cta-section) .cta-section:has(+ *) {
+  background: linear-gradient(135deg,
+    var(--services-dominant) 0%,
+    var(--services-dominant-dark) 100%
+  );
+  color: var(--white);
+}
+
+.services-page .white-cta,
+body:has(main > div:first-child > section.cta-section) .white-cta {
+  background: var(--services-dominant-dark);
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.services-page .white-cta:hover,
+body:has(main > div:first-child > section.cta-section) .white-cta:hover {
+  background: var(--white);
+  color: var(--services-dominant);
+}
+
+/* Technology Page - Teal Dominant */
+.technology-hero {
+  background: var(--white);
+  padding: var(--spacing-5xl) 0;
+  position: relative;
+}
+
+.technology-hero .section-title h1 {
+  color: var(--tech-dominant);
+}
+
+.technology-hero .section-title p {
+  color: var(--tech-dominant-dark);
+}
+
+.technology-overview {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--tech-dominant-light) 50%,
+    var(--white) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+}
+
+.crm-solutions,
+.custom-development {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--tech-dominant-light) 30%,
+    var(--white) 60%,
+    var(--tech-dominant-light) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+}
+
+.crm-solutions .division-header h2,
+.custom-development .division-header h2 {
+  color: var(--tech-dominant-dark);
+}
+
+/* Technology Page CTA Section - Teal Theme */
+body:has(.technology-hero) .cta-section,
+.technology-hero ~ .cta-section {
+  background: linear-gradient(135deg,
+    var(--tech-dominant-dark) 0%,
+    var(--tech-dominant) 100%
+  ) !important;
+  color: var(--white);
+}
+
+body:has(.technology-hero) .cta-section .white-cta,
+.technology-hero ~ .cta-section .white-cta {
+  background: var(--white) !important;
+  color: var(--tech-dominant) !important;
+  box-shadow: 0 5px 15px rgba(0, 131, 143, 0.2);
+}
+
+body:has(.technology-hero) .cta-section .white-cta:hover,
+.technology-hero ~ .cta-section .white-cta:hover {
+  background: var(--light-gray) !important;
+  color: var(--tech-dominant) !important;
+}
+
+/* Case Studies Page - Deep Green Dominant */
+.case-studies-hero {
+  background: linear-gradient(135deg,
+    var(--case-dominant-dark) 0%,
+    var(--case-dominant) 50%,
+    var(--case-dominant-dark) 100%
+  );
+  padding: var(--spacing-5xl) 0;
+  position: relative;
+}
+
+.case-studies-hero .section-title h1 {
+  color: var(--white);
+}
+
+.case-studies-hero .section-title p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Case study sections now use category-specific classes in globals.css */
+/* .case-study-section {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--case-dominant-light) 30%,
+    var(--white) 60%,
+    var(--case-dominant-light) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+} */
+
+.case-study-label {
+  color: var(--case-dominant-dark);
+}
+
+.case-study-title {
+  color: var(--case-dominant);
+}
+
+.results-stat-number {
+  color: var(--case-dominant-dark);
+}
+
+.case-studies-page .cta-section,
+body:has(main > div:first-child > section.case-studies-hero) ~ section.cta-section {
+  background: linear-gradient(135deg,
+    var(--case-dominant-dark) 0%,
+    var(--case-dominant) 100%
+  );
+  color: var(--white);
+}
+
+.case-studies-page .white-cta,
+body:has(main > div:first-child > section.case-studies-hero) ~ section.cta-section .white-cta {
+  background: var(--case-dominant);
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.case-studies-page .white-cta:hover,
+body:has(main > div:first-child > section.case-studies-hero) ~ section.cta-section .white-cta:hover {
+  background: var(--white);
+  color: var(--case-dominant);
+}
+
+/* Contact Page - Sunshine Yellow Dominant */
+.contact-hero {
+  background: linear-gradient(135deg,
+    var(--contact-dominant-dark) 0%,
+    var(--contact-dominant) 50%,
+    var(--contact-dominant-dark) 100%
+  );
+  padding: var(--spacing-5xl) 0;
+  position: relative;
+}
+
+.contact-hero .section-title h1 {
+  color: var(--blue-midnight);
+}
+
+.contact-section-bg {
+  background: linear-gradient(180deg,
+    var(--white) 0%,
+    var(--contact-dominant-light) 50%,
+    var(--white) 100%
+  );
+  padding: var(--spacing-4xl) 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--contact-dominant);
+  box-shadow: 0 0 0 3px var(--contact-dominant-light);
+}
+
+.contact-page .cta-button,
+body:has(main > div:first-child > section.contact-hero) ~ section.cta-section .cta-button.primary {
+  background: var(--contact-dominant);
+  color: var(--blue-midnight);
+  border: 2px solid var(--contact-dominant-dark);
+}
+
+.contact-page .cta-button:hover,
+body:has(main > div:first-child > section.contact-hero) ~ section.cta-section .cta-button.primary:hover {
+  background: var(--contact-dominant-dark);
+  box-shadow: 0 8px 24px rgba(255, 213, 79, 0.4);
+}
+
+.contact-page .cta-section,
+body:has(main > div:first-child > section.contact-hero) ~ section.cta-section {
+  background: linear-gradient(135deg,
+    var(--contact-dominant-dark) 0%,
+    var(--contact-dominant) 100%
+  );
+}
+
+.contact-page .cta-section h2,
+body:has(main > div:first-child > section.contact-hero) ~ section.cta-section h2 {
+  color: var(--blue-midnight);
+}
+
+.contact-page .cta-section p,
+body:has(main > div:first-child > section.contact-hero) ~ section.cta-section p {
+  color: var(--charcoal);
+}
+
+/* Stats Section - Home Page Yellow Accents */
+.statsSection .statNumber {
+  color: var(--home-dominant);
+}
+
+/* Testimonials Section - Yellow accents on home page */
+/* Testimonials hero background image is set in globals.css */
+
+/* Testimonials Page CTA Section - Yellow Theme */
+body:has(.testimonials-hero) .cta-section,
+.testimonials-hero ~ .cta-section {
+  background: linear-gradient(135deg,
+    var(--home-dominant-dark) 0%,
+    var(--home-dominant) 50%,
+    var(--home-dominant-dark) 100%
+  ) !important;
+  color: var(--charcoal);
+}
+
+body:has(.testimonials-hero) .cta-section h2,
+.testimonials-hero ~ .cta-section h2 {
+  color: var(--charcoal);
+}
+
+body:has(.testimonials-hero) .cta-section p,
+.testimonials-hero ~ .cta-section p {
+  color: var(--charcoal);
+}
+
+body:has(.testimonials-hero) .cta-section .white-cta,
+.testimonials-hero ~ .cta-section .white-cta {
+  background: var(--white) !important;
+  color: var(--charcoal) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body:has(.testimonials-hero) .cta-section .white-cta:hover,
+.testimonials-hero ~ .cta-section .white-cta:hover {
+  background: var(--light-gray) !important;
+  color: var(--charcoal) !important;
+}
+
+body:has(.testimonials-hero) .cta-section .secondary-white-cta,
+.testimonials-hero ~ .cta-section .secondary-white-cta {
+  color: var(--charcoal) !important;
+  border-bottom-color: rgba(66, 66, 66, 0.3);
+}
