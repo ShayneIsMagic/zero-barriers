@@ -1,208 +1,249 @@
-import type { Metadata, Viewport } from 'next'
-import { Poppins } from 'next/font/google'
-import Script from 'next/script'
-import '../styles/globals.css'
-import '../styles/page-colors.css'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer'
-import { Analytics } from '../components/Analytics'
-import { GTM } from '../components/GTM'
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import Script from "next/script";
+import "../styles/globals.css";
+import "../styles/page-colors.css";
+import "../assets/icons/fontawesome-webkit/css/all.min.css";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer";
+import { Analytics } from "../components/Analytics";
+import { GTM } from "../components/GTM";
 
-const poppins = Poppins({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
-  display: 'swap', // Prevents layout shift during font load
-  preload: false,  // Reduces preload warnings
-})
+const poppins = localFont({
+  src: [
+    {
+      path: "../assets/fonts/Poppins/Poppins-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Poppins/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Poppins/Poppins-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Poppins/Poppins-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Poppins/Poppins-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/Poppins/Poppins-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zerobarriers.io'),
-  title: 'Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
-  description: 'We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
-  keywords: 'revenue growth, profitable revenue growth, revenue generation, business transformation, revenue growth consulting, business consulting, revenue acceleration, sales optimization, revenue operations, RevOps, strategic consulting, growth strategy, revenue transformation, technology enablement, CRM optimization, revenue growth services, revenue growth methodology, business scaling, revenue systems, management consulting, business advisory, profit optimization, revenue profitability, growth consulting, revenue performance',
-  authors: [{ name: 'Zero Barriers' }],
-  creator: 'Zero Barriers',
-  publisher: 'Zero Barriers',
+  metadataBase: new URL("https://zerobarriers.io"),
+  title:
+    "Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results",
+  description:
+    "We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.",
+  keywords:
+    "revenue growth, profitable revenue growth, revenue generation, business transformation, revenue growth consulting, business consulting, revenue acceleration, sales optimization, revenue operations, RevOps, strategic consulting, growth strategy, revenue transformation, technology enablement, CRM optimization, revenue growth services, revenue growth methodology, business scaling, revenue systems, management consulting, business advisory, profit optimization, revenue profitability, growth consulting, revenue performance",
+  authors: [{ name: "Zero Barriers" }],
+  creator: "Zero Barriers",
+  publisher: "Zero Barriers",
   alternates: {
-    canonical: 'https://zerobarriers.io',
+    canonical: "https://zerobarriers.io",
   },
   icons: {
-    icon: [
-      { url: '/images/zero-barriers-logo.png', type: 'image/png' },
-    ],
-    shortcut: '/images/zero-barriers-logo.png',
-    apple: '/images/zero-barriers-logo.png',
+    icon: [{ url: "/images/zero-barriers-logo.png", type: "image/png" }],
+    shortcut: "/images/zero-barriers-logo.png",
+    apple: "/images/zero-barriers-logo.png",
   },
   openGraph: {
-    title: 'Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
-    description: 'We dominate profitable revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
-    url: 'https://zerobarriers.io',
-    siteName: 'Zero Barriers',
+    title:
+      "Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results",
+    description:
+      "We dominate profitable revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.",
+    url: "https://zerobarriers.io",
+    siteName: "Zero Barriers",
     images: [
       {
-        url: 'https://zerobarriers.io/images/og-image.jpg',
+        url: "https://zerobarriers.io/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Zero Barriers Open Graph Image',
+        alt: "Zero Barriers Open Graph Image",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@zerobarriers',
-    creator: '@zerobarriers',
-    title: 'Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
-    description: 'We dominate profitable revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.',
-    images: ['https://zerobarriers.io/images/twitter-card.jpg'],
+    card: "summary_large_image",
+    site: "@zerobarriers",
+    creator: "@zerobarriers",
+    title:
+      "Zero Barriers - Revenue Growth Transformation | Rapid, Substantial, Sustainable Results",
+    description:
+      "We dominate profitable revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.",
+    images: ["https://zerobarriers.io/images/twitter-card.jpg"],
   },
-  robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  robots:
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
-    title: 'Zero Barriers',
+    statusBarStyle: "default",
+    title: "Zero Barriers",
   },
-}
+};
 
 export const viewport: Viewport = {
-  themeColor: '#7cc347',
-  width: 'device-width',
+  themeColor: "#7cc347",
+  width: "device-width",
   initialScale: 1,
-}
+};
 
 // Enhanced Structured Data for SEO (Web 3/Web 4 compatible)
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Zero Barriers",
-  "url": "https://zerobarriers.io",
-      "logo": "https://zerobarriers.io/images/zero-barriers-logo.png",
-  "description": "Zero Barriers - Revenue Growth Consultancy specializing in profitable revenue growth. We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.",
-  "foundingDate": "2020",
-  "address": {
+  name: "Zero Barriers",
+  url: "https://zerobarriers.io",
+  logo: "https://zerobarriers.io/images/zero-barriers-logo.png",
+  description:
+    "Zero Barriers - Revenue Growth Consultancy specializing in profitable revenue growth. We dominate revenue growth with proven methodologies that deliver rapid, substantial, and sustainable results. Expert revenue generation and business transformation services.",
+  foundingDate: "2020",
+  address: {
     "@type": "PostalAddress",
-    "addressRegion": "Utah",
-    "addressCountry": "US"
+    addressRegion: "Utah",
+    addressCountry: "US",
   },
-  "contactPoint": {
+  contactPoint: {
     "@type": "ContactPoint",
-    "contactType": "customer service",
-    "email": "sk@zerobarriers.io",
-    "telephone": "+1-801-997-0457",
-    "url": "https://zerobarriers.io/contact",
-    "availableLanguage": "English"
+    contactType: "customer service",
+    email: "sk@zerobarriers.io",
+    telephone: "+1-801-997-0457",
+    url: "https://zerobarriers.io/contact",
+    availableLanguage: "English",
   },
-  "sameAs": [
+  sameAs: [
     "https://www.linkedin.com/company/zerobarriers",
     "https://www.facebook.com/zerobarriers",
     "https://www.instagram.com/zerobarriersinc",
-    "https://twitter.com/zerobarriers"
+    "https://twitter.com/zerobarriers",
   ],
-  "aggregateRating": {
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "6"
-  }
-}
+    ratingValue: "5",
+    reviewCount: "6",
+  },
+};
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Zero Barriers",
-  "url": "https://zerobarriers.io",
-  "potentialAction": {
+  name: "Zero Barriers",
+  url: "https://zerobarriers.io",
+  potentialAction: {
     "@type": "SearchAction",
-    "target": {
+    target: {
       "@type": "EntryPoint",
-      "urlTemplate": "https://zerobarriers.io/search?q={search_term_string}"
+      urlTemplate: "https://zerobarriers.io/search?q={search_term_string}",
     },
-    "query-input": "required name=search_term_string"
-  }
-}
+    "query-input": "required name=search_term_string",
+  },
+};
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Revenue Growth Consulting",
-  "provider": {
+  serviceType: "Revenue Growth Consulting",
+  provider: {
     "@type": "Organization",
-    "name": "Zero Barriers",
-    "url": "https://zerobarriers.io"
+    name: "Zero Barriers",
+    url: "https://zerobarriers.io",
   },
-  "description": "Zero Barriers delivers profitable revenue growth through proven methodologies including human transformation, technology enablement, revenue acceleration, strategic consulting, and team training. We provide rapid, substantial, and sustainable revenue growth solutions for businesses.",
-  "areaServed": {
+  description:
+    "Zero Barriers delivers profitable revenue growth through proven methodologies including human transformation, technology enablement, revenue acceleration, strategic consulting, and team training. We provide rapid, substantial, and sustainable revenue growth solutions for businesses.",
+  areaServed: {
     "@type": "Country",
-    "name": "United States"
+    name: "United States",
   },
-  "hasOfferCatalog": {
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Revenue Growth Services",
-    "itemListElement": [
+    name: "Revenue Growth Services",
+    itemListElement: [
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Human Transformation",
-          "description": "Purpose-driven revenue growth methodologies and proprietary frameworks"
-        }
+          name: "Human Transformation",
+          description:
+            "Purpose-driven revenue growth methodologies and proprietary frameworks",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Technology Enablement",
-          "description": "Salesforce CRM solutions and custom software development"
-        }
+          name: "Technology Enablement",
+          description:
+            "Salesforce CRM solutions and custom software development",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Revenue Acceleration",
-          "description": "Sales process optimization and KPI-driven performance management"
-        }
+          name: "Revenue Acceleration",
+          description:
+            "Sales process optimization and KPI-driven performance management",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Strategic Consulting",
-          "description": "Growth strategy development and organizational design"
-        }
+          name: "Strategic Consulting",
+          description: "Growth strategy development and organizational design",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Team Training",
-          "description": "Sales training, leadership development, and process adoption"
-        }
-      }
-    ]
-  }
-}
+          name: "Team Training",
+          description:
+            "Sales training, leadership development, and process adoption",
+        },
+      },
+    ],
+  },
+};
 
-const structuredData = [organizationSchema, websiteSchema, serviceSchema]
+const structuredData = [organizationSchema, websiteSchema, serviceSchema];
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <Script
+        {/* <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
           strategy="afterInteractive"
-        />
+        /> */}
         {/* Google Analytics */}
-        {gaId && (
+        {/* {gaId && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
@@ -219,20 +260,20 @@ export default function RootLayout({
               `}
             </Script>
           </>
-        )}
+        )} */}
       </head>
       <body className={poppins.variable} suppressHydrationWarning>
         {/* Google Tag Manager (noscript) - must be immediately after opening <body> tag */}
-        {process.env.NEXT_PUBLIC_GTM_ID && (
+        {/* {process.env.NEXT_PUBLIC_GTM_ID && (
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
               height="0"
               width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
+              style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
-        )}
+        )} */}
         {/* End Google Tag Manager (noscript) */}
         <GTM />
         <Analytics />
@@ -250,5 +291,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }
