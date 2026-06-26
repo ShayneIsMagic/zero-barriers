@@ -267,10 +267,17 @@ header {
 }
 
 .logo-image {
+  display: block;
+  flex-shrink: 0;
+  margin-right: var(--logo-margin-right);
+  line-height: 0;
+}
+
+.logo-image img {
   height: var(--logo-height);
   width: auto;
-  margin-right: var(--logo-margin-right);
   object-fit: contain;
+  display: block;
 }
 
 .logo span {
@@ -689,16 +696,27 @@ header {
   gap: var(--spacing-lg);
 }
 
-.hero-image-desktop {
+.hero-image {
   display: block;
   width: 100%;
 }
 
+.hero-image picture {
+  display: block;
+  width: 100%;
+}
+
+.hero-image img,
 .hero-image-desktop img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+}
+
+.hero-image-desktop {
+  display: block;
+  width: 100%;
 }
 
 .hero-image-mobile {
@@ -1396,6 +1414,7 @@ header {
   order: 2;
 }
 
+.services-hero .hero-image,
 .services-hero .hero-image-desktop {
   display: block;
   width: 100%;
@@ -1423,6 +1442,7 @@ header {
   margin-bottom: var(--spacing-lg);
 }
 
+.services-hero .hero-image img,
 .services-hero .hero-image-desktop img {
   width: 100%;
   height: auto;
@@ -1581,6 +1601,13 @@ header {
   transform: scale(1.05);
 }
 
+.service-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-image picture,
 .service-image img {
   width: 100%;
   height: 100%;
@@ -1664,12 +1691,15 @@ header {
   order: 2;
 }
 
+.technology-hero .hero-image,
 .technology-hero .hero-image-desktop {
   display: block;
   width: 100%;
   order: 1;
 }
 
+.technology-hero .hero-image picture,
+.technology-hero .hero-image img,
 .technology-hero .hero-image-desktop img {
   width: 100%;
   height: auto;
@@ -3224,29 +3254,36 @@ header {
 }
 
 /* Sticky sidebar for contact info */
-.contact-info.sticky {
+.contact-section .contact-info.sticky {
   position: sticky;
   top: 100px; /* below header */
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  border: 1px solid rgba(0, 131, 143, 0.12);
 }
 
-.contact-info {
+.contact-section .contact-info {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.contact-info h2 {
+.contact-section .contact-info h2 {
   font-size: 26px;
-  color: var(--contact-dominant);
-  margin-bottom: 10px;
+  color: var(--teal-rich);
+  margin-bottom: 16px;
   font-weight: 700;
+  line-height: 1.3;
 }
 
-.contact-info > p {
+.contact-section .contact-info > p {
   font-size: 16px;
-  color: var(--secondary);
-  line-height: 1.7;
-  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0;
 }
 
 .contact-img {
@@ -3266,27 +3303,19 @@ header {
   display: block;
 }
 
-/* Background image section for contact form/info */
+/* Contact form section — solid background for readable text (no full-bleed photo) */
+.contact-section,
 .contact-section-bg {
   position: relative;
-  padding: 60px 0 40px;
-  background-image: url('/images/contact-mountain-sunset-background.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* subtle parallax feel on desktop */
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, var(--contact-dominant-light) 0%, var(--white) 100%);
 }
 
 .contact-section-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg,
-    rgba(255, 255, 255, 0.85) 0%,
-    var(--contact-dominant-light) 50%,
-    rgba(255, 255, 255, 0.85) 100%
-  );
+  display: none;
 }
 
+.contact-section .container,
 .contact-section-bg .container {
   position: relative;
   z-index: 1;
@@ -3530,6 +3559,7 @@ footer::before {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .footer-logo span {
@@ -3626,7 +3656,7 @@ footer::before {
   font-weight: 500;
 }
 
-.contact-info {
+footer .contact-info {
   margin-bottom: 12px;
   display: flex;
   align-items: flex-start;
@@ -3634,7 +3664,7 @@ footer::before {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.contact-info-icon {
+footer .contact-info-icon {
   width: 16px;
   display: flex;
   justify-content: center;
@@ -3642,7 +3672,7 @@ footer::before {
   font-size: 14px;
 }
 
-.contact-info p {
+footer .contact-info p {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
@@ -3752,8 +3782,13 @@ footer::before {
     gap: 50px;
   }
   
+  .hero-image,
   .hero-image-desktop {
     order: -1;
+  }
+
+  .hero-image-mobile {
+    display: none;
   }
   
   .hero-text-content {
@@ -3799,16 +3834,12 @@ footer::before {
     text-align: center;
   }
   
+  .services-hero .hero-image,
   .services-hero .hero-image-desktop {
     order: -1;
   }
-  
+
   .services-hero .hero-image-mobile {
-    display: block;
-    order: -1;
-  }
-  
-  .services-hero .hero-image-desktop {
     display: none;
   }
   
@@ -3839,16 +3870,18 @@ footer::before {
     order: 1;
   }
   
+  .technology-hero .hero-image,
   .technology-hero .hero-image-desktop {
-    display: none;
-  }
-  
-  .technology-hero .hero-image-mobile {
     display: block;
     width: 100%;
     order: 2;
   }
-  
+
+  .technology-hero .hero-image-mobile {
+    display: none;
+  }
+
+  .technology-hero .hero-image img,
   .technology-hero .hero-image-mobile img {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
@@ -4120,15 +4153,17 @@ footer::before {
     max-width: 100%;
   }
   
+  .hero-image,
   .hero-image-desktop {
-    display: none;
-  }
-  
-  .hero-image-mobile {
     display: block;
     order: -1;
   }
+
+  .hero-image-mobile {
+    display: none;
+  }
   
+  .hero-image img,
   .hero-image-mobile img {
     width: 100%;
     max-width: 400px;
@@ -4255,8 +4290,8 @@ footer::before {
   }
   
   .contact-form,
-  .contact-main .contact-info {
-    padding: 25px 10px;
+  .contact-main .contact-info.sticky {
+    padding: 24px 20px;
   }
   
   .header-cta {
@@ -4315,7 +4350,6 @@ img {
 
 /* Testimonials Page Styles */
 .testimonials-hero {
-  background: url('/images/case-studies-bridge-the-gap-hero.png') center center / cover no-repeat !important;
   padding: 140px 0 100px;
   text-align: center;
   position: relative;
@@ -4323,6 +4357,20 @@ img {
   min-height: 600px;
   display: flex;
   align-items: center;
+}
+
+.section-bg-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-bg-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .testimonials-hero::before {
@@ -6305,7 +6353,7 @@ img {
     gap: 30px;
   }
 
-  .contact-info.sticky {
+  .contact-section .contact-info.sticky {
     position: static;
     top: auto;
   }
@@ -6691,6 +6739,102 @@ img {
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+}
+
+/* Utah AI disclosure labels for generative imagery */
+.ai-disclosed-image {
+  margin: 0;
+  width: 100%;
+}
+
+.ai-disclosed-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ai-image-disclosure,
+.ai-background-disclosure {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--gray-600, #5f6368);
+}
+
+.ai-image-disclosure {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.ai-background-disclosure {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.contact-section {
+  position: relative;
+}
+
+.legal-section {
+  position: relative;
+  padding: 60px 0 40px;
+  background: linear-gradient(180deg, var(--white) 0%, var(--light-gray) 100%);
+}
+
+.legal-document {
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  line-height: 1.7;
+}
+
+.legal-document h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-document h2:first-child {
+  margin-top: 0;
+}
+
+.legal-document h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.legal-document ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.legal-document li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-document a {
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footer-provenance-link {
+  color: inherit;
+  text-decoration: underline;
 }
 
 @media (prefers-reduced-motion: reduce) {

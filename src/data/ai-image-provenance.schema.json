@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zerobarriers.io/images/ai-image-provenance.schema.json",
+  "title": "Zero Barriers AI Image Provenance Registry",
+  "type": "object",
+  "required": ["version", "lastUpdated", "jurisdiction", "images"],
+  "properties": {
+    "version": { "type": "string" },
+    "lastUpdated": { "type": "string", "format": "date" },
+    "jurisdiction": { "type": "string" },
+    "policyNote": { "type": "string" },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "path",
+          "published",
+          "contentCategory",
+          "depictsRealPeople",
+          "depictsBusinessScenario",
+          "creationMethod",
+          "disclosureLabel",
+          "usedOn"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "published": { "type": "boolean" },
+          "contentCategory": { "type": "string" },
+          "depictsRealPeople": { "type": "boolean" },
+          "depictsBusinessScenario": { "type": "boolean" },
+          "creationMethod": { "type": "string" },
+          "disclosureLabel": { "type": "string" },
+          "usedOn": { "type": "array", "items": { "type": "string" } },
+          "removedReason": { "type": "string" },
+          "archivedPath": { "type": "string" }
+        }
+      }
+    }
+  }
+}

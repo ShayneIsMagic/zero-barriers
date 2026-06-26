@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import Link from 'next/link'
-// Note: Using regular img tag since images are unoptimized in next.config.js (required for static export)
 import styles from './Header.module.css'
-import { trackNavigationClick, trackCTAClick } from '../../lib/analytics'
+import { trackCTAClick, trackNavigationClick } from '../../lib/analytics'
+import { SiteLogo } from '../SiteLogo'
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -54,13 +54,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <img 
-              src="/images/zero-barriers-logo.png" 
-              alt="Zero Barriers logo"
-              width={40}
-              height={40}
-              className={styles.logoImage}
-            />
+            <SiteLogo size={40} className={styles.logoImage} />
           </motion.div>
           <span className={styles.logoText}>
             ZERO <span className={styles.accent}>BARRIERS</span>

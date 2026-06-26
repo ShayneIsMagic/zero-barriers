@@ -1,151 +1,83 @@
 /**
- * Analytics tracking utility for Google Analytics and GTM
+ * Self-hosted Umami analytics helpers.
  */
 
 declare global {
   interface Window {
-    gtag: (
-      command: 'config' | 'event' | 'set' | 'js',
-      targetId: string | Date,
-      config?: {
-        page_path?: string
-        page_title?: string
-        event_category?: string
-        event_label?: string
-        event_name?: string
-        value?: number
-        [key: string]: any
-      }
-    ) => void
-    dataLayer: any[]
+    umami?: {
+      track: (
+        event?: string | ((props: Record<string, string>) => Record<string, string>),
+        data?: Record<string, unknown>
+      ) => void
+    }
   }
 }
 
-/**
- * Track a custom event in Google Analytics
- */
+function trackUmami(
+  eventName: string,
+  data?: Record<string, unknown>
+) {
+  if (typeof window === 'undefined' || !window.umami) return
+  window.umami.track(eventName, data)
+}
+
 export function trackEvent(
   eventName: string,
-  eventParams?: {
-    event_category?: string
-    event_label?: string
-    value?: number
-    [key: string]: any
-  }
+  eventParams?: Record<string, unknown>
 ) {
-  if (typeof window === 'undefined') return
-
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-  if (gaId && window.gtag) {
-    window.gtag('event', eventName, {
-      event_category: eventParams?.event_category || 'engagement',
-      event_label: eventParams?.event_label,
-      value: eventParams?.value,
-      ...eventParams,
-    })
-  }
-
-  // Also push to GTM dataLayer
-  if (window.dataLayer) {
-    window.dataLayer.push({
-      event: eventName,
-      event_category: eventParams?.event_category || 'engagement',
-      event_label: eventParams?.event_label,
-      ...eventParams,
-    })
-  }
+  trackUmami(eventName, eventParams)
 }
 
-/**
- * Track navigation link clicks
- */
 export function trackNavigationClick(destination: string, linkText?: string) {
-  trackEvent('navigation_click', {
-    event_category: 'navigation',
-    event_label: linkText || destination,
-    destination: destination,
-    link_text: linkText,
+  trackUmami('navigation_click', {
+    destination,
+    link_text: linkText || destination,
   })
 }
 
-/**
- * Track CTA button clicks
- */
-export function trackCTAClick(ctaText: string, destination: string, location?: string) {
-  trackEvent('cta_click', {
-    event_category: 'engagement',
-    event_label: ctaText,
+export function trackCTAClick(
+  ctaText: string,
+  destination: string,
+  location?: string
+) {
+  trackUmami('cta_click', {
     cta_text: ctaText,
-    destination: destination,
+    destination,
     location: location || 'unknown',
   })
 }
 
-/**
- * Track form submission with detailed analytics
- */
-export function trackFormSubmission(formName: string, success: boolean, error?: string, formData?: {
-  email?: string
-  firstName?: string
-  lastName?: string
-  company?: string
-}) {
-  const eventName = success ? 'form_submit_success' : 'form_submit_error'
-  
-  // Enhanced tracking with form data
-  trackEvent(eventName, {
-    event_category: 'form',
-    event_label: formName,
+export function trackFormSubmission(
+  formName: string,
+  success: boolean,
+  error?: string,
+  formData?: {
+    email?: string
+    firstName?: string
+    lastName?: string
+    company?: string
+  }
+) {
+  trackUmami(success ? 'form_submit_success' : 'form_submit_error', {
     form_name: formName,
-    success: success,
+    success,
     error: error || null,
-    // Add form data for analytics (no PII)
     has_email: !!formData?.email,
     has_company: !!formData?.company,
-    form_timestamp: new Date().toISOString(),
   })
-  
-  // Log to console for debugging (development only)
-  if (process.env.NODE_ENV === 'development') {
-    console.log('[Analytics] Form submission tracked:', {
-      event: eventName,
-      formName,
-      success,
-      error,
-    })
-  }
 }
 
-/**
- * Track external link clicks
- */
 export function trackExternalLink(url: string, linkText?: string) {
-  trackEvent('external_link_click', {
-    event_category: 'outbound',
-    event_label: linkText || url,
+  trackUmami('external_link_click', {
     destination: url,
-    link_text: linkText,
+    link_text: linkText || url,
   })
 }
 
-/**
- * Track phone number clicks
- */
 export function trackPhoneClick(phoneNumber: string) {
-  trackEvent('phone_click', {
-    event_category: 'contact',
-    event_label: phoneNumber,
-    phone_number: phoneNumber,
-  })
+  trackUmami('phone_click', { phone_number: phoneNumber })
 }
 
-/**
- * Track email clicks
- */
 export function trackEmailClick(email: string) {
-  trackEvent('email_click', {
-    event_category: 'contact',
-    event_label: email,
-    email: email,
-  })
+  trackUmami('email_click', { email })
 }

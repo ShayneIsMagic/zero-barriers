@@ -1,0 +1,152 @@
+{
+  "$schema": "./ai-image-provenance.schema.json",
+  "version": "1.1.0",
+  "lastUpdated": "2026-06-26",
+  "jurisdiction": "Utah, United States",
+  "policyNote": "Internal build registry for remaining AI-generated site visuals. Public disclosure is in the Privacy Policy at /privacy. Photography by Spencer DuToit is used where noted in page alt text.",
+  "images": [
+    {
+      "id": "hero-human-transformation",
+      "path": "/images/hero-human-transformation.png",
+      "published": false,
+      "archivedPath": "archive/ai-images-removed/hero-human-transformation.png",
+      "removedReason": "Replaced with Spencer DuToit photography (summit-ridge-hikers.jpg).",
+      "contentCategory": "abstract-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Replaced by licensed photography.",
+      "usedOn": []
+    },
+    {
+      "id": "services-human-transformation",
+      "path": "/images/services-human-transformation.jpg",
+      "published": true,
+      "contentCategory": "abstract-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "AI-generated abstract illustration symbolizing human potential and mindset shift.",
+      "usedOn": ["/services"]
+    },
+    {
+      "id": "transforming-breakthrough",
+      "path": "/images/extracted/services/Transforming_Breakthrough.png",
+      "published": false,
+      "archivedPath": "archive/ai-images-removed/Transforming_Breakthrough.png",
+      "removedReason": "Replaced with Spencer DuToit photography (summit-climbers-samuel-joseph.jpg).",
+      "contentCategory": "surreal-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Replaced by licensed photography.",
+      "usedOn": []
+    },
+    {
+      "id": "technology-empowerment-hero",
+      "path": "/images/technology-empowerment-hero.png",
+      "published": true,
+      "contentCategory": "abstract-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "AI-generated abstract illustration. Does not depict a real person.",
+      "usedOn": ["/services"]
+    },
+    {
+      "id": "side-profile-tech",
+      "path": "/images/extracted/technology/side-profile-tech.png",
+      "published": true,
+      "contentCategory": "abstract-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "AI-generated abstract illustration. Does not depict a real person.",
+      "usedOn": ["/technology"]
+    },
+    {
+      "id": "services-revenue-flow-landscape",
+      "path": "/images/services-revenue-flow-landscape.webp",
+      "published": true,
+      "contentCategory": "landscape-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "AI-generated landscape illustration. Does not depict a real place, people, or business interaction.",
+      "usedOn": ["/services"]
+    },
+    {
+      "id": "contact-mountain-sunset",
+      "path": "/images/contact-mountain-sunset-background.png",
+      "published": false,
+      "removedReason": "Replaced with Spencer DuToit photography (summit-ridge-hikers.jpg).",
+      "contentCategory": "landscape-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Replaced by licensed photography.",
+      "usedOn": []
+    },
+    {
+      "id": "case-studies-bridge-the-gap",
+      "path": "/images/case-studies-bridge-the-gap-hero.jpg",
+      "published": true,
+      "contentCategory": "landscape-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "AI-generated landscape illustration with bridge metaphor. Does not depict a real place.",
+      "usedOn": ["/results"]
+    },
+    {
+      "id": "services-b2b-sales",
+      "path": "/images/services-b2b-sales.png",
+      "published": false,
+      "archivedPath": "archive/ai-images-removed/services-b2b-sales.png",
+      "removedReason": "Photorealistic AI-generated business handshake removed from site.",
+      "contentCategory": "photorealistic-people",
+      "depictsRealPeople": true,
+      "depictsBusinessScenario": true,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Archived outside public web root.",
+      "usedOn": []
+    },
+    {
+      "id": "testimonials-confident-woman",
+      "path": "/images/testimonials-confident-woman-hero.png",
+      "published": false,
+      "archivedPath": "archive/ai-images-removed/testimonials-confident-woman-hero.png",
+      "removedReason": "Photorealistic AI-generated professional portrait removed.",
+      "contentCategory": "photorealistic-people",
+      "depictsRealPeople": true,
+      "depictsBusinessScenario": true,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Archived outside public web root.",
+      "usedOn": []
+    },
+    {
+      "id": "team-portrait",
+      "path": "/images/team-portrait.png",
+      "published": false,
+      "archivedPath": "archive/ai-images-removed/team-portrait.png",
+      "removedReason": "Photorealistic AI-generated office team scene removed.",
+      "contentCategory": "photorealistic-people",
+      "depictsRealPeople": true,
+      "depictsBusinessScenario": true,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Not published. Archived outside public web root.",
+      "usedOn": []
+    },
+    {
+      "id": "river-landscape",
+      "path": "/images/optimized/River.webp",
+      "published": false,
+      "contentCategory": "landscape-illustration",
+      "depictsRealPeople": false,
+      "depictsBusinessScenario": false,
+      "creationMethod": "generative-artificial-intelligence",
+      "disclosureLabel": "Source file for services-revenue-flow-landscape.",
+      "usedOn": []
+    }
+  ]
+}

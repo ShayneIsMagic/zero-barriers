@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { trackNavigationClick } from '../lib/analytics'
+import { SiteLogo } from './SiteLogo'
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         <div className="footer-container">
           <div>
             <div className="footer-logo">
-              <img className="logo-image" src="/images/zero-barriers-logo.png" alt="Zero Barriers logo" />
+              <SiteLogo size={60} className="logo-image" />
               ZERO <span>BARRIERS</span>
             </div>
             <p className="footer-description">
@@ -61,6 +62,8 @@ export default function Footer() {
               <li><Link href="/technology" onClick={() => trackNavigationClick('/technology', 'Technology')}>Technology</Link></li>
               <li><Link href="/results" onClick={() => trackNavigationClick('/results', 'Results')}>Results</Link></li>
               <li><Link href="/contact" onClick={() => trackNavigationClick('/contact', 'Contact')}>Contact</Link></li>
+              <li><Link href="/privacy" onClick={() => trackNavigationClick('/privacy', 'Privacy Policy')}>Privacy Policy</Link></li>
+              <li><Link href="/cookies" onClick={() => trackNavigationClick('/cookies', 'Cookie Policy')}>Cookie Policy</Link></li>
             </ul>
           </div>
           <div>

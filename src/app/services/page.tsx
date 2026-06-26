@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
+import { OptimizedPhoto } from '../../components/OptimizedPhoto'
+import { OptimizedRaster } from '../../components/OptimizedRaster'
+import { siteImages } from '../../lib/site-images'
+
+const { hero, humanTransformation, technology, revenue } = siteImages.services
 
 // Structured Data for Services Page
 const servicesBreadcrumbSchema = {
@@ -59,9 +64,6 @@ export default function ServicesPage() {
               <span className="hero-tagline">THREE PILLARS, ONE TRANSFORMATION</span>
               <h1 className="hero-title">Purpose-Driven Growth Engine</h1>
               <p className="hero-subtitle">When purpose-driven human transformation, activated technology systems, and engineered revenue acceleration align—breakthrough results become inevitable.</p>
-              <div className="hero-image-mobile">
-                <img src="/images/extracted/services/Transforming_Breakthrough.png" alt="Strategic planning and growth transformation" width="600" height="400" loading="lazy" />
-              </div>
               <p className="hero-description">
                 Every client is different. We unleash potential through our proven three-pillar approach, delivering rapid, substantial, and sustainable transformation results across 15+ industries.
               </p>
@@ -74,8 +76,14 @@ export default function ServicesPage() {
                 </TrackedCTA>
               </div>
             </div>
-            <div className="hero-image-desktop">
-              <img src="/images/extracted/services/Transforming_Breakthrough.png" alt="Strategic planning and growth transformation" width="800" height="600" loading="eager" />
+            <div className="hero-image">
+              <OptimizedPhoto
+                src={hero.src}
+                alt={hero.alt}
+                width={hero.width}
+                height={hero.height}
+                priority
+              />
             </div>
           </div>
         </div>
@@ -125,12 +133,14 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="service-image">
-            <img 
-              src="/images/hero-human-transformation.png" 
-              alt="Human transformation service illustration showing purpose-driven methodologies and revenue growth" 
-              loading="eager"
-              width="600"
-              height="400"
+            <OptimizedPhoto
+              src={humanTransformation.src}
+              alt={humanTransformation.alt}
+              width={humanTransformation.width}
+              height={humanTransformation.height}
+              fullWidth={humanTransformation.fullWidth}
+              loading="lazy"
+              sizes="(max-width: 768px) 90vw, 600px"
             />
           </div>
         </div>
@@ -177,12 +187,15 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="service-image">
-            <img
-              src="/images/technology-empowerment-hero.png"
-              alt="Technology enablement services including Salesforce implementation and custom software development"
+            <OptimizedRaster
+              src={technology.src}
+              extension={technology.extension}
+              alt={technology.alt}
+              width={technology.width}
+              height={technology.height}
+              fullWidth={technology.fullWidth}
               loading="lazy"
-              width="600"
-              height="400"
+              sizes="(max-width: 768px) 90vw, 600px"
             />
           </div>
         </div>
@@ -230,12 +243,14 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="service-image">
-            <img
-              src="/images/services-b2b-sales.png"
-              alt="B2B sales and revenue acceleration services optimizing sales processes and KPIs"
+            <OptimizedPhoto
+              src={revenue.src}
+              alt={revenue.alt}
+              width={revenue.width}
+              height={revenue.height}
+              fullWidth={revenue.fullWidth}
               loading="lazy"
-              width="600"
-              height="400"
+              sizes="(max-width: 768px) 90vw, 600px"
             />
           </div>
         </div>

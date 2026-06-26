@@ -3,6 +3,11 @@ import type { Metadata } from 'next'
 import StoryCard from '../components/StoryCard'
 import StatsSection from '../components/StatsSection/StatsSection'
 import TrackedCTA from '../components/TrackedCTA'
+import { OptimizedPhoto } from '../components/OptimizedPhoto'
+import { DivisionLogo } from '../components/DivisionLogo'
+import { siteImages } from '../lib/site-images'
+
+const { hero } = siteImages.home
 
 export const metadata: Metadata = {
   title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
@@ -32,9 +37,6 @@ export default function HomePage() {
               <span className="hero-tagline">POTENTIAL UNLEASHED</span>
               <h1 className="hero-title">Transform Your Revenue Growth</h1>
               <p className="hero-subtitle">Rapid. Substantial. Sustainable.</p>
-              <div className="hero-image-mobile">
-                <img src="/images/hero-human-transformation.png" alt="Human transformation visual illustrating revenue growth transformation" width="600" height="400" loading="lazy" />
-              </div>
               <p className="hero-description">
                 We specialize in rapid revenue transformation through proven methodologies that deliver measurable results. Our expert team unlocks your business potential with data-driven strategies and systematic implementation.
               </p>
@@ -47,8 +49,14 @@ export default function HomePage() {
                 </TrackedCTA>
               </div>
             </div>
-            <div className="hero-image-desktop">
-              <img src="/images/hero-human-transformation.png" alt="Human transformation visual illustrating revenue growth transformation" width="800" height="600" loading="eager" />
+            <div className="hero-image">
+              <OptimizedPhoto
+                src={hero.src}
+                alt={hero.alt}
+                width={hero.width}
+                height={hero.height}
+                priority
+              />
             </div>
           </div>
         </div>
@@ -146,7 +154,7 @@ export default function HomePage() {
       </section>
 
       {/* Client Success Stories */}
-      <section className="testimonials-hero">
+      <section className="success-stories">
         <div className="container">
           <div className="section-title">
             <h2>Client Success Stories</h2>
@@ -197,8 +205,8 @@ export default function HomePage() {
             <div className="division-content">
               <div className="division-description">
                 <div className="division-logos">
-                  <img src="/images/salesforce-consulting-logo.svg" alt="Salesforce Consulting logo" className="division-logo" />
-                  <img src="/images/caselle-logo.png" alt="Caselle logo" className="division-logo" />
+                  <DivisionLogo src="/images/salesforce-consulting-logo" alt="Salesforce Consulting logo" format="svg" />
+                  <DivisionLogo src="/images/caselle-logo" alt="Caselle logo" />
                 </div>
                 <p>Our <strong>Zero Barriers CRM Solutions division</strong> delivers revenue growth through world-class CRM implementation and optimization. With 15+ Salesforce certifications and 100+ successful implementations, we provide the technology foundation for rapid, substantial, sustainable revenue growth.</p>
                 
@@ -234,9 +242,9 @@ export default function HomePage() {
             <div className="division-content">
               <div className="division-description">
                 <div className="division-logos">
-                  <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="division-logo" />
-                  <img src="/images/Q90-LOGO.svg" alt="Q90 logo" className="division-logo" />
-                  <img src="/images/sebo-logo.svg" alt="Sebo logo" className="division-logo" />
+                  <DivisionLogo src="/images/devpipeline-logo-black" alt="DevPipeline logo" />
+                  <DivisionLogo src="/images/Q90-LOGO" alt="Q90 logo" format="svg" />
+                  <DivisionLogo src="/images/sebo-logo" alt="Sebo logo" format="svg" />
                 </div>
                 <p>Our <strong>Zero Barriers Custom Development division</strong> delivers revenue growth through custom software solutions that eliminate technical barriers. With 30+ years of software development experience and a proven track record of building scalable systems, we create the technology infrastructure for sustainable revenue growth.</p>
                 

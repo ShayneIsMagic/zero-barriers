@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
+import { OptimizedRaster } from '../../components/OptimizedRaster'
+import { DivisionLogo } from '../../components/DivisionLogo'
+import { siteImages } from '../../lib/site-images'
+
+const { hero } = siteImages.technology
 
 export const metadata: Metadata = {
   title: 'Tech Empowerment | Zero Barriers – CRM + Custom Development',
@@ -29,16 +34,21 @@ export default function TechnologyPage() {
       <section className="technology-hero">
         <div className="container">
           <div className="hero-content-wrapper">
-            <div className="hero-image-desktop">
-              <img src="/images/extracted/technology/side-profile-tech.png" alt="Technology enablement visualization" width="800" height="600" loading="eager" />
+            <div className="hero-image">
+              <OptimizedRaster
+                src={hero.src}
+                extension={hero.extension}
+                alt={hero.alt}
+                width={hero.width}
+                height={hero.height}
+                fullWidth={hero.fullWidth}
+                priority
+              />
             </div>
             <div className="hero-text-content">
               <span className="hero-tagline">SYSTEMS ACTIVATED</span>
               <h1 className="hero-title">Technology Enablement</h1>
               <p className="hero-subtitle">Activate technology systems that amplify purpose-driven performance and scale transformation results</p>
-              <div className="hero-image-mobile">
-                <img src="/images/extracted/technology/side-profile-tech.png" alt="Technology enablement visualization" width="600" height="400" loading="lazy" />
-              </div>
               <p className="hero-description">
                 Our technology division activates systems that eliminate technical barriers and scale transformation results. With 30+ years of development experience and 100+ successful implementations, we provide the technology foundation for breakthrough growth.
               </p>
@@ -96,8 +106,8 @@ export default function TechnologyPage() {
           </div>
           <div className="division-content">
             <div className="division-logos">
-              <img src="/images/salesforce-consulting-logo.svg" alt="Salesforce Consulting logo" className="division-logo" />
-              <img src="/images/caselle-logo.png" alt="Caselle logo" className="division-logo" />
+              <DivisionLogo src="/images/salesforce-consulting-logo" alt="Salesforce Consulting logo" format="svg" />
+              <DivisionLogo src="/images/caselle-logo" alt="Caselle logo" />
             </div>
             <div className="division-description">
               <p>
@@ -147,9 +157,9 @@ export default function TechnologyPage() {
           </div>
           <div className="division-content">
             <div className="division-logos">
-              <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="division-logo" />
-              <img src="/images/Q90-LOGO.svg" alt="Q90 logo" className="division-logo" />
-              <img src="/images/sebo-logo.svg" alt="Sebo logo" className="division-logo" />
+              <DivisionLogo src="/images/devpipeline-logo-black" alt="DevPipeline logo" />
+              <DivisionLogo src="/images/Q90-LOGO" alt="Q90 logo" format="svg" />
+              <DivisionLogo src="/images/sebo-logo" alt="Sebo logo" format="svg" />
             </div>
             <div className="division-description">
               <p>

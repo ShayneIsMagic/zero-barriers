@@ -14,6 +14,8 @@ const PAGES = [
   '/technology',
   '/results',
   '/contact',
+  '/privacy',
+  '/cookies',
 ]
 
 // Results storage
@@ -283,7 +285,7 @@ async function testFormSubmission(browser) {
     // Set up response listener before clicking
     const responsePromise = page.waitForResponse((response) => {
       return (
-        response.url().includes('web3forms.com') &&
+        response.url().includes('/api/contact') &&
         response.request().method() === 'POST'
       )
     }, { timeout: 15000 }).catch(() => null)

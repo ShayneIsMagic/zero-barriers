@@ -1,32 +1,24 @@
-import Link from 'next/link'
-import type { Metadata } from 'next'
-import TrackedCTA from '../../components/TrackedCTA'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Results | Zero Barriers – Gap → Bridge → Results',
-  description:
-    'Real businesses. Real breakthroughs. Detailed case studies showcasing how purpose-driven transformation delivers rapid, substantial, and sustainable results.',
-  alternates: { canonical: 'https://zerobarriers.io/results' },
-  openGraph: {
-    title: 'Results | Zero Barriers',
-    description:
-      'Gap → Bridge → Results: Detailed transformation stories from Zero Barriers clients showing measurable outcomes.',
-    url: 'https://zerobarriers.io/results',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Results | Zero Barriers',
-    description:
-      'Gap → Bridge → Results: Detailed transformation stories from Zero Barriers clients showing measurable outcomes.',
-  },
-}
+import Link from 'next/link'
+import TrackedCTA from '../../components/TrackedCTA'
+import { SectionBackgroundPhoto } from '../../components/SectionBackgroundPhoto'
+import { CaseStudyLogo } from '../../components/CaseStudyLogo'
+import { siteImages } from '../../lib/site-images'
+
+const { hero } = siteImages.results
 
 export default function TestimonialsPage() {
   return (
     <>
       {/* Testimonials Hero */}
       <section className="testimonials-hero">
+        <SectionBackgroundPhoto
+          src={hero.src}
+          width={hero.width}
+          height={hero.height}
+          priority
+        />
         <div className="container">
           <div className="section-title">
             <div className="testimonials-eyebrow-group">
@@ -35,7 +27,6 @@ export default function TestimonialsPage() {
               <span className="section-eyebrow services-eyebrow">SERVICES DELIVERED</span>
             </div>
             <h1>Real Businesses. Real Breakthroughs.</h1>
-            <p>See how clients become the heroes of their own transformation stories</p>
           </div>
         </div>
       </section>
@@ -58,7 +49,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/sos-support-logo.png" alt="SOS Support logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/sos-support-logo" alt="SOS Support logo" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label transformation-label">Business Transformation</span>
@@ -179,7 +170,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/sos-support-logo.png" alt="SOS Support logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/sos-support-logo" alt="SOS Support logo" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label transformation-label">Personal Transformation</span>
@@ -276,7 +267,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/hays-company-logo.png" alt="Hays Company logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/hays-company-logo" alt="Hays Company logo" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label">Sales Transformation</span>
@@ -370,7 +361,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/caselle-logo.png" alt="Caselle logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/caselle-logo" alt="Caselle logo" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label services-label">Sales Process Transformation</span>
@@ -471,7 +462,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/sebo-logo.svg" alt="Sebo logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/sebo-logo" alt="Sebo logo" format="svg" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label">Revenue Growth & Process Optimization</span>
@@ -572,7 +563,7 @@ export default function TestimonialsPage() {
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
-                <img src="/images/devpipeline-logo-black.png" alt="DevPipeline logo" className="case-study-logo-large" />
+                <CaseStudyLogo src="/images/devpipeline-logo-black" alt="DevPipeline logo" />
               </div>
               <div className="case-study-header-content">
                 <span className="case-study-label technology-label">Technology Enablement & Growth</span>

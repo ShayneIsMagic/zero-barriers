@@ -12,6 +12,8 @@
     "start": "next start",
     "export": "next build && next export",
     "lint": "next lint",
+    "embed-ai-metadata": "node scripts/embed-ai-image-metadata.js",
+    "prebuild": "node scripts/embed-ai-image-metadata.js",
     "test": "node scripts/test-site.js",
     "test:local": "TEST_URL=http://localhost:3000 node scripts/test-site.js",
     "test:production": "TEST_URL=https://zerobarriers.io node scripts/test-site.js"
@@ -28,6 +30,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "exiftool-vendored": "^30.2.0",
     "puppeteer": "^24.26.1"
   }
 }

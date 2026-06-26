@@ -39,12 +39,12 @@ Zero Barriers delivers purpose-driven revenue growth transformation through prov
 - **Framework:** Next.js 16 (App Router) with TypeScript
 - **React:** 19.2.0
 - **Styling:** CSS Modules + Global CSS with design system
-- **Fonts:** Poppins (Google Fonts) via `next/font`
-- **Icons:** Font Awesome 6.4.0 (CDN)
-- **Analytics:** Google Analytics 4 + Google Tag Manager
-- **Form Handling:** Cloudflare Pages Functions + Resend API (with Web3Forms fallback)
+- **Fonts:** Poppins (self-hosted via `next/font/local`)
+- **Icons:** Font Awesome (self-hosted webfonts)
+- **Analytics:** Self-hosted Umami (no cookies, no cross-site tracking)
+- **Form Handling:** Cloudflare Pages Functions + Resend API + Cloudflare Turnstile (Contact page)
 - **Deployment:** Cloudflare Pages (static export)
-- **Email Service:** Resend (primary) / Web3Forms (fallback)
+- **Email Service:** Resend
 
 ---
 
@@ -60,17 +60,22 @@ zero-barriers/
 │   │   ├── technology/          # Technology solutions page
 │   │   ├── results/             # Testimonials & case studies
 │   │   ├── contact/             # Contact form page
+│   │   ├── privacy/             # Privacy Policy
+│   │   ├── cookies/             # Cookie Policy
 │   │   ├── robots.ts            # Dynamic robots.txt
 │   │   └── sitemap.ts           # Dynamic sitemap.xml
 │   ├── components/              # React components
 │   │   ├── Header/             # Navigation header
 │   │   ├── Footer.tsx          # Site footer
-│   │   ├── Analytics.tsx       # Google Analytics
-│   │   ├── GTM.tsx             # Google Tag Manager
+│   │   ├── Analytics.tsx       # Umami pageview tracking
+│   │   ├── UmamiScript.tsx     # Self-hosted analytics loader
+│   │   ├── LegalPageLayout.tsx # Privacy/Cookie policy layout
 │   │   ├── TrackedCTA.tsx      # Analytics-tracked CTAs
 │   │   └── StoryCard.tsx       # Case study cards
+│   ├── assets/                 # Self-hosted fonts and icons
+│   ├── data/                   # Internal build registries (not public)
 │   ├── lib/                    # Utilities
-│   │   ├── analytics.ts        # Analytics helpers
+│   │   ├── analytics.ts        # Umami event helpers
 │   │   └── animations.ts       # Animation utilities
 │   └── styles/
 │       ├── globals.css         # Main stylesheet (design system)
@@ -83,11 +88,8 @@ zero-barriers/
 │   ├── _headers                # Cloudflare headers (security, caching)
 │   ├── _redirects              # URL redirects
 │   ├── manifest.json           # PWA manifest
-│   └── sw.js                   # Service worker
-├── docs/
-│   └── archive/                # Archived documentation
-├── extracted-content/          # Content backups
-└── html-pages-backup/          # Legacy HTML backups
+├── archive/                    # Archived assets (not deployed)
+└── extracted-content/          # Legacy content snapshots (not deployed)
 ```
 
 ---
@@ -103,15 +105,14 @@ zero-barriers/
 
 ### 📧 Contact Form
 
-- **Dual Submission Methods:**
-  - Primary: Cloudflare Pages Function → Resend API
-  - Fallback: Web3Forms API (if primary fails)
+- **Submission:** Cloudflare Pages Function → Resend API
+- **Bot protection:** Cloudflare Turnstile (Contact page only)
 - **Features:**
   - Client-side validation
   - Rate limiting (60 seconds between submissions)
   - Honeypot field for bot protection
-  - Success/error toast notifications
-  - Analytics tracking
+  - Success/error inline messages
+  - Umami event tracking (when configured)
 - **Recipient:** All submissions sent to `sk@zerobarriers.io`
 
 ### 🔒 Security
@@ -123,9 +124,9 @@ zero-barriers/
 
 ### 📊 Analytics
 
-- **Google Analytics 4:** Page views, events, form submissions
-- **Google Tag Manager:** Flexible tag management
-- **Event Tracking:** Form submissions, CTA clicks, navigation
+- **Self-hosted Umami:** Page views and custom events (no cookies, no cross-site tracking)
+- **Event Tracking:** Form submissions, CTA clicks, navigation (via `src/lib/analytics.ts`)
+- **Privacy:** Loads only when `NEXT_PUBLIC_UMAMI_*` env vars are set
 
 ---
 
@@ -202,13 +203,12 @@ Implemented JSON-LD structured data:
 
 ### How It Works
 
-1. **User submits form** → Client-side validation
-2. **Primary method:** POST to `/api/contact` (Cloudflare Function)
-   - Function sends email via Resend API
-   - Recipient: `sk@zerobarriers.io`
-3. **Fallback:** If primary fails → Web3Forms API
-4. **Success notification:** User sees success message
-5. **Error handling:** Clear error message with contact alternatives
+1. **User submits form** → Client-side validation + Turnstile (when configured)
+2. **POST to `/api/contact`** (Cloudflare Function)
+   - Turnstile verified server-side
+   - Email sent via Resend API to `sk@zerobarriers.io`
+3. **Success notification:** User sees success message
+4. **Error handling:** Clear error message with contact alternatives
 
 ### Form Fields
 
@@ -256,12 +256,13 @@ Implemented JSON-LD structured data:
 
 **Required:**
 - `RESEND_API_KEY` - Resend API key for email sending
+- `TURNSTILE_SECRET_KEY` - Cloudflare Turnstile secret (runtime, Functions)
 
-**Optional:**
+**Optional (build-time):**
+- `NEXT_PUBLIC_UMAMI_SCRIPT_URL` - Self-hosted Umami base URL
+- `NEXT_PUBLIC_UMAMI_WEBSITE_ID` - Umami website ID
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` - Turnstile site key (Contact page)
 - `CONTACT_EMAIL` - Override recipient (defaults to `sk@zerobarriers.io`)
-- `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` - Web3Forms fallback key
-- `NEXT_PUBLIC_GA_ID` - Google Analytics 4 ID
-- `NEXT_PUBLIC_GTM_ID` - Google Tag Manager ID
 
 ### Headers & Caching
 
@@ -295,10 +296,10 @@ cp .env .env.local
 **Then edit `.env.local` with your actual keys:**
 
 ```env
-NEXT_PUBLIC_GA_ID=G-YHS2Y7L3C9
-NEXT_PUBLIC_GTM_ID=GTM-WL8K8XK
+NEXT_PUBLIC_UMAMI_SCRIPT_URL=https://analytics.zerobarriers.io
+NEXT_PUBLIC_UMAMI_WEBSITE_ID=your_umami_website_id
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key
 RESEND_API_KEY=your_resend_api_key_here
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-web3forms-key
 ```
 
 **Note:** `.env` is a template file (committed to git). `.env.local` is for your actual keys (gitignored).
@@ -467,8 +468,8 @@ Copyright © 2025 Zero Barriers. All rights reserved.
 
 For technical issues or questions:
 1. Check this README
-2. Review archived documentation in `docs/archive/`
-3. Contact development team
+2. Review `public/_headers` and `.env` for deployment configuration
+3. Contact the development team
 
 ---
 
