@@ -4,6 +4,11 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { useState, useEffect, useRef, useCallback, FormEvent } from 'react'
 import { trackFormSubmission } from '../../lib/analytics'
+import TrackedCTA from '../../components/TrackedCTA'
+import { SectionBackgroundPhoto } from '../../components/SectionBackgroundPhoto'
+import { siteImages } from '../../lib/site-images'
+
+const { hero: contactHero } = siteImages.contact
 
 declare global {
   interface Window {
@@ -171,20 +176,55 @@ export default function ContactPage() {
         <Script
           id="cloudflare-turnstile"
           src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           onLoad={renderTurnstile}
         />
       )}
 
-      <section className="contact-hero">
+      <section className="contact-hero contact-hero--photo">
+        <SectionBackgroundPhoto
+          src={contactHero.src}
+          width={contactHero.width}
+          height={contactHero.height}
+          priority
+          objectPosition={contactHero.objectPosition}
+        />
         <div className="container">
           <div className="section-title">
             <span className="section-eyebrow">POTENTIAL UNLEASHED</span>
-            <h1>Begin Your Transformation</h1>
-            <p>
-              Ready to align purpose-driven transformation, activated technology
-              systems, and engineered revenue acceleration?
-            </p>
+            <h1 className="hero-title hero-title--contact">Get Your Free Transformation Assessment</h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact-benefits" aria-labelledby="contact-benefits-heading">
+        <div className="container">
+          <div className="section-title">
+            <h2 id="contact-benefits-heading">What You Gain From Your Consultation</h2>
+            <p>A focused conversation designed to uncover barriers and map a path to breakthrough growth.</p>
+          </div>
+          <div className="methodology-steps">
+            <div className="step-card">
+              <div className="step-number">1</div>
+              <h3 className="step-title">Clarity on What Is Blocking Growth</h3>
+              <p className="step-description">
+                Identify the people, process, and technology barriers limiting your revenue — so you know exactly where to focus first.
+              </p>
+            </div>
+            <div className="step-card">
+              <div className="step-number">2</div>
+              <h3 className="step-title">A Personalized Path Forward</h3>
+              <p className="step-description">
+                Walk away with practical recommendations aligned to your goals — not a generic pitch or one-size-fits-all playbook.
+              </p>
+            </div>
+            <div className="step-card">
+              <div className="step-number">3</div>
+              <h3 className="step-title">Confidence to Take the Next Step</h3>
+              <p className="step-description">
+                Understand what working together looks like, what results to expect, and whether Zero Barriers is the right fit — with zero obligation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -192,7 +232,7 @@ export default function ContactPage() {
       <section className="contact-section">
         <div className="container contact-main">
           <div className="contact-info sticky">
-            <h2>Get in Touch</h2>
+            <h2>Work Directly With a Founder Who Delivers Results</h2>
             <p>
               Every client is different. Ready to discover how purpose-driven
               transformation can unleash your breakthrough results? Complete the
@@ -236,6 +276,10 @@ export default function ContactPage() {
           </div>
 
           <div className="contact-form-container">
+            <h2 className="contact-form-heading">Tell Us Where You Want to Grow</h2>
+            <p className="contact-form-intro">
+              Share your goals and challenges. We will respond promptly with next steps tailored to your situation.
+            </p>
             <form className="contact-form" id="contact-form" ref={formRef} onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -381,6 +425,25 @@ export default function ContactPage() {
                 )}
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <h2>Prefer to Connect Before You Submit?</h2>
+            <p>
+              Call, email, or connect on social — whichever is easiest. We are here to help you move from barriers to breakthrough results.
+            </p>
+            <TrackedCTA href="tel:8019970457" className="white-cta" location="contact_final">
+              Call 801-997-0457
+            </TrackedCTA>
+            <div>
+              <TrackedCTA href="mailto:sk@zerobarriers.io" className="secondary-white-cta" location="contact_final">
+                Email sk@zerobarriers.io <i className="fas fa-arrow-right"></i>
+              </TrackedCTA>
+            </div>
           </div>
         </div>
       </section>

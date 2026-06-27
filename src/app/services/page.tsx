@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
 import { OptimizedPhoto } from '../../components/OptimizedPhoto'
-import { OptimizedRaster } from '../../components/OptimizedRaster'
+import { ContentSplit } from '../../components/ContentSplit'
 import { siteImages } from '../../lib/site-images'
 
 const { hero, humanTransformation, technology, revenue } = siteImages.services
@@ -62,7 +62,7 @@ export default function ServicesPage() {
           <div className="hero-content-wrapper">
             <div className="hero-text-content">
               <span className="hero-tagline">THREE PILLARS, ONE TRANSFORMATION</span>
-              <h1 className="hero-title">Purpose-Driven Growth Engine</h1>
+              <h1 className="hero-title">Unleash Breakthrough Growth Across People, Systems, and Revenue</h1>
               <p className="hero-subtitle">When purpose-driven human transformation, activated technology systems, and engineered revenue acceleration align—breakthrough results become inevitable.</p>
               <p className="hero-description">
                 Every client is different. We unleash potential through our proven three-pillar approach, delivering rapid, substantial, and sustainable transformation results across 15+ industries.
@@ -83,6 +83,7 @@ export default function ServicesPage() {
                 width={hero.width}
                 height={hero.height}
                 priority
+                objectPosition={hero.objectPosition}
               />
             </div>
           </div>
@@ -91,13 +92,14 @@ export default function ServicesPage() {
 
       {/* Human Transformation */}
       <section className="service-detail" id="human">
-        <div className="container service-container">
-          <div className="service-content">
+        <ContentSplit image={humanTransformation}>
+          <>
             <span className="service-label">Purpose Unleashed</span>
-            <h2 className="service-title">Human Transformation</h2>
+            <h2 className="service-title">Unlock Human Potential That Drives Breakthrough Performance</h2>
             <p className="service-description">
               Unleash human potential through purpose-driven transformation. When individuals connect with their deeper purpose, professional excellence follows naturally—delivering breakthrough results through our proprietary methodologies.
             </p>
+            <h3 className="service-outcomes-heading">Outcomes You Can Expect</h3>
             <div className="service-features">
               <ul className="benefits-list">
                 <li>
@@ -131,30 +133,20 @@ export default function ServicesPage() {
               </p>
               <p className="service-testimonial-author">— Michelle A., SOS Support</p>
             </div>
-          </div>
-          <div className="service-image">
-            <OptimizedPhoto
-              src={humanTransformation.src}
-              alt={humanTransformation.alt}
-              width={humanTransformation.width}
-              height={humanTransformation.height}
-              fullWidth={humanTransformation.fullWidth}
-              loading="lazy"
-              sizes="(max-width: 768px) 90vw, 600px"
-            />
-          </div>
-        </div>
+          </>
+        </ContentSplit>
       </section>
 
       {/* Technology Enablement */}
       <section className="service-detail" id="technology">
-        <div className="container service-container">
-          <div className="service-content">
+        <ContentSplit image={technology} reverse>
+          <>
             <span className="service-label">Systems Activated</span>
-            <h2 className="service-title">Technology Enablement</h2>
+            <h2 className="service-title">Remove Technology Barriers That Cap Your Revenue</h2>
             <p className="service-description">
               Activate technology systems that amplify purpose-driven performance. Strategic implementation unleashes efficiency, scales transformation results, and eliminates technical barriers—enabling breakthrough growth.
             </p>
+            <h3 className="service-outcomes-heading">Outcomes You Can Expect</h3>
             <div className="service-features">
               <ul className="benefits-list">
                 <li>
@@ -185,31 +177,20 @@ export default function ServicesPage() {
               </p>
               <p className="service-testimonial-author">— Greg Williams, SeboDev</p>
             </div>
-          </div>
-          <div className="service-image">
-            <OptimizedRaster
-              src={technology.src}
-              extension={technology.extension}
-              alt={technology.alt}
-              width={technology.width}
-              height={technology.height}
-              fullWidth={technology.fullWidth}
-              loading="lazy"
-              sizes="(max-width: 768px) 90vw, 600px"
-            />
-          </div>
-        </div>
+          </>
+        </ContentSplit>
       </section>
 
       {/* Revenue Acceleration */}
       <section className="service-detail" id="revenue">
-        <div className="container service-container">
-          <div className="service-content">
+        <ContentSplit image={revenue}>
+          <>
             <span className="service-label">Growth Engineered</span>
-            <h2 className="service-title">Revenue Acceleration & Strategic Planning</h2>
+            <h2 className="service-title">Engineer Predictable Revenue Growth That Scales</h2>
             <p className="service-description">
               Engineer revenue acceleration through purpose-aligned systems and strategic growth planning. When strategic plans and revenue processes align with purpose-driven values, growth becomes predictable, substantial, and sustainable—delivering breakthrough results.
             </p>
+            <h3 className="service-outcomes-heading">Outcomes You Can Expect</h3>
             <div className="service-features">
               <ul className="benefits-list">
                 <li>
@@ -241,19 +222,8 @@ export default function ServicesPage() {
               </p>
               <p className="service-testimonial-author">— Jason Kidman, SOS Support</p>
             </div>
-          </div>
-          <div className="service-image">
-            <OptimizedPhoto
-              src={revenue.src}
-              alt={revenue.alt}
-              width={revenue.width}
-              height={revenue.height}
-              fullWidth={revenue.fullWidth}
-              loading="lazy"
-              sizes="(max-width: 768px) 90vw, 600px"
-            />
-          </div>
-        </div>
+          </>
+        </ContentSplit>
       </section>
 
 
@@ -261,7 +231,7 @@ export default function ServicesPage() {
       <section className="partnerships" id="partnerships">
         <div className="container">
           <div className="section-title">
-            <h2>Our Strategic Partnerships</h2>
+            <h2>Technology Partners Who Multiply Your Results</h2>
             <p>
               Zero Barriers collaborates with industry leaders to deliver
               comprehensive solutions
@@ -318,7 +288,7 @@ export default function ServicesPage() {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Begin Your Transformation?</h2>
+            <h2>Claim Your Free Transformation Assessment</h2>
             <p>
               Schedule a no-obligation assessment to discover how purpose-driven transformation, activated technology systems, and engineered revenue acceleration can align to unleash your breakthrough results.
             </p>

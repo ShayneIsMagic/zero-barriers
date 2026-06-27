@@ -12,7 +12,7 @@ export function UmamiScript({ scriptUrl, websiteId }: UmamiScriptProps) {
       src={`${scriptUrl.replace(/\/$/, '')}/script.js`}
       data-website-id={websiteId}
       data-domains="zerobarriers.io,www.zerobarriers.io,zero-barriers.pages.dev,localhost"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   )
 }

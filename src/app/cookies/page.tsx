@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <LegalPageLayout title="Cookie Policy">
+    <LegalPageLayout title="How We Use Cookies — Transparently" documentLabel="Cookie Policy">
       <p>
         This Cookie Policy explains how Zero Barriers (&quot;we,&quot; &quot;us,&quot; or
         &quot;our&quot;) uses cookies and similar technologies on zerobarriers.io (the

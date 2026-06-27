@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import TrackedCTA from '../../components/TrackedCTA'
-import { OptimizedRaster } from '../../components/OptimizedRaster'
+import { OptimizedPhoto } from '../../components/OptimizedPhoto'
 import { DivisionLogo } from '../../components/DivisionLogo'
 import { siteImages } from '../../lib/site-images'
 
@@ -35,19 +35,20 @@ export default function TechnologyPage() {
         <div className="container">
           <div className="hero-content-wrapper">
             <div className="hero-image">
-              <OptimizedRaster
+              <OptimizedPhoto
                 src={hero.src}
-                extension={hero.extension}
                 alt={hero.alt}
                 width={hero.width}
                 height={hero.height}
-                fullWidth={hero.fullWidth}
+                fullWidth={hero.fullWidth ?? hero.width}
                 priority
+                sizes="(max-width: 768px) 100vw, min(680px, 50vw)"
+                objectPosition={hero.objectPosition}
               />
             </div>
             <div className="hero-text-content">
               <span className="hero-tagline">SYSTEMS ACTIVATED</span>
-              <h1 className="hero-title">Technology Enablement</h1>
+              <h1 className="hero-title">Eliminate Technical Barriers and Accelerate Revenue Growth</h1>
               <p className="hero-subtitle">Activate technology systems that amplify purpose-driven performance and scale transformation results</p>
               <p className="hero-description">
                 Our technology division activates systems that eliminate technical barriers and scale transformation results. With 30+ years of development experience and 100+ successful implementations, we provide the technology foundation for breakthrough growth.
@@ -70,7 +71,7 @@ export default function TechnologyPage() {
         <div className="container">
           <div className="overview-container">
             <div className="overview-content">
-              <h2>Purpose-Driven Technology Transformation</h2>
+              <h2>Technology Systems That Amplify Your Transformation Results</h2>
               <p>
                 Our technology division activates systems that amplify purpose-driven performance. We deliver comprehensive solutions that eliminate technical barriers and scale transformation results—providing the technology foundation for breakthrough growth.
               </p>
@@ -101,7 +102,7 @@ export default function TechnologyPage() {
       <section className="crm-solutions">
         <div className="container">
           <div className="division-header">
-            <h2>Zero Barriers CRM Solutions</h2>
+            <h2>Increase ROI with Expert Salesforce CRM Solutions</h2>
             <p className="division-subtitle">Powered by SalesforceConsultants.io | A Zero Barriers Technology Division</p>
           </div>
           <div className="division-content">
@@ -152,7 +153,7 @@ export default function TechnologyPage() {
       <section className="custom-development">
         <div className="container">
           <div className="division-header">
-            <h2>Zero Barriers Custom Development</h2>
+            <h2>Custom Development That Scales Revenue Without Friction</h2>
             <p className="division-subtitle">Powered by DevPipeline | A Zero Barriers Technology Division</p>
           </div>
           <div className="division-content">
@@ -205,7 +206,7 @@ export default function TechnologyPage() {
         <div className="container">
           <div className="section-title">
             <span className="section-eyebrow">TRANSFORMATION ENABLED</span>
-            <h2>Integrated Technology Approach</h2>
+            <h2>One Integrated Approach for Comprehensive Technology Coverage</h2>
             <p>How activated technology systems deliver purpose-driven transformation and breakthrough results</p>
           </div>
           <div className="approach-grid">
@@ -233,7 +234,7 @@ export default function TechnologyPage() {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Activate Your Technology Systems?</h2>
+            <h2>Activate Your Technology for Breakthrough Growth</h2>
             <p>
               Discover how purpose-driven technology enablement can eliminate barriers and scale your transformation results
             </p>

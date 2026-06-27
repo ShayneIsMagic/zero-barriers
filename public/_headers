@@ -30,6 +30,56 @@
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
+# Licensed photography — no hotlinking, no indexing, no long-lived public cache
+/images/photography/*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+# Site illustrations and case-study art — same protections
+/images/home-human-transformation*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/services-human-transformation*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/transforming-breakthrough*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/technology-empowerment-hero*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/case-studies-bridge-the-gap-hero*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/services-revenue-flow-landscape*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
+/images/extracted/technology/*
+  Cross-Origin-Resource-Policy: same-origin
+  X-Robots-Tag: noindex, noimageindex, noai, noimageai
+  Cache-Control: private, max-age=86400
+  Referrer-Policy: same-origin
+
 # HTML pages - no cache to prevent stale content
 /*
   Cache-Control: no-cache, no-store, must-revalidate

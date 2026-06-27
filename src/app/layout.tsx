@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import { Analytics } from '../components/Analytics'
 import { UmamiScript } from '../components/UmamiScript'
 import { ServiceWorkerCleanup } from '../components/ServiceWorkerCleanup'
+import { CopyWatermark } from '../components/CopyWatermark'
 
 const poppins = localFont({
   src: [
@@ -35,11 +36,6 @@ const poppins = localFont({
     {
       path: '../assets/fonts/Poppins/Poppins-Bold.ttf',
       weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../assets/fonts/Poppins/Poppins-ExtraBold.ttf',
-      weight: '800',
       style: 'normal',
     },
   ],
@@ -248,8 +244,9 @@ export default function RootLayout({
           <UmamiScript scriptUrl={umamiScriptUrl} websiteId={umamiWebsiteId} />
         )}
       </head>
-      <body className={poppins.variable} suppressHydrationWarning>
+      <body className={`${poppins.variable} ${poppins.className}`} suppressHydrationWarning>
         <ServiceWorkerCleanup />
+        <CopyWatermark />
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>

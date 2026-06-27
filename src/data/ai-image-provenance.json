@@ -7,15 +7,13 @@
   "images": [
     {
       "id": "hero-human-transformation",
-      "path": "/images/hero-human-transformation.png",
-      "published": false,
-      "archivedPath": "archive/ai-images-removed/hero-human-transformation.png",
-      "removedReason": "Replaced with Spencer DuToit photography (summit-ridge-hikers.jpg).",
+      "path": "/images/home-human-transformation.jpg",
+      "published": true,
       "contentCategory": "abstract-illustration",
       "depictsRealPeople": false,
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
-      "disclosureLabel": "Not published. Replaced by licensed photography.",
+      "disclosureLabel": "AI-generated abstract illustration symbolizing human potential and mindset shift.",
       "usedOn": []
     },
     {
@@ -27,19 +25,17 @@
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
       "disclosureLabel": "AI-generated abstract illustration symbolizing human potential and mindset shift.",
-      "usedOn": ["/services"]
+      "usedOn": []
     },
     {
       "id": "transforming-breakthrough",
-      "path": "/images/extracted/services/Transforming_Breakthrough.png",
-      "published": false,
-      "archivedPath": "archive/ai-images-removed/Transforming_Breakthrough.png",
-      "removedReason": "Replaced with Spencer DuToit photography (summit-climbers-samuel-joseph.jpg).",
+      "path": "/images/transforming-breakthrough.jpg",
+      "published": true,
       "contentCategory": "surreal-illustration",
       "depictsRealPeople": false,
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
-      "disclosureLabel": "Not published. Replaced by licensed photography.",
+      "disclosureLabel": "AI-generated abstract illustration symbolizing breakthrough growth.",
       "usedOn": []
     },
     {
@@ -51,7 +47,7 @@
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
       "disclosureLabel": "AI-generated abstract illustration. Does not depict a real person.",
-      "usedOn": ["/services"]
+      "usedOn": []
     },
     {
       "id": "side-profile-tech",
@@ -62,7 +58,7 @@
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
       "disclosureLabel": "AI-generated abstract illustration. Does not depict a real person.",
-      "usedOn": ["/technology"]
+      "usedOn": ["/results"]
     },
     {
       "id": "services-revenue-flow-landscape",
@@ -73,7 +69,7 @@
       "depictsBusinessScenario": false,
       "creationMethod": "generative-artificial-intelligence",
       "disclosureLabel": "AI-generated landscape illustration. Does not depict a real place, people, or business interaction.",
-      "usedOn": ["/services"]
+      "usedOn": []
     },
     {
       "id": "contact-mountain-sunset",

@@ -4,9 +4,10 @@ import Link from 'next/link'
 import TrackedCTA from '../../components/TrackedCTA'
 import { SectionBackgroundPhoto } from '../../components/SectionBackgroundPhoto'
 import { CaseStudyLogo } from '../../components/CaseStudyLogo'
+import { ContentSplit, CaseStudySection } from '../../components/ContentSplit'
 import { siteImages } from '../../lib/site-images'
 
-const { hero } = siteImages.results
+const { hero, intro, caseStudies } = siteImages.results
 
 export default function TestimonialsPage() {
   return (
@@ -18,6 +19,7 @@ export default function TestimonialsPage() {
           width={hero.width}
           height={hero.height}
           priority
+          objectPosition={hero.objectPosition}
         />
         <div className="container">
           <div className="section-title">
@@ -26,26 +28,25 @@ export default function TestimonialsPage() {
               <span className="section-eyebrow technology-eyebrow">TECHNOLOGY ENABLED</span>
               <span className="section-eyebrow services-eyebrow">SERVICES DELIVERED</span>
             </div>
-            <h1>Real Businesses. Real Breakthroughs.</h1>
+            <h1 className="hero-title hero-title--photo">See the Measurable Results Our Clients Achieve</h1>
           </div>
         </div>
       </section>
 
       {/* Case Studies Introduction Section */}
       <section className="case-studies-intro-section">
-        <div className="container">
-          <div className="case-studies-intro">
-            <h2 className="intro-heading">Client Heroes, Proven Results</h2>
+        <ContentSplit image={intro}>
+          <>
+            <h2 className="intro-heading">From Barriers to Breakthroughs: Client Success Stories</h2>
             <p className="intro-description">
               Every client is the hero of their own transformation story. Explore how we partnered with businesses to unlock their potential through our proven framework: <strong>The Gap</strong> (challenges they faced), <strong>The Bridge</strong> (how we worked together), and <strong>The Results</strong> (their breakthrough outcomes). Each case study demonstrates how purpose-driven partnership delivers rapid, substantial, and sustainable results.
             </p>
-          </div>
-        </div>
+          </>
+        </ContentSplit>
       </section>
 
       {/* SOS Support Case Study */}
-      <section className="case-study-section transformation-section">
-        <div className="container">
+      <CaseStudySection className="transformation-section" image={caseStudies.sos} reverse>
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -161,12 +162,13 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* Michelle Atkinson Case Study */}
-      <section className="case-study-section transformation-section">
-        <div className="container">
+      <CaseStudySection
+        className="transformation-section"
+        image={caseStudies.michelle}
+      >
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -258,12 +260,10 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* Darrell Rawlins Case Study */}
-      <section className="case-study-section transformation-section">
-        <div className="container">
+      <CaseStudySection className="transformation-section" image={caseStudies.darrell} reverse>
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -352,12 +352,13 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* Caselle Case Study */}
-      <section className="case-study-section services-section">
-        <div className="container">
+      <CaseStudySection
+        className="services-section"
+        image={caseStudies.caselle}
+      >
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -453,12 +454,10 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* Sebo Case Study */}
-      <section className="case-study-section services-section">
-        <div className="container">
+      <CaseStudySection className="services-section" image={caseStudies.sebo} reverse>
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -554,12 +553,13 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* DevPipeline Case Study */}
-      <section className="case-study-section technology-section">
-        <div className="container">
+      <CaseStudySection
+        className="technology-section"
+        image={caseStudies.devpipeline}
+      >
           <div className="case-study-wrapper">
             <div className="case-study-header">
               <div className="case-study-logo-container">
@@ -655,13 +655,12 @@ export default function TestimonialsPage() {
             </div>
             </div>
           </div>
-        </div>
-      </section>
+      </CaseStudySection>
 
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to Create Your Success Story?</h2>
+          <h2>Start Building Your Own Success Story</h2>
           <p>Ready to transform your business or career with Zero Barriers?</p>
           <TrackedCTA href="/contact" className="white-cta" location="results_final">
             Schedule Your Transformation Assessment

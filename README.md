@@ -281,6 +281,16 @@ Implemented JSON-LD structured data:
 4. **Assets deploy** → CDN distribution
 5. **SSL/TLS** → Automatic certificate provisioning
 
+### Production Rollback (June 2026)
+
+If a deploy after this release needs to be reverted, roll back to the last known-good production build:
+
+- **Git commit:** `410d284` (Merge pull request #4 — privacy cleanup)
+- **Cloudflare deployment ID:** `a3c2badc-74a6-4299-8f35-45169abd3c91`
+- **Git tag:** `rollback/production-2026-06-26` (points at `410d284`)
+
+In Cloudflare Pages → **Deployments** → select that deployment → **Rollback to this deployment**. The tag preserves the commit in git history for reference.
+
 ---
 
 ## Environment Variables

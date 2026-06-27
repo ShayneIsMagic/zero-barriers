@@ -38,6 +38,11 @@ body:has(main > div:first-child > section.final-cta) .final-cta {
   );
 }
 
+.home-page .final-cta.final-cta--photo,
+body:has(main > div:first-child > section.final-cta.final-cta--photo) .final-cta {
+  background: transparent;
+}
+
 /* Services Page - Deep Blues Dominant */
 .services-hero {
   background: var(--white);
@@ -224,7 +229,7 @@ body:has(main > div:first-child > section.case-studies-hero) ~ section.cta-secti
 }
 
 /* Contact Page - Sunshine Yellow Dominant */
-.contact-hero {
+.contact-hero:not(.contact-hero--photo) {
   background: linear-gradient(135deg,
     var(--contact-dominant-dark) 0%,
     var(--contact-dominant) 50%,
@@ -232,6 +237,20 @@ body:has(main > div:first-child > section.case-studies-hero) ~ section.cta-secti
   );
   padding: var(--spacing-5xl) 0;
   position: relative;
+}
+
+.contact-hero.contact-hero--photo {
+  background: transparent;
+  padding: calc(140px + var(--site-header-offset, 80px)) 0 100px;
+}
+
+.contact-hero.contact-hero--photo .section-title h1,
+.contact-hero.contact-hero--photo .hero-title--contact {
+  color: var(--white);
+}
+
+.contact-hero.contact-hero--photo .section-title p {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .contact-hero .section-title h1 {

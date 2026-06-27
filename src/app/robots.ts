@@ -44,7 +44,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: [
+          '/api/',
+          '/images/photography/',
+          '/images/extracted/technology/',
+          '/images/home-human-transformation',
+          '/images/services-human-transformation',
+          '/images/transforming-breakthrough',
+          '/images/technology-empowerment-hero',
+          '/images/case-studies-bridge-the-gap-hero',
+          '/images/services-revenue-flow-landscape',
+        ],
         crawlDelay: 1,
       },
       ...blockedBots.map((bot) => ({

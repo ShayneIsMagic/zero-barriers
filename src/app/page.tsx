@@ -4,10 +4,16 @@ import StoryCard from '../components/StoryCard'
 import StatsSection from '../components/StatsSection/StatsSection'
 import TrackedCTA from '../components/TrackedCTA'
 import { OptimizedPhoto } from '../components/OptimizedPhoto'
+import { ContentSplit } from '../components/ContentSplit'
+import { FaqAccordion } from '../components/FaqAccordion'
 import { DivisionLogo } from '../components/DivisionLogo'
 import { siteImages } from '../lib/site-images'
+import { homeFaqItems } from '../lib/home-faq'
 
-const { hero } = siteImages.home
+const { hero, methodologyJourney, purposeIllustration } = siteImages.home
+
+const HERO_IMAGE_SIZES = '(max-width: 992px) 92vw, 680px'
+const HERO_IMAGE_CLASS = 'hero-image__photo'
 
 export const metadata: Metadata = {
   title: 'Zero Barriers – Revenue Growth Transformation | Rapid, Substantial, Sustainable Results',
@@ -35,7 +41,7 @@ export default function HomePage() {
           <div className="hero-content-wrapper">
             <div className="hero-text-content">
               <span className="hero-tagline">POTENTIAL UNLEASHED</span>
-              <h1 className="hero-title">Transform Your Revenue Growth</h1>
+              <h1 className="hero-title">Achieve Rapid, Substantial, Sustainable Revenue Growth</h1>
               <p className="hero-subtitle">Rapid. Substantial. Sustainable.</p>
               <p className="hero-description">
                 We specialize in rapid revenue transformation through proven methodologies that deliver measurable results. Our expert team unlocks your business potential with data-driven strategies and systematic implementation.
@@ -56,6 +62,9 @@ export default function HomePage() {
                 width={hero.width}
                 height={hero.height}
                 priority
+                sizes={HERO_IMAGE_SIZES}
+                className={HERO_IMAGE_CLASS}
+                objectPosition={hero.objectPosition}
               />
             </div>
           </div>
@@ -64,11 +73,15 @@ export default function HomePage() {
 
       {/* Methodology Section */}
       <section className="methodology">
+        <ContentSplit image={methodologyJourney} reverse>
+          <>
+            <div className="section-title section-title--left">
+              <h2>Remove Revenue Barriers with Our Proven Four-Phase Methodology</h2>
+              <p>A systematic approach that delivers rapid, substantial, and sustainable growth through proven revenue generation strategies.</p>
+            </div>
+          </>
+        </ContentSplit>
         <div className="container">
-          <div className="section-title">
-            <h2>Our Proven Four-Phase Methodology</h2>
-            <p>A systematic approach that delivers rapid, substantial, and sustainable growth through proven revenue generation strategies.</p>
-          </div>
           <div className="methodology-steps">
             <div className="step-card">
               <div className="step-number">1</div>
@@ -105,16 +118,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Purpose Section */}
+      <section className="purpose">
+        <ContentSplit image={purposeIllustration}>
+          <>
+            <h2 className="purpose-title">Align Purpose With Performance for Lasting Growth</h2>
+            <p className="purpose-description">
+              At Zero Barriers, lasting revenue growth starts with purpose. Our approach aligns personal motivation with professional excellence—creating organizations where people thrive and breakthrough results follow.
+            </p>
+            <div className="purpose-testimonial">
+              <p className="purpose-testimonial-content">
+                The purpose-driven model transformed my life, removing obstacles and igniting my potential. Being purpose-oriented has given me direction, freedom, fulfillment, confidence, peace, success, happiness, and love in multiple arenas of my life.
+              </p>
+              <p className="purpose-testimonial-author">— Michelle A., Purpose-Driven Leader</p>
+            </div>
+            <Link href="/services" className="purpose-link">
+              Discover our purpose and values <i className="fas fa-arrow-right"></i>
+            </Link>
+          </>
+        </ContentSplit>
+      </section>
+
       {/* Solutions Section */}
       <section className="solutions">
         <div className="container">
           <div className="section-title">
-            <h2>Our Core Solutions</h2>
+            <h2>Three Integrated Solutions Built for Measurable Results</h2>
             <p>Comprehensive revenue generation solutions designed to eliminate barriers and drive sustainable growth through our integrated approach.</p>
           </div>
           <div className="solutions-grid">
             <div className="solution-card">
-              <div className="solution-header">Human Transformation</div>
+              <h3 className="solution-header">Human Transformation That Unlocks Team Performance</h3>
               <div className="solution-content">
                 <p>Powered by our purpose-driven revenue growth methodologies, we help individuals and teams unlock their full revenue potential through our proprietary frameworks:</p>
                 <ul className="benefits-list">
@@ -125,7 +159,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="solution-card">
-              <div className="solution-header">Technology Enablement</div>
+              <h3 className="solution-header">Technology Enablement That Eliminates Friction</h3>
               <div className="solution-content">
                 <p>Through our strategic partnerships, we implement the right technology solutions to streamline revenue operations and enhance customer experiences for rapid growth:</p>
                 <ul className="benefits-list">
@@ -136,7 +170,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="solution-card">
-              <div className="solution-header">Revenue Acceleration</div>
+              <h3 className="solution-header">Revenue Acceleration That Becomes Predictable</h3>
               <div className="solution-content">
                 <p>Combining people, process, and technology for breakthrough revenue results, we create systems that generate predictable, sustainable revenue growth and substantial business expansion:</p>
                 <ul className="benefits-list">
@@ -157,7 +191,7 @@ export default function HomePage() {
       <section className="success-stories">
         <div className="container">
           <div className="section-title">
-            <h2>Client Success Stories</h2>
+            <h2>Client Results You Can See and Measure</h2>
             <p>Real results from businesses that transformed their revenue growth with Zero Barriers</p>
           </div>
           <div className="stories-grid">
@@ -192,7 +226,7 @@ export default function HomePage() {
       <section className="technology-division">
         <div className="container">
           <div className="section-title">
-            <h2>Our Technology Division</h2>
+            <h2>Technology Infrastructure That Scales Your Revenue Engine</h2>
             <p>Integrated technology solutions that deliver the infrastructure for rapid, substantial, sustainable revenue growth</p>
           </div>
           
@@ -280,27 +314,10 @@ export default function HomePage() {
       <section className="faq-section">
         <div className="container">
           <div className="section-title">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Common Questions About Revenue Transformation</h2>
             <p>Common questions about achieving rapid, substantial, sustainable revenue growth</p>
           </div>
-          <div className="faq-grid">
-            <div className="faq-item">
-              <h3>How do you achieve rapid revenue growth?</h3>
-              <p>We achieve rapid revenue growth through our proven four-phase methodology that identifies revenue barriers, implements best practices, adapts systems to your strengths, and engineers predictable revenue success patterns.</p>
-            </div>
-            <div className="faq-item">
-              <h3>What makes revenue growth substantial and sustainable?</h3>
-              <p>Our revenue growth is substantial and sustainable because we focus on building systems, not just tactics. We create predictable, repeatable revenue patterns that scale with your business and deliver long-term results.</p>
-            </div>
-            <div className="faq-item">
-              <h3>How does revenue generation work with your methodology?</h3>
-              <p>Our revenue generation methodology combines human transformation, technology enablement, and revenue acceleration to eliminate barriers and create systems that generate predictable, sustainable revenue growth.</p>
-            </div>
-            <div className="faq-item">
-              <h3>What results can I expect?</h3>
-              <p>Every client is different. Results vary by industry, company size, starting point, and execution. Our documented case studies show a 25-122% revenue growth range, with specific clients achieving 122% peak growth in their first year. See our case studies for detailed, verifiable results.</p>
-            </div>
-          </div>
+          <FaqAccordion items={homeFaqItems} />
         </div>
       </section>
 
@@ -311,7 +328,7 @@ export default function HomePage() {
             <div className="cta-icon">
               <i className="fas fa-bolt"></i>
             </div>
-            <h2>Ready to Dominate<br />Revenue Growth?</h2>
+            <h2>Claim Your No-Obligation Growth Assessment</h2>
             <p>
               Schedule a no-obligation assessment to identify your revenue barriers and discover how our proven methodology can unleash your business potential. Every client is different—we tailor our approach to your unique context.
             </p>
